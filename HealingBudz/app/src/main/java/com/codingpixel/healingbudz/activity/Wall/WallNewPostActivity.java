@@ -151,13 +151,11 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
 
         if (getIntent().getExtras() != null) {
             Bundle bundle = getIntent().getExtras();
-            if (bundle.getString("urlhas", "").equalsIgnoreCase("")) {
+            if (!bundle.containsKey("urlhas")) {
                 type = getIntent().getExtras().getInt("type_int", 0);
                 post = (Post) getIntent().getExtras().getSerializable(Constants.POST_EXTRA);
                 jsonDataPrevious = post.getJson_Data();
                 preJsonData = post.getJsonData();
-            } else {
-
             }
 
         } else {
@@ -175,9 +173,7 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
         });
         setUpView();
         Bundle bundle = getIntent().getExtras();
-        if (bundle.getString("urlhas", "").equalsIgnoreCase("")) {
-
-        } else {
+        if (bundle != null && bundle.containsKey("urlhas")) {
             editText.setText(bundle.getString("urlhas", ""));
         }
     }
