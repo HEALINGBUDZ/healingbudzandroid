@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#252525"
+            android:orientation="horizontal"
+            android:paddingLeft="10sp"
+            android:paddingTop="8sp"
+            android:paddingRight="10sp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="20sp"
+                android:layout_weight=".6"
+                android:src="@drawable/ic_tab_strain" />
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9.4"
+                android:orientation="vertical"
+                android:paddingLeft="10sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="You Updated Description."
+                        android:textColor="#f4c42f"
+                        android:textSize="14sp" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                        android:id="@+id/hours_aggo"
+                        android:layout_width="70sp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:text="1 hour ago"
+                        android:textColor="#545454"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:id="@+id/title_strain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Girls Scout Cookies"
+                    android:textColor="#e4e4e5"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36sp"
+                    android:layout_marginTop="-5sp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="7sp"
+                        android:orientation="horizontal"
+                        android:visibility="invisible">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#e7e7e7"
+                            android:textSize="12sp" />
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3sp"
+                            android:text="ANSWERS"
+                            android:textColor="#0876b4"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="70sp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <ImageView
+                            android:id="@+id/eddit"
+                            android:layout_width="0sp"
+                            android:layout_height="30sp"
+                            android:layout_weight="5"
+                            android:padding="6sp"
+                            android:src="@drawable/ic_edit_myquestion"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/delete_strains"
+                            android:layout_width="0sp"
+                            android:layout_height="30sp"
+                            android:layout_weight="5"
+                            android:padding="6sp"
+                            android:src="@drawable/ic_delete_icon" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="#aa1c1c1c" />
+</LinearLayout>

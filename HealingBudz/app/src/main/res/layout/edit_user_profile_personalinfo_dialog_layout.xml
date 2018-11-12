@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/profile_photo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+
+            android:orientation="vertical"
+            android:paddingBottom="18sp">
+
+            <LinearLayout
+                android:id="@+id/first_dialog_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/shoot_out_dialog_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="15sp"
+                android:paddingRight="16sp">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:id="@+id/heading_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46sp"
+                    android:gravity="center"
+                    android:text="UPDATE BIO"
+                    android:textColor="#f6f6f6"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_dialog_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bio_dialog_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="15sp"
+                android:paddingTop="0sp"
+                android:paddingRight="12sp"
+                android:paddingBottom="20sp">
+
+                <LinearLayout
+                    android:id="@+id/bio_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14sp">
+
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                        android:id="@+id/edit_bio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_edittext_bg_whit"
+                        android:gravity="top"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:minLines="10"
+                        android:padding="8sp"
+                        android:text="Lorem ipsum dolor sit met, consectut adipiscing edit. Fusce tincidunt magna ultricies ante porta varius, Suspendisse tincidunt, massa nec return cursus, nisi ritus iaculis leo, eu dignissim nulla lorem ut diam. Nulla faciliti. Integer tristique elut non leo facubus ultrices. Phasesllus quis lectus vulputate , return dit eget, faucibus risus, aecenas risus est, tincidunt nec mauris eget."
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14sp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="42sp"
+                        android:background="@drawable/ic_edittext_bg_whit"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:nextFocusForward="@+id/confirm_email"
+                        android:paddingLeft="8sp"
+                        android:paddingRight="8sp"
+                        android:text="John@gmail.com"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14sp"
+                        android:text="Confirm Email" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                        android:id="@+id/confirm_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="42sp"
+                        android:layout_marginTop="14sp"
+                        android:background="@drawable/ic_edittext_bg_whit"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:paddingLeft="8sp"
+                        android:paddingRight="8sp"
+                        android:text="John@gmail.com"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/password_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14sp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="42sp"
+                        android:background="@drawable/ic_edittext_bg_whit"
+                        android:gravity="center_vertical"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:paddingLeft="8sp"
+                        android:paddingRight="8sp"
+                        android:text="John@gmail.com"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14sp"
+                        android:text="Confirm Password" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                        android:id="@+id/confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="42sp"
+                        android:layout_marginTop="14sp"
+                        android:background="@drawable/ic_edittext_bg_whit"
+                        android:gravity="center_vertical"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:paddingLeft="8sp"
+                        android:paddingRight="8sp"
+                        android:text="John@gmail.com"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/zipcode_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14sp"
+                    android:orientation="vertical">
+
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                        android:id="@+id/zipcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="42sp"
+                        android:background="@drawable/ic_edittext_bg_whit"
+                        android:gravity="center_vertical"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:paddingLeft="8sp"
+                        android:paddingRight="8sp"
+                        android:text="45676"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14sp"
+                    android:orientation="vertical">
+
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="42sp"
+                        android:background="@drawable/ic_edittext_bg_whit"
+                        android:digits="qwertyuiopasdfghjklzxcvbnm 1234567890 QWERTYUIOPASDFGHJKLZXCVBNM"
+                        android:gravity="center_vertical"
+                        android:inputType="text|textCapWords"
+                        android:lines="1"
+                        android:maxLength="20"
+                        android:paddingLeft="8sp"
+                        android:paddingRight="8sp"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                    android:id="@+id/save_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_marginTop="20sp"
+                    android:background="@drawable/edit_profile_save_btn_bg"
+                    android:text="SAVE"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/cross_btn"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10sp"
+            android:paddingBottom="10sp"
+            android:src="@drawable/ic_feeling_dialog_cross_btn" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

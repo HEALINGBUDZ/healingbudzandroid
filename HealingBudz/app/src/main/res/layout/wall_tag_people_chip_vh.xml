@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="3dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wall_tag_chip_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30sp"
+            android:layout_marginLeft="2sp">
+
+            <com.codingpixel.healingbudz.customeUI.CircularImageView
+                android:id="@+id/wall_tag_people_chip_vh_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="3sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_person" />
+
+            <ImageView
+                android:id="@+id/profile_img_topi"
+                android:layout_width="10sp"
+                android:layout_height="10sp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="4sp"
+                android:src="@drawable/topi_ic"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+            android:id="@+id/wall_tag_people_chip_vh_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="5dp"
+            android:textColor="#7CC245"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/wall_tag_people_chip_vh_delete"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="5dp"
+            android:tint="@color/COLOR_YOUR_COLOR"
+            android:src="@drawable/ic_close_24dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

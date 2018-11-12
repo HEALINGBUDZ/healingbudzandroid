@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252525"
+    android:orientation="vertical"
+    tools:context="com.codingpixel.healingbudz.activity.home.side_menu.activitylog.ActivityLogActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/top_menu"
+            android:background="#1f1f1f"
+            android:layout_height="?android:attr/actionBarSize">
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="42sp"
+                android:layout_height="match_parent"
+                android:padding="2sp"
+                android:src="@drawable/ic_back_icon" />
+
+            <ImageView
+                android:id="@+id/home_btn"
+                android:layout_width="42sp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/back_btn"
+                android:padding="7sp"
+                android:src="@drawable/ic_home_icon" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_my_group_icon"
+                    android:id="@+id/add_new_journal"
+                    android:padding="1sp"
+                    android:layout_marginRight="3sp"
+                    android:layout_alignParentRight="true"/>
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="My Groups"
+                    android:textSize="22sp"
+                    android:paddingBottom="4sp"
+                    android:gravity="center"
+                    android:id="@+id/q_a_menu_title"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/add_new_group"
+                android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:padding="12sp"
+                android:layout_marginRight="7sp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_add_new_groups" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/my_groups_recyler_view"
+            android:layout_marginRight="14sp"
+            android:layout_marginLeft="14sp"
+            android:layout_marginTop="4sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Group Found!"
+            android:id="@+id/no_group_found"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="#FAFAFA"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38sp"
+        android:orientation="horizontal"
+        android:paddingLeft="6sp"
+        android:paddingRight="6sp">
+
+
+        <LinearLayout
+            android:id="@+id/follow_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center|center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <RelativeLayout
+                android:layout_width="0sp"
+                android:layout_height="38sp"
+
+                android:layout_toLeftOf="@+id/name"
+                android:layout_weight="1">
+
+                <com.codingpixel.healingbudz.customeUI.CircularImageView
+                    android:id="@+id/img_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="38sp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+
+                    android:padding="5sp"
+                    android:src="@drawable/ic_user_person" />
+
+                <ImageView
+                    android:id="@+id/profile_img_topi"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="8sp"
+                    android:src="@drawable/topi_ic"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                android:id="@+id/name"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="1sp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="HB User"
+                android:textColor="#464645"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/f_btn"
+                android:layout_width="0sp"
+                android:layout_height="20sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:paddingLeft="8sp"
+                android:paddingRight="5sp">
+
+                <ImageView
+                    android:id="@+id/follow_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:gravity="center"
+                    android:src="@drawable/liked_wall"
+                    android:text="Like this post"
+                    android:textAllCaps="true"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:tint="@color/post_description_links_color" />
+
+                <ImageView
+                    android:id="@+id/followe_icon"
+                    android:layout_width="14sp"
+                    android:layout_height="14sp"
+                    android:padding="2sp"
+                    android:src="@drawable/ic_profile_add"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginTop="1sp"
+        android:background="#68c4c3c3" />
+
+</LinearLayout>

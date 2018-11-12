@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="4sp"
+        android:background="#505050" />
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/indicator"
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal"
+        android:weightSum="11.5">
+
+        <View
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+            android:id="@+id/text_img"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="A-Z"
+            android:textColor="#f5921e"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img_rscr"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2.2"
+            android:padding="9sp"
+            android:src="@drawable/ic_heart" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:id="@+id/q_a_header_list_title"
+            android:layout_width="0sp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="5.7"
+            android:gravity="center_vertical|left"
+            android:text="FAVORITES"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="#c5c4c4"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_ic_cross"
+            android:layout_width="0sp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:padding="12sp"
+            android:src="@drawable/ic_cross_black" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_alignParentBottom="true"
+        android:background="#b1343434" />
+</RelativeLayout>

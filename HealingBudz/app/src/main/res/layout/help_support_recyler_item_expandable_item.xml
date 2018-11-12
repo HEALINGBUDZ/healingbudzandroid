@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:background="#252525"
+        android:orientation="vertical"
+        android:padding="5sp"
+        android:visibility="visible"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:paddingTop="12sp"
+            android:weightSum="10">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Hi Bud, Need Support?"
+                android:textColor="#c4c6c7"
+                android:textSize="18sp" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="We are always here to help. Plz Supply as much info as you can and someone will email you back in jiffy."
+                android:textColor="#c4c6c7"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42sp"
+            android:layout_marginLeft="14sp"
+            android:layout_marginTop="14sp"
+            android:layout_marginRight="14sp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2sp"
+                android:layout_marginBottom="2sp"
+                android:background="@drawable/ic_edittext_bg_whit">
+
+                <com.codingpixel.healingbudz.customeUI.customspinner
+                    android:id="@+id/link_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="Select One.." />
+
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                    android:id="@+id/search_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:focusable="false"
+                    android:gravity="left|center_vertical"
+                    android:hint="Select One.."
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:paddingLeft="8sp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#4d4d4d"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="42sp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:padding="14sp"
+                    android:src="@drawable/groups_chat_indicator_down" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14sp"
+            android:layout_marginTop="14sp"
+            android:layout_marginRight="14sp"
+            android:layout_marginBottom="2sp"
+            android:background="@drawable/ic_edittext_bg_whit">
+
+            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                android:id="@+id/message_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="left"
+                android:hint="Enter Message..."
+                android:inputType="textMultiLine|textImeMultiLine|textCapSentences"
+                android:minLines="5"
+                android:padding="10sp"
+                android:paddingLeft="8sp"
+                android:textColor="@color/black"
+                android:textColorHint="#4d4d4d"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="38sp"
+            android:layout_marginLeft="14sp"
+            android:layout_marginTop="12sp"
+            android:layout_marginRight="14sp"
+            android:layout_marginBottom="12sp"
+            android:background="@drawable/add_journal_entry_btn"
+            android:text="SUBMIT"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:background="#252525"
+        android:orientation="vertical"
+        android:padding="5sp"
+        android:visibility="visible"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="12sp"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Like"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" Healing Budz"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="?"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/send_play_store"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginLeft="14sp"
+                android:layout_marginTop="12sp"
+                android:layout_marginRight="14sp"
+                android:background="@drawable/like_healing_bud_help_support_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Write a Review &amp; Rate our App on Google Play Store."
+                    android:textColor="#7dc241"
+                    android:textSize="11sp" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:text="Click Here"
+                    android:textColor="@color/white"
+                    android:textSize="9sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+            android:id="@+id/ask_support"
+            android:layout_width="match_parent"
+            android:layout_height="38sp"
+            android:layout_marginLeft="14sp"
+            android:layout_marginTop="24sp"
+            android:layout_marginRight="14sp"
+            android:layout_marginBottom="12sp"
+            android:background="@drawable/add_journal_entry_btn"
+            android:text="Ask Support"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22sp"
+            android:gravity="center"
+            android:text="Follow us on:"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="16sp"
+            android:layout_marginRight="10sp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="52sp"
+                android:layout_height="52sp"
+                android:src="@drawable/follow_fb_icon" />
+
+            <ImageView
+                android:layout_width="52sp"
+                android:layout_height="52sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:src="@drawable/ic_follow_twitter" />
+
+            <ImageView
+                android:layout_width="52sp"
+                android:layout_height="52sp"
+                android:layout_marginRight="20sp"
+                android:src="@drawable/insta_follow_icon" />
+
+            <ImageView
+                android:layout_width="52sp"
+                android:layout_height="52sp"
+                android:src="@drawable/g1_ic" />
+
+
+        </LinearLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:text="Invite Friends"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6sp"
+            android:gravity="center"
+            android:text="Invite via Email address:"
+            android:textColor="#c4c6c7"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42sp"
+            android:layout_marginLeft="14sp"
+            android:layout_marginTop="14sp"
+            android:layout_marginRight="14sp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2sp"
+                android:layout_marginBottom="2sp"
+                android:background="@drawable/ic_edittext_bg_whit">
+
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                    android:id="@+id/email_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="25dp"
+                    android:background="@color/transparent"
+                    android:gravity="left|center_vertical"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:paddingStart="8sp"
+                    android:paddingLeft="8sp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#606060" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:layout_centerVertical="true"
+                    android:padding="2sp"
+                    android:src="@drawable/ic_email_icon"
+                    android:tint="#b7252525" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:layout_marginTop="14sp"
+
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="64sp"
+                android:layout_height="1sp"
+                android:background="#848383" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12sp"
+                android:layout_marginRight="12sp"
+                android:text="or"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="64sp"
+                android:layout_height="1sp"
+                android:background="#848383" />
+
+
+        </LinearLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:gravity="center"
+            android:text="Invite via text message"
+            android:textColor="#c4c6c7"
+            android:textSize="12sp" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6sp"
+            android:gravity="center"
+            android:text="Add Phone Number Below"
+            android:textColor="#999999"
+            android:textSize="9sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42sp"
+            android:layout_marginLeft="14sp"
+            android:layout_marginTop="14sp"
+            android:layout_marginRight="14sp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2sp"
+                android:layout_marginBottom="2sp"
+                android:background="@drawable/ic_edittext_bg_whit">
+
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                    android:id="@+id/phone_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="25dp"
+                    android:background="@color/transparent"
+                    android:digits="+1234567890"
+                    android:gravity="left|center_vertical"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:paddingStart="8sp"
+                    android:paddingLeft="8sp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#606060" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:layout_centerVertical="true"
+                    android:padding="3sp"
+                    android:src="@drawable/ic_call_icon"
+                    android:tint="#b7252525" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+            android:id="@+id/invite_bud"
+            android:layout_width="match_parent"
+            android:layout_height="38sp"
+            android:layout_marginLeft="14sp"
+            android:layout_marginTop="24sp"
+            android:layout_marginRight="14sp"
+            android:layout_marginBottom="12sp"
+            android:background="@drawable/add_journal_entry_btn"
+            android:text="INVITE NEW BUD"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:background="#252525"
+        android:orientation="vertical"
+        android:padding="5sp"
+        android:visibility="visible"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_marginBottom="12sp"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:paddingTop="12sp"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:id="@+id/policy_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Privacy Policy"
+                    android:textColor="#c4c6c7"
+                    android:textSize="12sp" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:id="@+id/term_condition_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40sp"
+                    android:gravity="center"
+                    android:text="Terms &amp; Conditions"
+                    android:textColor="#c4c6c7"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/ver_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:gravity="center"
+                android:text="Version 1.1.8"
+                android:textColor="#c4c6c7"
+                android:textSize="9sp" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/year_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Copyright Healing Budz, LLC 2017"
+                android:textColor="#c4c6c7"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

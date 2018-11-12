@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.codingpixel.healingbudz">
+
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera2.full"
+        android:required="false" />
+
+    <permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <application
+        android:name=".application.HealingBudApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_app_icon_tm"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:logo="@mipmap/ic_app_icon_tm"
+        android:roundIcon="@mipmap/ic_app_icon_tm"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:supportsRtl">
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+        <meta-data
+            android:name="com.onesignal.BadgeCount"
+            android:value="DISABLE" />
+
+        <activity
+            android:name=".activity.splash.Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            tools:replace="android:theme" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <!-- <activity -->
+        <!-- android:name=".activity.introduction.HealingBudzIntroActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".activity.deeplinkmodule.DeepLinkActivity"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="healingbudz.com"
+                    android:scheme="@string/schemeName" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/schemeName" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="healingbudz.com" />
+                <!-- 139.162.37.73 -->
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="healingbudz.com"
+                    android:scheme="@string/schemeName" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.home.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.age_verification.AgeVerification"
+            android:screenOrientation="portrait" />
+        <!--<activity-->
+        <!--android:name="com.github.florent37.camerafragment.PreviewActivity"-->
+        <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".activity.Registration.LoginEntrance"
+            android:screenOrientation="portrait"
+            android:theme="@style/Login"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.Registration.login.SignInWithEmailFirstStepActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Login"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.Registration.login.SignInWithEmailSecondStep"
+            android:screenOrientation="portrait"
+            android:theme="@style/Login"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.home.buz_feed.BuzzFeedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BlackStatusBar" />
+        <activity
+            android:name=".activity.shoot_out.ShootOutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BlackStatusBar" />
+        <activity
+            android:name=".activity.pin_password.PinPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BlackStatusBar" />
+        <activity
+            android:name=".activity.Registration.SignUpwithEmailFirstStep"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.Registration.SignUPWithEmailEnterPassword"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.Registration.SignUpwithEmailNickName"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.Registration.SignUpWithEmailProfilePhoto"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+
+        <service
+            android:name=".onesignal.OnClearFromRecentService"
+            android:stopWithTask="false" />
+        <service
+            android:name=".onesignal.OnSignalNotificationExtenderService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.onesignal.NotificationExtender" />
+            </intent-filter>
+        </service>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activity.home.home_fragment.budz_map_tab.AddNewBudzMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChangeAppThemeBudz"
+            android:windowSoftInputMode="adjustPan" />
+        <!--0a0a0a-->
+        <activity
+            android:name=".activity.home.home_fragment.budz_map_tab.BudzMapDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChangeAppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.home.home_fragment.budz_map_tab.BudzMapDetailsImagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Registration.AddYourExpertAreasActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Registration.AddExpertiseQuestionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.pin_password.PinPasswordConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Registration.FinalStepProfileComplete"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="313e6a5ad40e17050ecd131800f7e89df95fda80" />
+
+        <activity
+            android:name=".activity.home.home_fragment.journal_tab.AddNewJournalEvent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.profile.hb_gallery.HealingBudGallery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.messages.NewMessagingChatViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.journal_tab.JournalDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.journal_tab.JournalListChildDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.Strain_tab.straindetail.StrainDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChangeAppThemeBudz"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.home.home_fragment.Strain_tab.straindetail.AddMoreInfoAboutStrain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.Strain_tab.straindetail.StrainImagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.groups_tab.GroupsChatViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.home.home_fragment.groups_tab.AddNewGroup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.groups_tab.CreateGroupSuccessfully"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.groups_tab.GroupSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GroupSetting" />
+        <activity
+            android:name=".activity.home.side_menu.activitylog.ActivityLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.messages.MessagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.messages.MessagingChatViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.my_questions.MyQuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.my_answers.MyAnswersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.journal_tab.AddJournal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.my_groups.MyGroupsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.mystrains.MyStrainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.my_budzmap.MyBudzMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.mysaves.MySavesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.help_support.HelpAndSupportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.home.side_menu.my_journal.MyJournalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.profile.UserProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.profile.EditUserProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.profile.EditUserProfileUploadCoverPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.settings.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.settings.bussiness_listing_setting.Bussiness_Listing_Setting_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.settings.notification_alerts.NotificationAndAlerts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.settings.journal_setting.Journal_Setting_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.settings.journal_setting.ReminderSettings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.settings.journal_setting.DataSettingScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.my_groups.CloseGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.my_groups.EditGroup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Registration.ProfileSetupDemoQuestionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Registration.ProfileSetupDemoActivitySecond"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.journal_tab.EditJournal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.journal_tab.JournalEventVideoGallery"
+            android:screenOrientation="portrait" />
+        <activity android:name=".media_view_Dialog.MediPreview" />
+        <activity
+            android:name=".activity.home.home_fragment.Strain_tab.straindetail.StrainCommentFullView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.budz_map_tab.BudzMapCommentFullView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.Strain_tab.straindetail.tabs.EditMoreInfoAboutStrain"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".Reminder.receivers.AlarmReceiver" />
+        <receiver android:name=".Reminder.receivers.SnoozeActionReceiver" />
+        <receiver android:name=".Reminder.receivers.SnoozeReceiver" />
+        <receiver android:name=".Reminder.receivers.DismissReceiver" />
+        <receiver android:name=".Reminder.receivers.NagReceiver" />
+        <receiver
+            android:name=".Reminder.receivers.BootReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.home.side_menu.help_support.PrivacyPoliccy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.help_support.TermAndConditions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.help_support.TermAndConditionsOnIntorduction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Registration.login.ForgetPasswordStep"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.home.home_fragment.qa_tab.QAUserNotifyScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.myrewardz.MyRewardzActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Muzammil android Branch -->
+        <activity
+            android:name=".activity.Wall.WallPostDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.Wall.WallPostPhotoDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeActivity" />
+        <activity
+            android:name=".activity.Wall.WallNewPostActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.Wall.TagPeopleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeActivity" />
+        <activity
+            android:name=".camera_activity.HBCameraActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeActivity" />
+        <activity
+            android:name=".activity.Wall.WallNewFeedOtherActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.home.home_fragment.HomeGlobalSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Registration.login.SocialLoginFirstStep"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.home.home_fragment.budz_map_tab.BudzMapPaidViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.messages.MessagingBusinessChatViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.side_menu.myrewardz.folllowkeys.FollowKeywordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Registration.login.SignUpWithSocialProfilePhoto"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.home.home_fragment.qa_tab.QADetailActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.home.home_fragment.qa_tab.MyAnswersEditShowActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.Registration.login.ChangePasswordStep"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChangeAppTheme"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.introduction.CustomBackgroundIntro"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.home.home_fragment.budz_map_tab.tabs.AddProductActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChangeAppTheme"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.home.home_fragment.budz_map_tab.tabs.AddServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChangeAppTheme"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.home.home_fragment.budz_map_tab.tabs.AddTicketActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChangeAppTheme"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+        <activity
+            android:name=".activity.home.side_menu.allbudz.AllBudzActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ChangeAppTheme"
+            android:windowSoftInputMode="stateHidden|stateVisible" />
+    </application>
+
+</manifest>

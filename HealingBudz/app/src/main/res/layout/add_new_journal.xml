@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="#252525"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/top_menu"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="30sp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/sqe_one"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#1f1f1f">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="42sp"
+                android:layout_height="match_parent"
+                android:padding="2sp"
+                android:src="@drawable/ic_back_icon" />
+
+            <ImageView
+                android:id="@+id/home_btn"
+                android:layout_width="42sp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/back_btn"
+                android:padding="7sp"
+                android:src="@drawable/ic_home_icon" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_marginTop="4sp"
+            android:paddingLeft="15sp"
+            android:paddingRight="15sp"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="8.8"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:src="@drawable/ic_journal_name_icon"/>
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Journal Name"
+                    android:paddingLeft="10sp"
+                    android:textSize="18sp"
+                    android:textColor="#c4c4c4"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginRight="16sp"
+            android:layout_marginLeft="16sp"
+            android:background="@color/transparent"
+            android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white"
+            android:hint="Entry Title..."
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/entry_title"
+            android:textColorHint="#726f6a"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginLeft="10sp"
+            android:weightSum="10">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="6.8"
+                android:gravity="center_vertical"
+                android:textColor="#b9b8b8"
+                android:text="Public"/>
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="3.2"
+                android:layout_marginRight="10sp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layout_marginTop="4sp"
+                android:layout_marginBottom="4sp"
+                android:background="#616161"
+                android:layout_marginLeft="10sp">
+                <Button
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:layout_marginRight="-5sp"
+                    android:text="OFF"
+                    android:textSize="12sp"
+                    android:id="@+id/private_btn"
+                    android:textAllCaps="true"
+                    android:textColor="#f8f8f8"
+                    android:background="@drawable/toggle_btn_private"/>
+
+                <Button
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:layout_marginLeft="-5sp"
+                    android:textColor="#f8f8f8"
+                    android:text="ON"
+                    android:textSize="12sp"
+                    android:id="@+id/public_btn"
+                    android:textAllCaps="true"
+                    android:background="@color/transparent"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudButton
+            android:layout_width="match_parent"
+            android:layout_height="38sp"
+            android:textColor="#FFF"
+            android:layout_marginLeft="24sp"
+            android:layout_marginRight="24sp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/save_btn"
+            android:layout_marginTop="42sp"
+            android:background="@drawable/save_and_publish_journal"
+            android:text="SAVE"/>
+    </LinearLayout>
+
+</ScrollView>

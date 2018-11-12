@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252525"
+    tools:context="com.codingpixel.healingbudz.activity.home.home_fragment.groups_tab.GroupsChatViewActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6sp"
+        android:background="#252525">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="42sp"
+            android:layout_height="42sp"
+            android:padding="2sp"
+            android:src="@drawable/ic_back_icon" />
+
+        <ImageView
+            android:id="@+id/home_btn"
+            android:layout_width="42sp"
+            android:layout_height="42sp"
+            android:layout_toRightOf="@id/back_btn"
+            android:padding="7sp"
+            android:src="@drawable/ic_home_icon" />
+
+
+        <ImageView
+            android:id="@+id/cross_btn"
+            android:layout_width="52sp"
+            android:layout_height="42sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="6sp"
+            android:padding="5sp"
+            android:src="@drawable/ic_cross_image"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/user_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_view"
+        android:layout_marginTop="-20sp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/user_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60sp"
+                android:gravity="center">
+
+
+                <com.codingpixel.healingbudz.customeUI.CircularImageView
+                    android:id="@+id/user_img"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:src="@drawable/ic_profile_blue" />
+
+                <ImageView
+                    android:id="@+id/profile_img_topi"
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="-5sp"
+                    android:src="@drawable/topi_ic"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:text="Bester Bud"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="#cfcfd0" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="12sp"
+            android:layout_marginTop="12sp"
+            android:background="#383433" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/enter_msg"
+        android:layout_below="@+id/user_section"
+        android:layout_marginTop="10sp"
+        android:background="#252525">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_to_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="12sp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/group_recyler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/enter_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/feeds_comment_edittext_block_bg">
+
+        <ImageView
+            android:id="@+id/attach_ment"
+            android:layout_width="46sp"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_centerVertical="true"
+            android:padding="10sp"
+            android:src="@drawable/comment_attach_icon" />
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:paddingRight="6sp">
+
+            <RelativeLayout
+                android:id="@+id/attachment"
+                android:layout_width="60sp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2sp"
+                android:layout_weight="2"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5sp">
+
+                    <ImageView
+                        android:id="@+id/attachment_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/test_img" />
+
+                    <ImageView
+                        android:id="@+id/attachment_video_icon"
+                        android:layout_width="24sp"
+                        android:layout_height="24sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_play_attachment"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/attachment_cross"
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="7sp"
+                    android:paddingBottom="8sp"
+                    android:src="@drawable/ic_cross_image" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/send_buuton"
+                android:layout_width="46sp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/send_button"
+                android:padding="7sp"
+                android:src="@drawable/comment_post_icon" />
+        </LinearLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealinBudEditTextRegular
+            android:id="@+id/msg_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/buttons"
+            android:layout_toRightOf="@+id/attach_ment"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="Type message..."
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLines="4"
+            android:minHeight="?android:attr/actionBarSize"
+            android:minLines="2"
+            android:paddingLeft="6sp"
+            android:textColor="@color/white"
+            android:textColorHint="#b2b1b1"
+
+            android:textSize="16sp" />
+        <!--android:textColor="#242525"
+            android:textColorHint="#242525"-->
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/saerch_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_view"
+        android:background="#252525">
+
+        <RelativeLayout
+            android:id="@+id/search_section"
+            android:layout_width="match_parent"
+            android:layout_height="42sp"
+            android:layout_marginLeft="14sp"
+            android:layout_marginRight="14sp"
+            android:layout_marginTop="14sp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2sp"
+                android:layout_marginTop="2sp"
+                android:background="@drawable/qa_fragment_search_bg">
+
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditTextRegular
+                    android:id="@+id/search_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/search_btn"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:hint="customizing message"
+                    android:imeOptions="actionDone"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/search_btn"
+                    android:layout_width="42sp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:padding="7sp"
+                    android:src="@drawable/ic_qa_fragment_search" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_section">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/msg_swipe_to_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12sp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/messages_recyler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="14sp"
+                    android:layout_marginRight="14sp"
+                    android:layout_marginTop="14sp" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <TextView
+                android:id="@+id/no_record_found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="No Record Found!"
+                android:textColor="#FEFEFE"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

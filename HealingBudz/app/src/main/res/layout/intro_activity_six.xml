@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="4.5"
+            android:background="#93268f"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5sp"
+                android:layout_weight="2"
+                android:gravity="bottom|center_horizontal"
+                android:text="@string/intor_six_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/intro_screen_title_font_size" />
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:layout_marginTop="10sp"
+                android:layout_weight="8"
+                android:src="@drawable/ic_intro_six" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="5.5"
+            android:background="#721d6f">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#721d6f"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="5sp"
+                android:paddingTop="@dimen/intro_screen_heading_margin"
+                android:paddingRight="5sp">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/intor_six_heading"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/intro_screen_heading_font_size" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="18sp"
+                    android:layout_marginTop="@dimen/intro_screen_heading_to_description_margin"
+                    android:layout_marginRight="18sp"
+                    android:gravity="center"
+                    android:text="@string/intor_xis_msg"
+                    android:textColor="#e6e6e6"
+                    android:textSize="@dimen/intro_screen_discription_font_size" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                    android:id="@+id/get_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="52sp"
+                    android:layout_marginLeft="18sp"
+                    android:layout_marginTop="18sp"
+                    android:layout_marginRight="18sp"
+                    android:background="@drawable/get_started_btn"
+                    android:lineSpacingExtra="2dp"
+                    android:text="GET STARTED"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

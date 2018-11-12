@@ -1,0 +1,52 @@
+package com.codingpixel.healingbudz.customeUI.sliderclasses.SliderTypes.glideslider.glideclasses.load.resource.bitmap;
+
+import android.graphics.drawable.BitmapDrawable;
+import android.support.annotation.NonNull;
+
+import com.codingpixel.healingbudz.customeUI.sliderclasses.SliderTypes.glideslider.glideclasses.load.engine.Initializable;
+import com.codingpixel.healingbudz.customeUI.sliderclasses.SliderTypes.glideslider.glideclasses.load.engine.bitmap_recycle.BitmapPool;
+import com.codingpixel.healingbudz.customeUI.sliderclasses.SliderTypes.glideslider.glideclasses.load.resource.drawable.DrawableResource;
+import com.codingpixel.healingbudz.customeUI.sliderclasses.SliderTypes.glideslider.glideclasses.util.Util;
+
+/**
+ * A {@link com.codingpixel.healingbudz.customeUI.sliderclasses.SliderTypes.glideslider.glideclasses.load.engine.Resource} that wraps an
+ * {@link BitmapDrawable}
+ *
+ * <p> This class ensures that every call to {@link #get()}} always returns a new
+ * {@link BitmapDrawable} to avoid rendering issues if used in multiple
+ * views and is also responsible for returning the underlying {@link android.graphics.Bitmap} to the
+ * given {@link BitmapPool} when the resource is
+ * recycled. </p>
+ */
+public class BitmapDrawableResource extends DrawableResource<BitmapDrawable>
+    implements Initializable {
+  private final BitmapPool bitmapPool;
+
+  // Public API.
+  @SuppressWarnings("WeakerAccess")
+  public BitmapDrawableResource(BitmapDrawable drawable, BitmapPool bitmapPool) {
+    super(drawable);
+    this.bitmapPool = bitmapPool;
+  }
+
+  @NonNull
+  @Override
+  public Class<BitmapDrawable> getResourceClass() {
+    return BitmapDrawable.class;
+  }
+
+  @Override
+  public int getSize() {
+    return Util.getBitmapByteSize(drawable.getBitmap());
+  }
+
+  @Override
+  public void recycle() {
+    bitmapPool.put(drawable.getBitmap());
+  }
+
+  @Override
+  public void initialize() {
+    drawable.getBitmap().prepareToDraw();
+  }
+}

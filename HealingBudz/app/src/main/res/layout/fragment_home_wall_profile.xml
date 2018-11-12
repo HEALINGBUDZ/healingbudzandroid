@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_home_wall_main_post_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:id="@+id/feed_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:background="@drawable/full_view_feed_bg"
+            android:gravity="center"
+            android:padding="5sp"
+            android:text="See All The Buzz!"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+        android:id="@+id/not_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Empty The Buzz!"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone" />
+</RelativeLayout>

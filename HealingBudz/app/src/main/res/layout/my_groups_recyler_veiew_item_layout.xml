@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="72sp"
+        android:background="#252525"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="6sp"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="0sp"
+            android:layout_height="60sp"
+            android:layout_weight="1.7">
+
+            <RelativeLayout
+                android:layout_width="46sp"
+                android:layout_height="46sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/group_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="1sp"
+                    android:src="@drawable/ic_groups_icon" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="18sp"
+                android:layout_height="18sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2sp"
+                android:background="@drawable/my_group_badge_notification_bg"
+                android:gravity="center"
+                android:text="22"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="6.3"
+            android:orientation="vertical"
+            android:layout_marginTop="-3sp"
+            android:paddingLeft="6sp">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/group_name"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:lines="1"
+                android:layout_height="wrap_content"
+                android:text="Medical Marijuana fro Dummies"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                        android:id="@+id/group_budz"
+                        android:layout_width="70sp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="4sp"
+                        android:text="8 Budz"
+                        android:textColor="#c5c3c4"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/public_icon"
+                android:layout_width="18sp"
+                android:layout_height="18sp"
+                android:layout_above="@+id/buttons"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2sp"
+                android:layout_marginRight="3sp"
+                android:padding="3sp"
+                android:src="@drawable/ic_private_group" />
+
+            <LinearLayout
+                android:id="@+id/buttons"
+                android:layout_width="70sp"
+                android:layout_height="30sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="right|bottom"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <ImageView
+                    android:id="@+id/group_members"
+                    android:layout_width="0sp"
+                    android:layout_height="30sp"
+                    android:layout_weight="5"
+                    android:padding="6sp"
+                    android:src="@drawable/ic_group_single_men" />
+
+                <ImageView
+                    android:id="@+id/edite_group_btn"
+                    android:layout_width="0sp"
+                    android:layout_height="30sp"
+                    android:layout_weight="5"
+                    android:padding="6sp"
+                    android:src="@drawable/ic_edit_myquestion" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="#aa1c1c1c" />
+</LinearLayout>

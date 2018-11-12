@@ -1,0 +1,2058 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232323"
+    android:paddingLeft="13sp"
+    android:paddingTop="12sp"
+    android:paddingRight="13sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="40sp">
+
+        <!--Main Content-->
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Listing Type"
+            android:textColor="#932a88"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginTop="10sp"
+            android:background="#2f2f2f" />
+
+        <LinearLayout
+            android:id="@+id/dispencry"
+            android:layout_width="match_parent"
+            android:layout_height="54sp"
+            android:gravity="center_vertical"
+            android:weightSum="10">
+
+            <ImageView
+                android:id="@+id/choose_type_image"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.7"
+                android:padding="4sp"
+                android:src="@drawable/ic_dispancry_icon" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/choose_type_name"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:paddingLeft="12sp"
+                android:text="Dispensary"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/dispencry_icon"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:padding="12sp"
+                android:src="@drawable/ic_tick" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#2f2f2f" />
+
+        <LinearLayout
+            android:id="@+id/med_bay"
+            android:layout_width="match_parent"
+            android:layout_height="54sp"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.7"
+                android:padding="4sp"
+                android:src="@drawable/ic_medical_icon" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:paddingLeft="12sp"
+                android:text="Medical"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/med_bay_drop"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:padding="12sp"
+                android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#2f2f2f"
+            android:visibility="visible" />
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ael_duration="500"
+            app:ael_expanded="false"
+            app:ael_interpolator="fastOutLinearIn"
+            app:ael_orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/slider_med_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.7"
+                        android:padding="4sp"
+                        android:src="@drawable/ic_medical_icon"
+                        android:visibility="invisible" />
+
+                    <RelativeLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.3"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_alignParentBottom="true"
+                            android:background="#2f2f2f" />
+
+                        <LinearLayout
+                            android:id="@+id/madical_practitioner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1sp">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="7"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="12sp"
+                                android:text="Medical Practitioner"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/madical_practitioner_img_icon"
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.3"
+                                android:padding="12sp"
+                                android:src="@drawable/ic_tick_uncheck" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.7"
+                        android:padding="4sp"
+                        android:src="@drawable/ic_medical_icon"
+                        android:visibility="invisible" />
+
+                    <RelativeLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.3"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_alignParentBottom="true"
+                            android:background="#2f2f2f" />
+
+                        <LinearLayout
+                            android:id="@+id/holistic_medicine"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1sp">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="7"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="12sp"
+                                android:text="Holistic Medicine"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/holistic_medicine_img_icon"
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.3"
+                                android:padding="12sp"
+                                android:src="@drawable/ic_tick_uncheck" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.7"
+                        android:padding="4sp"
+                        android:src="@drawable/ic_medical_icon"
+                        android:visibility="invisible" />
+
+                    <RelativeLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.3"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_alignParentBottom="true"
+                            android:background="#2f2f2f" />
+
+                        <LinearLayout
+                            android:id="@+id/clinic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1sp">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                                android:id="@+id/healingBudTextView"
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="7"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="12sp"
+                                android:text="Clinic"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/clinic_img_icon"
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.3"
+                                android:padding="12sp"
+                                android:src="@drawable/ic_tick_uncheck" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/cannabites"
+            android:layout_width="match_parent"
+            android:layout_height="54sp"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.7"
+                android:padding="4sp"
+                android:src="@drawable/ic_cannabites_icon" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:paddingLeft="12sp"
+                android:text="Cannabites"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/cannabites_img_icon"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:padding="12sp"
+                android:src="@drawable/ic_tick_uncheck" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#2f2f2f"
+            android:visibility="visible" />
+
+
+        <LinearLayout
+            android:id="@+id/enter_bay"
+            android:layout_width="match_parent"
+            android:layout_height="54sp"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.7"
+                android:padding="4sp"
+                android:src="@drawable/ic_entertainment_icon" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:paddingLeft="12sp"
+                android:text="Entertainment"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/enter_bay_drop"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:padding="12sp"
+                android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#2f2f2f"
+            android:visibility="visible" />
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayoutTwo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ael_duration="500"
+            app:ael_expanded="false"
+            app:ael_interpolator="fastOutLinearIn"
+            app:ael_orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.7"
+                        android:padding="4sp"
+                        android:src="@drawable/ic_entertainment_icon"
+                        android:visibility="invisible" />
+
+                    <RelativeLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.3"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_alignParentBottom="true"
+                            android:background="#2f2f2f" />
+
+                        <LinearLayout
+                            android:id="@+id/lounge"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1sp">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="7"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="12sp"
+                                android:text="Lounge"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/lounge_img_icon"
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.3"
+                                android:padding="12sp"
+                                android:src="@drawable/ic_tick_uncheck" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.7"
+                        android:padding="4sp"
+                        android:src="@drawable/ic_entertainment_icon"
+                        android:visibility="invisible" />
+
+                    <RelativeLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.3"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1sp"
+                            android:layout_alignParentBottom="true"
+                            android:background="#2f2f2f" />
+
+                        <LinearLayout
+                            android:id="@+id/cannbis_club"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1sp">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="7"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="12sp"
+                                android:text="Cannabis Club/Bar"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/cannbis_club_img_icon"
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.3"
+                                android:padding="12sp"
+                                android:src="@drawable/ic_tick_uncheck" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/event"
+            android:layout_width="match_parent"
+            android:layout_height="54sp"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.7"
+                android:padding="4sp"
+                android:src="@drawable/ic_events_icon" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:paddingLeft="12sp"
+                android:text="Events"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/event_img_icon"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:padding="12sp"
+                android:src="@drawable/ic_tick_uncheck" />
+
+        </LinearLayout>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#2f2f2f" />
+
+        <LinearLayout
+            android:id="@+id/other"
+            android:layout_width="match_parent"
+            android:layout_height="54sp"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.7"
+                android:padding="4sp"
+                android:src="@drawable/other_item" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                android:paddingLeft="12sp"
+                android:text="Other"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/other_img_icon"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:padding="12sp"
+                android:src="@drawable/ic_tick_uncheck" />
+
+        </LinearLayout>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#2f2f2f" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27sp"
+            android:text="Add Short Description"
+            android:textColor="#932a88"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="121sp"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/answer_fragment_edittext_bg"
+            android:padding="14sp">
+
+            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                android:id="@+id/descriptions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:gravity="top|left"
+                android:hint="Description..."
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="300"
+                android:textColor="#383838"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginTop="12sp"
+            android:background="#2f2f2f"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/select_payment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Payment Methods Offered"
+                android:textColor="#8c2a81"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_payment_method_1" />
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5sp"
+                    android:src="@drawable/ic_payment_method_2" />
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5sp"
+                    android:src="@drawable/ic_payment_method_3" />
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5sp"
+                    android:src="@drawable/ic_payment_method_4" />
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5sp"
+                    android:src="@drawable/ic_payment_method_5" />
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5sp"
+                    android:src="@drawable/ic_payment_method_6" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/payment_method_selection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginTop="12sp"
+            android:background="#2f2f2f"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/medical_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginTop="17sp"
+                    android:background="#2f2f2f" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:text="Languages"
+                    android:textColor="#932a88"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyler_languages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60sp"
+                    android:layout_marginTop="16sp"
+                    android:background="@drawable/answer_fragment_edittext_bg">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/languages"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4sp"
+                        android:layout_marginBottom="4sp"
+                        android:background="@color/transparent"
+                        android:hint="Select languages"
+                        android:paddingLeft="6sp"
+                        android:paddingRight="6sp"
+                        android:textColor="#797777"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginTop="12sp"
+                    android:background="#2f2f2f" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10sp">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10sp"
+                        android:text="Insurance Accepted"
+                        android:textColor="#932a88"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/switch_layout"
+                        android:layout_width="110sp"
+                        android:layout_height="26sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10sp"
+                        android:background="#616161"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_off"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="-5sp"
+                            android:layout_weight="5"
+                            android:background="@drawable/seeting_toggle_btn_off"
+                            android:clickable="false"
+                            android:textAllCaps="true"
+                            android:textColor="#f8f8f8"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/btn_on"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="-5sp"
+                            android:layout_weight="5"
+                            android:background="@drawable/toggle_btn_public"
+                            android:clickable="false"
+                            android:text="ON"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginTop="12sp"
+                    android:background="#2f2f2f" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:text="Office policies &amp; Information"
+                    android:textColor="#932a88"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60sp"
+                    android:layout_marginTop="16sp"
+                    android:background="@drawable/answer_fragment_edittext_bg">
+
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                        android:id="@+id/office_pollicies"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical|left"
+                        android:hint="Office policies &amp; Information"
+                        android:maxLength="300"
+                        android:paddingLeft="10sp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="#5d5d5d" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginTop="12sp"
+                    android:background="#2f2f2f" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:text="Pre-visit Requirements"
+                    android:textColor="#932a88"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60sp"
+                    android:layout_marginTop="16sp"
+                    android:background="@drawable/answer_fragment_edittext_bg">
+
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditTextRegular
+                        android:id="@+id/previsting_requirments"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical|left"
+                        android:hint="Pre-visit Requirements"
+                        android:maxLength="300"
+                        android:paddingLeft="10sp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="#5d5d5d" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginTop="12sp"
+            android:background="#2f2f2f" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:text="Add Location"
+            android:textColor="#932a88"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginTop="16sp"
+            android:background="@drawable/answer_fragment_edittext_bg">
+
+            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                android:id="@+id/location_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:enabled="true"
+                android:focusable="false"
+                android:gravity="center_vertical|left"
+                android:hint="Add Location"
+                android:maxLength="300"
+                android:paddingLeft="10sp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#5d5d5d" />
+        </LinearLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14sp"
+            android:text="Adjust Pin Position"
+            android:textColor="#932a88"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:layout_marginTop="16sp">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.codingpixel.healingbudz.map.WorkaroundMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".activity.home.HomeActivity" />
+
+            <LinearLayout
+                android:id="@+id/zoom_btns"
+                android:layout_width="28sp"
+                android:layout_height="60sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30sp"
+                android:layout_marginRight="14sp"
+                android:background="@drawable/budz_map_zoom_button_bg"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <ImageView
+                    android:id="@+id/zoom_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:layout_weight="5"
+                    android:padding="2sp"
+                    android:src="@drawable/ic_zoom_plus" />
+
+                <ImageView
+                    android:id="@+id/zoom_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:layout_weight="5"
+                    android:padding="2sp"
+                    android:src="@drawable/ic_zoom_min" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/current_location"
+                android:layout_width="28sp"
+                android:layout_height="30sp"
+                android:layout_below="@+id/zoom_btns"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="12sp"
+                android:layout_marginRight="14sp"
+                android:background="@drawable/budz_map_zoom_button_bg"
+                android:padding="5sp"
+                android:src="@drawable/ic_my_location" />
+
+        </RelativeLayout>
+
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:text="Contact"
+            android:textColor="#932a88"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <include layout="@layout/layout_contacts_related_budz_map" />
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginTop="16sp"
+            android:background="#2f2f2f" />
+        <!--////////////-->
+
+
+        <LinearLayout
+            android:id="@+id/time_opratores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:text="Hours of Operation"
+                android:textColor="#932a88"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:id="@+id/monday"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:text="Mon:"
+                            android:textColor="#c4c4c4"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/mon_tick"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:padding="5sp"
+                            android:src="@drawable/ic_tick" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
+
+                    <LinearLayout
+                        android:id="@+id/mon_open"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7.8"
+                        android:orientation="horizontal"
+                        android:weightSum="7.8">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/monday_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="9:00 AM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:gravity="center">
+
+                            <View
+                                android:layout_width="5sp"
+                                android:layout_height="1sp"
+                                android:background="#a9a9a9" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/monday_end"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="5:00 PM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:id="@+id/mon_close"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="6sp"
+                        android:text="Closed"
+                        android:textColor="#9f9e9e"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:layout_marginTop="11sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:id="@+id/tuesday"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:text="Tue:"
+                            android:textColor="#c4c4c4"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <ImageView
+                            android:id="@+id/tue_tick"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:padding="5sp"
+                            android:src="@drawable/ic_tick" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
+
+                    <LinearLayout
+                        android:id="@+id/tue_open"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7.8"
+                        android:orientation="horizontal"
+                        android:weightSum="7.8">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/tue_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="9:00 AM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:gravity="center">
+
+                            <View
+                                android:layout_width="5sp"
+                                android:layout_height="1sp"
+                                android:background="#a9a9a9" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/tue_end"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="5:00 PM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:id="@+id/tue_close"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="6sp"
+                        android:text="Closed"
+                        android:textColor="#9f9e9e"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:layout_marginTop="11sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:id="@+id/wednesday"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:text="Wed:"
+                            android:textColor="#c4c4c4"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/wed_tick"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:padding="5sp"
+                            android:src="@drawable/ic_tick" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
+
+                    <LinearLayout
+                        android:id="@+id/wed_open"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7.8"
+                        android:orientation="horizontal"
+                        android:weightSum="7.8">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/wed_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="9:00 AM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:gravity="center">
+
+                            <View
+                                android:layout_width="5sp"
+                                android:layout_height="1sp"
+                                android:background="#a9a9a9" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/wed_end"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="5:00 PM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:id="@+id/wed_close"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="6sp"
+                        android:text="Closed"
+                        android:textColor="#9f9e9e"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:layout_marginTop="11sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:id="@+id/thursday"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:text="Thu:"
+                            android:textColor="#c4c4c4"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/thu_tick"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:padding="5sp"
+                            android:src="@drawable/ic_tick" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
+
+                    <LinearLayout
+                        android:id="@+id/thu_open"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7.8"
+                        android:orientation="horizontal"
+                        android:weightSum="7.8">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/thu_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="9:00 AM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:gravity="center">
+
+                            <View
+                                android:layout_width="5sp"
+                                android:layout_height="1sp"
+                                android:background="#a9a9a9" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/thu_end"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="5:00 PM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:id="@+id/thu_close"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="6sp"
+                        android:text="Closed"
+                        android:textColor="#9f9e9e"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:layout_marginTop="11sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:id="@+id/friday"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:text="Fri:"
+                            android:textColor="#c4c4c4"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/fri_tick"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:padding="5sp"
+                            android:src="@drawable/ic_tick" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
+
+                    <LinearLayout
+                        android:id="@+id/fri_open"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7.8"
+                        android:orientation="horizontal"
+                        android:weightSum="7.8">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/fri_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="9:00 AM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:gravity="center">
+
+                            <View
+                                android:layout_width="5sp"
+                                android:layout_height="1sp"
+                                android:background="#a9a9a9" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/fri_end"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="5:00 PM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:id="@+id/fri_close"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="6sp"
+                        android:text="Closed"
+                        android:textColor="#9f9e9e"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:layout_marginTop="11sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:id="@+id/saturday"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:text="Sat:"
+                            android:textColor="#c4c4c4"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/sat_tick"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:padding="5sp"
+                            android:src="@drawable/ic_tick" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
+
+                    <LinearLayout
+                        android:id="@+id/sat_open"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7.8"
+                        android:orientation="horizontal"
+                        android:weightSum="7.8">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/sat_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="9:00 AM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:gravity="center">
+
+                            <View
+                                android:layout_width="5sp"
+                                android:layout_height="1sp"
+                                android:background="#a9a9a9" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/sat_end"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="5:00 PM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:id="@+id/sat_close"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="6sp"
+                        android:text="Closed"
+                        android:textColor="#9f9e9e"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:layout_marginTop="11sp"
+                    android:gravity="center_vertical"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:id="@+id/sunday"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:text="Sun:"
+                            android:textColor="#c4c4c4"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/sun_tick"
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:padding="5sp"
+                            android:src="@drawable/ic_tick" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
+
+                    <LinearLayout
+                        android:id="@+id/sun_open"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7.8"
+                        android:orientation="horizontal"
+                        android:weightSum="7.8">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/sun_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="9:00 AM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.8"
+                            android:gravity="center">
+
+                            <View
+                                android:layout_width="5sp"
+                                android:layout_height="1sp"
+                                android:background="#a9a9a9" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:background="@drawable/doted_border">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                                android:id="@+id/sun_end"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:text="5:00 PM"
+                                android:textColor="#c4c4c4"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:id="@+id/sun_close"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="6sp"
+                        android:text="Closed"
+                        android:textColor="#9f9e9e"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/event_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14sp"
+                android:text="Date / Time"
+                android:textColor="#932a88"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35sp"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.6"
+                    android:background="@drawable/doted_border">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                        android:id="@+id/event_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:text=""
+                        android:textColor="#c4c4c4"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center" />
+
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.6"
+                        android:background="@drawable/doted_border">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                            android:id="@+id/event_start"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:text="9:00 AM"
+                            android:textColor="#c4c4c4"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:gravity="center">
+
+                        <View
+                            android:layout_width="5sp"
+                            android:layout_height="1sp"
+                            android:background="#a9a9a9" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.6"
+                        android:background="@drawable/doted_border">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                            android:id="@+id/event_end"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:text="5:00 PM"
+                            android:textColor="#c4c4c4"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginTop="16sp"
+            android:background="#2f2f2f" />
+
+        <LinearLayout
+            android:id="@+id/other_view_items"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="37sp"
+                android:layout_marginTop="18sp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                    android:id="@+id/upload_comment_image"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.4"
+                    android:background="@drawable/shoot_out_bg"
+                    android:text="Upload"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6.6"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="12sp">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="AN IMAGE"
+                        android:textColor="#e4e4e5"
+                        android:textSize="14sp" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0sp"
+                        android:gravity="center_vertical"
+                        android:text="(Max 1 Image.)"
+                        android:textColor="#e4e4e5"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="14sp"
+                android:layout_marginRight="10sp"
+                android:background="#363636" />
+
+            <LinearLayout
+                android:id="@+id/comment_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="10sp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="10">
+
+                <ImageView
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:padding="12sp"
+                    android:src="@drawable/ic_attatch_ment" />
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7.5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/attachement_img"
+                        android:layout_width="33dp"
+                        android:scaleType="fitXY"
+                        android:layout_height="33dp"
+                        android:src="@drawable/test_img" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                        android:id="@+id/attachment_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10sp"
+                        android:text="image.png"
+                        android:textColor="#e4e4e5"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/attatchment_cross"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:padding="15sp"
+                    android:src="@drawable/ic_cross_icon" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/attatch_img_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="10sp"
+                    android:background="#363636" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+            android:id="@+id/submit_data"
+            android:layout_width="match_parent"
+            android:layout_height="44sp"
+            android:layout_marginTop="16sp"
+            android:background="@drawable/budz_map_submit_button_bg"
+            android:text="ADD LISTING"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+        <!--Cotact Forward-->
+
+    </LinearLayout>
+</ScrollView>

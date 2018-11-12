@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#232323"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110sp"
+        android:layout_marginTop="10sp"
+        android:background="@drawable/doted_border_ligh"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="7"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:id="@+id/share_speacial"
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:layout_marginTop="8sp"
+                    android:src="@drawable/ic_share_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:id="@+id/title_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Summer Special"
+                    android:textColor="#f2f2f2"
+                    android:textSize="20sp" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:id="@+id/detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2sp"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="50% OFF on most 1G &amp; 2G bud "
+                    android:textColor="#e4e4e5"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/edition"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/edit"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginTop="4sp"
+                    android:padding="4sp"
+                    android:src="@drawable/ic_edit_dark_gray"
+                    android:tint="@color/white" />
+
+                <ImageView
+                    android:id="@+id/save"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginTop="4sp"
+                    android:padding="4sp"
+                    android:src="@drawable/ic_delete_icon"
+                    android:tint="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="2"
+            android:gravity="right|center_vertical">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/date_titless"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingRight="4sp"
+                android:text="Expire soon!"
+                android:textColor="#ed1c24"
+                android:textSize="7sp" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/date_expire"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Apr 25, 2017"
+                android:textColor="#e4e4e5"
+                android:textSize="7sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

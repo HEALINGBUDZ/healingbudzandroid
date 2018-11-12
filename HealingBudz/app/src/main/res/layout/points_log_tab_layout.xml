@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingLeft="15sp"
+    android:paddingRight="15sp"
+    android:paddingTop="12sp">
+
+    <LinearLayout
+        android:id="@+id/tab_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="8sp"
+        android:paddingRight="8sp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/main_heading_title"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:gravity="center"
+            android:src="@drawable/reward"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:text="Your Current Reward Points"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+            android:id="@+id/points_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab_text"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="14sp"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:indeterminateTint="#ffffff"
+            android:indeterminateTintMode="src_atop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2sp"
+            android:text="Loading..."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/not_found"
+        android:layout_below="@+id/tab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Record Found!"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_points_log"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/tab_text"
+        android:layout_marginTop="5sp"
+        android:nestedScrollingEnabled="false" />
+</RelativeLayout>
+

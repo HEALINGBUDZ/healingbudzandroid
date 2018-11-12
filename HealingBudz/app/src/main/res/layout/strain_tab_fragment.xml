@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252525"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/sqe_one"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#252222">
+
+            <ImageView
+                android:id="@+id/menu_btn"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:padding="13sp"
+                android:src="@drawable/menu_src" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/q_a_menu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="STRAINS"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/clear_search"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4sp"
+                android:padding="12sp"
+                android:src="@drawable/ic_cross_strain_yellow"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_menu"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_below="@+id/sqe_one"
+            android:background="#f4c42f" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28sp"
+            android:layout_below="@+id/line_menu"
+            android:gravity="center"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/search_button"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/strain_search"
+                android:gravity="center">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="20sp"
+                    android:text="Strain Search"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="18sp"
+                    android:layout_height="18sp"
+                    android:layout_marginLeft="5sp"
+                    android:padding="0sp"
+                    android:src="@drawable/ic_jstrain_search_down_arrow" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/alphabatecally_list"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_below="@id/line_menu"
+            android:layout_marginLeft="12sp"
+            android:layout_marginTop="52sp"
+            android:layout_marginRight="12sp"
+            android:layout_marginBottom="4sp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/list_alpha_imain"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.7"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18sp"
+                    android:layout_height="18sp"
+                    android:padding="2sp"
+                    android:src="@drawable/ic_menu_ic" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:id="@+id/text_alpha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4sp"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="List Alphabetically"
+                    android:textColor="#ceccce"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/list_alpha_filter"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.7"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:padding="2sp"
+                        android:src="@drawable/ic_menu_ic" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4sp"
+                        android:text="Your Matches"
+                        android:textColor="#cccccc"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="28sp"
+                        android:layout_height="18sp"
+                        android:padding="2sp"
+                        android:src="@drawable/ic_save_icon_strain" />
+
+                </LinearLayout>
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Based on your searched criteria"
+                    android:textColor="#cccccc"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="5.3"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="4sp"
+                android:paddingRight="4sp"
+                android:weightSum="9">
+
+                <LinearLayout
+                    android:id="@+id/indica_type"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="12sp"
+                        android:layout_height="12sp"
+                        android:background="@drawable/strain_liseted_alphabetically_border_bg_i"
+                        android:gravity="center"
+                        android:text="I"
+                        android:textColor="#AE59C2"
+                        android:textSize="8sp" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2sp"
+                        android:text="= Indica"
+                        android:textColor="#ceccce"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sativa_type"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="12sp"
+                        android:layout_height="12sp"
+                        android:background="@drawable/strain_liseted_alphabetically_border_bg_s"
+                        android:gravity="center"
+                        android:text="S"
+                        android:textColor="#C24462"
+                        android:textSize="8sp" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2sp"
+                        android:text="= Sativa"
+                        android:textColor="#ceccce"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hybrid_type"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="12sp"
+                        android:layout_height="12sp"
+                        android:background="@drawable/strain_liseted_alphabetically_border_bg_h"
+                        android:gravity="center"
+                        android:text="H"
+                        android:textColor="#7CC244"
+                        android:textSize="8sp" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2sp"
+                        android:text="= Hybrid"
+                        android:textColor="#ceccce"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/match_relevance"
+            android:layout_width="match_parent"
+            android:layout_height="34sp"
+            android:layout_below="@id/alphabatecally_list"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="12sp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="10">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="58sp"
+                android:layout_height="match_parent"
+                android:background="#f4c42f"
+                android:gravity="center"
+                android:text="Match\nRelevance"
+                android:textColor="#333333"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/second_line"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_below="@+id/match_relevance"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="12sp"
+            android:background="#545555" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/second_line"
+            android:layout_marginLeft="12sp"
+            android:layout_marginRight="12sp"
+            android:orientation="vertical">
+
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_to_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/refresh_layout_progress">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/strain_recyler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:id="@+id/no_record_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="5sp"
+            android:text="No Record Found!"
+            android:textColor="#999999"
+            android:visibility="gone" />
+        <!--Search dialogue-->
+        <LinearLayout
+            android:id="@+id/search_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_menu"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/searc_main_view"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="8.6"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="1sp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/strain_search"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="13sp">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Search by:"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="33sp"
+                        android:layout_marginLeft="16sp"
+                        android:layout_marginTop="15sp"
+                        android:layout_marginRight="16sp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2sp"
+                            android:layout_marginBottom="2sp"
+                            android:background="@drawable/strain_search_edittext_search_bg">
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/search_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/transparent"
+                                android:gravity="center_vertical"
+                                android:hint="Name or Keyword"
+                                android:imeOptions="actionDone"
+                                android:inputType="textAutoComplete"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:paddingLeft="8sp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:id="@+id/search_field_button"
+                                android:layout_width="44sp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:padding="6sp"
+                                android:src="@drawable/ic_strain_search_icon" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                        android:id="@+id/search_field_butttton"
+                        android:layout_width="match_parent"
+                        android:layout_height="38sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginTop="16sp"
+                        android:layout_marginRight="15sp"
+                        android:background="@drawable/strain_help_me_find_matches_btn_bg"
+                        android:text="Search"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24sp"
+                        android:layout_marginTop="15sp"
+                        android:background="#e8b331"
+                        android:gravity="center">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="or"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16sp"
+                        android:text="Strain Matching"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginRight="15sp"
+                        android:text="Use our advanced filtering to find strain matches based on medical use, disease prevention, sensation and/or flavor profile."
+                        android:textColor="#4d4d4d"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginTop="19sp"
+                        android:layout_marginRight="15sp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <RelativeLayout
+                            android:layout_width="0sp"
+                            android:layout_height="30sp"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="18sp"
+                                android:layout_height="18sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/white_circle" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="26sp"
+                                android:layout_weight="1.3"
+                                android:src="@drawable/ic_info_icon" />
+                        </RelativeLayout>
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12sp"
+                            android:layout_weight="9"
+                            android:text="Match suggestions are calculated by feedback and experience shared by the Healing Budz community."
+                            android:textColor="#4d4d4d"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                        android:id="@+id/help_me_find_matches"
+                        android:layout_width="match_parent"
+                        android:layout_height="38sp"
+                        android:layout_marginLeft="15sp"
+                        android:layout_marginTop="16sp"
+                        android:layout_marginRight="15sp"
+                        android:background="@drawable/strain_help_me_find_matches_btn_bg"
+                        android:text="Help Me Find Matches"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/close_Search_dialog"
+                        android:layout_width="50sp"
+                        android:layout_height="30sp"
+                        android:layout_marginTop="12sp"
+                        android:padding="4sp"
+                        android:src="@drawable/ic_search_dialog_up_arrow" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/indicator_close_layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/q_a_list"
+                    android:layout_centerHorizontal="true">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.2"
+                        android:background="@color/transparent" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_filter"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8.5"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="1sp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/strain_search"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="14sp">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Filter by:"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:text="Enter a search term for one or all."
+                        android:textColor="#4d4d4d"
+                        android:textSize="10sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18sp"
+                            android:text="Medical Use:"
+                            android:textAllCaps="false"
+                            android:textColor="#4d4d4d"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="33sp"
+                            android:layout_marginLeft="41sp"
+                            android:layout_marginTop="7sp"
+                            android:layout_marginRight="41sp">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/ssearch_medical_use"
+                                android:layout_width="match_parent"
+                                android:layout_height="33sp"
+                                android:background="@drawable/strain_search_edittext_search_bg"
+                                android:gravity="center"
+                                android:hint="Begin Typing search Term "
+                                android:imeOptions="actionNext"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/ssearch_disease"
+                                android:paddingLeft="8sp"
+                                android:singleLine="true"
+                                android:textColor="#4d4d4d"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/cross_medical"
+                                android:layout_width="33sp"
+                                android:layout_height="33sp"
+                                android:layout_alignParentRight="true"
+                                android:padding="8sp"
+                                android:src="@drawable/ic_cross_black_strain" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12sp"
+                            android:text="Disease Prevention:"
+                            android:textAllCaps="false"
+                            android:textColor="#4d4d4d"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="33sp"
+                            android:layout_marginLeft="41sp"
+                            android:layout_marginTop="7sp"
+                            android:layout_marginRight="41sp">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/ssearch_disease"
+                                android:layout_width="match_parent"
+                                android:layout_height="33sp"
+                                android:background="@drawable/strain_search_edittext_search_bg"
+                                android:gravity="center"
+                                android:hint="Begin Typing search Term "
+                                android:imeOptions="actionNext"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/search_modes"
+                                android:paddingLeft="8sp"
+                                android:singleLine="true"
+                                android:textColor="#4d4d4d"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/cross_disease"
+                                android:layout_width="33sp"
+                                android:layout_height="33sp"
+                                android:layout_alignParentRight="true"
+                                android:padding="8sp"
+                                android:src="@drawable/ic_cross_black_strain" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12sp"
+                            android:text="Mood and Sensation:"
+                            android:textAllCaps="false"
+                            android:textColor="#4d4d4d"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="33sp"
+                            android:layout_marginLeft="41sp"
+                            android:layout_marginTop="7sp"
+                            android:layout_marginRight="41sp">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/search_modes"
+                                android:layout_width="match_parent"
+                                android:layout_height="33sp"
+                                android:background="@drawable/strain_search_edittext_search_bg"
+                                android:gravity="center"
+                                android:hint="Begin Typing search Term "
+                                android:imeOptions="actionNext"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/search_flavour"
+                                android:paddingLeft="8sp"
+                                android:singleLine="true"
+                                android:textColor="#4d4d4d"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/cross_mode"
+                                android:layout_width="33sp"
+                                android:layout_height="33sp"
+                                android:layout_alignParentRight="true"
+                                android:padding="8sp"
+                                android:src="@drawable/ic_cross_black_strain" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12sp"
+                            android:text="Flavor Profile:"
+                            android:textAllCaps="false"
+                            android:textColor="#4d4d4d"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="33sp"
+                            android:layout_marginLeft="41sp"
+                            android:layout_marginTop="7sp"
+                            android:layout_marginRight="41sp">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/search_flavour"
+                                android:layout_width="match_parent"
+                                android:layout_height="33sp"
+                                android:background="@drawable/strain_search_edittext_search_bg"
+                                android:gravity="center"
+                                android:hint="Begin Typing search Term "
+                                android:imeOptions="actionDone"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:nextFocusForward="@+id/search_flavour"
+                                android:paddingLeft="8sp"
+                                android:singleLine="true"
+                                android:textColor="#4d4d4d"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/cross_flavour"
+                                android:layout_width="33sp"
+                                android:layout_height="33sp"
+                                android:layout_alignParentRight="true"
+                                android:padding="8sp"
+                                android:src="@drawable/ic_cross_black_strain" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                        android:id="@+id/search_matches"
+                        android:layout_width="match_parent"
+                        android:layout_height="38sp"
+                        android:layout_marginLeft="41sp"
+                        android:layout_marginTop="23sp"
+                        android:layout_marginRight="41sp"
+                        android:background="@drawable/strain_help_me_find_matches_btn_bg"
+                        android:text="Show Matches"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/clocse_search"
+                        android:layout_width="50sp"
+                        android:layout_height="30sp"
+                        android:layout_marginTop="12sp"
+                        android:padding="4sp"
+                        android:src="@drawable/ic_search_dialog_up_arrow" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/indicator_close_layout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/q_a_list"
+                    android:layout_centerHorizontal="true">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.2"
+                        android:background="@color/transparent" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clear_search_abc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sqe_one"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25sp"
+            android:gravity="center_horizontal"
+            android:padding="5sp"
+            android:visibility="gone">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Clear Filter Search"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/cross_ic"
+                android:layout_width="12sp"
+                android:layout_height="12sp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2sp"
+                android:layout_marginTop="3sp"
+                android:gravity="center"
+                android:src="@drawable/ic_cross_black_strain" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

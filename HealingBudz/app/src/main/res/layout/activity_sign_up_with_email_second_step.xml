@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg_img"
+    android:fitsSystemWindows="true"
+    tools:context="com.codingpixel.healingbudz.activity.Registration.LoginEntrance">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="52sp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16sp">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10sp"
+                android:text="Profile Details"
+                android:textColor="@color/white"
+                android:textSize="34sp" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:gravity="center"
+                android:text="Hey Bud, thanks for joining!\n What should we call you?"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="#a4a4a3"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="25sp"
+                android:layout_marginRight="30sp"
+                android:orientation="horizontal">
+
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                    android:id="@+id/nick_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    android:digits="qwertyuiopasdfghjklzxcvbnm 1234567890 QWERTYUIOPASDFGHJKLZXCVBNM"
+                    android:gravity="center"
+                    android:hint="Enter a nickname"
+                    android:inputType="textPersonName|textCapWords"
+                    android:lines="1"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textColor="#fafafa"
+                    android:textColorHint="#a4a4a3"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#60999996" />
+            </RelativeLayout>
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40sp"
+                android:text="Where are you located?"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="#a4a4a3"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="170sp"
+                android:layout_height="50sp"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="30sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                    android:id="@+id/zip_code"
+                    android:layout_width="170sp"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    android:gravity="center"
+                    android:hint="Enter Zip code"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:textColor="#fafafa"
+                    android:textColorHint="#a4a4a3"
+                    android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1sp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#60999996" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/next_step"
+                android:layout_width="75sp"
+                android:layout_height="75sp"
+                android:layout_marginTop="35sp"
+                android:padding="6sp"
+                android:src="@drawable/ic_login_next_btn" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="52sp"
+            android:layout_height="52sp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5sp"
+            android:padding="2sp"
+            android:src="@drawable/ic_back_icon" />
+    </RelativeLayout>
+</ScrollView>

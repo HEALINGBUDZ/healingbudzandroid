@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8sp"
+        android:id="@+id/remaining_time"
+        android:paddingBottom="8sp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6sp"
+            android:layout_marginBottom="2sp"
+            android:orientation="vertical">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/time_ago_text"
+                android:textSize="11sp"
+                android:text="Monday 3:30pm"
+                android:textColor="#c5c3c4"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5sp"
+        android:layout_marginBottom="6sp"
+        android:id="@+id/msgs_layout"
+        android:paddingBottom="5sp"
+        android:background="@drawable/groups_msgs_bg"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6sp"
+            android:paddingLeft="6sp"
+            android:paddingRight="6sp"
+            android:layout_marginBottom="2sp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <com.codingpixel.healingbudz.customeUI.CircularImageView
+                android:layout_width="0sp"
+                android:layout_height="34sp"
+                android:layout_weight="1"
+                android:id="@+id/profile_image"
+                android:src="@drawable/ic_user_profile"/>
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10sp"
+                android:layout_weight="7.5">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Glitter Storm"
+                    android:textStyle="bold"
+                    android:textSize="11sp"
+                    android:id="@+id/member_name"
+                    android:textColor="#caccca"/>
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hey every body, what’s up? Happy Monday!"
+                    android:textSize="12sp"
+                    android:id="@+id/msg_text"
+                    android:textColor="#c4c4c4"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6sp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="180sp"
+                        android:id="@+id/msg_img"
+                        android:visibility="gone"/>
+                    <ImageView
+                        android:layout_width="60sp"
+                        android:layout_height="60sp"
+                        android:id="@+id/video_icon"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_play_attachment"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"/>
+                    <ProgressBar
+                        android:id="@+id/loading_spinner"
+                        android:layout_width="48sp"
+                        android:layout_height="48sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="#ffffff"
+                        android:indeterminateTintMode="src_atop"
+                        android:visibility="gone" />
+                    <RelativeLayout
+                        android:id="@+id/uploading_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="180sp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#94000000" />
+                        <ProgressBar
+                            android:id="@+id/uploading_progress_bar"
+                            android:layout_width="48sp"
+                            android:layout_height="48sp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:indeterminateTintMode="src_atop"
+                            android:indeterminateTint="#ffffff"
+                            android:layout_gravity="center" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8sp"
+                android:gravity="center"
+                android:layout_weight="1.5">
+                <ImageView
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:id="@+id/like_msg"
+                    android:src="@drawable/ic_favorite_border_white" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    android:textSize="11sp"
+                    android:id="@+id/like_msg_count"
+                    android:layout_marginLeft="1sp"
+                    android:gravity="left|bottom"
+                    android:textColor="#f79121"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8sp"
+        android:id="@+id/joined_membder_layout"
+        android:paddingBottom="8sp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6sp"
+            android:layout_marginBottom="2sp"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#954e4644"
+                android:layout_marginRight="4sp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/joind_member_text"/>
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/joind_member_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Glitter Storm has joined the group."
+                android:textColor="#f89221"
+                android:textSize="11sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#954e4644"
+                android:layout_marginLeft="4sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/joind_member_text"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

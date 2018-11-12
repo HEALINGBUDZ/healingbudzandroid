@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/remaining_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8sp"
+        android:paddingTop="8sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2sp"
+            android:layout_marginTop="6sp"
+            android:orientation="vertical">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/time_ago_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Monday 3:30pm"
+                android:textColor="#696969"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/sender_msgs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6sp"
+        android:layout_marginRight="60sp">
+
+        <ImageView
+            android:id="@+id/indi_left"
+            android:layout_width="8sp"
+            android:layout_height="4sp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/chat_right_indicator" />
+
+        <LinearLayout
+            android:id="@+id/sender_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/indi_left"
+            android:background="@drawable/messaging_msgs_bg_left"
+            android:orientation="vertical"
+            android:padding="10sp">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/sender_msg_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hey every body, what’s up? Happy Monday!"
+                android:textColor="#7bc044"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6sp">
+
+                <ImageView
+                    android:id="@+id/sender_msg_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/sender_video_icon"
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_play_attachment"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/loading_spinner"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="#ffffff"
+                    android:indeterminateTintMode="src_atop"
+                    android:visibility="gone" />
+
+                <com.codingpixel.healingbudz.customeUI.Preview
+                    android:id="@+id/sender_scraps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6sp"
+                    android:visibility="gone">
+
+                </com.codingpixel.healingbudz.customeUI.Preview>
+            </RelativeLayout>
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/sender_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/sender_ll"
+                android:layout_marginTop="5sp"
+                android:gravity="center"
+                android:text="SenderName"
+                android:textColor="#808080"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/reciever_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="6sp"
+        android:layout_marginLeft="60sp">
+
+        <ImageView
+            android:id="@+id/ind_right"
+            android:layout_width="8sp"
+            android:layout_height="4sp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/chat_left_indicator" />
+
+        <LinearLayout
+            android:id="@+id/receiver_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ind_right"
+            android:background="@drawable/messaging_msgs_bg"
+            android:orientation="vertical"
+            android:padding="10sp">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/receiver_msg_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hey every body, what’s up? Happy Monday!"
+                android:textColor="#a3a3a3"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6sp">
+
+                <ImageView
+                    android:id="@+id/receiver_msg_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/receiver_video_icon"
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_play_attachment"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/loading_spinner_rcvr"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="#ffffff"
+                    android:indeterminateTintMode="src_atop"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/uploading_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="180sp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#94000000" />
+
+                    <ProgressBar
+                        android:id="@+id/uploading_progress_bar"
+                        android:layout_width="48sp"
+                        android:layout_height="48sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="#ffffff"
+                        android:indeterminateTintMode="src_atop" />
+                </RelativeLayout>
+
+                <com.codingpixel.healingbudz.customeUI.Preview
+                    android:id="@+id/receiver_scraps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6sp"
+                    android:visibility="gone">
+
+                </com.codingpixel.healingbudz.customeUI.Preview>
+            </RelativeLayout>
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/receiver_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/receiver_ll"
+                android:layout_gravity="end"
+                android:layout_marginTop="5sp"
+                android:gravity="center"
+                android:text="ReceiverName"
+                android:textColor="#808080"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

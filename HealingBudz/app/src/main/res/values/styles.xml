@@ -1,0 +1,210 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#cececc</item>
+        <item name="colorPrimaryDark">#cececc</item>
+        <item name="colorAccent">#cececc</item>
+    </style>
+
+    <style name="ChangeAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#252525</item>
+        <item name="colorPrimaryDark">#252525</item>
+        <item name="colorAccent">#252525</item>
+    </style>
+
+    <style name="ChangeAppThemeBudz" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#0a0a0a</item>
+        <item name="colorPrimaryDark">#0a0a0a</item>
+        <item name="colorAccent">#0a0a0a</item>
+    </style>
+
+    <integer name="simpletooltip_animation_duration">800</integer>
+    <integer name="simpletooltip_overlay_alpha">120</integer>
+
+    <style name="simpletooltip_default" parent="@android:style/TextAppearance.Medium"></style>
+
+    <style name="GroupSetting" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/group_setting</item>
+        <item name="colorPrimaryDark">@color/group_setting</item>
+        <item name="colorAccent">@color/group_setting</item>
+    </style>
+
+    <style name="HomeActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Home</item>
+        <item name="colorPrimaryDark">@color/Home</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+    <style name="Login" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Home</item>
+        <item name="colorPrimaryDark">@color/Home</item>
+        <item name="colorAccent">@color/white</item>
+        <!--<item name="android:fontFamily">default</item>-->
+    </style>
+
+
+    <style name="BlackStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Home</item>
+        <item name="colorPrimaryDark">@color/Home</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+
+    <style name="rating_barStyle" parent="Theme.AppCompat">
+        <item name="android:progressDrawable">@drawable/star_rating_bar_full</item>
+        <item name="android:minHeight">34dip</item>
+        <item name="android:maxHeight">34dip</item>
+    </style>
+
+    <style name="mySpinnerItemStyle">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+
+    </style>
+
+    <style name="tallerBarStyle" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@android:drawable/progress_horizontal</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_horizontal</item>
+        <item name="android:minHeight">30dip</item>
+        <item name="android:maxHeight">30dip</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#e070e0</item>
+        <item name="colorControlActivated">#e070e0</item>
+    </style>
+
+    <style name="DatePickerTheme" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+
+        <item name="colorAccent">#e070e0</item>
+        <item name="colorControlActivated">#e070e0</item>
+        <item name="colorControlHighlight">#e070e0</item>
+    </style>
+
+    <style name="DatePickerThemeE" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+
+        <item name="colorAccent">@color/Home</item>
+        <item name="colorControlActivated">@color/Home</item>
+        <item name="colorControlHighlight">@color/Home</item>
+    </style>
+
+
+    <!--ALRET STYLES -->
+    <style name="alert_dialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/float_transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+
+    <style name="dialog_blue_button" parent="android:Widget.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">31dp</item>
+        <item name="android:background">@drawable/alert_btn_bg</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">21dp</item>
+        <item name="android:paddingRight">21dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="dialog_blue_button_close" parent="android:Widget.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">31dp</item>
+        <item name="android:background">@drawable/alert_btn_bg</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">21dp</item>
+        <item name="android:paddingRight">21dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <!--SLIDER-->
+
+    <style name="AndroidImageSlider_Corner_Oval_Orange">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/indicator_corner_bg</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="shape">oval</item>
+        <item name="padding_left">3dp</item>
+        <item name="padding_right">3dp</item>
+        <item name="padding_top">4dp</item>
+        <item name="padding_bottom">4dp</item>
+
+        <item name="selected_color">#f60</item>
+        <item name="unselected_color">#ffffff</item>
+        <item name="selected_width">6dp</item>
+        <item name="selected_height">6dp</item>
+        <item name="unselected_width">6dp</item>
+        <item name="unselected_height">6dp</item>
+    </style>
+
+    <style name="AndroidImageSlider_Attractive_Rect_Blue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="shape">rect</item>
+        <item name="padding_left">3dp</item>
+        <item name="padding_right">3dp</item>
+        <item name="padding_top">4dp</item>
+        <item name="padding_bottom">4dp</item>
+
+        <item name="selected_color">#30CCE5</item>
+        <item name="unselected_color">#333333</item>
+        <item name="selected_width">13dp</item>
+        <item name="selected_height">4dp</item>
+        <item name="unselected_width">13dp</item>
+        <item name="unselected_height">4dp</item>
+    </style>
+
+    <style name="AndroidImageSlider_Magnifier_Oval_Black">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="shape">oval</item>
+        <item name="padding_left">3dp</item>
+        <item name="padding_right">3dp</item>
+        <item name="padding_top">4dp</item>
+        <item name="padding_bottom">4dp</item>
+
+        <item name="selected_color">#333333</item>
+        <item name="unselected_color">#33000000</item>
+        <item name="selected_width">8dp</item>
+        <item name="selected_height">8dp</item>
+        <item name="unselected_width">6dp</item>
+        <item name="unselected_height">6dp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

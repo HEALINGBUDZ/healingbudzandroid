@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="simpletooltip_animation_padding">4dp</dimen>
+    <dimen name="simpletooltip_arrow_height">15dp</dimen>
+    <dimen name="simpletooltip_arrow_width">30dp</dimen>
+    <dimen name="simpletooltip_margin">10dp</dimen>
+    <dimen name="simpletooltip_overlay_offset">10dp</dimen>
+    <dimen name="simpletooltip_padding">8dp</dimen>
+
+    <dimen name="LoadingDots_dots_size_default">12dp</dimen>
+    <dimen name="LoadingDots_dots_space_default">2dp</dimen>
+    <dimen name="LoadingDots_jump_height_default">12dp</dimen>
+
+
+    <dimen name="intro_screen_title_font_size">21sp</dimen>
+    <dimen name="intro_screen_heading_font_size">21sp</dimen>
+    <dimen name="intro_screen_discription_font_size">16sp</dimen>
+    <dimen name="intro_screen_heading_margin">20sp</dimen>
+    <dimen name="intro_screen_heading_to_description_margin">15sp</dimen>
+
+
+    <!--COLOR ALERT-->
+    <dimen name="alert_width">290dp</dimen>
+    <dimen name="common_circle_width">3dp</dimen>
+    <dimen name="progress_circle_radius">34dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="font_size_heading">25sp</dimen>
+    <dimen name="font_size_subheading">18sp</dimen>
+    <dimen name="font_size_normal">14sp</dimen>
+
+    <dimen name="recyclerview_margin">10dp</dimen>
+    <dimen name="layout_margin">10dp</dimen>
+    <dimen name="searchview_margin">5dp</dimen>
+    <dimen name="text_button_size">14sp</dimen>
+    <dimen name="textview_margin">10dp</dimen>
+    <dimen name="line_margin">40dp</dimen>
+
+</resources>

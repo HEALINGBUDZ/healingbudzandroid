@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dialog_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="27sp"
+            android:layout_marginRight="27sp"
+            android:background="@color/transparent">
+
+            <RelativeLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8sp"
+                android:layout_marginRight="8sp"
+                android:layout_marginTop="38sp"
+                android:orientation="vertical"
+                android:paddingBottom="18sp">
+
+                <LinearLayout
+                    android:id="@+id/first_dialog_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shoot_out_dialog_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="10sp"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="16sp"
+                    android:paddingTop="18sp">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Show activity for keyword"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="#929292" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:id="@+id/keyword_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cannabis"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:textColor="#7fc142" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="in: "
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="#929292" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/first_dialog_layout"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/floower_dialog_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="0sp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                        android:id="@+id/follow_keyword"
+                        android:layout_width="match_parent"
+                        android:layout_height="48sp"
+                        android:layout_below="@+id/recyler_view"
+                        android:background="@drawable/follow_keyword_btn"
+                        android:paddingBottom="6sp"
+                        android:text="Follow This Keyword"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/cross_btn"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30sp"
+                android:paddingBottom="5sp"
+                android:paddingLeft="5sp"
+                android:src="@drawable/ic_feeling_dialog_cross_btn" />
+
+            <ImageView
+                android:layout_width="68sp"
+                android:layout_height="68sp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/keyword_item_icon_bg"
+                android:padding="15sp"
+                android:src="@drawable/ic_public_icon_journal" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

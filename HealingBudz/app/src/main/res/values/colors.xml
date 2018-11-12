@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#878cac</color>
+    <color name="Home">#1c1919</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000</color>
+    <color name="blackis">#c2000000</color>
+    <color name="intro_color_one_header">#5c5c5c</color>
+    <color name="intro_color_one_header_title_color">#d9d9d9</color>
+    <color name="transparent">#00000000</color>
+    <color name="tab_indicator_color">#3a3a39</color>
+
+    <color name="onesignal_bgimage_notif_title_color">#FFFFFF</color>
+    <color name="onesignal_bgimage_notif_body_color">#FFFFFF</color>
+    <!--<color name="onesignal_bgimage_notif_body_color">#222222</color>-->
+    <color name="simpletooltip_arrow">@color/colorAccent</color>
+    <color name="simpletooltip_background">@color/colorAccent</color>
+    <color name="simpletooltip_text">@android:color/primary_text_light</color>
+
+    <color name="intro_one_bg">#3a3a3a</color>
+    <color name="intro_one_bg_dark">#282828</color>
+    <color name="intro_two_bg">#0371ad</color>
+    <color name="intro_two_bg_dark">#024f79</color>
+
+    <color name="intro_three_bg">#ec8105</color>
+    <color name="intro_three_bg_dark">#a55a03</color>
+
+    <color name="intro_four_bg">#579129</color>
+    <color name="intro_four_bg_dark">#3d651d</color>
+
+    <color name="intro_five_bg">#e4b000</color>
+    <color name="intro_five_bg_dark">#9f7b00</color>
+
+
+    <color name="intro_six_bg">#721d6f</color>
+    <color name="intro_six_bg_dark">#50144d</color>
+    <color name="group_setting">#949393</color>
+
+
+    <color name="charcol_black">#2E2E2E</color>
+    <color name="light_grey">#8D8D8D</color>
+    <color name="green">#7cc244</color>
+    <color name="brown_question">#F0BA25</color>
+    <color name="i">#AE59C2</color>
+    <color name="h">#7CC244</color>
+    <color name="s">#C24462</color>
+
+    <!--COLOR ALERT-->
+    <color name="float_transparent">#00000000</color>
+    <color name="success_stroke_color">#A5DC86</color>
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+    <color name="text_color">#575757</color>
+    <color name="material_blue_grey_80">#ff37474f</color>
+    <color name="material_blue_grey_90">#ff263238</color>
+    <color name="material_blue_grey_95">#ff21272b</color>
+    <color name="material_deep_teal_20">#ff80cbc4</color>
+    <color name="material_deep_teal_50">#ff009688</color>
+    <color name="black_p50">#7f000000</color>
+    <color name="color_link">#e773e7</color>
+
+    <!--Branch Muzammil Android Color Resources-->
+    <color name="feed_toolbar_color">#252222</color>
+    <color name="mention_color">#7CC245</color>
+    <color name="hash_tag_color">#7CC245</color>
+    <color name="web_link_color">#7CC245</color>
+    <color name="email_color">#7CC245</color>
+    <color name="new_post_dropdown_text_color">#c6c4c5</color>
+    <color name="feeds_liked_blue_color">#7CC245</color>
+    <color name="wall_repost">#7CC245</color>
+    <color name="feeds_like_gray_color">#c6c4c5</color>
+    <color name="post_description_links_color">#7CC245</color>
+    <color name="default_clr">#c6c4c5</color>
+    <color name="COLOR_YOUR_COLOR">#7CC245</color>
+    <color name="url_color">#c6c4c5</color>
+    <color name="colorNew">#f4c42f</color>
+    <!--Branch Muzammil Android Color Resources-->
+</resources>

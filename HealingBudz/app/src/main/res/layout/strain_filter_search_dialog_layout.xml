@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dialog_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24sp"
+            android:layout_marginRight="24sp"
+            android:background="@color/transparent">
+
+            <RelativeLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:orientation="vertical"
+                android:paddingBottom="18sp">
+
+                <LinearLayout
+                    android:id="@+id/first_dialog_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_alignEnd="@+id/relativeLayout"
+                    android:layout_alignRight="@+id/relativeLayout"
+                    android:layout_alignTop="@+id/relativeLayout"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shoot_out_dialog_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="16sp"
+                    tools:ignore="NotSibling">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Save Search"
+                        android:textAllCaps="true"
+                        android:textColor="#f4c42f"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/first_dialog_layout"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/strain_filter_dialog_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="19sp"
+                    android:paddingRight="19sp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11sp"
+                        android:gravity="center_vertical">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Name Your Search"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="15"
+                            app:counterOverflowTextAppearance="@color/black"
+                            app:counterTextAppearance="@color/black"
+                            app:hintEnabled="true">
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/et_save_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textCapWords"
+                                android:imeOptions="actionDone"
+                                android:maxLength="15"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="#ceccce" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/save_search"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="4sp"
+                            android:padding="5sp"
+                            android:src="@drawable/ic_save_icon_filter_dialog" />
+
+                    </RelativeLayout>
+
+                    <!--<View-->
+                        <!---->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1sp"-->
+                        <!--android:background="#545555" />-->
+
+
+                    <LinearLayout
+                        android:layout_marginBottom="5sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="24sp"
+                            android:layout_height="24sp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="15sp"
+                                android:layout_height="15sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:background="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/strain_description"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_info_icon" />
+                        </RelativeLayout>
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6sp"
+                            android:text="Searches are saved in the app  menu under My Saves"
+                            android:textColor="#4d4d4d"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/cross_btn"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignEnd="@+id/relativeLayout"
+            android:layout_alignRight="@+id/relativeLayout"
+            android:layout_alignTop="@+id/relativeLayout"
+            android:paddingBottom="10sp"
+            android:paddingLeft="10sp"
+            android:src="@drawable/ic_cross_strain_yellow" />
+    </RelativeLayout>
+</LinearLayout>

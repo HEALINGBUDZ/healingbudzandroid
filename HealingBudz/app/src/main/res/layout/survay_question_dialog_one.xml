@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dialog_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24sp"
+            android:layout_marginRight="24sp"
+            android:background="@android:color/transparent">
+
+            <RelativeLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:orientation="vertical"
+                android:paddingBottom="18sp">
+
+                <LinearLayout
+                    android:id="@+id/main_working_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:id="@+id/top_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shoot_out_dialog_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="12sp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingTop="15sp"
+                            android:paddingBottom="15sp"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                                android:id="@+id/first_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:text="Take our Strain Survey and receive "
+                                android:textColor="@color/light_grey"
+                                android:textSize="14sp" />
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                                android:id="@+id/second_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="6sp"
+                                android:text="50 pts"
+                                android:textColor="@color/green"
+                                android:textSize="22sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bottom_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/strain_filter_dialog_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="14sp">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                            android:id="@+id/start_survey"
+                            android:layout_width="match_parent"
+                            android:layout_height="40sp"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginRight="14dp"
+                            android:background="@drawable/strain_help_me_find_matches_btn_bg"
+                            android:text="start survey"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/cross_button"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignEnd="@+id/relativeLayout"
+            android:layout_alignRight="@+id/relativeLayout"
+            android:layout_alignTop="@+id/relativeLayout"
+            android:paddingBottom="10sp"
+            android:paddingLeft="10sp"
+            android:src="@drawable/ic_cross_strain_yellow" />
+    </RelativeLayout>
+
+</LinearLayout>

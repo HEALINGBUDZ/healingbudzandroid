@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dialog_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="27sp"
+            android:layout_marginRight="27sp"
+            android:background="@color/transparent">
+
+            <RelativeLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:orientation="vertical"
+                android:paddingBottom="18sp">
+
+                <LinearLayout
+                    android:id="@+id/first_dialog_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shoot_out_dialog_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="20sp"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="16sp"
+                    android:paddingTop="18sp">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:id="@+id/following_title"
+                        android:layout_width="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content"
+                        android:text="Experience Info"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+                <!--#929292-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/first_dialog_layout"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/floower_dialog_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="6sp"
+                    android:paddingTop="0sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="QUESTION 1/2"
+                            android:textColor="#929292"
+                            android:textSize="12sp" />
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewItalic
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3sp"
+                            android:gravity="center"
+                            android:text="Which conditions or ailments have you \n treated with cannabis?"
+                            android:textColor="#7dc241"
+                            android:textSize="12sp" />
+
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3sp"
+                            android:gravity="center"
+                            android:text="Anxiety \n Canker Sores \n Muscle Spasms \n Insomnia \n Skin Rash"
+                            android:textColor="#2e2e2e"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginTop="5sp"
+                        android:background="#cda1a1a1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3sp"
+                        android:layout_marginBottom="8sp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="QUESTION 2/2"
+                            android:textColor="#929292"
+                            android:textSize="12sp" />
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewItalic
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3sp"
+                            android:gravity="center"
+                            android:text="What marijuana strains do you have experience with?"
+                            android:textColor="#7dc241"
+                            android:textSize="12sp" />
+
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3sp"
+                            android:gravity="center"
+                            android:text="OG kush \n Capri Sunset \n Girl Scout Cookies \n Blueberry Dream \n Hazyhash"
+                            android:textColor="#2e2e2e"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/cross_btn"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="7sp"
+                android:paddingLeft="7sp"
+                android:src="@drawable/ic_feeling_dialog_cross_btn" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

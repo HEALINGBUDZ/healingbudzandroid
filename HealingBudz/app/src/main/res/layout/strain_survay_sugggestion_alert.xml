@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+        android:id="@+id/text_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="#F0BA25"
+        android:gravity="center"
+        android:padding="4sp"
+        android:text="Submitted \n for approval"
+        android:textColor="#3c3c3c"
+        android:textSize="7sp" />
+
+    <ImageView
+        android:layout_width="4sp"
+        android:layout_height="13sp"
+        android:layout_centerVertical="true"
+
+        android:layout_marginLeft="-1sp"
+        android:layout_toRightOf="@+id/text_alert"
+        android:src="@drawable/strain_survay_indicator" />
+</RelativeLayout>

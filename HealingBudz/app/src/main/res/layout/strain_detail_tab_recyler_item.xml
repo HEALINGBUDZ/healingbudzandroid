@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#252525"
+    android:orientation="vertical">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_mob_id_add" />
+
+    <LinearLayout
+        android:id="@+id/main_layout_whole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:background="@drawable/strain_detail_recyler_item_bg"
+            android:orientation="vertical"
+            android:padding="8sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50sp"
+                            android:layout_weight="2">
+
+                            <com.codingpixel.healingbudz.customeUI.CircularImageView
+                                android:id="@+id/user_img"
+                                android:layout_width="42sp"
+                                android:layout_height="42sp"
+                                android:padding="6sp"
+                                android:src="@drawable/ic_discuss_question_profile" />
+
+                            <ImageView
+                                android:id="@+id/profile_img_topi"
+                                android:layout_width="20sp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/topi_ic"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+
+                        <ImageView
+                            android:id="@+id/like_thumb"
+                            android:layout_width="28sp"
+                            android:layout_height="28sp"
+                            android:layout_marginTop="15sp"
+                            android:layout_weight="2"
+                            android:src="@drawable/ic_thumb_unliked" />
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                            android:id="@+id/like_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:gravity="center"
+                            android:text="150"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/got_ur_vote"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="19sp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="26sp"
+                                android:layout_height="22sp"
+                                android:layout_marginTop="15sp"
+                                android:layout_weight="2"
+                                android:padding="3sp"
+                                android:src="@drawable/ic_tick_yellow" />
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6sp"
+                                android:gravity="center"
+                                android:text="Got Your Vote"
+                                android:textColor="#f4c42f"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8.6"
+                        android:orientation="vertical"
+                        android:paddingLeft="10sp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="46sp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                    android:id="@+id/user_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jone Doe"
+                                    android:textColor="#c4c4c4"
+                                    android:textSize="13sp" />
+
+                                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                    android:id="@+id/updated_by"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="1sp"
+                                    android:text="updated Description 5 days ago"
+                                    android:textColor="#e4e4e5"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="right">
+
+                                <ImageView
+                                    android:id="@+id/reward_like"
+                                    android:layout_width="46sp"
+                                    android:layout_height="match_parent"
+                                    android:padding="6sp"
+                                    android:src="@drawable/ic_reward_like_strain_red"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                android:id="@+id/detail_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6sp"
+                                android:text="Girl Scout Cookies, or GSC, is an OG Kush and Durban Poison hybrid cross whose reputation grew too large to stay within the borders of its California homeland. Girl Scout Cookies, or GSC, in an OG Kush and Durban Poison hybrid cross whose reputation grew too large to stay, Girl Scout Cookies, or GSC, is an OG Kush and Durban Poison hybrid cross whose reputation grew too large to stay within the borders of its California homeland. Girl Scout Cookies, or GSC, in an OG Kush and Durban Poison hybrid cross whose, Girl Scout Cookies, or GSC, is an OG Kush and Durban Poison hybrid cross whose reputation grew too large to stay within the borders of its California homeland. Girl Scout Cookies, or GSC, in an OG Kush "
+                                android:textColor="#c4c4c4"
+                                android:textSize="14sp" />
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                                android:id="@+id/all_edits"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="12sp"
+                                android:paddingTop="12sp"
+                                android:text="View all edits added by this user"
+                                android:textColor="#f4c42f" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

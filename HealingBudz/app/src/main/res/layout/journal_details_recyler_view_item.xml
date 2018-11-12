@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:padding="8sp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="February, 17"
+            android:textStyle="bold"
+            android:id="@+id/date_title"
+            android:textSize="18sp"
+            android:textColor="#7cc144"/>
+        <ImageView
+            android:layout_width="24sp"
+            android:id="@+id/arrow_journal_list"
+            android:layout_height="24sp"
+            android:src="@drawable/ic_journal_details_expand"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginRight="12sp"
+        android:layout_marginLeft="12sp"
+        android:background="#b04e4c4e"/>
+</LinearLayout>

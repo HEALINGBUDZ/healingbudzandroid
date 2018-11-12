@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190sp"
+        android:background="@color/transparent"
+        android:padding="15sp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="6sp"
+            android:background="@drawable/save_discussion_dialog_bg" />
+
+        <ImageView
+            android:id="@+id/cross_btn"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="7sp"
+            android:paddingLeft="7sp"
+            android:src="@drawable/ic_save_dialog_cross" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8sp">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAVE DISCUSSION"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="#4d4d4d" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7sp"
+                android:layout_marginRight="7sp"
+                android:layout_marginTop="14sp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:src="@drawable/ic_info_icon" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:id="@+id/title_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:text="Q’s &amp; A’s are saved in the app menu under My Saves"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6sp"
+                android:layout_marginRight="7sp"
+                android:layout_marginTop="12sp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/save_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30sp" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:id="@+id/msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Got it! Don not show again for Q’s &amp; A’s I save"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

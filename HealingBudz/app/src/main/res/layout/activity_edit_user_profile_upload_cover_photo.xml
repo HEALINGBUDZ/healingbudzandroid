@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codingpixel.healingbudz.activity.home.side_menu.profile.UserProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2a2a2a">
+
+        <RelativeLayout
+            android:id="@+id/top_view"
+            android:layout_width="match_parent"
+            android:layout_height="290sp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/cover_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#79000000"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/prfl_img"
+                android:layout_width="wrap_content"
+                android:layout_height="80sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50sp"
+                android:visibility="visible">
+
+                <com.codingpixel.healingbudz.customeUI.CircularImageView
+                    android:id="@+id/profile_photo"
+                    android:layout_width="74sp"
+                    android:layout_height="74sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8sp"
+                    android:src="@drawable/ic_discuss_question_profile" />
+
+                <ImageView
+                    android:id="@+id/profile_img_topi"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="-4sp"
+                    android:src="@drawable/topi_ic"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/buder_infoo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/prfl_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16sp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="BesterBud"
+                        android:textColor="#ef9a07"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_marginTop="22sp">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="42sp"
+                android:layout_height="match_parent"
+                android:padding="2sp"
+                android:src="@drawable/ic_back_icon" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_view"
+            android:background="#232323"
+            android:orientation="vertical"
+            android:paddingBottom="18sp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68sp"
+                android:background="#1d1d1c"
+                android:paddingLeft="23sp"
+                android:paddingRight="23sp">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                    android:id="@+id/upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_btn_product_up"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="Upload Cover"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                    android:id="@+id/save_btn"
+                    android:layout_width="116sp"
+                    android:layout_height="38sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/get_started_btn"
+                    android:text="SAVE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#292929" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

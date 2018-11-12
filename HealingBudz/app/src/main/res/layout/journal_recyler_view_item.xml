@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:orientation="horizontal"
+        android:padding="8sp"
+        android:weightSum="10">
+
+        <com.codingpixel.healingbudz.customeUI.CircularImageView
+            android:id="@+id/user_img"
+            android:layout_width="0sp"
+            android:layout_height="60sp"
+            android:layout_weight="1.8"
+            android:padding="3sp"
+            android:src="@drawable/journal_profile_test_img" />
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6sp"
+            android:layout_weight="8.2"
+            android:orientation="vertical"
+            android:paddingLeft="12sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:id="@+id/name_layout"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5.5"
+                    android:orientation="vertical">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                        android:id="@+id/journal_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Journal Name"
+                        android:textColor="@color/white"
+                        android:singleLine="true"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textSize="15sp" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewItalic
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="John Doe"
+                        android:textColor="#c5c3c4"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4.5"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/favorite"
+                            android:layout_width="0sp"
+                            android:layout_height="26sp"
+                            android:layout_weight="1"
+                            android:padding="3sp"
+                            android:src="@drawable/ic_favorite_border_green" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:id="@+id/share_journal"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="26sp"
+                            android:layout_weight="1"
+                            android:padding="5sp"
+                            android:src="@drawable/ic_share_white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/item_indicator_btn"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/item_indicator"
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_navigate_next" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/slide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/journal_list_item_recyler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginLeft="12sp"
+        android:layout_marginRight="12sp"
+        android:background="#4e4a4b" />
+</LinearLayout>

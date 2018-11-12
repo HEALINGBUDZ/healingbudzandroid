@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252525"
+    android:orientation="vertical"
+    tools:context="com.codingpixel.healingbudz.activity.home.buz_feed.BuzzFeedActivity">
+
+    <RelativeLayout
+        android:id="@+id/sqe_one"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#1f1f1f">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="42sp"
+            android:layout_height="match_parent"
+            android:padding="2sp"
+            android:src="@drawable/ic_back_icon" />
+
+        <ImageView
+            android:id="@+id/home_btn"
+            android:layout_width="42sp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/back_btn"
+            android:padding="7sp"
+            android:src="@drawable/ic_home_icon" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonRegular
+            android:id="@+id/buzz_feed_clear_btn"
+            android:layout_width="72sp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="Clear All"
+            android:textAllCaps="false"
+            android:textColor="#909090"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="21sp"
+                android:layout_height="21sp"
+                android:layout_marginBottom="1sp"
+                android:layout_marginRight="9sp"
+                android:src="@drawable/ic_buzz_feed_gray" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/q_a_menu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingBottom="4sp"
+                android:text="Notifications"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/dis_view"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="#7cc144"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/main_count"
+        android:layout_width="match_parent"
+        android:layout_height="19sp"
+        android:background="#7cc144"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+            android:id="@+id/new_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="new notifications since you last logged in."
+            android:textColor="#1c1c1c"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:id="@+id/not_found"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="No New Notification!"
+            android:textColor="@color/white" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_to_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/buzz_feed_recyler_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+</LinearLayout>

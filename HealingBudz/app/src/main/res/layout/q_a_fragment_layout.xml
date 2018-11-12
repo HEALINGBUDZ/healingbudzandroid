@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252525"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/q_a_home_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/sqe_one"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#252222">
+
+            <ImageView
+                android:id="@+id/q_a_menu_btn"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:padding="13sp"
+                android:src="@drawable/menu_src" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/q_a_menu_title"
+                android:layout_width="180sp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingBottom="4sp"
+                android:text="Q&amp;A"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                android:id="@+id/q_a_menu_right_button_askquestion"
+                android:layout_width="75sp"
+                android:layout_height="36sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10sp"
+                android:background="@drawable/q_a_menu_ask_q_button"
+                android:text="ASK Q"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/q_a_home_menu"
+        android:background="#252525"
+
+        android:paddingTop="17sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="33sp"
+                android:orientation="horizontal"
+                android:paddingLeft="13sp"
+                android:paddingRight="13sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2sp"
+                    android:layout_marginBottom="2sp"
+                    android:background="@drawable/qa_fragment_search_bg_white">
+
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                        android:id="@+id/search_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:hint="search"
+                        android:imeActionLabel="Search"
+                        android:imeOptions="actionDone"
+                        android:inputType="text|textAutoComplete"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="@color/white"
+                        android:textSize="16sp" />
+                    <!--676766-->
+                    <ImageView
+                        android:id="@+id/search_button"
+                        android:layout_width="42sp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:padding="7sp"
+                        android:src="@drawable/ic_qa_fragment_search" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_to_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12sp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/qa_recyler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+        android:id="@+id/no_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="No Questions Found!"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/q_a_home_menu"
+        android:layout_marginTop="-15sp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/slide_header_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp">
+
+            <RelativeLayout
+                android:id="@+id/q_a_list"
+                android:layout_width="match_parent"
+                android:layout_height="240sp"
+                android:background="#252222">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/q_a_header_recyler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="22sp"
+                    android:layout_marginRight="22sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/q_a_list_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="15sp"
+                android:layout_below="@id/q_a_list"
+                android:background="#252222">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4sp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#0083ca" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/indicator_close_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/q_a_list"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="40sp"
+                    android:layout_height="30sp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/q_a_home_menu_indicator_bg"
+                    android:padding="7sp"
+                    android:src="@drawable/q_a_menu_indicator_close" />
+
+                <ImageView
+                    android:id="@+id/indicator_close"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.2"
+                    android:background="#86000000" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/indicator_layout"
+            android:layout_width="65sp"
+            android:layout_height="40sp"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="30sp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/q_a_home_menu_indicator_bg"
+                android:padding="7sp"
+                android:src="@drawable/q_a_menu_indicator" />
+
+            <ImageView
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/qa_home_fragment_sub_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232323"
+    tools:context="com.codingpixel.healingbudz.activity.home.home_fragment.budz_map_tab.AddNewBudzMapActivity">
+
+    <ScrollView
+        android:id="@+id/main_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <io.togoto.imagezoomcrop.photoview.PhotoView
+                android:id="@+id/iv_photo"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:layout_margin="-10sp"
+                android:scaleType="center"
+                android:src="#232323" />
+
+            <RelativeLayout
+                android:id="@+id/top_header"
+                android:layout_width="match_parent"
+                android:layout_height="290sp"
+                android:background="@color/transparent">
+
+                <ImageView
+                    android:id="@+id/slider_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="#232323"
+                    android:visibility="gone" />
+
+
+                <io.togoto.imagezoomcrop.cropoverlay.CropOverlayView
+                    android:id="@+id/crop_overlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="290sp"
+                    app:cornerRadius="0sp"
+                    app:guideLines="false"
+                    app:marginSide="0sp"
+                    app:marginTop="0sp"
+                    app:overlayColor="@color/transparent" />
+
+                <RelativeLayout
+                    android:id="@+id/toper_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#8c000000" />
+
+                    <RelativeLayout
+                        android:id="@+id/menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="?android:attr/actionBarSize">
+
+                        <ImageView
+                            android:id="@+id/back_btn"
+                            android:layout_width="42sp"
+                            android:layout_height="match_parent"
+                            android:padding="2sp"
+                            android:src="@drawable/ic_back_icon" />
+
+                        <ImageView
+                            android:id="@+id/home_btn"
+                            android:layout_width="42sp"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/back_btn"
+                            android:padding="7sp"
+                            android:src="@drawable/ic_home_icon"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/add_banner_btn"
+                            android:layout_width="52sp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10sp"
+                            android:padding="13sp"
+                            android:src="@drawable/ic_upload_budz_map_icon" />
+                    </RelativeLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.CircularImageView
+                        android:id="@+id/logo_img"
+                        android:layout_width="78sp"
+                        android:layout_height="78sp"
+                        android:layout_below="@+id/menu"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="-29sp"
+                        android:src="@drawable/ic_budz_adn" />
+
+                    <LinearLayout
+                        android:id="@+id/header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/logo_img"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonRegular
+                            android:id="@+id/add_logo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="34sp"
+                            android:layout_marginTop="10sp"
+                            android:background="@drawable/budz_map_add_logo_bg"
+                            android:gravity="center"
+                            android:paddingLeft="12sp"
+                            android:paddingRight="12sp"
+                            android:text="Add your Logo"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="9sp" />
+
+                        <com.codingpixel.healingbudz.customeUI.HealinBudEditTextBold
+                            android:id="@+id/Namea"
+                            android:layout_width="match_parent"
+                            android:layout_height="46sp"
+                            android:layout_marginLeft="11sp"
+                            android:layout_marginTop="20sp"
+                            android:layout_marginRight="11sp"
+                            android:background="@drawable/doted_border"
+                            android:digits="qwertyuiopasdfghjklzxcvbnm 1234567890 QWERTYUIOPASDFGHJKLZXCVBNM"
+                            android:gravity="center"
+                            android:hint="Add Business/Event Name"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPersonName|textCapSentences"
+                            android:maxLength="30"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white"
+                            android:textSize="19sp" />
+
+                        <LinearLayout
+                            android:id="@+id/opt_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="50sp"
+                            android:layout_marginTop="18sp"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <LinearLayout
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/check_box_one"
+                                    android:layout_width="35sp"
+                                    android:layout_height="35sp"
+                                    android:padding="6sp"
+                                    android:src="@drawable/ic_budmap_check_box_uncheckd" />
+
+                                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8sp"
+                                    android:text="Organic"
+                                    android:textColor="#e4e4e5"
+                                    android:textSize="12sp" />
+
+                                <ImageView
+                                    android:id="@+id/organic_img"
+                                    android:layout_width="40sp"
+                                    android:layout_height="match_parent"
+                                    android:padding="7sp"
+                                    android:src="@drawable/ic_organic" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0sp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/check_box_two"
+                                    android:layout_width="35sp"
+                                    android:layout_height="35sp"
+                                    android:padding="6sp"
+                                    android:src="@drawable/ic_budmap_check_box_uncheckd" />
+
+                                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8sp"
+                                    android:text="We Deliver"
+                                    android:textColor="#e4e4e5"
+                                    android:textSize="12sp" />
+
+                                <ImageView
+                                    android:layout_width="40sp"
+                                    android:layout_height="match_parent"
+                                    android:padding="7sp"
+                                    android:src="@drawable/ic_delivery" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                    android:id="@+id/resize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10sp"
+                    android:background="#8c000000"
+                    android:text="Select"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                    android:id="@+id/resize_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10sp"
+                    android:background="#8c000000"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="42sp"
+                android:layout_below="@+id/top_header"
+                android:background="#5c5c5c"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <RelativeLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.94"
+                    android:background="#932a88">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                        android:id="@+id/tab_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:text="Business Info"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/other_tabs"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8.06"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="8.06">
+
+                    <View
+                        android:id="@+id/event_indicator"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="0.06"
+                        android:background="#5c5c5c" />
+
+                    <RelativeLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                            android:id="@+id/tab_two"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:gravity="center"
+                            android:text="Product/Services"
+                            android:textAllCaps="false"
+                            android:textColor="#c4c4c4"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="0.06"
+                        android:background="#5c5c5c" />
+
+                    <RelativeLayout
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3.94">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                            android:id="@+id/tab_three"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:gravity="center"
+                            android:text="Specials"
+                            android:textAllCaps="false"
+                            android:textColor="#c4c4c4"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/tab_line"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_below="@+id/tabs"
+                android:background="#872e7e" />
+
+
+            <FrameLayout
+                android:id="@+id/fragment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tab_line"
+                android:background="#232323" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

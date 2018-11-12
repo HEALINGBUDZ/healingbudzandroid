@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2a2a2a"
+    tools:context="com.codingpixel.healingbudz.activity.home.side_menu.my_journal.MyJournalActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#1f1f1f">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="42sp"
+            android:layout_height="match_parent"
+            android:padding="2sp"
+            android:src="@drawable/ic_back_icon" />
+
+        <ImageView
+            android:id="@+id/home_btn"
+            android:layout_width="42sp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/back_btn"
+            android:padding="7sp"
+            android:src="@drawable/ic_home_icon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/q_a_menu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingBottom="4sp"
+                android:paddingLeft="4sp"
+                android:text="Settings"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_menu"
+        android:layout_margin="6sp"
+        android:id="@+id/setting_recyler_View"/>
+
+</RelativeLayout>

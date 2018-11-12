@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24sp"
+            android:layout_marginRight="24sp">
+
+            <RelativeLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14sp"
+                android:orientation="vertical"
+                android:paddingBottom="18sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:id="@+id/top_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.2"
+                        android:background="@drawable/shoot_out_dialog_bg"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:id="@+id/first_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center"
+                                android:text="QUESTION 1/6"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/second_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/first_textview"
+                                android:gravity="center"
+                                android:text="@string/question_1"
+                                android:textColor="@color/brown_question"
+                                android:textSize="26sp"
+                                android:textStyle="italic" />
+
+                            <View
+                                android:id="@+id/view_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@+id/second_textview"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="7dp"
+                                android:background="#ccc"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:id="@+id/add_upto_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/view_line"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:gravity="center"
+                                android:text="Add up to 3"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:id="@+id/selected_first_item"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/add_upto_3"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/bottom_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/strain_filter_dialog_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/selected_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:id="@+id/auto_complete_textview_textview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/textview_upper_auto_complete_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:gravity="center"
+                                        android:text="Begin typing medical condition  to search"
+                                        android:textColor="@color/white"
+                                        android:textSize="18sp" />
+
+                                    <AutoCompleteTextView
+                                        android:id="@+id/name_or_email"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="38sp"
+                                        android:layout_marginLeft="23sp"
+                                        android:layout_marginRight="23sp"
+                                        android:layout_marginTop="1sp"
+                                        android:background="@drawable/strain_search_edittext_search_bg"
+                                        android:gravity="center_vertical"
+                                        android:inputType="textAutoComplete"
+                                        android:lines="1"
+                                        android:maxLines="1"
+                                        android:paddingLeft="8sp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/add_upto_3_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <LinearLayout
+                                        android:id="@+id/invite_another_bud"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40sp"
+                                        android:layout_marginLeft="24sp"
+                                        android:layout_marginRight="24sp"
+                                        android:background="@drawable/add_onther_bud_invited_group_section_btn_bg"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="36sp"
+                                            android:layout_height="36sp"
+                                            android:padding="7sp"
+                                            android:src="@drawable/ic_invite_groups_bud_add_btn" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="6sp"
+                                            android:text="Add Another"
+                                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/save_continue_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/selected_layout"
+                                android:layout_marginTop="10dp"
+
+                                android:visibility="invisible">
+
+                                <Button
+                                    android:id="@+id/save_continue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/budz_map_dialog_green_btn_bg"
+                                    android:text="Save and Continue"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/cross_button"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@+id/relativeLayout"
+            android:layout_alignRight="@+id/relativeLayout"
+            android:layout_alignTop="@+id/relativeLayout"
+            android:paddingBottom="10sp"
+            android:paddingLeft="10sp"
+            android:src="@drawable/ic_feeling_dialog_cross_btn" />
+    </RelativeLayout>
+</LinearLayout>

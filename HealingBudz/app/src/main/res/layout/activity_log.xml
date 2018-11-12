@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252525"
+    android:orientation="vertical"
+    tools:context="com.codingpixel.healingbudz.activity.home.side_menu.activitylog.ActivityLogActivity">
+
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+        android:id="@+id/no_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="No Activity Found!"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/top_menu"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#1f1f1f">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="42sp"
+                android:layout_height="match_parent"
+                android:padding="2sp"
+                android:src="@drawable/ic_back_icon" />
+
+            <ImageView
+                android:id="@+id/home_btn"
+                android:layout_width="42sp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/back_btn"
+                android:padding="7sp"
+                android:src="@drawable/ic_home_icon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/add_new_journal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="4sp"
+                    android:src="@drawable/ic_activity_log" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:id="@+id/q_a_menu_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingBottom="4sp"
+                    android:text="Activity Log"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_rf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_menu">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_log_recyler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/top_menu"
+                android:layout_marginLeft="16sp"
+                android:layout_marginRight="16sp" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:id="@+id/not_fount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="No Activity Found!"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_menu"
+            android:layout_marginTop="-15sp">
+
+            <RelativeLayout
+                android:id="@+id/slide_header_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp">
+
+                <RelativeLayout
+                    android:id="@+id/q_a_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="300sp"
+                    android:background="#1F1F1F">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/journal_header_recyler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="22sp"
+                        android:layout_marginRight="22sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/q_a_list_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="15sp"
+                    android:layout_below="@id/q_a_list"
+                    android:background="#1F1F1F">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4sp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#505050" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/indicator_close_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/q_a_list"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:layout_width="40sp"
+                        android:layout_height="30sp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/activity_log_bg_indicatior"
+                        android:padding="7sp"
+                        android:src="@drawable/groups_chat_indicator_up" />
+                    <!--1F1F1F-->
+                    <ImageView
+                        android:id="@+id/indicator_close"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.2"
+                        android:background="#86000000" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/indicator_layout"
+                android:layout_width="65sp"
+                android:layout_height="40sp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="40sp"
+                    android:layout_height="30sp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/activity_header_indicator_bg"
+                    android:padding="7sp"
+                    android:src="@drawable/groups_chat_indicator_down" />
+
+                <ImageView
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="14sp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:indeterminateTint="#ffffff"
+            android:indeterminateTintMode="src_atop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2sp"
+            android:text="Loading..."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

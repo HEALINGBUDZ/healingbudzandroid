@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#252525"
+            android:orientation="horizontal"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"
+            android:paddingTop="8sp"
+            android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0sp"
+                android:layout_height="20sp"
+                android:layout_weight=".6"
+                android:src="@drawable/ic_question_icon" />
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9.4"
+                android:orientation="vertical"
+                android:paddingLeft="6sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="You asked a question."
+                        android:textColor="#0082ca"
+                        android:singleLine="true"
+                        android:textSize="11sp" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                        android:id="@+id/aggo"
+                        android:layout_width="70sp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+
+                        android:text="1 hour ago"
+                        android:textColor="#545454"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:id="@+id/question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="5"
+                    android:text="Should I warm Cannabis oil before applying?"
+                    android:textColor="#e4e4e4"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36sp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="7sp"
+                        android:orientation="horizontal">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:id="@+id/answers_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="11sp" />
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3sp"
+
+                            android:text="ANSWERS"
+                            android:textColor="#0082ca"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="70sp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <ImageView
+                            android:id="@+id/edit_my_question"
+                            android:layout_width="0sp"
+                            android:layout_height="30sp"
+                            android:layout_weight="5"
+                            android:padding="6sp"
+                            android:src="@drawable/ic_edit_myquestion" />
+
+                        <ImageView
+                            android:id="@+id/delete_my_question"
+                            android:layout_width="0sp"
+                            android:layout_height="30sp"
+                            android:layout_weight="5"
+                            android:padding="6sp"
+                            android:src="@drawable/ic_delete_icon" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="#aa1c1c1c" />
+</LinearLayout>

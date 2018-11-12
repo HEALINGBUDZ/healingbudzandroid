@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90sp"
+    android:id="@+id/main_layout"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_line"
+        android:layout_below="@+id/top_line"
+        android:paddingBottom="7sp"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/icon_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6sp"
+                android:layout_weight="2"
+                android:padding="4sp"
+                android:src="@drawable/ic_profile_blue" />
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="10sp"
+                android:id="@+id/bud_map_catagory_img"
+                android:src="@drawable/ic_dispancry_icon" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="8"
+            android:orientation="vertical"
+            android:paddingLeft="6sp"
+            android:paddingTop="14sp">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dispensary"
+                android:textColor="#ceccce"
+                android:textSize="11sp" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/heading_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1sp"
+                android:layout_marginTop="4sp"
+                android:text="Culture Farms &amp; Dispensary"
+                android:textColor="#932a88"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingRight="12sp"
+                android:weightSum="12">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="3.2 ml"
+                    android:textColor="#999999"
+                    android:textSize="11sp" />
+
+
+                <ImageView
+                    android:id="@+id/rating_img"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:padding="3sp"
+                    android:src="@drawable/ic_rating_img" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="2sp"
+                    android:text="5 Reviews"
+                    android:textColor="#999999"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="end"
+                    android:paddingLeft="6sp"
+                    android:paddingRight="6sp"
+                    android:weightSum="10">
+
+                    <ImageView
+                        android:id="@+id/organic_img"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:padding="5sp"
+                        android:src="@drawable/ic_organic" />
+
+                    <ImageView
+                        android:id="@+id/delivery_img"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:padding="5sp"
+                        android:src="@drawable/ic_delivery" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="2sp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="4sp"
+        android:background="@drawable/doted_line" />
+    <LinearLayout
+        android:layout_width="70sp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4sp"
+        android:layout_marginRight="4sp"
+        android:layout_alignParentRight="true"
+        android:gravity="center_horizontal|bottom"
+        android:weightSum="10">
+        <ImageView
+            android:layout_width="0sp"
+            android:layout_height="30sp"
+            android:layout_weight="5"
+            android:src="@drawable/ic_edit_myquestion"
+            android:padding="6sp"/>
+        <ImageView
+            android:layout_width="0sp"
+            android:layout_height="30sp"
+            android:layout_weight="5"
+            android:src="@drawable/ic_delete_icon"
+            android:padding="6sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_alignParentBottom="true"
+        android:background="#484848"/>
+</RelativeLayout>

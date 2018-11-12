@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "700098895046",
+    "firebase_url": "https://healing-budz-40a54.firebaseio.com",
+    "project_id": "healing-budz-40a54",
+    "storage_bucket": "healing-budz-40a54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700098895046:android:81d99da1ebadffaf",
+        "android_client_info": {
+          "package_name": "com.healingbudz.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700098895046-vtgtdpu4kk45qtrgjddk1bsfp9s4sh39.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.healingbudz.android",
+            "certificate_hash": "5a28bdc4f87702907b0b4ed21e1c352329fc6ebe"
+          }
+        },
+        {
+          "client_id": "700098895046-hli00o0jk37hg7jpbcmda0ps3dsl7f39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDfsO3ZzleI-WsxN3x6Yt6PuXGVUaMVmQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700098895046-hli00o0jk37hg7jpbcmda0ps3dsl7f39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

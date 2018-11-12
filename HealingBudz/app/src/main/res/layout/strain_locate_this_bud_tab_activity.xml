@@ -1,0 +1,217 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232323"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="11sp"
+    android:paddingRight="11sp"
+    android:paddingTop="24sp">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="30sp">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Based on your Profile Info"
+                    android:textColor="#f4c42f"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="123sp"
+                    android:layout_marginTop="12sp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.codingpixel.healingbudz.customeUI.CircularImageView
+                            android:id="@+id/user_image"
+                            android:layout_width="75sp"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_user_profile" />
+
+                        <ImageView
+                            android:id="@+id/user_image_topi"
+                            android:layout_width="35sp"
+                            android:layout_height="35sp"
+                            android:layout_marginTop="15sp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/topi_ic" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12sp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="You're in Zip Code"
+                            android:textColor="#c4c4c4"
+                            android:textSize="14sp" />
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:id="@+id/zip_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:text="33143"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp" />
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:id="@+id/address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:text="South Miami, FL"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:visibility="gone" />
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                            android:id="@+id/find_my_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:letterSpacing="0.1"
+                            android:lineSpacingExtra="2dp"
+                            android:text="[ Find My Current Location ]"
+                            android:textColor="#7dc242"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginTop="18sp"
+                    android:background="#666666" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="74sp"
+                    android:layout_marginTop="14sp"
+                    android:background="#999999"
+                    android:gravity="center">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AD PLACMENT"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="#525252" />
+                </LinearLayout>
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:id="@+id/display_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12sp"
+                    android:gravity="center"
+                    android:text="Cannabusinesses Near You that Offer this Strain"
+                    android:textColor="#f4c42f"
+                    android:textSize="16sp" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:id="@+id/location_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:gravity="center"
+                    android:textColor="#c4c4c4"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12sp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/bud_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="36sp"
+                        android:background="@drawable/locate_bud_top_green_header"
+                        android:paddingLeft="12sp">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="BUD"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14sp"
+                        android:background="@drawable/locate_bud_bottom_green_header"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/locate_bud_recyler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="14sp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:indeterminateTint="#ffffff"
+            android:indeterminateTintMode="src_atop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2sp"
+            android:text="Loading..."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

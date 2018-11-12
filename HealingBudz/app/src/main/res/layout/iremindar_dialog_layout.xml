@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dialog_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="27sp"
+            android:layout_marginRight="27sp"
+            android:background="@color/transparent">
+
+            <RelativeLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:orientation="vertical"
+                android:paddingBottom="18sp">
+
+                <LinearLayout
+                    android:id="@+id/first_dialog_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shoot_out_dialog_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="20sp"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="16sp"
+                    android:paddingTop="18sp">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:id="@+id/following_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reminder"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                <!--#929292-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/first_dialog_layout"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/floower_dialog_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="26sp"
+                    android:paddingTop="0sp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8sp"
+                        android:layout_marginTop="3sp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="8sp">
+
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Enter Days"
+                            android:textColor="#929292"
+                            android:textSize="12sp" />
+
+                        <com.codingpixel.healingbudz.customeUI.HealinBudEditTextBold
+                            android:id="@+id/days_et"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:minWidth="80sp"
+                            android:layout_marginTop="3sp"
+                            android:digits="0123456789"
+                            android:gravity="center"
+                            android:hint="Enter days in number"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:textColor="#787878"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                        android:id="@+id/done"
+                        android:layout_width="80sp"
+                        android:layout_height="35sp"
+                        android:background="@drawable/reminder_drw"
+                        android:text="Done"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/cross_btn"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="7sp"
+                android:paddingLeft="7sp"
+                android:src="@drawable/ic_feeling_dialog_cross_btn" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

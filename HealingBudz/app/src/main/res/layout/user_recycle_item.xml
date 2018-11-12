@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#252525"
+            android:orientation="horizontal"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"
+            android:weightSum="10">
+
+            <RelativeLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <RelativeLayout
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+
+                    <com.codingpixel.healingbudz.customeUI.CircularImageView
+                        android:id="@+id/user_image"
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:padding="1sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_user_profile" />
+
+                    <ImageView
+                        android:id="@+id/profile_img_topi"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/topi_ic"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:paddingLeft="5sp">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Bester Bud"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <RelativeLayout
+                    android:id="@+id/follow_btn"
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+
+                    <com.codingpixel.healingbudz.customeUI.CircularImageView
+
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:padding="1sp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_profile_add" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="#aa1c1c1c" />
+</LinearLayout>

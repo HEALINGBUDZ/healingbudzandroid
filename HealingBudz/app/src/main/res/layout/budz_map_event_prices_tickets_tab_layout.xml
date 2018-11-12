@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232323"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topPanelc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="20sp"
+            android:paddingRight="20sp">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment Methods"
+                android:textColor="#8c2a81"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/not_found"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="No payment method found."
+                android:textColor="#999999"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/payment_method_selection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_payment_method_1" />
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5sp"
+                    android:src="@drawable/ic_payment_method_2" />
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5sp"
+                    android:src="@drawable/ic_payment_method_3" />
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5sp"
+                    android:src="@drawable/ic_payment_method_4" />
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5sp"
+                    android:src="@drawable/ic_payment_method_5" />
+
+                <ImageView
+                    android:layout_width="36sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5sp"
+                    android:src="@drawable/ic_payment_method_6" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginTop="14sp"
+            android:background="#363636" />
+
+        <LinearLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#232323"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="14sp">
+
+            <ProgressBar
+                android:id="@+id/loading_spinner"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:indeterminateTint="#ffffff"
+                android:indeterminateTintMode="src_atop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2sp"
+                android:text="Loading..."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+            android:id="@+id/no_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="14sp"
+            android:gravity="center"
+            android:text="No Product Found!"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/event_recyler_adapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topPanelc"
+        android:layout_marginTop="12sp"
+        android:nestedScrollingEnabled="false" />
+
+    <Button
+        android:id="@+id/link_open"
+        android:layout_width="match_parent"
+        android:layout_height="42sp"
+        android:layout_below="@+id/event_recyler_adapter"
+        android:layout_marginLeft="24sp"
+        android:layout_marginTop="12sp"
+        android:layout_marginRight="24sp"
+        android:layout_marginBottom="12sp"
+        android:background="@drawable/shoot_out_bg"
+        android:text="Purchase Tickets"
+        android:textAllCaps="false"
+        android:textColor="#fdfbfd"
+        android:visibility="visible" />
+
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/link_open"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="12sp"
+        android:layout_marginBottom="20sp"
+        android:gravity="center"
+        android:text="Tapping the above will open a browser window \n to purchases at the event website."
+        android:textColor="#9a9a9a"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

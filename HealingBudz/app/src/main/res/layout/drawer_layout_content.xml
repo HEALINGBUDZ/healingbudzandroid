@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="280sp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:background="#1f1f1f"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/profile_btn_slide_menu"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="8.4"
+                android:orientation="horizontal"
+                android:weightSum="8.4">
+
+                <RelativeLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.3">
+
+                    <com.codingpixel.healingbudz.customeUI.CircularImageView
+                        android:id="@+id/profile_immg"
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:layout_centerInParent="true"
+                        android:padding="4sp"
+                        android:src="@drawable/ic_user_profile" />
+
+                    <ImageView
+                        android:id="@+id/profile_img_topi_side"
+                        android:layout_width="20sp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="16sp"
+                        android:src="@drawable/topi_ic"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:id="@+id/profile_nname"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6.1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="7sp"
+                    android:text="John Alex"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/setting_btn"
+                android:layout_width="0sp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.6"
+                android:padding="6sp"
+                android:src="@drawable/ic_settings" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:background="#252525"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/budz_question_recylreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/help_support"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:background="#1f1f1f"
+            android:gravity="center_vertical"
+            android:onClick="HelpAndSupprort"
+            android:paddingLeft="18sp">
+
+            <ImageView
+                android:layout_width="22sp"
+                android:layout_height="22sp"
+                android:src="@drawable/ic_help" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12sp"
+                android:gravity="center_vertical"
+                android:text="Help &amp; Support"
+                android:textColor="#c6c6c6"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

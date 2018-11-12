@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dialog_view">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24sp"
+            android:layout_marginLeft="24sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:orientation="vertical"
+                android:paddingBottom="18sp"
+                android:id="@+id/main_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="15sp"
+                    android:paddingRight="16sp"
+                    android:paddingBottom="15sp"
+                    android:paddingTop="12sp"
+                    android:id="@+id/first_dialog_layout"
+                    android:background="@drawable/shoot_out_dialog_bg"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="How are you feeling?"
+                        android:textColor="#929292"/>
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select your mood from below emojis."
+                        android:textColor="#929292"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:layout_marginTop="8sp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="How are you feeling?"
+                                android:textSize="15sp"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="#bcbdbe"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="smile"
+                                android:id="@+id/feeling_Text"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:textColor="#7ab841"/>
+
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="0sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:id="@+id/emoji_icon"
+                            android:src="@drawable/smile"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="15sp"
+                    android:layout_below="@+id/first_dialog_layout"
+                    android:paddingRight="12sp"
+                    android:paddingBottom="6sp"
+                    android:paddingTop="0sp"
+                    android:background="@drawable/shoot_out_dialog_bg_white"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="270sp"
+                        android:id="@+id/emoji_recyler_view"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:layout_marginTop="7sp"
+                        android:text="SAVE"
+                        android:textSize="18sp"
+                        android:id="@+id/save_btn"
+                        android:textColor="@color/white"
+                        android:background="@drawable/budz_map_dialog_green_btn_bg"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:id="@+id/cross_btn"
+                android:src="@drawable/ic_feeling_dialog_cross_btn"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="7sp"
+                android:paddingLeft="7sp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/report_question_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#252222">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/reporting_heading"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginLeft="22sp"
+                android:layout_marginTop="26sp"
+                android:gravity="center_vertical"
+
+                android:text="REASON FOR REPORTING:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/q_a_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top"
+            android:background="#252222">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                android:id="@+id/send_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
+                android:layout_below="@+id/report_question_recyler_view"
+                android:layout_marginLeft="26sp"
+                android:background="@drawable/q_a_menu_ask_q_button"
+                android:text="SEND"
+                android:textColor="@color/white" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/report_question_recyler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4sp"
+                android:layout_marginLeft="22sp"
+                android:layout_marginRight="22sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/q_a_list_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="15sp"
+            android:layout_below="@id/q_a_list"
+            android:background="#252222">
+
+            <View
+                android:id="@+id/line_color_report"
+                android:layout_width="match_parent"
+                android:layout_height="4sp"
+                android:layout_alignParentBottom="true"
+                android:background="#0083ca" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/indicator_close_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/q_a_list"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/indi_report"
+                android:layout_width="40sp"
+                android:layout_height="30sp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/q_a_home_menu_indicator_bg"
+                android:padding="7sp"
+                android:src="@drawable/q_a_menu_indicator_close" />
+
+            <ImageView
+                android:id="@+id/indicator_close"
+                android:background="#86000000"
+                android:alpha="0.2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

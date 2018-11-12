@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0000"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000" />
+
+    <RelativeLayout
+        android:id="@+id/cameraLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#fafafa">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                android:id="@+id/cross"
+                android:layout_width="60sp"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:text="X"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="#262626" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/text_top"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/cross"
+                android:gravity="center"
+                android:text="Photo"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="#000" />
+
+            <ImageView
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10sp"
+                android:src="@drawable/ic_settings"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/settings_view"
+                android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/transparent"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <com.otaliastudios.cameraview.CameraView
+
+            android:id="@+id/camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/record_panel"
+            android:layout_below="@+id/header"
+            android:layout_gravity="center"
+            android:keepScreenOn="true"
+            app:cameraAudio="on"
+            app:cameraFacing="back"
+            app:cameraFlash="off"
+            app:cameraGestureLongTap="none"
+            app:cameraGesturePinch="zoom"
+            app:cameraGestureScrollHorizontal="exposureCorrection"
+            app:cameraGestureScrollVertical="none"
+            app:cameraGestureTap="focusWithMarker"
+            app:cameraGrid="off"
+            app:cameraPlaySounds="true" />
+
+        <ImageView
+            android:id="@+id/front_back_camera_switcher"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/record_panel"
+            android:layout_margin="14sp"
+            android:layout_marginRight="15dp"
+            android:padding="6sp"
+            android:src="@drawable/ic_change_camera" />
+
+        <ImageView
+            android:id="@+id/flash_switch_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/record_panel"
+            android:layout_alignParentRight="true"
+            android:layout_margin="14sp"
+            android:background="@drawable/ic_camera_flash_bg"
+            android:padding="8sp"
+            android:src="@drawable/ic_camera_flash" />
+
+
+        <!--android:background="#82000000"-->
+        <RelativeLayout
+            android:id="@+id/record_panel"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#fafafa">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50sp">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                    android:id="@+id/record_button"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/camera_capture" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:id="@+id/video_duration_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/record_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10sp"
+                    android:textColor="#282828" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom_tabbb"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:weightSum="9">
+
+                <RelativeLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                        android:id="@+id/gallery_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/one_indicator"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:text="GALLERY"
+                        android:textAllCaps="false"
+                        android:textColor="#9a9a9a"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/one_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="3sp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#000"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                        android:id="@+id/take_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/two_indicator"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:text="PHOTO"
+                        android:textAllCaps="false"
+                        android:textColor="#282828"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/two_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="3sp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/video_button"
+                    android:layout_width="0sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButton
+                        android:id="@+id/take_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/three_indicator"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:text="VIDEO"
+                        android:textAllCaps="false"
+                        android:textColor="#9a9a9a"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/three_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="3sp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#000"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="300dp"
+        app:behavior_skipCollapsed="false"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

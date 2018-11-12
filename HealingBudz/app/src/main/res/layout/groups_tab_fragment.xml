@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#252525"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/top_menu"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/sqe_one"
+            android:background="#252222"
+            android:layout_height="?android:attr/actionBarSize">
+            <ImageView
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:id="@+id/menu_btn"
+                android:src="@drawable/menu_src"
+                android:padding="13sp" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="180sp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="GROUPS"
+                android:textSize="22sp"
+                android:paddingBottom="4sp"
+                android:gravity="center"
+                android:id="@+id/q_a_menu_title"
+                android:textColor="@color/white"/>
+            <ImageView
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="14sp"
+                android:src="@drawable/ic_add_new_groups"
+                android:id="@+id/add_new_group"
+                 android:layout_marginRight="4sp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="17sp"
+        android:paddingLeft="12sp"
+        android:layout_below="@+id/top_menu"
+        android:paddingRight="12sp"
+        android:background="#252525">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="33sp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2sp"
+                    android:layout_marginBottom="2sp"
+                    android:background="@drawable/qa_fragment_search_bg">
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:id="@+id/search_field"
+                        android:hint="search public groups"
+                        android:singleLine="true"
+                        android:lines="1"
+                        android:textSize="16sp"
+                        android:maxLines="1"
+                        android:textColor="#676766"/>
+                    <ImageView
+                        android:layout_width="42sp"
+                        android:src="@drawable/ic_qa_fragment_search"
+                        android:layout_height="match_parent"
+                        android:padding="7sp"
+                        android:id="@+id/search_button"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12sp"
+                    android:layout_above="@+id/refresh_layout_progress"
+                    android:id="@+id/swipe_to_refresh_layout">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/journal_recyler_view"/>
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+                <ProgressBar
+                    android:id="@+id/refresh_layout_progress"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:visibility="gone"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginBottom="5sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:indeterminateTintMode="src_atop"
+                    android:indeterminateTint="#8f8f8f"
+                    android:layout_gravity="center" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-15sp"
+        android:layout_below="@+id/top_menu">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:id="@+id/slide_header_list">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="162sp"
+                android:background="#252222"
+                android:id="@+id/q_a_list">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="22sp"
+                    android:layout_marginLeft="22sp"
+                    android:id="@+id/journal_header_recyler_view"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="15sp"
+                android:background="#252222"
+                android:id="@+id/q_a_list_bottom"
+                android:layout_below="@id/q_a_list">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4sp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#f5921e"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="65sp"
+                android:layout_height="65sp"
+                android:id="@+id/indicator_close_layout"
+                android:layout_below="@id/q_a_list"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:layout_width="40sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/groups_menu_indicator_close"
+                    android:padding="7sp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/q_a_home_menu_indicator_bg"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/indicator_close"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="65sp"
+            android:layout_height="40sp"
+            android:id="@+id/indicator_layout"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:layout_width="40sp"
+                android:layout_height="30sp"
+                android:padding="7sp"
+                android:src="@drawable/groups_menu_indicator"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/q_a_home_menu_indicator_bg"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/indicator"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_sub_fragment"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Group Found!"
+        android:id="@+id/no_group_found"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FAFAFA"/>
+</RelativeLayout>

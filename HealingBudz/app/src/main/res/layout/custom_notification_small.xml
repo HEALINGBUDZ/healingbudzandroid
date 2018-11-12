@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/onesignal_bgimage_default_image"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/image_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ic_app_icon_tm" />
+
+    <TextView
+        android:id="@+id/title"
+        style="Custom Notification Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/image_app"
+        android:text="Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/text"
+        style="Custom Notification Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_toRightOf="@+id/image_app"
+        android:text="Text"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="-10dp"
+        android:src="#437e7b7b" />
+
+</RelativeLayout>

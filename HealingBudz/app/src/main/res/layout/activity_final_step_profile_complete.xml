@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg_img"
+    tools:context="com.codingpixel.healingbudz.activity.Registration.LoginEntrance">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16sp">
+
+        <ImageView
+            android:layout_width="134sp"
+            android:layout_height="69sp"
+            android:src="@drawable/ic_profile_final_step_icon" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:gravity="center"
+            android:text="Thanks!"
+            android:textColor="@color/white"
+            android:textSize="36sp" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:gravity="center"
+            android:text="The Healing Budz community is completely driven by user input - not data collected in a laboratory."
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:gravity="center"
+            android:text="The more active you are in the community, the more reward points you collect to redeem for cool stuff!"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22sp"
+            android:background="@drawable/qa_question_list_item_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="4sp">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="You’ve received"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="+ 50 Reward Points"
+                android:textColor="#7dc241"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="for completing your profile"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/reward_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8sp"
+                android:layout_marginTop="10sp"
+                android:gravity="center"
+                android:text="Learn about Rewards >"
+                android:textColor="#c5c5c5"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+            android:id="@+id/view_my_profile"
+            android:layout_width="match_parent"
+            android:layout_height="52sp"
+            android:layout_marginTop="14sp"
+            android:background="@drawable/budz_map_dialog_green_btn_bg_thanks"
+            android:text="View My Profile"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:layout_marginBottom="16sp"
+            android:layout_marginTop="14sp"
+            android:background="#504b38" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Own a cannabusiness?"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+            android:id="@+id/add_new_budz"
+            android:layout_width="match_parent"
+            android:layout_height="52sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/shoot_out_bg"
+            android:text="Get A Free Budz Adz Listing"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudButton
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14sp"
+            android:background="@color/transparent"
+            android:paddingLeft="15sp"
+            android:paddingRight="15sp"
+            android:text="Skip >"
+            android:textAllCaps="false"
+            android:textColor="#cfcfcf" />
+    </LinearLayout>
+
+</ScrollView>

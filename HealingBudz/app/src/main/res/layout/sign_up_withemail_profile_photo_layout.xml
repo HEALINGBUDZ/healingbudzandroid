@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg_img"
+    tools:context="com.codingpixel.healingbudz.activity.Registration.LoginEntrance">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="32sp">
+
+            <RelativeLayout
+                android:layout_width="100sp"
+                android:layout_height="90sp">
+
+                <com.codingpixel.healingbudz.customeUI.CircularImageView
+                    android:id="@+id/profile_img"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                     />
+                <!--//android:src="@drawable/ic_user_profile_green"-->
+
+                <ImageView
+                    android:id="@+id/profile_img_topi"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_user_profile_green"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/hello_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="25sp"
+                android:gravity="center"
+                android:text="Hello, David,\n From Miami,FL"
+                android:textColor="@color/white"
+                android:textSize="34sp" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:gravity="center"
+                android:text="Why so green?\n You can choose a different Color Icon:"
+                android:textColor="#a4a4a3"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/topi"
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:layout_marginTop="16sp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="12">
+
+                <ProgressBar
+                    android:id="@+id/loading_spinner_topi"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="#ffffff"
+                    android:indeterminateTintMode="src_atop" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/avatar_recyler_view_topi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60sp"
+                android:layout_marginTop="16sp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <ProgressBar
+                    android:id="@+id/loading_spinner"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="#ffffff"
+                    android:indeterminateTintMode="src_atop" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/avatar_recyler_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:layout_marginTop="18sp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="1sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="4.2"
+                    android:background="#60999996" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:gravity="center_horizontal"
+                    android:text="OR"
+                    android:textColor="#cccccb"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="0sp"
+                    android:layout_height="1sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="4.2"
+                    android:background="#60999996" />
+            </LinearLayout>
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudButtonRegular
+                android:id="@+id/upload_profile_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64sp"
+                android:layout_marginRight="64sp"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/upload_profile_photo_btn_bg"
+                android:text="Upload a profile photo"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/next_step"
+                android:layout_width="66sp"
+                android:layout_height="66sp"
+                android:layout_marginTop="20sp"
+                android:padding="6sp"
+                android:src="@drawable/ic_login_next_btn" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="52sp"
+        android:layout_height="52sp"
+        android:layout_margin="5sp"
+        android:padding="2sp"
+        android:src="@drawable/ic_back_icon" />
+
+</RelativeLayout>

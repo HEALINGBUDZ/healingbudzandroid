@@ -1,0 +1,54 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/parent_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/intro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="22dp"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="Title"
+            android:textColor="#6a6b6b"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+
+            android:id="@+id/intro_image"
+            android:layout_width="160sp"
+            android:layout_height="160sp"
+            android:layout_below="@+id/intro_title"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/intro_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intro_image"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+
+            android:textColor="#6a6b6b"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</ScrollView>

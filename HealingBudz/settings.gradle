@@ -1,0 +1,1 @@
+include ':app', ':CustomeSlideDown', ':expandablerecyclerview', ':ijkplayer-java', ':videoplayer', ':cameraview', ':introLibrary', ':android-image-zoom-crop'//':CustomeCameraUI',

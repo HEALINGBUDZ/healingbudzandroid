@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252525"
+    tools:context=".activity.home.home_fragment.budz_map_tab.tabs.AddProductActivity">
+
+    <FrameLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/feed_toolbar_color">
+
+        <LinearLayout
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/ic_wall_sceen_cross" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="Cancel"
+                android:textColor="#929191"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Add Product"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|right"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_wall_new_post_submit"
+                android:tint="#7CC245"
+                android:visibility="gone" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_menu_dot_gray"
+                android:text="Save"
+                android:textColor="#D4AC3E"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/pager_view"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:layout_marginBottom="10sp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/place_holder_wall" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200sp"
+                    android:layout_weight="1">
+
+                </android.support.v4.view.ViewPager>
+
+                <com.rd.PageIndicatorView
+                    android:id="@+id/pager_control"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginTop="5dp"
+                    app:piv_animationType="scale"
+                    app:piv_dynamicCount="true"
+                    app:piv_interactiveAnimation="true"
+                    app:piv_padding="4dp"
+                    app:piv_radius="3dp"
+                    app:piv_scaleFactor="0.9"
+                    app:piv_selectedColor="#929091"
+                    app:piv_unselectedColor="#54534f" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pager_view"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/upload_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45sp"
+
+                    android:layout_marginTop="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/upload_btn_new">
+
+                    <ImageView
+                        android:id="@+id/upload_photo_img"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10sp"
+                        android:src="@drawable/ic_gallery_gray"
+                        android:tint="@color/white" />
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginEnd="10sp"
+                        android:layout_toEndOf="@+id/upload_photo_img"
+                        android:text="Upload Photos"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10sp"
+                    android:text="Name"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                    android:id="@+id/name_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/edit_fornew"
+                    android:hint="Type product name.."
+                    android:inputType="text|textCapWords"
+                    android:padding="12sp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/intro_color_one_header"
+                    android:textSize="14sp" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10sp"
+                    android:text="Category Name"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                    android:id="@+id/name_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10sp"
+                    android:background="@drawable/edit_fornew"
+                    android:hint="Type category name.."
+                    android:inputType="text|textCapWords"
+                    android:padding="12sp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/intro_color_one_header"
+                    android:textSize="14sp" />
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10sp"
+                    android:text="Select Strain"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/spinner_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10sp">
+
+                    <com.codingpixel.healingbudz.customeUI.customspinner
+                        android:id="@+id/link_to_strain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="@string/app_name" />
+
+
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                        android:id="@+id/name_strain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/edit_fornew"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:hint="Select a Strain"
+                        android:padding="12sp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/intro_color_one_header"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="10sp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginEnd="30sp"
+                                android:layout_marginBottom="10sp"
+                                android:text="THC %"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/name_tch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5sp"
+                                android:background="@drawable/edit_fornew"
+                                android:digits="1234567890."
+                                android:hint="Add amount.."
+                                android:inputType="number"
+
+                                android:maxLength="3"
+                                android:padding="12sp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/intro_color_one_header"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginEnd="30sp"
+                                android:layout_marginBottom="10sp"
+                                android:text="CBD %"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/name_cbd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5sp"
+                                android:background="@drawable/edit_fornew"
+                                android:digits="1234567890."
+                                android:hint="Add amount.."
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:padding="12sp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/intro_color_one_header"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="10sp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginEnd="30sp"
+                                android:layout_marginBottom="10sp"
+                                android:text="Weight 1"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/weight_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5sp"
+                                android:background="@drawable/edit_fornew"
+                                android:hint="e.g. 1 lb, 16 oz, 453.6 g or 0.45 kg"
+                                android:inputType="text|textCapWords"
+                                android:maxLength="8"
+                                android:padding="12sp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/intro_color_one_header"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginEnd="30sp"
+                                android:layout_marginBottom="10sp"
+                                android:text="Price 1"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                            <!--        app:met_mask="(###) ###-####" />
+
+                                    <com.santalu.maskedittext.MaskEditText
+                            -->
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/price_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5sp"
+                                android:background="@drawable/edit_fornew"
+                                android:digits="1234567890."
+                                android:hint="Add amount.."
+                                android:inputType="number"
+                                android:maxLength="8"
+                                android:padding="12sp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/intro_color_one_header"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="10sp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginEnd="30sp"
+                                android:layout_marginBottom="10sp"
+                                android:text="Weight 2"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/weight_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5sp"
+                                android:background="@drawable/edit_fornew"
+                                android:hint="e.g. 1 lb, 16 oz, 453.6 g or 0.45 kg"
+                                android:inputType="text|textCapWords"
+                                android:maxLength="8"
+                                android:padding="12sp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/intro_color_one_header"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="30sp"
+                                android:layout_marginBottom="10sp"
+                                android:text="Price 2"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/price_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5sp"
+                                android:background="@drawable/edit_fornew"
+                                android:digits="1234567890."
+                                android:hint="Add amount.."
+                                android:inputType="number"
+                                android:maxLength="8"
+                                android:padding="12sp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/intro_color_one_header"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="10sp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="30sp"
+                                android:layout_marginBottom="10sp"
+                                android:text="Weight 3"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/weight_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5sp"
+                                android:background="@drawable/edit_fornew"
+                                android:hint="e.g. 1 lb, 16 oz, 453.6 g or 0.45 kg"
+                                android:inputType="text|textCapWords"
+                                android:maxLength="8"
+                                android:padding="12sp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/intro_color_one_header"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="30sp"
+                                android:layout_marginBottom="10sp"
+                                android:text="Price 3"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/price_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5sp"
+                                android:background="@drawable/edit_fornew"
+                                android:digits="1234567890."
+                                android:hint="Add amount.."
+                                android:inputType="number"
+                                android:maxLength="8"
+                                android:padding="12sp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/intro_color_one_header"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="10sp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="30sp"
+                                android:layout_marginBottom="10sp"
+                                android:text="Weight 4"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/weight_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5sp"
+                                android:background="@drawable/edit_fornew"
+                                android:hint="e.g. 1 lb, 16 oz, 453.6 g or 0.45 kg"
+                                android:inputType="text|textCapWords"
+                                android:maxLength="8"
+                                android:padding="12sp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/intro_color_one_header"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="30sp"
+                                android:layout_marginBottom="10sp"
+                                android:text="Price 4"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/price_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5sp"
+                                android:background="@drawable/edit_fornew"
+                                android:digits="1234567890."
+                                android:hint="Add amount.."
+                                android:inputType="number"
+                                android:maxLength="8"
+                                android:padding="12sp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/intro_color_one_header"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

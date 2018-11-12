@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.home.home_fragment.qa_tab.QADetailActivity"
+    tools:showIn="@layout/activity_qadetail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="13sp"
+        android:paddingRight="13sp">
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonRegular
+            android:id="@+id/budz_answers"
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            android:layout_marginEnd="2sp"
+            android:layout_marginStart="2sp"
+            android:layout_marginTop="8sp"
+            android:background="@drawable/q_a_menu_ask_q_button_bottom"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="14sp">
+
+                <ProgressBar
+                    android:id="@+id/loading_spinner"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:indeterminateTint="#ffffff"
+                    android:indeterminateTintMode="src_atop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2sp"
+                    android:text="Loading..."
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2sp"
+                android:layout_marginStart="2sp"
+                android:layout_marginTop="-5sp"
+                android:orientation="vertical">
+
+                <!--<android.support.v4.widget.SwipeRefreshLayout-->
+                    <!--android:id="@+id/swipe_to_refresh_layout"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/anser_detail_recyler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

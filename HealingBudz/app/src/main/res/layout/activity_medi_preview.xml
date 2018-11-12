@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.codingpixel.healingbudz.media_view_Dialog.MediPreview">
+
+
+    <include
+        layout="@layout/giraffe_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:id="@+id/image_showing_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="10">
+
+            <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/complete_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_text_img_1"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.codingpixel.healingbudz.customeUI.TouchImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#000000"
+        android:scaleType="fitCenter" />
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        android:layout_width="52sp"
+        android:layout_height="52sp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:indeterminateTint="#ffffff"
+        android:indeterminateTintMode="src_atop" />
+
+
+    <RelativeLayout
+        android:id="@+id/sqe_one"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="52sp"
+            android:layout_height="match_parent"
+            android:padding="2sp"
+            android:src="@drawable/ic_back_icon" />
+
+        <ImageView
+            android:id="@+id/download_btn"
+            android:layout_width="52sp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:padding="12sp"
+            android:src="@drawable/ic_download"
+            android:tint="@color/white" />
+    </RelativeLayout>
+</RelativeLayout>

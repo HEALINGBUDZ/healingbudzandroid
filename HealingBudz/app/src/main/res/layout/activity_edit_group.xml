@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:focusableInTouchMode="true"
+    android:id="@+id/main_scroll"
+    android:background="@drawable/home_bg_img"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/top_menu"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="30sp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/group_cover"
+            android:background="#f7921f">
+            <RelativeLayout
+                android:id="@+id/sqe_one"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/back_btn"
+                    android:layout_width="42sp"
+                    android:layout_height="match_parent"
+                    android:padding="2sp"
+                    android:src="@drawable/ic_back_icon" />
+
+                <ImageView
+                    android:id="@+id/home_btn"
+                    android:layout_width="42sp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/back_btn"
+                    android:padding="7sp"
+                    android:src="@drawable/ic_home_icon" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealinBudEditTextRegular
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginTop="12sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginLeft="10sp"
+            android:hint="Add Group Name"
+            android:id="@+id/group_name"
+            android:textSize="18sp"
+            android:textColorHint="#f6921f"
+            android:textColor="#f6921f"
+            android:background="@color/transparent"
+            android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_marginLeft="16sp"
+            android:layout_marginRight="16sp"
+            android:background="@drawable/answer_fragment_edittext_bg"
+            android:padding="14sp">
+
+            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                android:id="@+id/group_discription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:gravity="top|left"
+                android:focusable="true"
+                android:minLines="5"
+                android:focusableInTouchMode="true"
+                android:hint="Add Group Description...."
+                android:maxLength="300"
+                android:textSize="16sp"
+                android:textColor="#383838" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:padding="10sp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Group Tags:"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="4sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@color/transparent"
+                android:hint="search tag keywords..."
+                android:textColor="#FFF"
+                android:id="@+id/search_Strain"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:focusable="true"
+                android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="4sp"
+                android:textColorHint="#646464"/>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/strain_recyler_view"/>
+        </LinearLayout>
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:textColor="#FFF"
+            android:layout_marginLeft="13sp"
+            android:layout_marginRight="13sp"
+            android:textSize="16sp"
+            android:id="@+id/create_new_group"
+            android:layout_marginTop="18sp"
+            android:background="@drawable/create_group_btn_bg"
+            android:text="Update GROUP"/>
+       </LinearLayout>
+
+</ScrollView>

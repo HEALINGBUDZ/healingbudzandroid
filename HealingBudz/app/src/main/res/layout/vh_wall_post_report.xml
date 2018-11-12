@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="#403f3f">
+
+    <View
+        android:id="@+id/vh_wall_post_report_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="4sp"
+        android:background="#7CC245" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/vh_wall_post_report_indicator"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/vh_wall_post_report_img"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:padding="15dp"
+            android:src="@drawable/ic_double_circle" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+            android:id="@+id/vh_wall_post_report_txt"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="center_vertical|left"
+            android:text="ANSWER IS OFFENCIVE"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

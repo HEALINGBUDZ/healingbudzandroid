@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#252525"
+    tools:context="com.codingpixel.healingbudz.activity.home.side_menu.my_groups.CloseGroupActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:id="@+id/group_bud_list_layout"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#252525">
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="42sp"
+                android:layout_height="match_parent"
+                android:padding="2sp"
+                android:src="@drawable/ic_back_icon" />
+
+            <ImageView
+                android:id="@+id/home_btn"
+                android:layout_width="42sp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/back_btn"
+                android:padding="7sp"
+                android:src="@drawable/ic_home_icon" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/group_name"
+                android:layout_marginRight="22sp"
+                android:layout_toLeftOf="@+id/private_publice_icon"
+                android:layout_toRightOf="@+id/home_btn"
+                android:text="Smoking' da bud"
+                android:textColor="#f6921f"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:layout_width="62sp"
+                android:id="@+id/private_publice_icon"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:padding="20sp"
+                android:src="@drawable/ic_private_group" />
+
+        </RelativeLayout>
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="-16sp"
+            android:layout_toLeftOf="@+id/private_publice_icon"
+            android:layout_toRightOf="@+id/group_buds_home_btn"
+            android:text="Admin Settings"
+            android:textColor="#c5c3c4"
+            android:textSize="23sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="11sp"
+            android:layout_marginRight="11sp"
+            android:paddingTop="25sp">
+
+            <com.codingpixel.healingbudz.customeUI.HealinBudEditTextRegular
+                android:layout_width="match_parent"
+                android:layout_height="48sp"
+                android:text="Edit Group Name"
+                android:textColor="#8e8e8e"
+                android:focusable="false"
+                android:textSize="14sp"
+                android:id="@+id/edit_name"
+                android:background="@color/transparent" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginTop="5sp"
+                android:background="#343434"/>
+
+            <com.codingpixel.healingbudz.customeUI.HealinBudEditTextRegular
+                android:layout_width="match_parent"
+                android:layout_height="48sp"
+                android:text="Edit Group Description"
+                android:textColor="#8e8e8e"
+                android:focusable="false"
+                android:textSize="14sp"
+                android:id="@+id/edit_discription"
+                android:background="@color/transparent" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginTop="5sp"
+                android:background="#343434"/>
+
+
+            <com.codingpixel.healingbudz.customeUI.HealinBudEditTextRegular
+                android:layout_width="match_parent"
+                android:layout_height="48sp"
+                android:text="Edit Tags"
+                android:id="@+id/edit_tags"
+                android:textColor="#8e8e8e"
+                android:focusable="false"
+                android:textSize="14sp"
+                android:background="@color/transparent" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginTop="5sp"
+                android:background="#343434"/>
+            <com.codingpixel.healingbudz.customeUI.HealinBudEditTextRegular
+                android:layout_width="match_parent"
+                android:layout_height="48sp"
+                android:text="Remove Members"
+                android:textColor="#8e8e8e"
+                android:focusable="false"
+                android:textSize="14sp"
+                android:id="@+id/remove_member"
+                android:background="@color/transparent" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginTop="5sp"
+                android:background="#343434"/>
+
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                android:layout_width="match_parent"
+                android:layout_height="42sp"
+                android:textColor="#FFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:id="@+id/close_group"
+                android:layout_marginTop="24sp"
+                android:background="@drawable/create_group_btn_bg"
+                android:text="CLOSE GROUP"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

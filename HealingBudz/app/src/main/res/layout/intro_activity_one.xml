@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="4.5"
+            android:background="@color/intro_color_one_header"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/intor_one_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/intro_screen_title_font_size" />
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="140sp"
+
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_intro_one" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="5.5"
+            android:background="#3a3a3a">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3a3a3a"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/intro_screen_heading_margin">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/intor_one_heading"
+                    android:textColor="#cccccc"
+                    android:textSize="@dimen/intro_screen_heading_font_size" />
+
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginRight="15sp"
+                    android:layout_marginTop="@dimen/intro_screen_heading_to_description_margin"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:focusable="false"
+                    android:lineSpacingExtra="2dp"
+                    android:nestedScrollingEnabled="true"
+                    android:text="@string/intor_one_msg"
+                    android:textColor="#b3b3b3"
+                    android:textSize="@dimen/intro_screen_discription_font_size"
+                    tools:targetApi="o" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

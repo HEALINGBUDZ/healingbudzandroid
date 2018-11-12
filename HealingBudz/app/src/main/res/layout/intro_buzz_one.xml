@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="4.5"
+            android:background="#7CC244"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="\'\'The Buzz\'\' Feed"
+                android:textColor="@color/white"
+                android:textSize="@dimen/intro_screen_title_font_size" />
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="140sp"
+
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_intro_buzz" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="5.5"
+            android:background="#579129">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#579129"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/intro_screen_heading_margin">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="Just like the old smoke circles
+around the bonfire..."
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/intro_screen_heading_font_size" />
+
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginRight="15sp"
+                    android:layout_marginTop="@dimen/intro_screen_heading_to_description_margin"
+                    android:background="@color/transparent"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:focusable="false"
+                    android:lineSpacingExtra="2dp"
+                    android:nestedScrollingEnabled="true"
+                    android:text="Community is at the core of cannabis culture, and Healing Budz is passionate about creating connection.
+
+The Buzz is where users can share their thoughts, healing stories, pictures, videos, advice and much more."
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/intro_screen_discription_font_size"
+                    tools:targetApi="o" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

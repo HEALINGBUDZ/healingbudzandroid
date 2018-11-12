@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232323"
+    android:orientation="vertical"
+    android:paddingTop="14sp">
+
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_product_open"
+        android:layout_marginTop="5sp"
+        android:paddingLeft="14sp"
+        android:paddingRight="14sp"
+        android:text="Special Offers"
+        android:textColor="#932a88"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/special_product_recyler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="8sp"
+        android:layout_marginRight="8sp"
+        android:layout_marginTop="8sp"
+        android:nestedScrollingEnabled="false" />
+
+    <LinearLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/add_product_open"
+        android:background="#232323"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="14sp">
+
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:indeterminateTint="#ffffff"
+            android:indeterminateTintMode="src_atop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2sp"
+            android:text="Loading..."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_product_open"
+        android:layout_width="200sp"
+        android:layout_height="42sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="24sp"
+        android:layout_marginRight="24sp"
+        android:background="@drawable/bg_btn_product"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="7sp"
+            android:layout_toLeftOf="@+id/text_btn"
+            android:padding="5sp"
+            android:src="@drawable/ic_plus_product" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+            android:id="@+id/text_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+            android:text="Add Special"
+            android:textAllCaps="false"
+            android:textColor="#fdfbfd" />
+    </RelativeLayout>
+
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+        android:id="@+id/no_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_product_open"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="14sp"
+        android:text="No Specials Found!"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone" />
+</RelativeLayout>

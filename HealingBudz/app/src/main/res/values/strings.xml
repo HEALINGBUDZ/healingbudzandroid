@@ -1,0 +1,632 @@
+<resources>
+    <string name="app_name">Healing Budz</string>
+    <string name="intor_one_title">Welcome to Healing Budz</string>
+    <string name="intor_one_heading">"Back in the day you got everything\n you needed to know about cannabis\n from your cousin Tommy."</string>
+    <string name="intor_one_msg">Today’s cannabis patients are part horticulturalist, part herbalist, and part chemist, but they are also passionate about sharing their knowledge. Our Budz are patients with stories to tell. The Healing Budz community connects you to decades of real life experience. Demystify cannabis and get all the answers you couldn\'t ask Tommy - privately and anonymously.</string>
+
+    <string name="intor_two_title">Live Q&amp;A Forum</string>
+    <string name="intor_two_heading">"The Healing Budz Community \nhas heard it all…"</string>
+    <string name="intor_two_msg">So ask away and get quick answers to thousands of live questions on a range of plant science and healing topics. Answer questions on your area of experience and earn points towards our rewards program!</string>
+
+
+    <string name="intor_three_title">Groups</string>
+    <string name="intor_three_heading">"Just like the old smoke circles\n around the bonfire…"</string>
+    <string name="intor_three_msg">Community is at the core of cannabis culture and Healing Budz is passionate about creating connections. Join and create public or private groups to share healing stories, recipes and advice from patients and connoisseurs all around the globe.</string>
+
+    <!--<string name="facebook_app_id">1554666707939071</string>-->
+    <!--<string name="facebook_client_token">f606b95087735f502781b6ccd79b87af</string>-->
+    <!--<string name="fb_login_protocol_scheme">fb1554666707939071</string>-->
+    <!--<string name="facebook_app_id">1516859511696232</string>-->
+    <!--<string name="facebook_client_token">7868014bbd2f55cef056c17fa5e05e6e</string>-->
+    <!--<string name="fb_login_protocol_scheme">fb1516859511696232</string>-->
+    <!--<string name="facebook_app_id">149566972411566</string>-->
+    <!--<string name="facebook_client_token">75eaa816f4e4729e93c97558105f9ca7</string>-->
+    <!--<string name="fb_login_protocol_scheme">fb149566972411566</string>-->
+    <!--<string name="facebook_app_id">1516859511696232</string>-->
+    <!--<string name="facebook_client_token">7868014bbd2f55cef056c17fa5e05e6e</string>-->
+    <!--<string name="fb_login_protocol_scheme">fb1516859511696232</string>-->
+    <!--<string name="facebook_app_id">149566972411566</string>-->
+    <string name="facebook_app_id">189648565295722</string>
+    <!--<string name="facebook_client_token">75eaa816f4e4729e93c97558105f9ca7</string>-->
+    <string name="facebook_client_token">0f5945fa9932f34178fbd7cfc469944b</string>
+    <!--<string name="fb_login_protocol_scheme">fb149566972411566</string>-->
+    <string name="fb_login_protocol_scheme">fb189648565295722</string>
+    <!--1516859511696232-->
+    <string name="intor_four_title">Journals</string>
+    <string name="fabric_key">313e6a5ad40e17050ecd131800f7e89df95fda80</string>
+    <string name="intor_four_heading">"Document your journey as you\n experiment with different strains…"</string>
+    <string name="intor_four_msg">Whether you smoke, eat, or use topically, write down all of those cool inventions that you dreamt up last time you felt that creative spark. Share your journals with the Healing Budz community, create a private diary for symptom management and share with close family, friends or your physician.</string>
+
+
+    <string name="intor_five_title">Strain User Reviews</string>
+    <string name="intor_five_heading">"Individualized strain reviews,\n powered by you, not a laboratory…"</string>
+    <string name="intor_five_msg">From Acapulco Gold to White Widow, find your strain in our database with our individualized strain reviews, rankings on aroma, taste, potency, genetics, and health benefits. Powered by you, not a laboratory, in a language you can understand without a botany degree. Share your prize worthy bud photos, best growing techniques, mood, sensation, and effects.</string>
+    <!-- Don’t see your favorite strain? Add it to the database and earn rewards points!-->
+
+
+    <string name="intor_six_title">Budz Adz</string>
+    <string name="intor_six_heading">"Find medical dispensaries,\n physicians, natural healers, smoke\n shops, glass artists, canna chefs…"</string>
+    <string name="intor_xis_msg">Discover your local canna community. Be in the know about upcoming deals, promotions, fun industry events, and educational seminars in just a few taps.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_test_map">Map</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <string-array name="open_time">
+        <item>9:00 AM</item>
+        <item>9:30 AM</item>
+
+    </string-array>
+
+
+    <string-array name="close_time">
+        <item>7:00 PM</item>
+        <item>7:30 PM</item>
+
+    </string-array>
+
+    <string name="double_cors">&quot;</string>
+
+
+    <string name="email"><u>cutlerfarms@gmail.com</u></string>
+    <string name="website"><u>www.cutlerfarms.com</u></string>
+    <string name="facebook"><u>facebook.com/cutlerfarms</u></string>
+    <string name="twitter"><u>twitter.com./cutlerfarms</u></string>
+    <string name="instagram"><u>intagram.com/cutlerfarms</u></string>
+    <string name="syns_backup_restore"><![CDATA[Syns, backup & restore]]></string>
+    <string name="data_backup_restore"><![CDATA[Data Backup & Restore]]></string>
+
+    <string-array name="shopping_item">
+        <item>Values</item>
+        <item>Values2</item>
+        <item>Values3</item>
+        <item>Values4</item>
+        <item>Values5</item>
+
+    </string-array>
+    <string name="dialog_done_text">DONE</string>
+    <string name="dialog_cancel_text">CANCEL</string>
+    <string name="list_empty">No items to display</string>
+    <string name="select_entry">Select Entries</string>
+    <string name="validation_text">Please select atleast one option</string>
+    <string name="please_select_atleast">Please select atleast </string>
+    <string name="you_can_only_select_upto">You can only select upto </string>
+    <string name="option"> option</string>
+    <string name="options"> options</string>
+    <string name="select_all">select all</string>
+    <string name="de_select_all">deselect all</string>
+
+    <string name="date_today">Today</string>
+    <string name="start_survey_text">Take our Strain Survey and receive</string>
+    <string name="question_1">What medical conditions have you effectively treated with this strain?</string>
+    <string name="question_2">Which moods or sensations have you experienced with this strain?</string>
+    <string name="question_3">"What negative effects have you \n experienced with this strain?"</string>
+    <string name="question_4">Are you currently using cannabis as preventive medication?</string>
+    <string name="question_5">"Which 3 prevention areas are you \n focusing on?"</string>
+    <string name="question_6">"What flavor profiles would you \n associate with this strain?"</string>
+    <string name="dialog_title">Select Up to 3 Values</string>
+    <string name="ok_label">ok</string>
+    <string name="dismiss_label">Cancel</string>
+    <string name="clear_all_label">clear_all</string>
+
+    <string name="default_colour_value" translatable="false">#8e8e8e</string>
+
+    <string name="default_icon_value" translatable="false">ic_logo</string>
+    <string-array name="icons_string_array" translatable="false">
+        <item>ic_notifications_white_24dp</item>
+        <item>ic_account_balance_wallet_white_24dp</item>
+        <item>ic_local_dining_white_24dp</item>
+        <item>ic_list_white_24dp</item>
+        <item>ic_favorite_white_24dp</item>
+        <item>ic_android_white_24dp</item>
+        <item>ic_email_white_24dp</item>
+        <item>ic_chat_bubble_white_24dp</item>
+        <item>ic_forum_white_24dp</item>
+        <item>ic_games_white_24dp</item>
+        <item>ic_camera_alt_white_24dp</item>
+        <item>ic_call_white_24dp</item>
+        <item>ic_directions_bus_white_24dp</item>
+        <item>ic_directions_car_white_24dp</item>
+        <item>ic_directions_railway_white_24dp</item>
+        <item>ic_laptop_chromebook_white_24dp</item>
+        <item>ic_laptop_mac_white_24dp</item>
+        <item>ic_code_white_24dp</item>
+        <item>ic_school_white_24dp</item>
+        <item>ic_local_printshop_white_24dp</item>
+        <item>ic_delete_white_24dp</item>
+        <item>ic_work_white_24dp</item>
+        <item>ic_shop_white_24dp</item>
+        <item>ic_shopping_basket_white_24dp</item>
+        <item>ic_shopping_cart_white_24dp</item>
+        <item>ic_airplanemode_active_white_24dp</item>
+        <item>ic_directions_bike_white_24dp</item>
+        <item>ic_directions_boat_white_24dp</item>
+        <item>ic_directions_run_white_24dp</item>
+        <item>ic_directions_subway_white_24dp</item>
+        <item>ic_directions_walk_white_24dp</item>
+        <item>ic_local_gas_station_white_24dp</item>
+        <item>ic_account_balance_white_24dp</item>
+        <item>ic_grade_white_24dp</item>
+        <item>ic_adb_white_24dp</item>
+        <item>ic_brightness_high_white_24dp</item>
+        <item>ic_audiotrack_white_24dp</item>
+        <item>ic_headset_white_24dp</item>
+        <item>ic_brush_white_24dp</item>
+        <item>ic_battery_full_white_24dp</item>
+        <item>ic_cake_white_24dp</item>
+        <item>ic_map_white_24dp</item>
+        <item>ic_movie_white_24dp</item>
+        <item>ic_camera_enhance_white_24dp</item>
+        <item>ic_content_cut_white_24dp</item>
+        <item>ic_access_time_white_24dp</item>
+        <item>ic_accessibility_white_24dp</item>
+        <item>ic_account_box_white_24dp</item>
+        <item>ic_account_circle_white_24dp</item>
+        <item>ic_add_alert_white_24dp</item>
+        <item>ic_add_circle_white_24dp</item>
+        <item>ic_add_shopping_cart_white_24dp</item>
+        <item>ic_add_white_24dp</item>
+        <item>ic_adjust_white_24dp</item>
+        <item>ic_airline_seat_recline_normal_white_24dp</item>
+        <item>ic_alarm_add_white_24dp</item>
+        <item>ic_alarm_off_white_24dp</item>
+        <item>ic_alarm_on_white_24dp</item>
+        <item>ic_alarm_white_24dp</item>
+        <item>ic_album_white_24dp</item>
+        <item>ic_announcement_white_24dp</item>
+        <item>ic_archive_white_24dp</item>
+        <item>ic_arrow_back_white_24dp</item>
+        <item>ic_assessment_white_24dp</item>
+        <item>ic_assignment_ind_white_24dp</item>
+        <item>ic_assignment_late_white_24dp</item>
+        <item>ic_assignment_turned_in_white_24dp</item>
+        <item>ic_assignment_white_24dp</item>
+        <item>ic_assistant_white_24dp</item>
+        <item>ic_attach_file_white_24dp</item>
+        <item>ic_attach_money_white_24dp</item>
+        <item>ic_backspace_white_24dp</item>
+        <item>ic_backup_white_24dp</item>
+        <item>ic_battery_alert_white_24dp</item>
+        <item>ic_battery_charging_full_white_24dp</item>
+        <item>ic_beenhere_white_24dp</item>
+        <item>ic_bluetooth_white_24dp</item>
+        <item>ic_book_white_24dp</item>
+        <item>ic_bookmark_white_24dp</item>
+        <item>ic_brightness_1_white_24dp</item>
+        <item>ic_broken_image_white_24dp</item>
+        <item>ic_bug_report_white_24dp</item>
+        <item>ic_wb_sunny_white_24dp</item>
+        <item>ic_build_white_24dp</item>
+        <item>ic_business_white_24dp</item>
+        <item>ic_call_end_white_24dp</item>
+        <item>ic_call_made_white_24dp</item>
+        <item>ic_call_merge_white_24dp</item>
+        <item>ic_call_missed_white_24dp</item>
+        <item>ic_call_received_white_24dp</item>
+        <item>ic_call_split_white_24dp</item>
+        <item>ic_camera_roll_white_24dp</item>
+        <item>ic_camera_white_24dp</item>
+        <item>ic_card_giftcard_white_24dp</item>
+        <item>ic_card_travel_white_24dp</item>
+        <item>ic_cast_connected_white_24dp</item>
+        <item>ic_check_circle_white_24dp</item>
+        <item>ic_chrome_reader_mode_white_24dp</item>
+        <item>ic_clear_white_24dp</item>
+        <item>ic_close_white_24dp</item>
+        <item>ic_cloud_circle_white_24dp</item>
+        <item>ic_cloud_download_white_24dp</item>
+        <item>ic_cloud_upload_white_24dp</item>
+        <item>ic_cloud_white_24dp</item>
+        <item>ic_collections_bookmark_white_24dp</item>
+        <item>ic_collections_white_24dp</item>
+        <item>ic_color_lens_white_24dp</item>
+        <item>ic_colorize_white_24dp</item>
+        <item>ic_computer_white_24dp</item>
+        <item>ic_confirmation_number_white_24dp</item>
+        <item>ic_contact_phone_white_24dp</item>
+        <item>ic_contacts_white_24dp</item>
+        <item>ic_content_copy_white_24dp</item>
+        <item>ic_content_paste_white_24dp</item>
+        <item>ic_create_white_24dp</item>
+        <item>ic_credit_card_white_24dp</item>
+        <item>ic_data_usage_white_24dp</item>
+        <item>ic_description_white_24dp</item>
+        <item>ic_desktop_mac_white_24dp</item>
+        <item>ic_desktop_windows_white_24dp</item>
+        <item>ic_developer_board_white_24dp</item>
+        <item>ic_devices_white_24dp</item>
+        <item>ic_directions_white_24dp</item>
+        <item>ic_dns_white_24dp</item>
+        <item>ic_done_white_24dp</item>
+        <item>ic_drafts_white_24dp</item>
+        <item>ic_dvr_white_24dp</item>
+        <item>ic_eject_white_24dp</item>
+        <item>ic_equalizer_white_24dp</item>
+        <item>ic_error_white_24dp</item>
+        <item>ic_event_seat_white_24dp</item>
+        <item>ic_explore_white_24dp</item>
+        <item>ic_extension_white_24dp</item>
+        <item>ic_face_white_24dp</item>
+        <item>ic_fast_forward_white_24dp</item>
+        <item>ic_fast_rewind_white_24dp</item>
+        <item>ic_feedback_white_24dp</item>
+        <item>ic_filter_b_and_w_white_24dp</item>
+        <item>ic_filter_frames_white_24dp</item>
+        <item>ic_filter_hdr_white_24dp</item>
+        <item>ic_filter_vintage_white_24dp</item>
+        <item>ic_find_in_page_white_24dp</item>
+        <item>ic_flag_white_24dp</item>
+        <item>ic_flash_on_white_24dp</item>
+        <item>ic_flight_land_white_24dp</item>
+        <item>ic_flight_takeoff_white_24dp</item>
+        <item>ic_folder_shared_white_24dp</item>
+        <item>ic_folder_white_24dp</item>
+        <item>ic_format_paint_white_24dp</item>
+        <item>ic_format_quote_white_24dp</item>
+        <item>ic_get_app_white_24dp</item>
+        <item>ic_gps_fixed_white_24dp</item>
+        <item>ic_group_work_white_24dp</item>
+        <item>ic_headset_mic_white_24dp</item>
+        <item>ic_hearing_white_24dp</item>
+        <item>ic_help_white_24dp</item>
+        <item>ic_home_white_24dp</item>
+        <item>ic_hotel_white_24dp</item>
+        <item>ic_hourglass_full_white_24dp</item>
+        <item>ic_https_white_24dp</item>
+        <item>ic_import_export_white_24dp</item>
+        <item>ic_inbox_white_24dp</item>
+        <item>ic_info_white_24dp</item>
+        <item>ic_insert_chart_white_24dp</item>
+        <item>ic_insert_emoticon_white_24dp</item>
+        <item>ic_insert_link_white_24dp</item>
+        <item>ic_insert_photo_white_24dp</item>
+        <item>ic_invert_colors_white_24dp</item>
+        <item>ic_keyboard_white_24dp</item>
+        <item>ic_label_white_24dp</item>
+        <item>ic_language_white_24dp</item>
+        <item>ic_layers_white_24dp</item>
+        <item>ic_library_add_white_24dp</item>
+        <item>ic_library_music_white_24dp</item>
+        <item>ic_live_help_white_24dp</item>
+        <item>ic_local_activity_white_24dp</item>
+        <item>ic_local_atm_white_24dp</item>
+        <item>ic_local_bar_white_24dp</item>
+        <item>ic_local_cafe_white_24dp</item>
+        <item>ic_local_florist_white_24dp</item>
+        <item>ic_local_laundry_service_white_24dp</item>
+        <item>ic_local_library_white_24dp</item>
+        <item>ic_local_mall_white_24dp</item>
+        <item>ic_local_pizza_white_24dp</item>
+        <item>ic_local_shipping_white_24dp</item>
+        <item>ic_local_taxi_white_24dp</item>
+        <item>ic_location_city_white_24dp</item>
+        <item>ic_looks_white_24dp</item>
+        <item>ic_loyalty_white_24dp</item>
+        <item>ic_mail_white_24dp</item>
+        <item>ic_markunread_mailbox_white_24dp</item>
+        <item>ic_memory_white_24dp</item>
+        <item>ic_mic_white_24dp</item>
+        <item>ic_more_vert_white_24dp</item>
+        <item>ic_mouse_white_24dp</item>
+        <item>ic_nature_people_white_24dp</item>
+        <item>ic_nature_white_24dp</item>
+        <item>ic_navigation_white_24dp</item>
+        <item>ic_new_releases_white_24dp</item>
+        <item>ic_note_add_white_24dp</item>
+        <item>ic_notifications_off_white_24dp</item>
+        <item>ic_notifications_paused_white_24dp</item>
+        <item>ic_open_in_browser_white_24dp</item>
+        <item>ic_open_in_new_white_24dp</item>
+        <item>ic_pause_circle_filled_white_24dp</item>
+        <item>ic_pause_white_24dp</item>
+        <item>ic_perm_phone_msg_white_24dp</item>
+        <item>ic_person_white_24dp</item>
+        <item>ic_play_arrow_white_24dp</item>
+        <item>ic_play_circle_filled_white_24dp</item>
+        <item>ic_playlist_add_white_24dp</item>
+        <item>ic_polymer_white_24dp</item>
+        <item>ic_print_white_24dp</item>
+        <item>ic_public_white_24dp</item>
+        <item>ic_question_answer_white_24dp</item>
+        <item>ic_queue_music_white_24dp</item>
+        <item>ic_radio_button_checked_white_24dp</item>
+        <item>ic_radio_white_24dp</item>
+        <item>ic_receipt_white_24dp</item>
+        <item>ic_recent_actors_white_24dp</item>
+        <item>ic_refresh_white_24dp</item>
+        <item>ic_remove_circle_white_24dp</item>
+        <item>ic_remove_red_eye_white_24dp</item>
+        <item>ic_reorder_white_24dp</item>
+        <item>ic_repeat_white_24dp</item>
+        <item>ic_reply_all_white_24dp</item>
+        <item>ic_reply_white_24dp</item>
+        <item>ic_report_problem_white_24dp</item>
+        <item>ic_report_white_24dp</item>
+        <item>ic_room_white_24dp</item>
+        <item>ic_router_white_24dp</item>
+        <item>ic_satellite_white_24dp</item>
+        <item>ic_save_white_24dp</item>
+        <item>ic_scanner_white_24dp</item>
+        <item>ic_sd_storage_white_24dp</item>
+        <item>ic_search_white_24dp</item>
+        <item>ic_security_white_24dp</item>
+        <item>ic_send_white_24dp</item>
+        <item>ic_settings_applications_white_24dp</item>
+        <item>ic_settings_backup_restore_white_24dp</item>
+        <item>ic_settings_input_antenna_white_24dp</item>
+        <item>ic_settings_input_hdmi_white_24dp</item>
+        <item>ic_settings_system_daydream_white_24dp</item>
+        <item>ic_settings_white_24dp</item>
+        <item>ic_share_white_24dp</item>
+        <item>ic_shop_two_white_24dp</item>
+        <item>ic_shuffle_white_24dp</item>
+        <item>ic_sim_card_white_24dp</item>
+        <item>ic_skip_next_white_24dp</item>
+        <item>ic_skip_previous_white_24dp</item>
+        <item>ic_snooze_white_24dp</item>
+        <item>ic_speaker_white_24dp</item>
+        <item>ic_stars_white_24dp</item>
+        <item>ic_stay_current_portrait_white_24dp</item>
+        <item>ic_stay_primary_portrait_white_24dp</item>
+        <item>ic_stop_white_24dp</item>
+        <item>ic_storage_white_24dp</item>
+        <item>ic_store_mall_directory_white_24dp</item>
+        <item>ic_store_white_24dp</item>
+        <item>ic_straighten_white_24dp</item>
+        <item>ic_style_white_24dp</item>
+        <item>ic_subject_white_24dp</item>
+        <item>ic_subtitles_white_24dp</item>
+        <item>ic_supervisor_account_white_24dp</item>
+        <item>ic_swap_vertical_circle_white_24dp</item>
+        <item>ic_theaters_white_24dp</item>
+        <item>ic_thumb_down_white_24dp</item>
+        <item>ic_thumb_up_white_24dp</item>
+        <item>ic_thumbs_up_down_white_24dp</item>
+        <item>ic_timelapse_white_24dp</item>
+        <item>ic_timer_white_24dp</item>
+        <item>ic_toys_white_24dp</item>
+        <item>ic_track_changes_white_24dp</item>
+        <item>ic_traffic_white_24dp</item>
+        <item>ic_trending_down_white_24dp</item>
+        <item>ic_trending_flat_white_24dp</item>
+        <item>ic_trending_up_white_24dp</item>
+        <item>ic_tv_white_24dp</item>
+        <item>ic_usb_white_24dp</item>
+        <item>ic_verified_user_white_24dp</item>
+        <item>ic_vibration_white_24dp</item>
+        <item>ic_videocam_white_24dp</item>
+        <item>ic_view_list_white_24dp</item>
+        <item>ic_visibility_white_24dp</item>
+        <item>ic_voicemail_white_24dp</item>
+        <item>ic_volume_up_white_24dp</item>
+        <item>ic_vpn_key_white_24dp</item>
+        <item>ic_vpn_lock_white_24dp</item>
+        <item>ic_warning_white_24dp</item>
+        <item>ic_watch_white_24dp</item>
+        <item>ic_wc_white_24dp</item>
+        <item>ic_whatshot_white_24dp</item>
+        <item>ic_wifi_tethering_white_24dp</item>
+        <item>ic_wifi_white_24dp</item>
+    </string-array>
+
+
+    <string name="preference_notification_category">Notification Preferences</string>
+    <string name="checkbox_vibrate">Vibrate</string>
+    <string name="checkbox_sound">Sound</string>
+    <string name="checkbox_LED">LED</string>
+    <string name="checkbox_ongoing">Persistent</string>
+    <string name="ongoing_detail">Prevent notification from being swiped away</string>
+    <string name="snooze">Snooze</string>
+    <string name="snooze_detail">Add a snooze action to the notification</string>
+    <string name="snooze_length">Snooze length</string>
+    <string name="mark_as_done">Mark as done</string>
+    <string name="mark_as_done_detail">Add a \"Mark as done\" action to the notification</string>
+    <string name="nagging_reminder">Nagging reminder</string>
+    <string name="nagging_detail">Continuously notify you of the current notification until it is dismissed</string>
+    <string name="nagging_interval">Nagging interval</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_about">About</string>
+    <string name="action_show_now">Show now</string>
+    <string name="action_mark_as_done">Mark as done</string>
+    <string name="action_share">Share</string>
+    <string name="delete_confirmation">Are you sure you want to delete this notification?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="title">Title</string>
+    <string name="save_menu">Save</string>
+    <string name="time_now">Now</string>
+    <string name="times_shown">Shown %1$d out of %2$d times</string>
+    <string name="times_shown_edit">Shown %1$d out of</string>
+    <string name="forever">Forever</string>
+    <string name="no_repeat">Does not repeat</string>
+    <string name="times">times</string>
+    <string name="repeat_notification">Number of times to repeat: </string>
+    <string name="content_hint">Add notification content</string>
+    <string name="select_icon">Select an icon</string>
+    <string name="default_icon">Default icon</string>
+    <string name="custom_icon">Custom icon</string>
+    <string name="select_colour">Select a colour</string>
+    <string name="default_colour">Default colour</string>
+    <string name="repeats_on">Repeats on:</string>
+    <string name="repeat_every">Repeat every</string>
+    <string name="repeats_every">Repeats every: %1$d %2$s</string>
+    <string name="no_active">No active notifications</string>
+    <string name="no_inactive">No inactive notifications</string>
+    <string name="toast_past_date">Cannot set initial date in the past</string>
+    <string name="toast_higher_number">Repeat number must be higher</string>
+    <string name="toast_title_empty">Title cannot be empty</string>
+    <string name="toast_mark_as_done">Marked next reminder as done</string>
+    <string name="add_reminder">Add reminder</string>
+    <string name="libraries">Libraries</string>
+    <string name="rate_app">Rate app</string>
+    <string name="contact">Contact</string>
+    <string name="version">Version</string>
+    <string name="thanks_to">Thanks to</string>
+    <string name="translator">Translator</string>
+    <string name="send_email">Send email</string>
+    <string-array name="repeat_array">
+        <item>Does not repeat</item>
+        <item>Every hour</item>
+        <item>Every day</item>
+        <item>Every week</item>
+        <item>Every month</item>
+        <item>Every year</item>
+        <item>Specific days of the week</item>
+        <item>Advanced</item>
+    </string-array>
+    <string name="asset_statements" translatable="false">[{\n  \"relation\": [\"delegate_permission/common.handle_all_urls\"],\n  \"target\": {\n    \"namespace\": \"web\",\n    \"site\": \"https://139.162.37.73\",\n  }\n}]</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="within_15_miles_of_your_location">within 15 miles of your Location</string>
+    <string name="title_location_permission">Location Access Permission</string>
+    <string name="text_location_permission">For Application Usage and Features.</string>
+
+    <string name="text_location_permission_open">Please on the location from setting to access this.</string>
+
+    <string name="dialog_default_title">Here\'s a message!</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <!--branch Muzammil android String Resources-->
+    <string name="network_error_title">Internet Error</string>
+    <string name="network_not_connected_error">It seems that your device is not connected to internet!</string>
+    <!--branch Muzammil android String Resources-->
+
+    <string name="schemeName">hbscheme</string>
+    <string name="hostName">139.162.37.73</string>
+    <!--<string name="hostName">healingbudz.codingpixel.co</string>-->
+    <string name="ad_mob_id_add">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_mob_id_add_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_mob_id_add_ini_simple">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="ad_mob_id_add_ini_vid">ca-app-pub-3940256099942544/8691691433</string>
+    <string name="ad_mob_id_init">ca-app-pub-3940256099942544~3347511713</string>
+    <!--<string name="ad_mob_id_did">2D2AE05AA737317DCBC236EAFCE64333</string>-->
+    <!--<string name="ad_mob_id_did">1175F6FBF4963992CCBEC6F7F2F74B13</string>-->
+    <string name="ad_mob_id_did">7A733B5D64CE502DC060FC28660CECC4</string>
+    <string-array name="list_state">
+        <item>Alaska</item>
+        <item>Arizona</item>
+        <item>Arkansas</item>
+        <item>California</item>
+        <item>Colorado</item>
+        <item>Connecticut</item>
+        <item>Delaware</item>
+        <item>Florida</item>
+        <item> Hawaii</item>
+        <item> Illinois</item>
+        <item>Maine</item>
+        <item>Maryland</item>
+        <item>Massachusetts</item>
+        <item>Michigan</item>
+        <item>Minnesota</item>
+        <item> Montana</item>
+        <item>Nevada</item>
+        <item> New Hampshire</item>
+        <item> New Jersey</item>
+        <item>New Mexico</item>
+        <item>New York</item>
+        <item> North Dakota</item>
+        <item> Ohio</item>
+        <item> Oregon</item>
+        <item>Pennsylvania</item>
+        <item> Rhode Island</item>
+        <item>Vermont</item>
+        <item>Washington</item>
+        <item>Washington, DC</item>
+        <item>West Virginia</item>
+    </string-array>
+    <string name="title_activity_qadetail">QADetailActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+</resources>

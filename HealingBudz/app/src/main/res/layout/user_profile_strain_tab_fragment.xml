@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+            android:id="@+id/not_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_contetn"
+            android:layout_centerInParent="true"
+            android:layout_margin="10sp"
+            android:gravity="center"
+            android:text="No record found!"
+            android:textColor="#c4c3c4"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/main_contetn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_marginBottom="6sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="6sp"
+                android:gravity="center"
+                android:text="My Strains"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="#f4c42f"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/linee"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginLeft="8sp"
+                android:layout_marginRight="8sp"
+                android:background="#333333" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyler_View"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8sp"
+                android:clickable="false" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="14sp">
+
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:indeterminateTint="#ffffff"
+            android:indeterminateTintMode="src_atop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2sp"
+            android:text="Loading..."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/strain_search_edittext_search_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginLeft="24sp"
+        android:layout_marginRight="24sp"
+        android:layout_marginTop="10dp"
+
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="36sp"
+            android:layout_height="36sp"
+            android:padding="5sp"
+            android:src="@drawable/ic_invite_groups_bud_add_btn"
+            android:visibility="gone" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewItalic
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6sp"
+            android:text="No Condition Found"
+
+            android:textColor="#999999" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/suggest_add"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginLeft="24sp"
+        android:layout_marginRight="24sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/add_onther_bud_invited_group_section_btn_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="36sp"
+            android:layout_height="36sp"
+            android:padding="7sp"
+            android:src="@drawable/ic_invite_groups_bud_add_btn" />
+
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6sp"
+            android:text="Suggest an addition"
+            android:textSize="12sp"
+            android:textColor="#999999" />
+    </LinearLayout>
+</LinearLayout>
