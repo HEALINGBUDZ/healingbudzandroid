@@ -369,5 +369,6 @@ public class Post implements Serializable {
 
     public MentionTagJsonModel[] getJsonData() {
         return new Gson().fromJson(getJson_Data(), MentionTagJsonModel[].class);
+
     }
 }

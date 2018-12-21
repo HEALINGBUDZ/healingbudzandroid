@@ -249,11 +249,13 @@
             android:weightSum="10">
 
             <ImageView
+                android:id="@+id/fb_link"
                 android:layout_width="52sp"
                 android:layout_height="52sp"
                 android:src="@drawable/follow_fb_icon" />
 
             <ImageView
+                android:id="@+id/tw_link"
                 android:layout_width="52sp"
                 android:layout_height="52sp"
                 android:layout_marginLeft="20sp"
@@ -261,15 +263,18 @@
                 android:src="@drawable/ic_follow_twitter" />
 
             <ImageView
+                android:id="@+id/inst_link"
                 android:layout_width="52sp"
                 android:layout_height="52sp"
                 android:layout_marginRight="20sp"
                 android:src="@drawable/insta_follow_icon" />
 
             <ImageView
+                android:id="@+id/yt_link"
                 android:layout_width="52sp"
                 android:layout_height="52sp"
-                android:src="@drawable/g1_ic" />
+                android:tint="@color/white"
+                android:src="@drawable/youtube_tc" />
 
 
         </LinearLayout>

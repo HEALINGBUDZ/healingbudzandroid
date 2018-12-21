@@ -91,12 +91,20 @@
                 android:text="No Surveys Submitted!"
                 android:textColor="#999999" />
 
+            <ImageView
+                android:id="@+id/img_pending"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="185dp"
+                android:src="@drawable/smp_img"
+                android:visibility="visible" />
+
             <LinearLayout
                 android:id="@+id/survay_layoutt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"

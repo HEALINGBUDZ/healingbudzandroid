@@ -2,10 +2,10 @@ package com.codingpixel.healingbudz.activity.home.home_fragment.budz_map_tab;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -17,8 +17,12 @@ import android.widget.TextView;
 import com.android.volley.Request;
 import com.codingpixel.healingbudz.R;
 import com.codingpixel.healingbudz.Utilities.Constants;
+import com.codingpixel.healingbudz.Utilities.DateConverter;
 import com.codingpixel.healingbudz.activity.home.home_fragment.budz_map_tab.dialog.BudzFeedAlertDialog;
+import com.codingpixel.healingbudz.activity.home.home_fragment.budz_map_tab.dialog.BudzMapAuthAzureDialog;
 import com.codingpixel.healingbudz.activity.home.home_fragment.budz_map_tab.dialog.BudzMapStripeDialog;
+import com.codingpixel.healingbudz.activity.home.home_fragment.budz_map_tab.dialog.PaymentModel;
+import com.codingpixel.healingbudz.customeUI.CustomeToast;
 import com.codingpixel.healingbudz.data_structure.APIActions;
 import com.codingpixel.healingbudz.network.VollyAPICall;
 import com.codingpixel.healingbudz.network.model.APIResponseListner;
@@ -34,7 +38,10 @@ import static com.codingpixel.healingbudz.data_structure.APIActions.ApiActions.u
 import static com.codingpixel.healingbudz.network.model.URL.update_pop_up;
 import static com.codingpixel.healingbudz.static_function.UIModification.FullScreen;
 
-public class BudzMapPaidViewActivity extends AppCompatActivity implements BudzMapStripeDialog.OnDialogFragmentClickListener, APIResponseListner, BudzFeedAlertDialog.OnDialogFragmentClickListener {
+public class BudzMapPaidViewActivity extends AppCompatActivity implements BudzMapStripeDialog.OnDialogFragmentClickListener
+        , APIResponseListner
+        , BudzFeedAlertDialog.OnDialogFragmentClickListener
+        , BudzMapAuthAzureDialog.OnDialogFragmentClickListener {
 
     TextView text_heading, text_detail, text_learn_more, text_middle_doller, text_left_doller, text_right_doller;
     RelativeLayout tab_three_main, tab_tow_main, tab_one_main, middle_bg;
@@ -212,8 +219,13 @@ public class BudzMapPaidViewActivity extends AppCompatActivity implements BudzMa
 //                    bundle.putString("under_small_val", "per mo");
                     pay = "$15.95";
                 }
+                //FOR STRIPE
                 BudzMapStripeDialog budzFeedAlertDialog = BudzMapStripeDialog.newInstance(BudzMapPaidViewActivity.this, false, pay);
                 budzFeedAlertDialog.show(BudzMapPaidViewActivity.this.getSupportFragmentManager(), "dialog");
+
+                //FOR AUTHORIZE.NET
+//                BudzMapAuthAzureDialog budzMapAuthAzureDialog = BudzMapAuthAzureDialog.newInstance(BudzMapPaidViewActivity.this, false, pay, model);
+//                budzMapAuthAzureDialog.show(BudzMapPaidViewActivity.this.getSupportFragmentManager(), "dialog");
             }
         });
         check_box_tap.setOnClickListener(new View.OnClickListener() {
@@ -227,6 +239,8 @@ public class BudzMapPaidViewActivity extends AppCompatActivity implements BudzMa
             }
         });
     }
+
+    PaymentModel model;
 
     private void initView() {
         text_heading = findViewById(R.id.text_heading);
@@ -307,6 +321,41 @@ public class BudzMapPaidViewActivity extends AppCompatActivity implements BudzMa
     @Override
     public void onRequestError(String response, APIActions.ApiActions apiActions) {
         Log.d("log", response);
+        try {
+            JSONObject object = new JSONObject(response);
+            CustomeToast.ShowCustomToast(this, object.getString("errorMessage"), Gravity.TOP);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (model != null) {
+            if (apiActions == add_subscription) {
+                callPopup();
+            } else if (apiActions == update_subscription) {
+                callPopup();
+            }
+        }
+    }
+
+    private void callPopup() {
+        String pay = "";
+        if (plan_type == 1) {
+            pay = "$29.95";
+//                    bundle.putString("main_val", "$29");
+//                    bundle.putString("small_val", "95");
+//                    bundle.putString("under_small_val", "per mo");
+        } else if (plan_type == 2) {
+//                    bundle.putString("main_val", "$19");
+//                    bundle.putString("small_val", "95");
+//                    bundle.putString("under_small_val", "per mo");
+            pay = "$19.95";
+        } else {
+//                    bundle.putString("main_val", "$15");
+//                    bundle.putString("small_val", "95");
+//                    bundle.putString("under_small_val", "per mo");
+            pay = "$15.95";
+        }
+        BudzMapAuthAzureDialog budzMapAuthAzureDialog = BudzMapAuthAzureDialog.newInstance(BudzMapPaidViewActivity.this, false, pay, model);
+        budzMapAuthAzureDialog.show(BudzMapPaidViewActivity.this.getSupportFragmentManager(), "dialog");
     }
 
     @Override
@@ -317,5 +366,32 @@ public class BudzMapPaidViewActivity extends AppCompatActivity implements BudzMa
     @Override
     public void onSubcribeNowBtnClick(BudzFeedAlertDialog dialog) {
 
+    }
+
+    @Override
+    public void TokenGenrate(PaymentModel token) {
+        Log.d("token", token.toString());
+        model = token;
+        JSONObject object = new JSONObject();
+        try {
+
+            object.put("plan_type", plan_type);
+            object.put("card", token.getCardName());
+            object.put("year", DateConverter.getDateTime("MM/yy", "yy", token.getExpDate()));
+            object.put("month", DateConverter.getDateTime("MM/yy", "MM", token.getExpDate()));
+            object.put("cvc", token.getCvc());
+            object.put("email", token.getEmail());
+            if (isUpdate) {
+                object.put("budz_id", budz_id);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (isUpdate) {
+            new VollyAPICall(BudzMapPaidViewActivity.this, true, URL.update_subscription, object, user.getSession_key(), Request.Method.POST, BudzMapPaidViewActivity.this, update_subscription);
+        } else {
+
+            new VollyAPICall(BudzMapPaidViewActivity.this, true, URL.add_subscription, object, user.getSession_key(), Request.Method.POST, BudzMapPaidViewActivity.this, add_subscription);
+        }
     }
 }

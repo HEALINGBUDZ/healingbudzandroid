@@ -257,7 +257,7 @@ public class MyAnswersActivity extends AppCompatActivity implements APIResponseL
 
     @Override
     public void onItemClick(View view, int position) {
-        finish();
+//        finish();
         showSubFragmentListner_object.ShowAnswers(genrateDataModal(main_data.get(position)), main_data.get(position).getQuestion_id(), true);
     }
 

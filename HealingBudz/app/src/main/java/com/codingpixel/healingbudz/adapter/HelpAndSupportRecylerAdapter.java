@@ -122,10 +122,10 @@ public class HelpAndSupportRecylerAdapter extends ExpandableRecyclerViewAdapter<
                 } else if (holder.phone_edit_text.getText().toString().trim().length() > 0) {
                     CallUser.sendSMS(holder.phone_edit_text.getText().toString(), "Healing Budz", view.getContext());
                     holder.phone_edit_text.setText("");
-                } else if(holder.email_edit_text.getText().toString().trim().length() > 0){
+                } else if (holder.email_edit_text.getText().toString().trim().length() > 0) {
                     sendInviteEmail(view, holder.email_edit_text.getText().toString());
                     holder.email_edit_text.setText("");
-                }else {
+                } else {
 
                 }
             }
@@ -186,6 +186,30 @@ public class HelpAndSupportRecylerAdapter extends ExpandableRecyclerViewAdapter<
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+        holder.fb_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LinksUtils.GotoWebLink("https://www.facebook.com/healingbudz/", (Activity) v.getContext());
+            }
+        });
+        holder.tw_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LinksUtils.GotoWebLink("https://twitter.com/healingbudz?lang=en", (Activity) v.getContext());
+            }
+        });
+        holder.inst_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LinksUtils.GotoWebLink("https://www.instagram.com/healingbudz/?hl=en", (Activity) v.getContext());
+            }
+        });
+        holder.yt_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LinksUtils.GotoWebLink("https://www.youtube.com/channel/UCcQUb_JBOCzPItwVA56DNuA?view_as=subscriber", (Activity) v.getContext());
             }
         });
     }
@@ -284,3 +308,7 @@ public class HelpAndSupportRecylerAdapter extends ExpandableRecyclerViewAdapter<
         }
     }
 }
+//Youtube https://www.youtube.com/channel/UCcQUb_JBOCzPItwVA56DNuA?view_as=subscriber
+//Insta https://www.instagram.com/healingbudz/?hl=en
+//FB https://www.facebook.com/healingbudz/
+// Twit https://twitter.com/healingbudz?lang=en

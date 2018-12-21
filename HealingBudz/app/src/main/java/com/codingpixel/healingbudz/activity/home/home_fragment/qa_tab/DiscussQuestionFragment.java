@@ -129,9 +129,9 @@ public class DiscussQuestionFragment extends Fragment implements SaveDiscussionA
     private Button Reply_Answer_btn;
     ScrollView mScrollView;
     LinearLayout attachment_view;
-    RelativeLayout attachment_three,attachment_two,attachment_one;
-    SelectableRoundedImageView attachment_three_image,attachment_two_image,attachment_one_image;
-    ImageView attachment_three_video,attachment_two_video,attachment_one_video;
+    RelativeLayout attachment_three, attachment_two, attachment_one;
+    SelectableRoundedImageView attachment_three_image, attachment_two_image, attachment_one_image;
+    ImageView attachment_three_video, attachment_two_video, attachment_one_video;
 
     private boolean isViewVisible(View view) {
         Rect scrollBounds = new Rect();
@@ -389,7 +389,7 @@ public class DiscussQuestionFragment extends Fragment implements SaveDiscussionA
             url = get_answers + "/" + dataModel.getId();
         }
         new VollyAPICall(getContext(), false, url, jsonObject, user.getSession_key(), Request.Method.GET, DiscussQuestionFragment.this, get_question_answers);
-        if (dataModel.getAttachments() != null){
+        if (dataModel.getAttachments() != null) {
             if (dataModel.getAttachments().size() > 0) {
                 attachment_view.setVisibility(View.VISIBLE);
                 final ArrayList<QuestionAnswersDataModel.Attachment> attachments = dataModel.getAttachments();
@@ -554,7 +554,7 @@ public class DiscussQuestionFragment extends Fragment implements SaveDiscussionA
         } else {
             attachment_view.setVisibility(GONE);
         }
-        
+
     }
 
     @TargetApi(Build.VERSION_CODES.M)
@@ -615,7 +615,11 @@ public class DiscussQuestionFragment extends Fragment implements SaveDiscussionA
                     transaction.commitAllowingStateLoss();
                     xy = 0;
                 }
-                ((HomeActivity) view.getContext()).backHandle();
+                if (getContext() instanceof HomeActivity)
+                    ((HomeActivity) view.getContext()).backHandle();
+                else {
+                    getActivity().finish();
+                }
 //                if (HomeActivity.drawerLayout != null) {
 //                    HomeActivity.drawerLayout.openDrawer(Gravity.START);
 //                }
@@ -791,7 +795,8 @@ public class DiscussQuestionFragment extends Fragment implements SaveDiscussionA
         if (isShared) {
 
         } else {
-            ((HomeActivity) getContext()).bottomBar(false);
+            if (getContext() instanceof HomeActivity)
+                ((HomeActivity) getContext()).bottomBar(false);
         }
     }
 
@@ -808,10 +813,12 @@ public class DiscussQuestionFragment extends Fragment implements SaveDiscussionA
     public void onResume() {
         super.onResume();
         isShared = false;
-        if (this.isVisible() && !this.isDetached() && !this.isHidden())
-            ((HomeActivity) getContext()).bottomBar(true);
-        else {
-            ((HomeActivity) getContext()).bottomBar(false);
+        if (this.isVisible() && !this.isDetached() && !this.isHidden()) {
+            if (getContext() instanceof HomeActivity)
+                ((HomeActivity) getContext()).bottomBar(true);
+        } else {
+            if (getContext() instanceof HomeActivity)
+                ((HomeActivity) getContext()).bottomBar(false);
         }
         if (isNewScreen) {
             isNewScreen = false;

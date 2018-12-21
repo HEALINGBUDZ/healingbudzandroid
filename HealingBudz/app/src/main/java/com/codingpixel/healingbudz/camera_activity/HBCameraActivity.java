@@ -152,7 +152,6 @@ public class HBCameraActivity extends AppCompatActivity implements ControlView.C
             HBCameraActivity.this.finish();
             return;
         }
-
         video_button_layout = (RelativeLayout) findViewById(R.id.video_button);
         FullScreen(this);
         isVideoCaptureAble = getIntent().getExtras().getBoolean("isVideoCaptureAble");
@@ -178,7 +177,7 @@ public class HBCameraActivity extends AppCompatActivity implements ControlView.C
         //Muzammil android branch
 //
 
-        if (Build.VERSION.SDK_INT > 15) {
+        if (Build.VERSION.SDK_INT > 21) {
             final String[] permissions = {
                     Manifest.permission.CAMERA,
                     Manifest.permission.RECORD_AUDIO,
@@ -700,6 +699,7 @@ public class HBCameraActivity extends AppCompatActivity implements ControlView.C
                 //                                          int[] grantResults)
                 // to handle the case where the user grants the permission. See the documentation
                 // for ActivityCompat#requestPermissions for more details.
+                finish();
                 return;
             }
 //            addCamera();

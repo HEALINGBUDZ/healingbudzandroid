@@ -347,7 +347,10 @@ public class BudzMapHomeFragment extends Fragment implements OnMapReadyCallback
                     pages = 0;
                     Refresh.setVisibility(View.VISIBLE);
                     budz_map_test_data.clear();
-                    recyler_adapter.notifyDataSetChanged();
+                    recyler_adapter.notifyDataSetChanged();//115.242200//36.183322
+                    //lat: 39.3970499
+                    //
+                    //lng: -101.0519032
                     new VollyAPICall(view.getContext(), false, URL.get_budz_map + "?skip=0&lat=" + lat + "&lng=" + lng + "&type=" + Filteration_ids + "&query=" + Search_budz.getText().toString(), object, user.getSession_key(), Request.Method.GET, BudzMapHomeFragment.this, get_budz_map);
                 }
             }
@@ -912,7 +915,7 @@ public class BudzMapHomeFragment extends Fragment implements OnMapReadyCallback
                     dataModel.setCard_brand(object.getString("card_brand"));
                     dataModel.setCard_last_four(object.getString("card_last_four"));
                     dataModel.setTrial_ends_at(object.getString("trial_ends_at"));
-                    dataModel.setDistance(object.optInt("distance"));
+                    dataModel.setDistance(object.optDouble("distance"));
                     dataModel.setGet_user_save_count(object.getInt("get_user_save_count"));
                     if (!object.isNull("rating_sum")) {
 //                        dataModel.setRating_sum(object.optJSONObject("rating_sum").getDouble("total"));
@@ -1028,7 +1031,8 @@ public class BudzMapHomeFragment extends Fragment implements OnMapReadyCallback
 
     public void SetMarkers() {
         mMap.clear();
-        for (int x = 0; x < budz_map_test_data.size(); x++) {
+        for (int x = (budz_map_test_data.size() - 1); x >= 0; x--) {
+//        for (int x = 0; x < budz_map_test_data.size(); x++) {
             BudzMapHomeDataModel data = budz_map_test_data.get(x);
             Double latitude = data.getLat();
             Double longitude = data.getLng();
@@ -1237,6 +1241,8 @@ public class BudzMapHomeFragment extends Fragment implements OnMapReadyCallback
         }
         lat = String.valueOf(userLAtitude);
         lng = String.valueOf(userLongitude);
+
+        //34.114274,-84.637390
 //        if (lat.length() < 4) {
 //            lat = userLAtitude + "";
 //            lng = userLongitude + "";

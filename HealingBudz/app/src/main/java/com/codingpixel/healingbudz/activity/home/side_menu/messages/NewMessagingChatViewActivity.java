@@ -331,7 +331,7 @@ public class NewMessagingChatViewActivity extends AppCompatActivity implements V
                     if (Msg_Text.getText().toString().trim().length() > 0) {
                         JSONObject object = new JSONObject();
                         List<String> urlsTest = Utility.extractURL(Msg_Text.getText().toString());
-                        if (urlsTest.size() > 0) {
+                        if (urlsTest != null && urlsTest.size() > 0) {
                             isUrlSend = true;
                         } else {
                             isUrlSend = false;
@@ -384,7 +384,7 @@ site_image*/
                         try {
                             json_object.put("message", Msg_Text.getText().toString());
                             List<String> urls = Utility.extractURL(Msg_Text.getText().toString());
-                            if (urls.size() > 0) {
+                            if (urls != null && urls.size() > 0) {
                                 json_object.put("url", urls.get(0));
                             } else {
                                 json_object.put("url", "");
@@ -427,6 +427,7 @@ site_image*/
                             dataModel.setReceiver_id(chat_message_data_modal.getSender_id());
                         }
                         dataModel.setAdded_date(getCurrentDate());
+                        dataModel.setCreateDate(getCurrentDate());
                         data.add(dataModel);
                     } else if (Attached_video_path.length() > 0) {
                         MessagesChatMsgsDataModel dataModel = new MessagesChatMsgsDataModel();
@@ -436,6 +437,7 @@ site_image*/
                         dataModel.setTimeItem(false);
                         dataModel.setReceiver(false);
                         dataModel.setAdded_date(getCurrentDate());
+                        dataModel.setCreateDate(getCurrentDate());
                         dataModel.setVideo_path("");
                         dataModel.setVideo_thumbni("");
                         dataModel.setUploadinStart(true);
@@ -521,6 +523,7 @@ site_image*/
                             }
                             dataModel.setMsg_TExt(json_data.getString("text"));
                             dataModel.setAdded_date(getCurrentDate());
+                            dataModel.setCreateDate(getCurrentDate());
                             data.add(dataModel);
                             recyler_adapter.notifyItemInserted(data.size());
                             chat_recyler_view.scrollToPosition(recyler_adapter.getItemCount() - 1);
@@ -594,7 +597,7 @@ site_image*/
             String Name = "";
             if (user.getUser_id() == chat_message_data_modal.getReceiver_id()) {
                 if (chat_message_data_modal.getSender_image_path().length() > 8) {
-                    if ((chat_message_data_modal.getSender_image_path().contains("facebook.com") ||chat_message_data_modal.getSender_image_path().contains("https") ||chat_message_data_modal.getSender_image_path().contains("http") || chat_message_data_modal.getSender_image_path().contains("google.com") || chat_message_data_modal.getSender_image_path().contains("googleusercontent.com")))
+                    if ((chat_message_data_modal.getSender_image_path().contains("facebook.com") || chat_message_data_modal.getSender_image_path().contains("https") || chat_message_data_modal.getSender_image_path().contains("http") || chat_message_data_modal.getSender_image_path().contains("google.com") || chat_message_data_modal.getSender_image_path().contains("googleusercontent.com")))
                         icon_path = chat_message_data_modal.getSender_image_path();
                     else
                         icon_path = images_baseurl + chat_message_data_modal.getSender_image_path();
@@ -612,7 +615,7 @@ site_image*/
 
             } else if (user.getUser_id() == chat_message_data_modal.getSender_id()) {
                 if (chat_message_data_modal.getReceiver_image_path().length() > 8) {
-                    if ((chat_message_data_modal.getReceiver_image_path().contains("facebook.com") ||chat_message_data_modal.getReceiver_image_path().contains("https") ||chat_message_data_modal.getReceiver_image_path().contains("https") || chat_message_data_modal.getReceiver_image_path().contains("google.com") || chat_message_data_modal.getReceiver_image_path().contains("googleusercontent.com")))
+                    if ((chat_message_data_modal.getReceiver_image_path().contains("facebook.com") || chat_message_data_modal.getReceiver_image_path().contains("https") || chat_message_data_modal.getReceiver_image_path().contains("https") || chat_message_data_modal.getReceiver_image_path().contains("google.com") || chat_message_data_modal.getReceiver_image_path().contains("googleusercontent.com")))
                         icon_path = chat_message_data_modal.getReceiver_image_path();
                     else {
                         icon_path = images_baseurl + chat_message_data_modal.getReceiver_image_path();
@@ -629,7 +632,7 @@ site_image*/
                 Name = chat_message_data_modal.getReceiver_first_name();
             } else {
                 if (chat_message_data_modal.getReceiver_image_path().length() > 8) {
-                    if ((chat_message_data_modal.getReceiver_image_path().contains("facebook.com") ||chat_message_data_modal.getReceiver_image_path().contains("https") ||chat_message_data_modal.getReceiver_image_path().contains("http") || chat_message_data_modal.getReceiver_image_path().contains("google.com") || chat_message_data_modal.getReceiver_image_path().contains("googleusercontent.com")))
+                    if ((chat_message_data_modal.getReceiver_image_path().contains("facebook.com") || chat_message_data_modal.getReceiver_image_path().contains("https") || chat_message_data_modal.getReceiver_image_path().contains("http") || chat_message_data_modal.getReceiver_image_path().contains("google.com") || chat_message_data_modal.getReceiver_image_path().contains("googleusercontent.com")))
                         icon_path = chat_message_data_modal.getReceiver_image_path();
                     else {
                         icon_path = images_baseurl + chat_message_data_modal.getReceiver_image_path();
@@ -933,6 +936,7 @@ site_image*/
                     }
                     dataModel.setMsg_TExt(msg_object.getString("message"));
                     dataModel.setAdded_date(msg_object.getString("created_at"));
+                    dataModel.setCreateDate(msg_object.getString("created_at"));
                     data.add(dataModel);
                     recyler_adapter.notifyItemChanged(x);
                 }
@@ -1025,6 +1029,7 @@ site_image*/
                     dataModel.setReceiver(false);
                     dataModel.setImage_Path(object.getString("file"));
                     dataModel.setAdded_date(getCurrentDate());
+                    dataModel.setCreateDate(getCurrentDate());
                     data.add(dataModel);
                 } else {
                     MessagesChatMsgsDataModel dataModel = new MessagesChatMsgsDataModel();
@@ -1034,6 +1039,7 @@ site_image*/
                     dataModel.setTimeItem(false);
                     dataModel.setReceiver(false);
                     dataModel.setAdded_date(getCurrentDate());
+                    dataModel.setCreateDate(getCurrentDate());
                     dataModel.setVideo_path(object.getString("file"));
                     dataModel.setVideo_thumbni(object.getString("file_poster"));
                     data.add(dataModel);

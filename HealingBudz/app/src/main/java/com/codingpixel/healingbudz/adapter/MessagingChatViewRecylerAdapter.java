@@ -109,11 +109,11 @@ public class MessagingChatViewRecylerAdapter extends RecyclerView.Adapter<Messag
         } else {
             holder.receiver_name.setText(MessageFormat.format("{0} {1}", Splash.user.getFirst_name(), Splash.user.getLast_name()));
             holder.sender_name.setText("");
-
             holder.Receiver_Msg_Layout.setVisibility(View.VISIBLE);
             holder.Sender_Msg_Layout.setVisibility(View.GONE);
         }
-
+        holder.receiver_date.setText(DateConverter.getPrettyTime(mData.get(position).getCreateDate()));
+        holder.sender_date.setText(DateConverter.getPrettyTime(mData.get(position).getCreateDate()));
 
         if (mData.get(position).isImageMsg()) {
             holder.Sender_video_icon.setVisibility(View.GONE);
@@ -330,10 +330,13 @@ public class MessagingChatViewRecylerAdapter extends RecyclerView.Adapter<Messag
         ProgressBar Uploading_progress_bar;
         RelativeLayout Sender_Msg_Layout, Receiver_Msg_Layout;
         Preview receiver_scraps, sender_scraps;
+        TextView receiver_date,sender_date;
 
         public ViewHolder(View itemView) {
             super(itemView);
             sender_name = itemView.findViewById(R.id.sender_name);
+            sender_date = itemView.findViewById(R.id.sender_date);
+            receiver_date = itemView.findViewById(R.id.receiver_date);
             receiver_name = itemView.findViewById(R.id.receiver_name);
             Msg_Time_layout = itemView.findViewById(R.id.remaining_time);
             Sender_Msg_Layout = itemView.findViewById(R.id.sender_msgs_layout);

@@ -1282,7 +1282,7 @@ public class BudzMapDetailsActivity extends AppCompatActivity implements View.On
                 dataModel.setCard_brand(object.getString("card_brand"));
                 dataModel.setCard_last_four(object.getString("card_last_four"));
                 dataModel.setTrial_ends_at(object.getString("trial_ends_at"));
-                dataModel.setDistance(object.getInt("distance"));
+                dataModel.setDistance(object.optDouble("distance"));
                 dataModel.setGet_user_save_count(object.getInt("get_user_save_count"));
                 if (!object.isNull("rating_sum")) {
                     dataModel.setRating_sum(Double.valueOf(D_FORMAT_ONE.format(object.optJSONObject("rating_sum").getDouble("total"))));
@@ -1407,55 +1407,55 @@ public class BudzMapDetailsActivity extends AppCompatActivity implements View.On
                     JSONObject object = jsonArray.getJSONObject(0);
                     JSONArray array = jsonArray.getJSONObject(0).getJSONArray("address_components");
                     for (int i = 0; i < array.length(); i++) {
-                        String name = array.getJSONObject(i).getString("long_name");
-                        for (int j = 0; j < Constants.stateList.length; j++) {
-                            if (Constants.stateList[j].equalsIgnoreCase(name)) {
-
-                                stst = 1;
-                            }
-                        }
+//                        String name = array.getJSONObject(i).getString("long_name");
+//                        for (int j = 0; j < Constants.stateList.length; j++) {
+//                            if (Constants.stateList[j].equalsIgnoreCase(name)) {
+//
+//                                stst = 1;
+//                            }
+//                        }
                     }
                     if (stst == -1) {
-                        new SweetAlertDialog(this, SweetAlertDialog.NORMAL_TYPE)
-                                .setTitleText("Error!")
-                                .setContentText("You can't view this type of business in your area.")
-                                .setConfirmText("Okay!")
-                                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                                    @Override
-                                    public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                        sweetAlertDialog.dismissWithAnimation();
-                                        finish();
-                                    }
-                                }).show();
+//                        new SweetAlertDialog(this, SweetAlertDialog.NORMAL_TYPE)
+//                                .setTitleText("Error!")
+//                                .setContentText("You can't view this type of business in your area.")
+//                                .setConfirmText("Okay!")
+//                                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+//                                    @Override
+//                                    public void onClick(SweetAlertDialog sweetAlertDialog) {
+//                                        sweetAlertDialog.dismissWithAnimation();
+//                                        finish();
+//                                    }
+//                                }).show();
                     }
 
                 } else {
-                    new SweetAlertDialog(this, SweetAlertDialog.NORMAL_TYPE)
-                            .setTitleText("Error!")
-                            .setContentText("You can't view this type of business in your area.")
-                            .setConfirmText("Okay!")
-                            .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                                @Override
-                                public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                    sweetAlertDialog.dismissWithAnimation();
-                                    finish();
-                                }
-                            }).show();
+//                    new SweetAlertDialog(this, SweetAlertDialog.NORMAL_TYPE)
+//                            .setTitleText("Error!")
+//                            .setContentText("You can't view this type of business in your area.")
+//                            .setConfirmText("Okay!")
+//                            .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+//                                @Override
+//                                public void onClick(SweetAlertDialog sweetAlertDialog) {
+//                                    sweetAlertDialog.dismissWithAnimation();
+//                                    finish();
+//                                }
+//                            }).show();
                 }
 
             } catch (JSONException e) {
                 e.printStackTrace();
-                new SweetAlertDialog(this, SweetAlertDialog.NORMAL_TYPE)
-                        .setTitleText("Error!")
-                        .setContentText("You can't view this type of business in your area.")
-                        .setConfirmText("Okay!")
-                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                            @Override
-                            public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                sweetAlertDialog.dismissWithAnimation();
-                                finish();
-                            }
-                        }).show();
+//                new SweetAlertDialog(this, SweetAlertDialog.NORMAL_TYPE)
+//                        .setTitleText("Error!")
+//                        .setContentText("You can't view this type of business in your area.")
+//                        .setConfirmText("Okay!")
+//                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+//                            @Override
+//                            public void onClick(SweetAlertDialog sweetAlertDialog) {
+//                                sweetAlertDialog.dismissWithAnimation();
+//                                finish();
+//                            }
+//                        }).show();
             }
 
 
@@ -1470,6 +1470,9 @@ public class BudzMapDetailsActivity extends AppCompatActivity implements View.On
         try {
             JSONObject object = new JSONObject(response);
             CustomeToast.ShowCustomToast(getContext(), object.getString("errorMessage"), Gravity.TOP);
+            if (object.getString("errorMessage").equalsIgnoreCase("invalid id.")) {
+                finish();
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }

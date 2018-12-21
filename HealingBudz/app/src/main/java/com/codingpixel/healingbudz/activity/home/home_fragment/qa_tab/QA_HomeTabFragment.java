@@ -52,6 +52,7 @@ import com.codingpixel.healingbudz.network.VollyAPICall;
 import com.codingpixel.healingbudz.network.model.APIResponseListner;
 import com.codingpixel.healingbudz.network.model.URL;
 import com.codingpixel.healingbudz.sharedprefrences.SharedPrefrences;
+import com.codingpixel.healingbudz.static_function.IntentFunction;
 import com.mancj.slideup.SlideUp;
 import com.mancj.slideup.SlideUpBuilder;
 
@@ -413,12 +414,13 @@ public class QA_HomeTabFragment extends Fragment implements QAHomeFragmentRecyle
                 @Override
                 public void run() {
                     DetachSubFragments();
-                    discussQuestionFragment.dataModel = dataModel;
-                    FragmentManager manager = getActivity().getSupportFragmentManager();
-                    FragmentTransaction transaction = manager.beginTransaction();
-                    transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_in);
-                    transaction.add(R.id.fragment_id_full_screen, discussQuestionFragment, "1");
-                    transaction.commitAllowingStateLoss();
+                    IntentFunction.GoToWithBundle(getContext(), QADetailActivity.class, dataModel);
+//                    discussQuestionFragment.dataModel = dataModel;
+//                    FragmentManager manager = getActivity().getSupportFragmentManager();
+//                    FragmentTransaction transaction = manager.beginTransaction();
+//                    transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_in);
+//                    transaction.add(R.id.fragment_id_full_screen, discussQuestionFragment, "1");
+//                    transaction.commitAllowingStateLoss();
                 }
             });
 //            QADetailActivity.dataModel = dataModel;
@@ -429,12 +431,13 @@ public class QA_HomeTabFragment extends Fragment implements QAHomeFragmentRecyle
                 @Override
                 public void run() {
                     DetachSubFragments();
-                    discussQuestionFragment.dataModel = dataModel;
-                    FragmentManager manager = getActivity().getSupportFragmentManager();
-                    FragmentTransaction transaction = manager.beginTransaction();
-                    transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_in);
-                    transaction.add(R.id.fragment_id_full_screen, discussQuestionFragment, "1");
-                    transaction.commitAllowingStateLoss();
+                    IntentFunction.GoToWithBundle(getContext(), QADetailActivity.class, dataModel);
+//                    discussQuestionFragment.dataModel = dataModel;
+//                    FragmentManager manager = getActivity().getSupportFragmentManager();
+//                    FragmentTransaction transaction = manager.beginTransaction();
+//                    transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_in);
+//                    transaction.add(R.id.fragment_id_full_screen, discussQuestionFragment, "1");
+//                    transaction.commitAllowingStateLoss();
                 }
             });
 //            QADetailActivity.dataModel = dataModel;
@@ -447,12 +450,13 @@ public class QA_HomeTabFragment extends Fragment implements QAHomeFragmentRecyle
                 @Override
                 public void run() {
                     DetachSubFragments();
-                    discussQuestionFragment.dataModel = dataModel;
-                    FragmentManager manager = getActivity().getSupportFragmentManager();
-                    FragmentTransaction transaction = manager.beginTransaction();
-                    transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_in);
-                    transaction.add(R.id.fragment_id_full_screen, discussQuestionFragment, "1");
-                    transaction.commitAllowingStateLoss();
+                    IntentFunction.GoToWithBundle(getContext(), QADetailActivity.class, dataModel);
+//                    discussQuestionFragment.dataModel = dataModel;
+//                    FragmentManager manager = getActivity().getSupportFragmentManager();
+//                    FragmentTransaction transaction = manager.beginTransaction();
+//                    transaction.setCustomAnimations(R.anim.fade_in, R.anim.fade_in);
+//                    transaction.add(R.id.fragment_id_full_screen, discussQuestionFragment, "1");
+//                    transaction.commitAllowingStateLoss();
                 }
             });
 //            QADetailActivity.dataModel = dataModel;

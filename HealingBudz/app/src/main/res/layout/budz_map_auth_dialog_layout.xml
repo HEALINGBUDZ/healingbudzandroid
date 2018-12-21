@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dialog_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+
+            android:background="@color/transparent">
+
+            <RelativeLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:background="@drawable/budz_map_auth_dialog_bg"
+                android:paddingBottom="18sp">
+
+                <LinearLayout
+                    android:id="@+id/topMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shoot_out_dialog_bg"
+                    android:gravity="center"
+                    android:paddingLeft="10sp"
+                    android:paddingTop="10sp"
+                    android:paddingRight="10sp"
+                    android:paddingBottom="10sp">
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Subscription for Buying Budz Adz"
+                        android:textColor="@color/wall_repost"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/first_dialog_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/topMain"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:src="@drawable/ic_logo_auth" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="8sp"
+                            android:layout_marginBottom="8sp"
+                            android:background="@drawable/ic_edittext_bg_whit">
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/email_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toEndOf="@+id/email"
+                                android:background="@color/transparent"
+                                android:gravity="left|center_vertical"
+                                android:hint="Email"
+                                android:inputType="textEmailAddress"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="#606060" />
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/email"
+                                android:layout_width="35sp"
+                                android:layout_height="35sp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="5dp"
+                                android:padding="6sp"
+                                android:src="@drawable/ic_email_auth"
+                                android:tint="#b7252525" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="8sp"
+                            android:layout_marginBottom="8sp"
+                            android:background="@drawable/ic_edittext_bg_whit">
+
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                android:id="@+id/card_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toEndOf="@+id/card"
+                                android:background="@color/transparent"
+                                android:digits="1234567890"
+                                android:gravity="left|center_vertical"
+                                android:hint="Card Number"
+                                android:inputType="number"
+                                android:lines="1"
+                                android:maxLength="16"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textColorHint="#606060" />
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/card"
+                                android:layout_width="35sp"
+                                android:layout_height="35sp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="5dp"
+                                android:padding="6sp"
+                                android:src="@drawable/ic_card_auth"
+                                android:tint="#b7252525" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="8sp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="8sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_edittext_bg_whit">
+
+                                <com.santalu.maskedittext.MaskEditText
+                                    android:id="@+id/date_edit_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_toEndOf="@+id/date"
+                                    android:background="@color/transparent"
+                                    android:digits="0123456789/"
+                                    android:gravity="left|center_vertical"
+                                    android:hint="MM / YY"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:maxLength="6"
+                                    android:maxLines="1"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="#606060"
+                                    app:met_mask="##/##" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/date"
+                                    android:layout_width="35sp"
+                                    android:layout_height="35sp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="5dp"
+                                    android:padding="6sp"
+                                    android:src="@drawable/ic_date_auth"
+                                    android:tint="#b7252525" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="60dp"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="8sp"
+                                android:layout_marginBottom="8sp"
+                                android:layout_weight="1"
+                                android:background="@drawable/ic_edittext_bg_whit">
+
+                                <com.codingpixel.healingbudz.customeUI.HealinBudEditText
+                                    android:id="@+id/cvv_edit_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_toEndOf="@+id/cvv"
+                                    android:background="@color/transparent"
+                                    android:digits="0123456789"
+                                    android:gravity="left|center_vertical"
+                                    android:hint="CVC"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    android:maxLength="3"
+                                    android:maxLines="1"
+                                    android:padding="5dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="#606060" />
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/cvv"
+                                    android:layout_width="35sp"
+                                    android:layout_height="35sp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="5dp"
+                                    android:padding="6sp"
+                                    android:src="@drawable/ic_cvc_auth"
+                                    android:tint="#b7252525" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold
+                        android:id="@+id/payy"
+                        android:layout_width="match_parent"
+                        android:layout_height="36sp"
+                        android:layout_marginTop="20sp"
+                        android:background="@drawable/q_a_menu_ask_q_button"
+                        android:text="Pay $99.99"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/cross_btn"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="10sp"
+                android:paddingBottom="10sp"
+                android:src="@drawable/ic_close_auth" />
+
+
+            <ImageView
+                android:id="@+id/premium_tag"
+                android:layout_width="70sp"
+                android:layout_height="100sp"
+                android:layout_margin="5sp"
+                android:background="@drawable/ic_premium_tag_icon"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

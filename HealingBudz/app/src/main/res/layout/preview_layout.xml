@@ -14,12 +14,28 @@
         android:orientation="vertical"
         android:weightSum="3">
 
-        <com.codingpixel.healingbudz.customeUI.SelectableRoundedImageView
-            android:id="@+id/imgViewImage"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0sp"
-            android:layout_weight="2"
-            android:scaleType="centerCrop" />
+            android:layout_weight="2">
+
+            <com.codingpixel.healingbudz.customeUI.SelectableRoundedImageView
+                android:id="@+id/imgViewImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/cross"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_margin="15dp"
+                android:padding="6sp"
+                android:src="@drawable/ic_wall_sceen_cross"
+                android:visibility="gone" />
+        </RelativeLayout>
 
 
         <LinearLayout
@@ -60,14 +76,6 @@
                 android:textColor="#c6c4c5"
                 tools:text="www.somesite.com" />
 
-            <ImageView
-                android:id="@+id/cross"
-                android:layout_width="25sp"
-                android:layout_height="25sp"
-                android:layout_gravity="end"
-                android:padding="6sp"
-                android:src="@drawable/ic_wall_sceen_cross"
-                android:visibility="gone" />
 
             <LinearLayout
                 android:id="@+id/qa_view"

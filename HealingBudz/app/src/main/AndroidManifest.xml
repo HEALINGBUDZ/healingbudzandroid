@@ -43,6 +43,7 @@
         android:name="android.hardware.camera.flash"
         android:required="false" />
 
+
     <application
         android:name=".application.HealingBudApplication"
         android:allowBackup="true"
@@ -55,6 +56,9 @@
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:supportsRtl">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
         <meta-data
             android:name="asset_statements"
             android:resource="@string/asset_statements" />
@@ -72,6 +76,11 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/*" />
             </intent-filter>
         </activity>
 
@@ -148,11 +157,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/HomeActivity"
             android:windowSoftInputMode="adjustPan">
-            <intent-filter>
-                <action android:name="android.intent.action.SEND" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="text/*" />
-            </intent-filter>
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.SEND" />-->
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--<data android:mimeType="text/*" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity
             android:name=".activity.age_verification.AgeVerification"
@@ -477,7 +486,7 @@
             android:name=".activity.home.home_fragment.qa_tab.QADetailActivity"
             android:label=""
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/ChangeAppTheme" />
         <activity
             android:name=".activity.home.home_fragment.qa_tab.MyAnswersEditShowActivity"
             android:label=""

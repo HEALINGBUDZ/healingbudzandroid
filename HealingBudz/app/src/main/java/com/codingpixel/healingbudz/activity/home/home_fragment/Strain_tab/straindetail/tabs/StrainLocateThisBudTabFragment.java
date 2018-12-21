@@ -294,7 +294,7 @@ public class StrainLocateThisBudTabFragment extends Fragment implements StrainLo
                                     }
                                 }
                             }
-                            if (stst == -1) {
+                            if (stst == 1) {
                                 //TODO FOR CHECK HERE
                                 display_text.setText("Sorry we don't offer strains in illegal state");
                                 location_text.setText("");

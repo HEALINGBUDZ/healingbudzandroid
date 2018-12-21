@@ -21,6 +21,15 @@ public class MessagesChatMsgsDataModel {
     String Local_image_path;
     int receiver_id;
     String receiverName, senderName;
+    String createDate;
+
+    public String getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(String createDate) {
+        this.createDate = createDate;
+    }
 
     public String getReceiverName() {
         return receiverName;
@@ -203,6 +212,7 @@ public class MessagesChatMsgsDataModel {
         this.isImageMsg = isImageMsg;
         this.userImg = userImg;
         this.added_date = added_date;
+        this.createDate = added_date;
         this.media_resourse = media_resourse;
         this.isReceiver = isReceiver;
 

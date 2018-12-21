@@ -384,6 +384,7 @@ public class MessagingBusinessChatViewActivity extends AppCompatActivity impleme
                             dataModel.setReceiver_id(chat_message_data_modal.getSender_id());
                         }
                         dataModel.setAdded_date(getCurrentDate());
+                        dataModel.setCreateDate(getCurrentDate());
                         data.add(dataModel);
                     } else if (Attached_video_path.length() > 0) {
                         MessagesChatMsgsDataModel dataModel = new MessagesChatMsgsDataModel();
@@ -393,6 +394,7 @@ public class MessagingBusinessChatViewActivity extends AppCompatActivity impleme
                         dataModel.setTimeItem(false);
                         dataModel.setReceiver(false);
                         dataModel.setAdded_date(getCurrentDate());
+                        dataModel.setCreateDate(getCurrentDate());
                         dataModel.setVideo_path("");
                         dataModel.setVideo_thumbni("");
                         dataModel.setUploadinStart(true);
@@ -467,6 +469,7 @@ public class MessagingBusinessChatViewActivity extends AppCompatActivity impleme
                             }
                             dataModel.setMsg_TExt(json_data.getString("text"));
                             dataModel.setAdded_date(getCurrentDate());
+                            dataModel.setCreateDate(getCurrentDate());
                             data.add(dataModel);
                             recyler_adapter.notifyItemInserted(data.size());
                             chat_recyler_view.scrollToPosition(recyler_adapter.getItemCount() - 1);
@@ -866,7 +869,8 @@ public class MessagingBusinessChatViewActivity extends AppCompatActivity impleme
                     }
                     String test = msg_object.getString("message");
                     dataModel.setMsg_TExt(test);
-                    dataModel.setAdded_date(msg_object.getString("updated_at"));
+                    dataModel.setCreateDate(msg_object.getString("created_at"));
+                    dataModel.setAdded_date(msg_object.getString("created_at"));
                     data.add(dataModel);
                     recyler_adapter.notifyItemChanged(x);
                     if (chat_message_data_modal.getSender_image_path() == null && chat_message_data_modal.getReceiver_image_path() == null) {
@@ -1000,6 +1004,7 @@ public class MessagingBusinessChatViewActivity extends AppCompatActivity impleme
                     dataModel.setReceiver(false);
                     dataModel.setImage_Path(object.getString("file"));
                     dataModel.setAdded_date(getCurrentDate());
+                    dataModel.setCreateDate(getCurrentDate());
                     data.add(dataModel);
                 } else {
                     MessagesChatMsgsDataModel dataModel = new MessagesChatMsgsDataModel();
@@ -1009,6 +1014,7 @@ public class MessagingBusinessChatViewActivity extends AppCompatActivity impleme
                     dataModel.setTimeItem(false);
                     dataModel.setReceiver(false);
                     dataModel.setAdded_date(getCurrentDate());
+                    dataModel.setCreateDate(getCurrentDate());
                     dataModel.setVideo_path(object.getString("file"));
                     dataModel.setVideo_thumbni(object.getString("file_poster"));
                     data.add(dataModel);

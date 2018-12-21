@@ -66,6 +66,7 @@ public class Constants {
     };
     public static final String[] stateListIni = {"ID", "WY", "UT", "SD", "NE", "KS", "OK", "TX", "MO", "IA", "WI", "IN",
             "KY", "TN", "MS", "AL", "VA", "GA", "NC", "SC"};
+
     //            {"AK",
 //            "AZ",
 //            "AR",

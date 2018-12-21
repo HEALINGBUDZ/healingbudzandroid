@@ -363,12 +363,13 @@ public class WallPostDetailActivity extends AppCompatActivity implements View.On
         personName.setTextColor(Color.parseColor(Utility.getBudColor(post.getUser().getPoints())));
         personLeafImg.setImageResource(Utility.getBudColorDrawable(post.getUser().getPoints()));
         Glide.with(getApplicationContext()).load(post.getUser().getImagePath()).
+        asBitmap().
                 diskCacheStrategy(DiskCacheStrategy.SOURCE).error(R.drawable.noimage).
                 placeholder(R.drawable.ic_user_profile_green).into(personImg);
         if (post.getUser().getSpecial_icon().length() > 5) {
             profile_img_topi.setVisibility(View.VISIBLE);
 
-            Glide.with(getApplicationContext()).load(post.getUser().getSpecial_icon()).
+            Glide.with(getApplicationContext()).load(post.getUser().getSpecial_icon()).asBitmap().
                     diskCacheStrategy(DiskCacheStrategy.SOURCE).
                     placeholder(R.drawable.topi_ic).into(profile_img_topi);
         } else {

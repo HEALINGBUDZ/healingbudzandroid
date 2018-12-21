@@ -331,13 +331,13 @@ public class BuzzFeedActivity extends AppCompatActivity implements View.OnClickL
                 HomeQAfragmentDataModel model = new HomeQAfragmentDataModel();
                 model.setId(list.get(position).getType_id());
                 showSubFragmentListner_object.ShowQuestions(model, true);
-                finish();
+//                finish();
                 break;
             case "Answers":
                 HomeQAfragmentDataModel model1 = new HomeQAfragmentDataModel();
                 model1.setId(list.get(position).getType_id());
                 showSubFragmentListner_object.ShowAnswers(model1, list.get(position).getType_id(), true);
-                finish();
+//                finish();
                 break;
             case "Budz Map":
             case "Budz Adz":
@@ -436,12 +436,12 @@ public class BuzzFeedActivity extends AppCompatActivity implements View.OnClickL
             HomeQAfragmentDataModel model_q = new HomeQAfragmentDataModel();
             model_q.setId(list.get(position).getType_id());
             showSubFragmentListner_object.ShowQuestions(model_q, true);
-            finish();
+//            finish();
         } else if (activty_model.contains("Answers")) {
             HomeQAfragmentDataModel model_a = new HomeQAfragmentDataModel();
             model_a.setId(list.get(position).getType_id());
             showSubFragmentListner_object.ShowAnswers(model_a, list.get(position).getType_id(), true);
-            finish();
+//            finish();
         } else if (activty_model.contains("Strains") || activty_model.contains("Strain")) {
             Intent strain_intetn = new Intent(BuzzFeedActivity.this, StrainDetailsActivity.class);
             strain_intetn.putExtra("strain_id", list.get(position).getType_id());

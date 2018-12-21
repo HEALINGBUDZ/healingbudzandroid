@@ -288,7 +288,7 @@ public class BusinessInfoTabFragmentEdit extends Fragment implements OnMapReadyC
                                                     }
                                                 }
                                             }
-                                            if (stst == -1) {
+                                            if (stst == 1) {
                                                 new SweetAlertDialog(getActivity(), SweetAlertDialog.NORMAL_TYPE)
                                                         .setTitleText("Error!")
                                                         .setContentText("You can't create this type of business in this zip code.")
@@ -390,7 +390,7 @@ public class BusinessInfoTabFragmentEdit extends Fragment implements OnMapReadyC
                                                         }
                                                     }
                                                 }
-                                                if (stst == -1) {
+                                                if (stst == 1) {
                                                     new SweetAlertDialog(getActivity(), SweetAlertDialog.NORMAL_TYPE)
                                                             .setTitleText("Error!")
                                                             .setContentText("You can't create this type of business in this zip code.")
@@ -609,7 +609,7 @@ public class BusinessInfoTabFragmentEdit extends Fragment implements OnMapReadyC
                                             }
                                         }
                                     }
-                                    if (stst == -1) {
+                                    if (stst == 1) {
                                         new SweetAlertDialog(getActivity(), SweetAlertDialog.NORMAL_TYPE)
                                                 .setTitleText("Error!")
                                                 .setContentText("You can't create this type of business in your area.")
@@ -2411,11 +2411,10 @@ public class BusinessInfoTabFragmentEdit extends Fragment implements OnMapReadyC
             int st = -1;
             for (int j = 0; j < Constants.stateListIni.length; j++) {
                 if (Location_text.getText().toString().trim().contains(Constants.stateListIni[j].toUpperCase())) {
-
                     st = 1;
                 }
             }
-            if (st == -1) {
+            if (st == 1) {
                 CustomeToast.ShowCustomToast(getContext(), "You can't create this type of business in this area!", Gravity.TOP);
                 return false;
             }

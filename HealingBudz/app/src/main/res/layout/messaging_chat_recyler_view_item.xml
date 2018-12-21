@@ -9,14 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="8sp"
-        android:paddingTop="8sp">
+        android:paddingTop="8sp"
+        android:paddingBottom="8sp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="2sp"
             android:layout_marginTop="6sp"
+            android:layout_marginBottom="2sp"
             android:orientation="vertical">
 
             <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
@@ -26,7 +26,8 @@
                 android:gravity="center"
                 android:text="Monday 3:30pm"
                 android:textColor="#696969"
-                android:textSize="11sp" />
+                android:textSize="11sp"
+                android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>
 
@@ -34,8 +35,8 @@
         android:id="@+id/sender_msgs_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="6sp"
-        android:layout_marginRight="60sp">
+        android:layout_marginRight="60sp"
+        android:layout_marginBottom="6sp">
 
         <ImageView
             android:id="@+id/indi_left"
@@ -107,14 +108,25 @@
                 android:id="@+id/sender_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:layout_below="@+id/sender_ll"
+                android:layout_alignParentStart="true"
                 android:layout_marginTop="5sp"
                 android:gravity="center"
                 android:text="SenderName"
                 android:textColor="#808080"
                 android:textSize="9sp" />
 
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/sender_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sender_ll"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5sp"
+                android:gravity="center"
+                android:text="Date"
+                android:textColor="#808080"
+                android:textSize="9sp" />
         </LinearLayout>
 
 
@@ -125,8 +137,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:layout_marginBottom="6sp"
-        android:layout_marginLeft="60sp">
+        android:layout_marginLeft="60sp"
+        android:layout_marginBottom="6sp">
 
         <ImageView
             android:id="@+id/ind_right"
@@ -221,12 +233,25 @@
                 android:id="@+id/receiver_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
                 android:layout_below="@+id/receiver_ll"
+                android:layout_alignParentEnd="true"
                 android:layout_gravity="end"
                 android:layout_marginTop="5sp"
                 android:gravity="center"
                 android:text="ReceiverName"
+                android:textColor="#808080"
+                android:textSize="9sp" />
+
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                android:id="@+id/receiver_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/receiver_ll"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_marginTop="5sp"
+                android:gravity="center"
+                android:text="Date"
                 android:textColor="#808080"
                 android:textSize="9sp" />
         </LinearLayout>

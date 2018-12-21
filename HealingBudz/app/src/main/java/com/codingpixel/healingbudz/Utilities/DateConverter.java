@@ -108,6 +108,31 @@ public class DateConverter {
         }
     }
 
+    public static String checkDatePay(String date_string) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM/yy");
+        Date myDate = null;
+        try {
+            myDate = dateFormat.parse(date_string);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return "Date Format Error";
+        }
+        if (date_string.contains("/")) {
+            String tv = date_string.split("/")[0];
+            int vc = Integer.parseInt(tv);
+            if (vc > 12) {
+                return "Date Format Error";
+            }
+        }
+        SimpleDateFormat timeFormat = new SimpleDateFormat("MM/yyyy");
+        Date dt = Calendar.getInstance().getTime();
+        if (dt.before(myDate)) {
+            return timeFormat.format(myDate);
+        } else {
+            return "Date Format Error";
+        }
+
+    }
 
     public static String convertDate(String date_string) {
         date_string = UtcToLocal(date_string);

@@ -26,6 +26,7 @@ import com.codingpixel.healingbudz.DataModel.User;
 import com.codingpixel.healingbudz.R;
 import com.codingpixel.healingbudz.Utilities.Utility;
 import com.codingpixel.healingbudz.activity.Registration.login.SocialLoginFirstStep;
+import com.codingpixel.healingbudz.activity.Wall.WallNewPostActivity;
 import com.codingpixel.healingbudz.activity.age_verification.AgeVerification;
 import com.codingpixel.healingbudz.activity.introduction.CustomBackgroundIntro;
 import com.codingpixel.healingbudz.customeUI.customalerts.SweetAlertDialog;
@@ -84,6 +85,50 @@ public class Splash extends AppCompatActivity {
         Animation startAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blinking);
         icon.startAnimation(startAnimation);
         text.startAnimation(startAnimation);
+        getFragmentMenager();
+        Intent receivedIntent = getIntent();
+        String receivedAction = receivedIntent.getAction();
+        String receivedType = receivedIntent.getType();
+        if (receivedAction != null) {
+            if (receivedAction.equals(Intent.ACTION_SEND)) {
+                if (receivedType.startsWith("text/")) {
+                    String receivedText = receivedIntent.getStringExtra(Intent.EXTRA_TEXT);
+                    if (receivedText != null) {
+                        Log.d("URLSHARE", receivedText);
+                        if (SharedPrefrences.getBool("is_user_login", this)) {
+                            User user = getSavedUser(this);
+                            Splash.user = user;
+                            Bundle bundleTxt = new Bundle();
+                            bundleTxt.putString("urlhas", receivedText);
+                            Utility.launchActivity(this, WallNewPostActivity.class, true, bundleTxt);
+                        } else {
+                            callNext();
+                        }
+
+                        //set the text
+
+                    } else {
+                        callNext();
+                    }
+                    //handle sent text
+                } else {
+                    callNext();
+                }
+                //content is being shared
+            } else if (receivedAction.equals(Intent.ACTION_MAIN)) {
+                callNext();
+            }else {
+                callNext();
+            }
+        } else {
+            callNext();
+        }
+
+//        NextActivity();
+
+    }
+
+    public void callNext() {
         if (checkLocationPermission()) {
             Intent intent = getIntent();
             if (intent.getBooleanExtra(DeepLink.IS_DEEP_LINK, false)) {
@@ -108,8 +153,6 @@ public class Splash extends AppCompatActivity {
 
 
         }
-//        NextActivity();
-        getFragmentMenager();
     }
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;

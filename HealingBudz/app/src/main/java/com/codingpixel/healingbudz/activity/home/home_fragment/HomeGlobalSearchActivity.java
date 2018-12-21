@@ -29,7 +29,6 @@ import com.android.volley.Request;
 import com.codingpixel.healingbudz.DataModel.HomeQAfragmentDataModel;
 import com.codingpixel.healingbudz.DataModel.HomeSearchListData;
 import com.codingpixel.healingbudz.R;
-import com.codingpixel.healingbudz.Utilities.Utility;
 import com.codingpixel.healingbudz.Utilities.eventbus.MessageEvent;
 import com.codingpixel.healingbudz.activity.home.home_fragment.Strain_tab.straindetail.StrainDetailsActivity;
 import com.codingpixel.healingbudz.activity.home.home_fragment.budz_map_tab.BudzMapDetailsActivity;
@@ -706,14 +705,14 @@ public class HomeGlobalSearchActivity extends AppCompatActivity implements View.
                 HomeQAfragmentDataModel model1 = new HomeQAfragmentDataModel();
                 model1.setId(home_search_list_data.get(position).getId());
                 showSubFragmentListner_object.ShowAnswers(model1, home_search_list_data.get(position).getId(), true);
-                finish();
+//                finish();
                 break;
             case "q":
 //                HideViewSearch();
                 HomeQAfragmentDataModel model = new HomeQAfragmentDataModel();
                 model.setId(home_search_list_data.get(position).getId());
                 showSubFragmentListner_object.ShowQuestions(model, true);
-                finish();
+//                finish();
                 break;
             case "g":
 //                HideViewSearch();

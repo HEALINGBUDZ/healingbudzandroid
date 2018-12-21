@@ -188,6 +188,7 @@ public class WallFeedsMainFragment extends Fragment implements CounterCallback, 
                 @Override
                 public void onClick(View v) {
                     if (adapter.getItemCount() > 0) {
+                        WallNewFeedOtherActivity.isFromUserFile = true;
                         WallNewFeedOtherActivity.USER_FEED_ID = userId;
                         GoTo(v.getContext(), WallNewFeedOtherActivity.class);
 
@@ -1298,7 +1299,7 @@ public class WallFeedsMainFragment extends Fragment implements CounterCallback, 
                 @Override
                 public void success() {
                     if (response.body().getSuccessData().getPosts() == null || response.body().getSuccessData().getPosts().isEmpty()) {
-                        isOnFinalPage = true;
+                        isOnFinalPage = false;
                         if (adapter.getItemCount() > 0) {
                             if (not_found != null) {
                                 not_found.setVisibility(View.GONE);
@@ -1318,8 +1319,6 @@ public class WallFeedsMainFragment extends Fragment implements CounterCallback, 
                         }
                         return;
                     }
-
-//                    TODO FOR TAGGING OF UNKNONWN SHIT
 
                     if (pageNo == 0) {
                         adapter.setDataSet(new ArrayList<Post>());

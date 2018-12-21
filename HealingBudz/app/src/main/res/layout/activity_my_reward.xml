@@ -222,7 +222,7 @@
                         android:orientation="vertical"
                         android:paddingLeft="8sp"
                         android:paddingRight="8sp"
-                        android:visibility="gone">
+                        android:visibility="visible">
 
                         <ImageView
                             android:layout_width="match_parent"

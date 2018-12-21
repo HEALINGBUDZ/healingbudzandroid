@@ -1340,12 +1340,19 @@ public class BudzFeedMainPostAdapter extends RecyclerView.Adapter<BudzFeedMainPo
                 } else {
                     if (holder.postText.getText().toString().length() > 200) {
                         MentionTagJsonModel[] temp = post.getJsonData();
-                        MentionTagJsonModel[] abc = new MentionTagJsonModel[temp.length + 1];
-                        for (int k = 0; k < temp.length; k++) {
-                            abc[k] = temp[k];
+                        if (temp != null) {
+                            MentionTagJsonModel[] abc = new MentionTagJsonModel[temp.length + 1];
+                            for (int k = 0; k < temp.length; k++) {
+                                abc[k] = temp[k];
+                            }
+                            abc[temp.length] = new MentionTagJsonModel(String.valueOf(post.getId()), "user", "-See More", "!");
+                            ClickAbleKeywordText.createLink(holder.postText, holder.postText.getText().toString().substring(0, 199) + " -See More", abc, post);
+                        } else {
+                            MentionTagJsonModel[] abc = new MentionTagJsonModel[1];
+                            abc[0] = new MentionTagJsonModel(String.valueOf(post.getId()), "user", "-See More", "!");
+                            ClickAbleKeywordText.createLink(holder.postText, holder.postText.getText().toString().substring(0, 199) + " -See More", abc, post);
                         }
-                        abc[temp.length] = new MentionTagJsonModel(String.valueOf(post.getId()), "user", "-See More", "!");
-                        ClickAbleKeywordText.createLink(holder.postText, holder.postText.getText().toString().substring(0, 199) + " -See More", abc, post);
+
                     } else {
 
                         ClickAbleKeywordText.createLink(holder.postText, holder.postText.getText().toString());
@@ -1518,25 +1525,26 @@ public class BudzFeedMainPostAdapter extends RecyclerView.Adapter<BudzFeedMainPo
                 });
                 holder.pager.setAdapter(holder.adapter);
                 holder.pager.beginFakeDrag();
-//                FrameLayout.LayoutParams buttonParams = (FrameLayout.LayoutParams) holder.pager.getLayoutParams();
-//                buttonParams.height = Utility.convertDpToPixel(350, holder.itemView.getContext());
-//                holder.pager.setLayoutParams(buttonParams);
-//                float width = Splash.widthDis;
+                FrameLayout.LayoutParams buttonParams = (FrameLayout.LayoutParams) holder.pager.getLayoutParams();
+                buttonParams.height = BudzFeedMainPostMediaPagerAdapter.heightDv;
+                holder.pager.setLayoutParams(buttonParams);
+                float width = Splash.widthDis;
+
 //                float ratio = Float.valueOf(post.getFiles().get(0).getRatio());
 //                if (ratio < 1) {
 //                    float height = width / ratio;
 //                    if (height > 200) {
 //                        height = Utility.convertDpToPixel(400, holder.itemView.getContext());
 //                    }
-//                    buttonParams = (FrameLayout.LayoutParams) holder.pager.getLayoutParams();
-//                    buttonParams.height = (int) height;
-//                    holder.pager.setLayoutParams(buttonParams);
+                buttonParams = (FrameLayout.LayoutParams) holder.pager.getLayoutParams();
+                buttonParams.height = BudzFeedMainPostMediaPagerAdapter.heightDv;
+                holder.pager.setLayoutParams(buttonParams);
 //
 //                }
-//                new Handler().postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        holder.adapter.notifyDataSetChanged();
 //                        float width = holder.pager.getMeasuredWidth();
 //                        float ratio = Float.valueOf(post.getFiles().get(0).getRatio());
 //
@@ -1553,8 +1561,8 @@ public class BudzFeedMainPostAdapter extends RecyclerView.Adapter<BudzFeedMainPo
 //                            holder.pager.setLayoutParams(buttonParams);
 //
 //                        }
-//                    }
-//                }, 11);
+                    }
+                }, 11);
 
 
                 holder.indicatorView.setCount(holder.adapter.getCount());

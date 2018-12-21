@@ -3,6 +3,7 @@ package com.codingpixel.healingbudz.activity.home.side_menu.help_support;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,11 +18,15 @@ public class HelpSupportRecylerChildViewHolder extends ChildViewHolder {
     public TextView term_condition_link, policy_link,year_text,ver_num;
     public customspinner link_to;
     public LinearLayout Item_One, Item_Two, Item_Three, send_play_store;
-
+    public ImageView fb_link,tw_link,inst_link,yt_link;
     public HelpSupportRecylerChildViewHolder(View itemView) {
         super(itemView);
         childItemView = itemView;
         link_to = itemView.findViewById(R.id.link_to);
+        fb_link = itemView.findViewById(R.id.fb_link);
+        yt_link = itemView.findViewById(R.id.yt_link);
+        inst_link = itemView.findViewById(R.id.inst_link);
+        tw_link = itemView.findViewById(R.id.tw_link);
         ask_support = itemView.findViewById(R.id.ask_support);
         year_text = itemView.findViewById(R.id.year_text);
         ver_num = itemView.findViewById(R.id.ver_num);

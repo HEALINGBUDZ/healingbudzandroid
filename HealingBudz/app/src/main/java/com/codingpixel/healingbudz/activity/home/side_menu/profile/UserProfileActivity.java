@@ -979,7 +979,7 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
                         dataModel.setCard_last_four(object.getString("card_last_four"));
                         dataModel.setTrial_ends_at(object.getString("trial_ends_at"));
                         if (!object.isNull("distance")) {
-                            dataModel.setDistance(object.getInt("distance"));
+                            dataModel.setDistance(object.optDouble("distance"));
                         }
                         if (!object.isNull("get_user_save_count")) {
                             dataModel.setGet_user_save_count(object.getInt("get_user_save_count"));

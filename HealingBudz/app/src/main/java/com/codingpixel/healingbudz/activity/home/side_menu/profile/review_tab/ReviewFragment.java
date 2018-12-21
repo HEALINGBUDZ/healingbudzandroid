@@ -118,7 +118,7 @@ public class ReviewFragment extends Fragment implements APIResponseListner {
                     dataModel.setCard_brand(review_object.getJSONObject("bud").getString("card_brand"));
                     dataModel.setCard_last_four(review_object.getJSONObject("bud").getString("card_last_four"));
                     dataModel.setTrial_ends_at(review_object.getJSONObject("bud").getString("trial_ends_at"));
-                    dataModel.setDistance(review_object.getJSONObject("bud").getInt("distance"));
+                    dataModel.setDistance(review_object.getJSONObject("bud").optDouble("distance"));
                     dataModel.setGet_user_save_count(1);
                     review.setBud(dataModel);
                     if (!review_object.isNull("rating")) {

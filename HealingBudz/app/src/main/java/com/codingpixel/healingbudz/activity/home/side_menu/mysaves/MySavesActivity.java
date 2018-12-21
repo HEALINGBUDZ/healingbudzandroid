@@ -26,7 +26,6 @@ import com.codingpixel.healingbudz.activity.home.home_fragment.Strain_tab.strain
 import com.codingpixel.healingbudz.activity.home.home_fragment.budz_map_tab.BudzMapDetailsActivity;
 import com.codingpixel.healingbudz.activity.home.home_fragment.groups_tab.GroupsChatViewActivity;
 import com.codingpixel.healingbudz.activity.home.home_fragment.journal_tab.JournalDetailsActivity;
-import com.codingpixel.healingbudz.activity.home.side_menu.messages.MessagesActivity;
 import com.codingpixel.healingbudz.activity.home.side_menu.messages.MessagingBusinessChatViewActivity;
 import com.codingpixel.healingbudz.activity.home.side_menu.messages.MessagingChatViewActivity;
 import com.codingpixel.healingbudz.activity.splash.Splash;
@@ -687,7 +686,7 @@ public class MySavesActivity extends AppCompatActivity implements APIResponseLis
                 HomeQAfragmentDataModel model = new HomeQAfragmentDataModel();
                 model.setId(data_list.get(position).getType_sub_id());
                 showSubFragmentListner_object.ShowQuestions(model, true);
-                finish();
+//                finish();
                 break;
             case 7:
                 Intent strain_intetn = new Intent(MySavesActivity.this, StrainDetailsActivity.class);
@@ -717,7 +716,7 @@ public class MySavesActivity extends AppCompatActivity implements APIResponseLis
                     object = new JSONObject(data_list.get(position).getDescription());
                     HomeQAfragmentDataModel model1 = new HomeQAfragmentDataModel();
                     showSubFragmentListner_object.ShowStrainSearch(model1, object.getString("search_data"));
-                    finish();
+//                    finish();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

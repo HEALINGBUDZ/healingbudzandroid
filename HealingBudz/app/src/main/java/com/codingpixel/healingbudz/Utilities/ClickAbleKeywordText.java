@@ -212,7 +212,7 @@ public class ClickAbleKeywordText {
                 String tt = temp.getTrigger() + temp.getValue();
                 if (completeString.toLowerCase().contains(tt.toLowerCase())) {
                     int startPosition = completeString.indexOf(tt);
-                    int endPosition = completeString.lastIndexOf(tt) + (tt).length();
+                    int endPosition = startPosition + (tt).length();
 
                     spannableString.setSpan(new ClickableSpan() {
                                                 @Override
@@ -240,7 +240,8 @@ public class ClickAbleKeywordText {
 //
             if (completeString.toLowerCase().contains("#" + temp.toLowerCase())) {
                 int startPosition = completeString.toLowerCase().indexOf("#" + temp.toLowerCase());
-                int endPosition = completeString.toLowerCase().lastIndexOf("#" + temp.toLowerCase()) + ("#" + temp.toLowerCase()).length();
+//                int endPosition = completeString.toLowerCase().lastIndexOf("#" + temp.toLowerCase()) + ("#" + temp.toLowerCase()).length();
+                int endPosition = startPosition + ("#" + temp.toLowerCase()).length();
 
                 spannableString.setSpan(new ClickableSpan() {
                                             @Override
@@ -262,7 +263,7 @@ public class ClickAbleKeywordText {
             for (String anArrayT : arrayT) {
                 if (anArrayT.equalsIgnoreCase(temp)) {
                     int startPosition = completeString.indexOf(anArrayT);
-                    int endPosition = completeString.lastIndexOf(anArrayT) + (anArrayT).length();
+                    int endPosition = startPosition + (anArrayT).length();
 
                     spannableString.setSpan(new ClickableSpan() {
                                                 @Override
@@ -393,7 +394,7 @@ public class ClickAbleKeywordText {
                 String tt = temp.getTrigger() + temp.getValue();
                 if (completeString.toLowerCase().contains(tt.toLowerCase())) {
                     int startPosition = completeString.indexOf(tt);
-                    int endPosition = completeString.lastIndexOf(tt) + (tt).length();
+                    int endPosition = startPosition + (tt).length();
 
                     spannableString.setSpan(new ClickableSpan() {
                                                 @Override
@@ -420,7 +421,7 @@ public class ClickAbleKeywordText {
 
             if (completeString.toLowerCase().contains("#" + temp.toLowerCase())) {
                 int startPosition = completeString.toLowerCase().indexOf("#" + temp.toLowerCase());
-                int endPosition = completeString.toLowerCase().lastIndexOf("#" + temp.toLowerCase()) + ("#" + temp.toLowerCase()).length();
+                int endPosition = startPosition + ("#" + temp.toLowerCase()).length();
 
                 spannableString.setSpan(new ClickableSpan() {
                                             @Override
@@ -442,7 +443,7 @@ public class ClickAbleKeywordText {
             for (String anArrayT : arrayT) {
                 if (anArrayT.equalsIgnoreCase(temp)) {
                     int startPosition = completeString.indexOf(anArrayT);
-                    int endPosition = completeString.lastIndexOf(anArrayT) + (anArrayT).length();
+                    int endPosition = startPosition + (anArrayT).length();
 
                     spannableString.setSpan(new ClickableSpan() {
                                                 @Override
@@ -521,7 +522,7 @@ public class ClickAbleKeywordText {
 
             if (completeString.toLowerCase().contains("#" + temp.toLowerCase())) {
                 int startPosition = completeString.toLowerCase().indexOf("#" + temp.toLowerCase());
-                int endPosition = completeString.toLowerCase().lastIndexOf("#" + temp.toLowerCase()) + ("#" + temp.toLowerCase()).length();
+                int endPosition = startPosition + ("#" + temp.toLowerCase()).length();
 
                 spannableString.setSpan(new ClickableSpan() {
                                             @Override
@@ -543,7 +544,7 @@ public class ClickAbleKeywordText {
             for (String anArrayT : arrayT) {
                 if (anArrayT.equalsIgnoreCase(temp)) {
                     int startPosition = completeString.indexOf(anArrayT);
-                    int endPosition = completeString.lastIndexOf(anArrayT) + (anArrayT).length();
+                    int endPosition = startPosition + (anArrayT).length();
 
                     spannableString.setSpan(new ClickableSpan() {
                                                 @Override

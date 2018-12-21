@@ -43,8 +43,8 @@ android {
 //        applicationId "com.codingpixel.healingbudz"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 15
-        versionName "1.0.13"
+        versionCode 24
+        versionName "1.0.22"
         multiDexEnabled true
 //        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

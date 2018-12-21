@@ -200,7 +200,7 @@ public class Bussiness_Listing_Setting_Activity extends AppCompatActivity implem
                         dataModel.setCard_brand(object.getString("card_brand"));
                         dataModel.setCard_last_four(object.getString("card_last_four"));
                         dataModel.setTrial_ends_at(object.getString("trial_ends_at"));
-                        dataModel.setDistance(object.getInt("distance"));
+                        dataModel.setDistance(object.optDouble("distance"));
                         dataModel.setGet_user_save_count(object.getInt("get_user_save_count"));
                         if (!object.isNull("rating_sum")) {
                             dataModel.setRating_sum(Double.valueOf(D_FORMAT_ONE.format(object.getJSONObject("rating_sum").getDouble("total"))));

@@ -11,31 +11,46 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="?android:attr/actionBarSize"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/activity_wall_post_detail_back_btn"
-                android:layout_width="?android:attr/actionBarSize"
+                android:layout_width="42sp"
                 android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:padding="2sp"
                 android:src="@drawable/ic_chevron_left_white_36dp" />
 
             <ImageView
+                android:id="@+id/home_btn"
+                android:layout_width="42sp"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/activity_wall_post_detail_back_btn"
+                android:layout_toRightOf="@id/activity_wall_post_detail_back_btn"
+                android:padding="7sp"
+                android:src="@drawable/ic_home_icon" />
+
+            <ImageView
                 android:id="@+id/feed_pic"
-                android:layout_width="?android:attr/actionBarSize"
+                android:layout_width="42dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_marginLeft="50sp"
+                android:layout_toStartOf="@+id/txt_head"
                 android:gravity="center"
-                android:padding="10dp"
+                android:padding="6dp"
                 android:src="@drawable/social_wall_new"
                 android:visibility="visible" />
 
             <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold
+                android:id="@+id/txt_head"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_centerInParent="true"
                 android:gravity="center"
                 android:text="The Buzz"
                 android:textAllCaps="true"
@@ -46,12 +61,14 @@
                 android:id="@+id/activity_wall_post_detail_add_btn"
                 android:layout_width="?android:attr/actionBarSize"
                 android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
                 android:padding="15dp"
-                android:tint="#7CC245"
                 android:src="@drawable/feed_main_add_icon"
-                android:visibility="invisible" />
+                android:tint="#7CC245"
+                android:visibility="visible" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <FrameLayout

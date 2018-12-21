@@ -23,6 +23,14 @@ public class IntentFunction {
         context.startActivity(intent);
     }
 
+    public static void GoToWithBundle(Context context, Class next_class, Serializable bundle, int Answerid, boolean isOnlyId, String name) {
+        Intent intent = new Intent(context, next_class);
+        intent.putExtra("object", bundle);
+        intent.putExtra("Answerid", Answerid);
+        intent.putExtra(name, isOnlyId);
+        context.startActivity(intent);
+    }
+
     public static void GoToHome(Context context, boolean isActive) {
         Intent i = new Intent(context, HomeActivity.class);
         i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);

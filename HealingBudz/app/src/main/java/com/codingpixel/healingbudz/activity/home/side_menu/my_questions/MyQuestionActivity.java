@@ -249,7 +249,7 @@ public class MyQuestionActivity extends AppCompatActivity implements APIResponse
             QAUserNotifyScreenActivity.dataModel = main_data.get(position);
             GoTo(view.getContext(), QAUserNotifyScreenActivity.class);
         } else {
-            finish();
+//            finish();
             showSubFragmentListner_object.ShowQuestions(main_data.get(position), true);
         }
     }

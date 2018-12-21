@@ -21,6 +21,6 @@ public class LinksUtils {
 //        } catch (android.content.ActivityNotFoundException anfe) {
 //            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
 //        }
-        activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/")));
+        activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.healingbudz.android")));
     }
 }

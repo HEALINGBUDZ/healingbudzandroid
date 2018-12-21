@@ -524,7 +524,9 @@ public class WallFeedsOtherFragment extends Fragment implements View.OnClickList
             }
         }
     }
-
+    public void callFragForNewPost(){
+        Utility.launchActivityForResultFromFragment(WallFeedsOtherFragment.this, getActivity(), WallNewPostActivity.class, null, Flags.ACTIVITIES_COMMUNICATION_FLAG);
+    }
     @Override
     public void onItemClick(final Object obj, int pos, int type) {
         if (obj != null && obj instanceof Post) {

@@ -31,6 +31,8 @@ import static android.widget.ImageView.ScaleType.FIT_CENTER;
 public class BudzFeedMainPostMediaPagerAdapter extends PagerAdapter {
     private List<File> files;
     private RecyclerViewItemClickListener clickListener = null;
+    public static int widhtDv = 200;
+    public static int heightDv = 350;
 
     public BudzFeedMainPostMediaPagerAdapter(List<File> files, @NonNull RecyclerViewItemClickListener clickListener) {
         this.files = files;
@@ -59,10 +61,9 @@ public class BudzFeedMainPostMediaPagerAdapter extends PagerAdapter {
             case 0: {
                 if (container instanceof ZoomProblemViewPager) {
                     ViewPager.LayoutParams params = new ViewPager.LayoutParams();
-                    params.width = ViewPager.LayoutParams.MATCH_PARENT;
-                    params.height = ViewPager.LayoutParams.MATCH_PARENT;
+                    params.width = widhtDv;//ViewPager.LayoutParams.MATCH_PARENT;
+                    params.height = heightDv;//ViewPager.LayoutParams.MATCH_PARENT;
                     params.gravity = Gravity.CENTER;
-
                     PhotoView photoView = new PhotoView(container.getContext());
                     photoView.setLayoutParams(params);
                     photoView.getAttacher().setMinimumScale(1f);
@@ -78,27 +79,52 @@ public class BudzFeedMainPostMediaPagerAdapter extends PagerAdapter {
                         }
                     });
 
-                    Glide.with(container.getContext()).load(URL.images_baseurl + files.get(position).getFile()).
-//                            asBitmap().
-                            placeholder(R.drawable.place_holder_wall).error(R.drawable.noimage).
-                            fitCenter().
-                            diskCacheStrategy(DiskCacheStrategy.SOURCE).into(photoView);
+                    if (files.get(position).getFile().contains(".gif")) {
+                        Glide.with(container.getContext()).load(URL.images_baseurl + files.get(position).getFile()).
+                                placeholder(R.drawable.place_holder_wall).
+                                error(R.drawable.noimage).
+                                fitCenter().
+                                diskCacheStrategy(DiskCacheStrategy.SOURCE).into(photoView);
+                    } else {
+                        Glide.with(container.getContext()).load(URL.images_baseurl + files.get(position).getFile()).
+                                asBitmap().
+                                placeholder(R.drawable.place_holder_wall).
+                                error(R.drawable.noimage).
+                                fitCenter().
+                                diskCacheStrategy(DiskCacheStrategy.SOURCE).into(photoView);
+
+                    }
+
 
                     ((ViewPager) container).addView(photoView);
                     return photoView;
                 } else {
                     ViewPager.LayoutParams params = new ViewPager.LayoutParams();
-                    params.width = ViewPager.LayoutParams.WRAP_CONTENT;
-                    params.height = ViewPager.LayoutParams.WRAP_CONTENT;
+                    params.width = widhtDv;//Utility.getDeviceWidth(container.getContext());//ViewPager.LayoutParams.MATCH_PARENT;
+                    params.height = heightDv;//Utility.convertDpToPixel(350F,container.getContext());//ViewPager.LayoutParams.MATCH_PARENT;
                     ImageView imageView = new ImageView(container.getContext());
                     imageView.setLayoutParams(params);
 //                    imageView.setCornerRadiusDP(0f);
+                    if (files.get(position).getFile().contains(".gif")) {
+                        Glide.with(container.getContext()).load(URL.images_baseurl + files.get(position).getFile()).
+
+                                placeholder(R.drawable.place_holder_wall)
+                                .error(R.drawable.noimage).
+                                fitCenter().
+                                diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                                .into(imageView);
+                    } else {
+                        Glide.with(container.getContext()).load(URL.images_baseurl + files.get(position).getFile()).
+                                asBitmap().
+                                placeholder(R.drawable.place_holder_wall)
+                                .error(R.drawable.noimage).
+                                fitCenter().
+                                diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                                .into(imageView);
+
+                    }
                     imageView.setScaleType(FIT_CENTER);
-                    Glide.with(container.getContext()).load(URL.images_baseurl + files.get(position).getFile()).
-//                            asBitmap().
-                            placeholder(R.drawable.place_holder_wall).error(R.drawable.noimage).
-                            fitCenter().
-                            diskCacheStrategy(DiskCacheStrategy.SOURCE).into(imageView);
+
                     imageView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -120,15 +146,17 @@ public class BudzFeedMainPostMediaPagerAdapter extends PagerAdapter {
 
                 //view poster image
                 ImageView imageView = new ImageView(container.getContext());
-                imageView.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
+                imageView.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT));
                 imageView.setLayoutParams(params);
 //                imageView.setCornerRadiusDP(0f);
                 imageView.setScaleType(FIT_CENTER);
                 Glide.with(container.getContext()).load(URL.images_baseurl + files.get(position).getPoster()).
-//                        asBitmap().
-                        placeholder(R.drawable.place_holder_wall).error(R.drawable.noimage).
+                        asBitmap().
+                        placeholder(R.drawable.place_holder_wall)
+                        .error(R.drawable.noimage).
                         fitCenter().
-                        diskCacheStrategy(DiskCacheStrategy.SOURCE).into(imageView);
+                        diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                        .into(imageView);
                 layout.addView(imageView);
 
                 //view play icon

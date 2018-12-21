@@ -1,7 +1,6 @@
 package com.codingpixel.healingbudz.adapter;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -10,27 +9,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.codingpixel.healingbudz.Utilities.eventbus.MessageEvent;
-import com.codingpixel.healingbudz.activity.home.home_fragment.journal_tab.JournalDetailsActivity;
-import com.codingpixel.healingbudz.activity.home.side_menu.profile.qa_tab.QARecylerChildViewHolder;
-import com.codingpixel.healingbudz.activity.home.side_menu.profile.qa_tab.QARecylerGroupViewHolder;
 import com.codingpixel.healingbudz.DataModel.HomeQAfragmentDataModel;
 import com.codingpixel.healingbudz.DataModel.JournalDetailsExpandAbleData;
 import com.codingpixel.healingbudz.DataModel.UserProfileQATabExpandAbleData;
 import com.codingpixel.healingbudz.R;
 import com.codingpixel.healingbudz.Utilities.DateConverter;
+import com.codingpixel.healingbudz.activity.home.home_fragment.journal_tab.JournalDetailsActivity;
+import com.codingpixel.healingbudz.activity.home.side_menu.profile.qa_tab.QARecylerChildViewHolder;
+import com.codingpixel.healingbudz.activity.home.side_menu.profile.qa_tab.QARecylerGroupViewHolder;
 import com.thoughtbot.expandablerecyclerview.ExpandableRecyclerViewAdapter;
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
-
-import org.greenrobot.eventbus.EventBus;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import static com.codingpixel.healingbudz.activity.home.HomeActivity.showSubFragmentListner_object;
 import static com.codingpixel.healingbudz.Utilities.ClickAbleKeywordText.MakeKeywordClickableText;
+import static com.codingpixel.healingbudz.activity.home.HomeActivity.showSubFragmentListner_object;
 
 public class UserProfileQATabRecylerAdapter extends ExpandableRecyclerViewAdapter<QARecylerGroupViewHolder, QARecylerChildViewHolder> {
     Context context;
@@ -85,13 +81,13 @@ public class UserProfileQATabRecylerAdapter extends ExpandableRecyclerViewAdapte
                         HomeQAfragmentDataModel model1 = new HomeQAfragmentDataModel();
                         model1.setId(items.get(childIndex).getId());
                         showSubFragmentListner_object.ShowAnswers(model1 , items.get(childIndex).getId(), true);
-                        new android.os.Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                EventBus.getDefault().post(new MessageEvent(true));
-                            }
-                        }, 200);
-                        ((Activity)view.getContext() ).finish();
+//                        new android.os.Handler().postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                EventBus.getDefault().post(new MessageEvent(true));
+//                            }
+//                        }, 200);
+//                        ((Activity)view.getContext() ).finish();
 
                     }
                 }
@@ -114,13 +110,13 @@ public class UserProfileQATabRecylerAdapter extends ExpandableRecyclerViewAdapte
                     HomeQAfragmentDataModel model = new HomeQAfragmentDataModel();
                     model.setId(items.get(childIndex).getId());
                     showSubFragmentListner_object.ShowQuestions(model , true);
-                    new android.os.Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            EventBus.getDefault().post(new MessageEvent(true));
-                        }
-                    }, 200);
-                    ((Activity)view.getContext() ).finish();
+//                    new android.os.Handler().postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            EventBus.getDefault().post(new MessageEvent(true));
+//                        }
+//                    }, 200);
+//                    ((Activity)view.getContext() ).finish();
                 }
             });
         } else if (group.getTitle().equalsIgnoreCase("My A’s")) {
@@ -136,13 +132,13 @@ public class UserProfileQATabRecylerAdapter extends ExpandableRecyclerViewAdapte
                         HomeQAfragmentDataModel model1 = new HomeQAfragmentDataModel();
                         model1.setId(items.get(childIndex).getId());
                         showSubFragmentListner_object.ShowAnswers(model1 , items.get(childIndex).getId(), true);
-                        new android.os.Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                EventBus.getDefault().post(new MessageEvent(true));
-                            }
-                        }, 200);
-                        ((Activity)view.getContext() ).finish();
+//                        new android.os.Handler().postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                EventBus.getDefault().post(new MessageEvent(true));
+//                            }
+//                        }, 200);
+//                        ((Activity)view.getContext() ).finish();
                     }
                 }
             });
@@ -153,13 +149,13 @@ public class UserProfileQATabRecylerAdapter extends ExpandableRecyclerViewAdapte
                         HomeQAfragmentDataModel model1 = new HomeQAfragmentDataModel();
                         model1.setId(items.get(childIndex).getId());
                         showSubFragmentListner_object.ShowAnswers(model1 , items.get(childIndex).getId(), true);
-                        new android.os.Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                EventBus.getDefault().post(new MessageEvent(true));
-                            }
-                        }, 200);
-                        ((Activity)view.getContext() ).finish();
+//                        new android.os.Handler().postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                EventBus.getDefault().post(new MessageEvent(true));
+//                            }
+//                        }, 200);
+//                        ((Activity)view.getContext() ).finish();
                     }
                 }
             });
@@ -183,13 +179,13 @@ public class UserProfileQATabRecylerAdapter extends ExpandableRecyclerViewAdapte
                     HomeQAfragmentDataModel model1 = new HomeQAfragmentDataModel();
                     model1.setId(items.get(childIndex).getId());
                     showSubFragmentListner_object.ShowAnswers(model1 , items.get(childIndex).getId(), true);
-                    new android.os.Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            EventBus.getDefault().post(new MessageEvent(true));
-                        }
-                    }, 200);
-                    ((Activity)view.getContext() ).finish();
+//                    new android.os.Handler().postDelayed(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            EventBus.getDefault().post(new MessageEvent(true));
+//                        }
+//                    }, 200);
+//                    ((Activity)view.getContext() ).finish();
                 }
             });
         }

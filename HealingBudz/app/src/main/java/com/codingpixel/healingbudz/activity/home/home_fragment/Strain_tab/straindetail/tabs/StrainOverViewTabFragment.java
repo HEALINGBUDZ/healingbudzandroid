@@ -187,6 +187,7 @@ public class StrainOverViewTabFragment extends Fragment implements APIResponseLi
     Context context;
     LinearLayout Survay_layout, comment_above, comment_below;
     TextView No_survay_found, first_count, second_count, question_detail_character_counter;
+    ImageView img_pending;
     View for_no_survay;
     RelativeLayout mu1, dp1, ms1, ne1, fp1;
     RelativeLayout mu2, dp2, ms2, ne2, fp2;
@@ -929,10 +930,12 @@ public class StrainOverViewTabFragment extends Fragment implements APIResponseLi
 
         if (strainOverViewDataModel.getMadicalConditions().size() == 0) {
             No_survay_found.setVisibility(View.VISIBLE);
+            img_pending.setVisibility(View.VISIBLE);
             for_no_survay.setVisibility(View.VISIBLE);
             Survay_layout.setVisibility(GONE);
         } else {
             No_survay_found.setVisibility(GONE);
+            img_pending.setVisibility(View.GONE);
             for_no_survay.setVisibility(View.GONE);
             Survay_layout.setVisibility(View.VISIBLE);
         }
@@ -1536,6 +1539,7 @@ public class StrainOverViewTabFragment extends Fragment implements APIResponseLi
 
         Survay_layout = view.findViewById(R.id.survay_layoutt);
         No_survay_found = view.findViewById(R.id.no_survay);
+        img_pending = view.findViewById(R.id.img_pending);
         for_no_survay = view.findViewById(R.id.for_no_survay);
 
 

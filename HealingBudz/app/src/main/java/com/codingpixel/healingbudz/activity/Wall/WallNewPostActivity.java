@@ -218,7 +218,7 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
                 if (hasFocus) {
                     editText.setHint("");
                 } else {
-                    editText.setHint("What's on your mind?");
+                    editText.setHint("Hey Bud, what's on your mind?");
                 }
             }
         });
@@ -457,6 +457,15 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
         editText.setQueryTokenReceiver(new QueryTokenReceiver() {
             @Override
             public List<String> onQueryReceived(@NonNull QueryToken queryToken) {
+                List<String> urls = Utility.extractURL(editText.getText().toString());
+                if (urls != null && !urls.isEmpty()) {
+                    urlLink = urls.get(0);
+                    scrapUrl(urls.get(0));
+                } else {
+                    urlLink = null;
+                    scrapUrl(null);
+                }
+                urls = null;
                 if (queryToken.getExplicitChar() == '#') {
                     if (queryToken.getKeywords().toLowerCase().length() > 0) {
                         showHashTagList(queryToken.getKeywords().toLowerCase());
@@ -471,15 +480,7 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
                         mentionTagList.setVisibility(View.GONE);
                     }
                 } else {
-                    List<String> urls = Utility.extractURL(editText.getText().toString());
-                    if (urls != null && !urls.isEmpty()) {
-                        urlLink = urls.get(0);
-                        scrapUrl(urls.get(0));
-                    } else {
-                        urlLink = null;
-                        scrapUrl(null);
-                    }
-                    urls = null;
+
                     mentionTagList.setVisibility(View.GONE);
                 }
                 return null;
@@ -496,11 +497,21 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
         if (currentScrapUrl == null) {
 //            scrapLayout.setData("", "", "", "");
             scrapLayout.setVisibility(View.GONE);
-        } else if (currentScrapUrl.equals(temp)) {
-            //scrapLayout.setData(s);
+            scrapLayout.clear();
+        } else if (currentScrapUrl.equalsIgnoreCase(temp)) {
+            scrapLayout.clear();
+            scrapLayout.setData(s);
             scrapLayout.setVisibility(View.VISIBLE);
         } else {
-            scrapLayout.setData(s);
+            if (s == null) {
+                scrapLayout.setVisibility(View.GONE);
+                scrapLayout.clear();
+            } else {
+                scrapLayout.clear();
+                scrapLayout.setData(s);
+                scrapLayout.setVisibility(View.VISIBLE);
+            }
+
         }
         temp = null;
     }
@@ -730,7 +741,7 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
             postText = new String[]{editText.getMentionsText().toString().trim(), ""};
         }
         if (post != null && type == 1) {
-            if (postText[1].length() < 1) {
+            if (postText[1].length() < 5) {
                 postText[1] = jsonDataPrevious;
             }
             if (urlLink == null) {
@@ -1069,13 +1080,13 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
 
     @Override
     public void onDataReady(final Preview preview) {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                scrapLayout.setVisibility(View.VISIBLE);
-//                scrapLayout.setMessage(preview.getLink(), ContextCompat.getColor(WallNewPostActivity.this, R.color.color_link));
-            }
-        });
+//        runOnUiThread(new Runnable() {
+//            @Override
+//            public void run() {
+//                scrapLayout.setVisibility(View.VISIBLE);
+////                scrapLayout.setMessage(preview.getLink(), ContextCompat.getColor(WallNewPostActivity.this, R.color.color_link));
+//            }
+//        });
     }
 
     public void getSubUsers() {
@@ -1184,7 +1195,12 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
 
     @Override
     public void onRequestSuccess(String response, APIActions.ApiActions apiActions) {
-        dialog.dismiss();
+        try {
+            if (dialog != null)
+                dialog.dismiss();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
         if (apiActions == APIActions.ApiActions.wall_post_img_upload) {
             if (response.contains("error")) {
                 if (response.toLowerCase().contains("Session Expired".toLowerCase())) {
@@ -1222,13 +1238,23 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
 
     @Override
     public void onRequestError(String response, APIActions.ApiActions apiActions) {
-        dialog.dismiss();
+        try {
+            if (dialog != null)
+                dialog.dismiss();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
         CustomeToast.ShowCustomToast(WallNewPostActivity.this, "Media Not Uploaded!", Gravity.TOP);
     }
 
     @Override
     public void onResponse(Call<GetAllPostResponse> call, final Response<GetAllPostResponse> response) {
-        dialog.dismiss();
+        try {
+            if (dialog != null)
+                dialog.dismiss();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
         if (response.isSuccessful() || response.body() != null) {
             Utility.getApiStatusCallBack(response.body().getStatus(), response.body().getErrorMessage(), new ApiStatusCallBack() {
                 @Override
@@ -1281,7 +1307,12 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
 
     @Override
     public void onFailure(Call<GetAllPostResponse> call, Throwable t) {
-        dialog.dismiss();
+        try {
+            if (dialog != null)
+                dialog.dismiss();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
         showUnknownError();
     }
 
@@ -1367,9 +1398,7 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
                     }
                 }
             }
-            if (jsonExtra.length() > 1)
-                jsonExtra = new StringBuilder(jsonExtra.substring(0, jsonExtra.lastIndexOf(",")));
-            jsonExtra.append("]");
+
             StringBuffer addedd = new StringBuffer();
             for (int i = 0; i < arrayT.length; i++) {
                 if (i == 0)
@@ -1380,6 +1409,30 @@ public class WallNewPostActivity extends AppCompatActivity implements RecyclerVi
                     addedd.append(" " + arrayT[i] + " ");
                 }
             }
+            if (preJsonData != null && post != null) {
+                for (MentionTagJsonModel aPreJsonData : preJsonData) {
+                    if (!jsonExtra.toString().trim().toLowerCase().contains(aPreJsonData.getValue().toLowerCase().trim())) {
+                        if (editText.getText().toString().toLowerCase().trim().contains(aPreJsonData.getTrigger().toLowerCase().trim() + aPreJsonData.getValue().toLowerCase().trim())) {
+                            if (aPreJsonData.getTrigger().trim().equalsIgnoreCase("@")) {
+                                if (aPreJsonData.getType().trim().equalsIgnoreCase("user")) {
+                                    jsonExtra.append(new Gson().toJson(new MentionTagJsonModel(String.valueOf(aPreJsonData.getId()), "user", aPreJsonData.getValue(), "@")));
+                                    jsonExtra.append(",");
+                                } else {
+                                    jsonExtra.append(new Gson().toJson(new MentionTagJsonModel(String.valueOf(aPreJsonData.getId()), "budz", aPreJsonData.getValue(), "@")));
+                                    jsonExtra.append(",");
+                                }
+                            } else {
+                                jsonExtra.append(new Gson().toJson(new MentionTagJsonModel(String.valueOf(aPreJsonData.getId()), "tag", aPreJsonData.getValue(), "#")));
+                                jsonExtra.append(",");
+
+                            }
+                        }
+                    }
+                }
+            }
+            if (jsonExtra.length() > 1)
+                jsonExtra = new StringBuilder(jsonExtra.substring(0, jsonExtra.lastIndexOf(",")));
+            jsonExtra.append("]");
             return new String[]{addedd.toString().trim(), jsonExtra.toString()};
         }
         int start = 0;

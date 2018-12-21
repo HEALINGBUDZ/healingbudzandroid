@@ -138,7 +138,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
-                android:text="Like By"
+                android:text="Liked By"
                 android:textColor="#000"
                 android:textSize="10sp" />
 

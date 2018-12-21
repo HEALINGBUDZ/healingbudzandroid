@@ -178,7 +178,7 @@ public class BudzMapHomeRecylAdapter extends RecyclerView.Adapter<BudzMapHomeRec
                     }
                 }
             });
-            @SuppressLint("DefaultLocale") String Distance = String.format("%.01f", Double.parseDouble(mData.get(position).getDistance() + ""));
+            @SuppressLint("DefaultLocale") String Distance = String.format("%.002f", Double.parseDouble(mData.get(position).getDistance() + ""));
             holder.distance.setText(Distance + " mi");
             if (data.getReviews() != null) {
                 holder.reviewss.setText(data.getReviews().size() + " Reviews");

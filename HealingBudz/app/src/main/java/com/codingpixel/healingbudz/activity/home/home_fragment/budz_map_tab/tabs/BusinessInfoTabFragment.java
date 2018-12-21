@@ -396,7 +396,7 @@ public class BusinessInfoTabFragment extends Fragment implements OnMapReadyCallb
                                                 }
                                             }
                                         }
-                                        if (stst == -1){
+                                        if (stst == 1){
                                             new SweetAlertDialog(getActivity(), SweetAlertDialog.NORMAL_TYPE)
                                                     .setTitleText("Error!")
                                                     .setContentText("You can't create this type of business in your area.")

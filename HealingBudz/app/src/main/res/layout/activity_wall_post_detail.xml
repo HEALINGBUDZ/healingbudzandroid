@@ -62,7 +62,7 @@
                     <FrameLayout
                         android:id="@+id/activity_wall_post_detail_post_imgs_viewpager_parent"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="180dp"
                         android:layout_marginStart="1px"
                         android:layout_marginLeft="1px"
                         android:layout_marginTop="1px"

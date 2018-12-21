@@ -527,13 +527,13 @@ SubUser*/
                 HomeQAfragmentDataModel model = new HomeQAfragmentDataModel();
                 model.setId(filter_activity_list_data.get(position).getType_id());
                 showSubFragmentListner_object.ShowQuestions(model, true);
-                finish();
+//                finish();
                 break;
             case "Answers":
                 HomeQAfragmentDataModel model1 = new HomeQAfragmentDataModel();
                 model1.setId(filter_activity_list_data.get(position).getType_id());
                 showSubFragmentListner_object.ShowAnswers(model1, filter_activity_list_data.get(position).getType_id(), true);
-                finish();
+//                finish();
                 break;
             case "Budz Map":
             case "Budz Adz":
