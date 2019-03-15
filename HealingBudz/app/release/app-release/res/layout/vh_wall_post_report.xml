@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff403f3f" android:layout_width="fill_parent" android:layout_height="?actionBarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/vh_wall_post_report_indicator" android:background="#ff7cc245" android:layout_width="fill_parent" android:layout_height="4.0sp" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0" android:layout_below="@id/vh_wall_post_report_indicator">
+        <ImageView android:id="@id/vh_wall_post_report_img" android:padding="15.0dip" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_double_circle" android:layout_weight="1.5" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@android:style/TextAppearance.Large" android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center|left" android:id="@id/vh_wall_post_report_txt" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="ANSWER IS OFFENCIVE" android:layout_weight="6.0" />
+    </LinearLayout>
+</RelativeLayout>

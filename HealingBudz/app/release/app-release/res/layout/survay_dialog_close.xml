@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dialog_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/relativeLayout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0sp" android:layout_marginRight="24.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <RelativeLayout android:orientation="vertical" android:id="@id/main_content" android:paddingBottom="18.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0sp">
+                <LinearLayout android:orientation="vertical" android:id="@id/main_working_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/top_layout" android:background="@drawable/shoot_out_dialog_bg" android:paddingTop="20.0sp" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewItalic android:textSize="16.0sp" android:textColor="@color/brown_question" android:gravity="center" android:id="@id/first_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="Thank you for sharing your experience with this strain. " android:layout_centerInParent="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/bottom_layout" android:background="@drawable/strain_filter_dialog_bg" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/close" android:background="@drawable/strain_help_me_find_matches_btn_bg" android:layout_width="fill_parent" android:layout_height="40.0sp" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="Close" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <ImageView android:id="@id/cross_button" android:paddingLeft="10.0sp" android:paddingBottom="10.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_cross_strain_yellow" android:layout_alignTop="@id/relativeLayout" android:layout_alignRight="@id/relativeLayout" android:layout_alignEnd="@id/relativeLayout" />
+        <ImageView android:id="@id/back_button" android:paddingRight="10.0sp" android:paddingBottom="10.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_cross_back_btn" android:layout_alignLeft="@id/relativeLayout" android:layout_alignTop="@id/relativeLayout" android:layout_alignStart="@id/relativeLayout" />
+    </RelativeLayout>
+</LinearLayout>

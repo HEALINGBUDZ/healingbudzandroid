@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="52.0sp" android:weightSum="10.0">
+        <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/left_month" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.0">
+            <ImageView android:layout_width="30.0sp" android:layout_height="fill_parent" android:src="@drawable/left_white" android:alpha="0.5" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffe4e4e5" android:id="@id/previous_month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FRB" android:textAllCaps="true" />
+        </LinearLayout>
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffe4e4e5" android:gravity="center" android:id="@id/current_month" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="MARCH 2017" android:layout_weight="6.0" android:textAllCaps="true" />
+        <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:id="@id/right_month" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.0">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffe4e4e5" android:id="@id/next_month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="APR" android:textAllCaps="true" />
+            <ImageView android:layout_width="30.0sp" android:layout_height="fill_parent" android:src="@drawable/right_white" android:alpha="0.5" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/top_line" android:background="#ff5f5c5c" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="52.0sp" android:layout_marginTop="6.0sp" android:weightSum="7.0">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffe4e4e4" android:gravity="center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="SUN" android:layout_weight="1.0" android:textAllCaps="true" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffe4e4e4" android:gravity="center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="MON" android:layout_weight="1.0" android:textAllCaps="true" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffe4e4e4" android:gravity="center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="TUE" android:layout_weight="1.0" android:textAllCaps="true" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffe4e4e4" android:gravity="center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="WED" android:layout_weight="1.0" android:textAllCaps="true" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffe4e4e4" android:gravity="center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="THU" android:layout_weight="1.0" android:textAllCaps="true" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffe4e4e4" android:gravity="center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="FRI" android:layout_weight="1.0" android:textAllCaps="true" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffe4e4e4" android:gravity="center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="SAT" android:layout_weight="1.0" android:textAllCaps="true" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/mode_calendar_recyler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

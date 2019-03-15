@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_vi" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/top_menu" android:background="#ff1f1f1f" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+            <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+            <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                <ImageView android:id="@id/add_new_journal" android:padding="1.0sp" android:layout_width="30.0sp" android:layout_height="fill_parent" android:layout_marginRight="3.0sp" android:src="@drawable/budzmapnewic" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="22.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/q_a_menu_title" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="My Budz Adz" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_rf" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_vi">
+        <android.support.v4.widget.NestedScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:paddingTop="14.0sp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                    <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+                </LinearLayout>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:orientation="vertical" android:id="@id/pending_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="16.0sp" android:textColor="#ff942b88" android:padding="5.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pending" />
+                        <android.support.v7.widget.RecyclerView android:id="@id/my_budzmap_recyler_view_pending" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0sp" android:nestedScrollingEnabled="false" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/my_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/pending_layout">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="16.0sp" android:textColor="#ff942b88" android:padding="5.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="My Listing" />
+                        <android.support.v7.widget.RecyclerView android:id="@id/my_budzmap_recyler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0sp" android:nestedScrollingEnabled="false" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textColor="@color/white" android:id="@id/not_fount" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No Budz Adz Found!" android:layout_centerInParent="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+</RelativeLayout>

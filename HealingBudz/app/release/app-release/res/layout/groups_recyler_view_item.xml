@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="70.0sp" android:weightSum="10.0">
+        <ImageView android:id="@id/icon_img" android:padding="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_groups_icon" android:layout_weight="2.0" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginTop="6.0sp" android:layout_weight="8.0">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0sp" android:weightSum="10.0">
+                <LinearLayout android:orientation="vertical" android:id="@id/name_layout" android:paddingLeft="4.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="8.0">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textColor="#ffffffff" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:text="Journal Name" android:maxLines="1" android:lines="1" android:singleLine="true" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ffc5c3c4" android:id="@id/no_of_budz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:text="John Doe" />
+                </LinearLayout>
+                <RelativeLayout android:id="@id/follow_btn" android:layout_width="0.0sp" android:layout_height="fill_parent" android:weightSum="3.0" android:layout_weight="2.0">
+                    <ImageView android:layout_width="26.0sp" android:layout_height="26.0sp" android:src="@drawable/ic_groups_add" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ff545555" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+</LinearLayout>

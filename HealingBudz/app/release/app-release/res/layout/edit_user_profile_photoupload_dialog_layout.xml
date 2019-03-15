@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/profile_photo_layout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:layout_marginRight="10.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <RelativeLayout android:orientation="vertical" android:id="@id/main_content" android:paddingBottom="18.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0sp">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/first_dialog_layout" android:background="@drawable/shoot_out_dialog_bg" android:paddingLeft="15.0sp" android:paddingRight="16.0sp" android:paddingBottom="25.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="19.0sp" android:textColor="#fff6f6f6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0sp" android:text="UPDATE PROFILE PHOTO" />
+                <RelativeLayout android:layout_width="140.0sp" android:layout_height="140.0sp">
+                    <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/profile_img" android:layout_width="122.0sp" android:layout_height="120.0sp" android:layout_marginTop="14.0sp" android:src="@drawable/ic_profile_blue" android:layout_centerInParent="true" />
+                    <ImageView android:id="@id/profile_img_topi" android:visibility="gone" android:layout_width="60.0sp" android:layout_height="60.0sp" android:layout_marginTop="-5.0sp" android:src="@drawable/topi_ic" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerInParent="true" android:layout_alignParentStart="true" />
+                </RelativeLayout>
+                <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textColor="@color/white" android:id="@id/upload_profile_img" android:background="@drawable/upload_profile_photo_btn_bg" android:layout_width="fill_parent" android:layout_height="42.0sp" android:layout_marginLeft="36.0sp" android:layout_marginTop="20.0sp" android:layout_marginRight="36.0sp" android:text="Upload " android:textAllCaps="false" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0sp" android:layout_marginTop="18.0sp" android:layout_marginRight="30.0sp" android:weightSum="10.0">
+                    <View android:background="#60999996" android:layout_width="0.0sp" android:layout_height="1.0sp" android:layout_weight="4.2" android:layout_alignParentBottom="true" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textColor="#ffc5c5c5" android:gravity="center_horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="OR" android:layout_weight="1.6" />
+                    <View android:background="#60999996" android:layout_width="0.0sp" android:layout_height="1.0sp" android:layout_weight="4.2" android:layout_alignParentBottom="true" />
+                </LinearLayout>
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="#ff9f9f9e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:text="You Can Choose an Icon" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0sp" android:weightSum="12.0">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/topi" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0sp" android:weightSum="12.0">
+                        <ProgressBar android:layout_gravity="center" android:id="@id/loading_spinner_topi" android:layout_width="48.0sp" android:layout_height="48.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                        <android.support.v7.widget.RecyclerView android:id="@id/avatar_recyler_view_topi" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="60.0sp" android:weightSum="12.0">
+                        <ProgressBar android:layout_gravity="center" android:id="@id/loading_spinner" android:layout_width="48.0sp" android:layout_height="48.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                        <android.support.v7.widget.RecyclerView android:id="@id/avatar_recyler_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/shoot_out_dialog_bg_white" android:paddingLeft="15.0sp" android:paddingTop="0.0sp" android:paddingRight="12.0sp" android:paddingBottom="20.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/first_dialog_layout" android:layout_centerHorizontal="true">
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/save_btn" android:background="@drawable/edit_profile_save_btn_bg" android:layout_width="fill_parent" android:layout_height="40.0sp" android:layout_marginTop="20.0sp" android:text="SAVE" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:id="@id/cross_btn" android:paddingLeft="7.0sp" android:paddingBottom="7.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_feeling_dialog_cross_btn" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/cover_photo" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:layout_marginRight="10.0sp" android:scaleType="fitCenter" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <RelativeLayout android:orientation="vertical" android:paddingBottom="18.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0sp">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/upload_profile_cover_bg" android:paddingLeft="15.0sp" android:paddingRight="16.0sp" android:paddingBottom="25.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="19.0sp" android:textColor="#fff6f6f6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0sp" android:text="UPDATE COVER PHOTO" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textColor="@color/white" android:id="@id/second_upload_profile_img" android:background="@drawable/upload_profile_photo_btn_bg" android:layout_width="fill_parent" android:layout_height="42.0sp" android:layout_marginLeft="36.0sp" android:layout_marginTop="26.0sp" android:layout_marginRight="36.0sp" android:text="Upload " android:textAllCaps="false" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:id="@id/second_cross_btn" android:paddingLeft="7.0sp" android:paddingBottom="7.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_feeling_dialog_cross_btn" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

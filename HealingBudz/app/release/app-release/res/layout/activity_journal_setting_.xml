@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff2a2a2a" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_menu" android:background="#ff242424" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+        <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+        <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="22.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/q_a_menu_title" android:paddingLeft="4.0sp" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Journal Settings" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="12.0sp" android:paddingRight="12.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingTop="14.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="7.0">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/item_one_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Quick Entry:" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffcfc3c4" android:gravity="center_vertical" android:id="@id/item_one_discription" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:text="Clicking on any date in Mode Calendar will open Quick Entry popup. You will be able to add entry Title. Entry Short Description, Choose Mood Icon and Journal (if you have multiple Journals)" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="14.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="3.0">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/switch_layout" android:background="#ff616161" android:clickable="true" android:layout_width="fill_parent" android:layout_height="26.0sp" android:layout_marginLeft="10.0sp" android:layout_marginTop="4.0sp" android:layout_marginRight="10.0sp" android:layout_marginBottom="1.0sp" android:weightSum="10.0">
+                        <Button android:textSize="12.0sp" android:textColor="#fff8f8f8" android:id="@id/private_btn" android:background="@drawable/seeting_toggle_btn_off" android:clickable="false" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginRight="-5.0sp" android:layout_weight="5.0" android:textAllCaps="true" />
+                        <Button android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/public_btn" android:background="@drawable/toggle_btn_public" android:clickable="false" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="-5.0sp" android:text="ON" android:layout_weight="5.0" android:textAllCaps="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#c7565555" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="12.0sp" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/item_one" android:layout_width="fill_parent" android:layout_height="54.0sp" android:layout_marginTop="6.0sp">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reminders" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ffc5c3c4" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Set writer reminders" />
+        </LinearLayout>
+        <View android:background="#c7565555" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/item_two" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="54.0sp" android:layout_marginTop="6.0sp">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ffc5c3c4" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="@string/syns_backup_restore" />
+        </LinearLayout>
+        <View android:background="#c7565555" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+    </LinearLayout>
+</LinearLayout>

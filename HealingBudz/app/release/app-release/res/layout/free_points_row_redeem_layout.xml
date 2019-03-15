@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/first_review_layout" android:background="#ff5c5d5d" android:layout_width="fill_parent" android:layout_height="70.0sp" android:layout_marginTop="10.0sp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+            <LinearLayout android:orientation="vertical" android:padding="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.0">
+                <ImageView android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/reward_bg" android:scaleType="centerCrop" />
+            </LinearLayout>
+            <RelativeLayout android:orientation="vertical" android:paddingTop="2.0sp" android:paddingRight="2.0sp" android:paddingBottom="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="8.0">
+                <LinearLayout android:orientation="vertical" android:background="#ff232323" android:paddingLeft="10.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0sp" android:paddingStart="6.0sp">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Complete your profile." />
+                        <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <ImageView android:layout_gravity="top" android:id="@id/star" android:paddingTop="6.0sp" android:paddingRight="6.0sp" android:paddingBottom="6.0sp" android:layout_width="23.0sp" android:layout_height="23.0sp" android:layout_marginLeft="-3.0sp" android:src="@drawable/ic_green_star_reward" />
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ff82bb2b" android:id="@id/text_point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-6.0sp" android:text="400 points" android:layout_toRightOf="@id/star" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="10.0sp" android:textColor="#ff5c5d5d" android:id="@id/date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Redeem Date: 16-05-2018" android:paddingStart="6.0sp" />
+                </LinearLayout>
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="14.0sp" android:textStyle="normal" android:textColor="@color/white" android:id="@id/claim_reward" android:background="@drawable/reward_btn" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="35.0sp" android:layout_marginTop="11.0sp" android:layout_marginBottom="11.0sp" android:text="View Product" android:layout_alignParentBottom="true" android:lineSpacingExtra="2.0dip" android:textAllCaps="false" android:layout_marginStart="16.0sp" android:layout_marginEnd="25.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

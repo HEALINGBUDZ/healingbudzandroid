@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/dialog_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/relativeLayout" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0sp" android:layout_marginRight="24.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <RelativeLayout android:orientation="vertical" android:id="@id/main_content" android:paddingBottom="18.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0sp">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/first_dialog_layout" android:background="@drawable/shoot_out_dialog_bg" android:paddingLeft="15.0sp" android:paddingRight="16.0sp" android:layout_width="fill_parent" android:layout_height="50.0sp" android:layout_marginTop="8.0dip" android:layout_alignTop="@id/relativeLayout" android:layout_alignRight="@id/relativeLayout" android:layout_alignEnd="@id/relativeLayout">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="18.0sp" android:textStyle="bold" android:textColor="#fff4c42f" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Save Search" android:textAllCaps="true" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/strain_filter_dialog_bg" android:paddingLeft="19.0sp" android:paddingRight="19.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/first_dialog_layout" android:layout_centerHorizontal="true">
+                    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0sp">
+                        <android.support.design.widget.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Name Your Search" app:counterEnabled="true" app:counterMaxLength="15" app:counterOverflowTextAppearance="@color/black" app:counterTextAppearance="@color/black" app:hintEnabled="true">
+                            <com.codingpixel.healingbudz.customeUI.HealinBudEditText android:textColor="#ffceccce" android:id="@id/et_save_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:maxLength="15" android:inputType="textCapWords" android:imeOptions="actionDone" />
+                        </android.support.design.widget.TextInputLayout>
+                        <ImageView android:id="@id/save_search" android:padding="5.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:layout_marginTop="4.0sp" android:src="@drawable/ic_save_icon_filter_dialog" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0sp">
+                        <RelativeLayout android:gravity="center" android:layout_width="24.0sp" android:layout_height="24.0sp">
+                            <ImageView android:background="@color/white" android:layout_width="15.0sp" android:layout_height="15.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                            <ImageView android:id="@id/strain_description" android:layout_width="25.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_info_icon" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0sp" android:text="Searches are saved in the app  menu under My Saves" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <ImageView android:id="@id/cross_btn" android:paddingLeft="10.0sp" android:paddingBottom="10.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_cross_strain_yellow" android:layout_alignTop="@id/relativeLayout" android:layout_alignRight="@id/relativeLayout" android:layout_alignEnd="@id/relativeLayout" />
+    </RelativeLayout>
+</LinearLayout>

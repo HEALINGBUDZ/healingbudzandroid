@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/home_bg_img" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="157.0sp" android:layout_height="71.0sp" android:src="@drawable/ic_expert_areas_top_icon" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0sp" android:text="The Healing Budz community is \n all about budz helping budz." />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/qa_question_list_item_bg" android:padding="12.0sp" android:layout_width="fill_parent" android:layout_height="120.0sp" android:layout_marginTop="22.0sp">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="46.0sp" android:layout_height="46.0sp" android:src="@drawable/ic_expert_area_question_icon" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="#ffc5c5c5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0sp" android:layout_marginTop="12.0sp" android:text="A bud asks the community a question…" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ffc5c5c5" android:gravity="right" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_marginLeft="16.0sp" android:layout_marginTop="12.0sp" android:text="Budz with experience in that area \nare notified to supply an answer." android:layout_weight="8.0" />
+                <ImageView android:layout_width="0.0sp" android:layout_height="46.0sp" android:src="@drawable/ic_experet_area_top_question_icon" android:layout_weight="2.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0sp" android:text="By indicating your experience areas with us, we can notify you via push notifications when another bud needs your help in that specific area." />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:text="Be someone’s hero." />
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/add_epert_area" android:background="@drawable/budz_map_dialog_green_btn_bg_main" android:layout_width="fill_parent" android:layout_height="48.0sp" android:layout_marginLeft="8.0sp" android:layout_marginTop="20.0sp" android:layout_marginRight="8.0sp" android:text="ADD YOUR EXPERIENCE AREAS" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textSize="14.0sp" android:textColor="#ffc5c5c5" android:id="@id/remind_me_later" android:background="@color/transparent" android:paddingLeft="15.0sp" android:paddingRight="15.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0sp" android:text="Remind me later >" android:textAllCaps="false" />
+    </LinearLayout>
+</RelativeLayout>

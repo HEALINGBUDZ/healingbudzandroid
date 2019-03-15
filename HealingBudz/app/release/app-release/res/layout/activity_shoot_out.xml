@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/sqe_one" android:background="#ff1f1f1f" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+        <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+        <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textSize="12.0sp" android:textColor="#ff595959" android:gravity="bottom" android:id="@id/buzz_feed_clear_btn" android:background="@color/transparent" android:paddingBottom="10.0sp" android:visibility="invisible" android:layout_width="72.0sp" android:layout_height="fill_parent" android:text="Clear All" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textAllCaps="false" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <ImageView android:layout_width="26.0sp" android:layout_height="18.0sp" android:layout_marginRight="10.0sp" android:src="@drawable/ic_shoot_out_purpole" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="22.0sp" android:textColor="#ffe070e0" android:gravity="center" android:id="@id/q_a_menu_title" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Shout Outs" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/send_shoot_out" android:background="@drawable/shoot_out_bg" android:visibility="gone" android:layout_width="0.0sp" android:layout_height="40.0sp" android:layout_marginLeft="55.0sp" android:layout_marginTop="20.0sp" android:layout_marginRight="55.0sp" android:layout_marginBottom="20.0sp" android:layout_weight="10.0">
+            <ImageView android:layout_width="26.0sp" android:layout_height="17.0sp" android:layout_marginRight="10.0sp" android:src="@drawable/ic_home_shoot_out" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SEND A SHOUT OUT" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/buy_shoot_out" android:background="@drawable/shoot_out_bg" android:visibility="gone" android:layout_width="0.0sp" android:layout_height="40.0sp" android:layout_marginLeft="55.0sp" android:layout_marginTop="20.0sp" android:layout_marginRight="55.0sp" android:layout_marginBottom="20.0sp" android:layout_weight="10.0">
+            <ImageView android:layout_width="26.0sp" android:layout_height="17.0sp" android:layout_marginRight="10.0sp" android:src="@drawable/ic_home_shoot_out" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BUY SUBSCRIPTION" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="3.0sp">
+        <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_to_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0sp" android:layout_marginRight="10.0sp">
+            <android.support.v7.widget.RecyclerView android:id="@id/buzz_feed_recyler_item" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</LinearLayout>

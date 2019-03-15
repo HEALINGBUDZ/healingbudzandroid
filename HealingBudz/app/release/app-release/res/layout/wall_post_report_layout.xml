@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/report_question_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top" android:background="#ff252222" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/reporting_heading" android:layout_width="fill_parent" android:layout_height="50.0sp" android:layout_marginLeft="22.0sp" android:layout_marginTop="26.0sp" android:text="REASON FOR REPORTING:" android:layout_marginStart="22.0sp" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="vertical" android:id="@id/q_a_list" android:background="#ff252222" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top">
+        <android.support.v7.widget.RecyclerView android:id="@id/report_wall_post_recyler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="22.0sp" android:layout_marginRight="22.0sp" android:layout_marginBottom="4.0sp" android:layout_weight="1.0" android:layout_marginStart="22.0sp" android:layout_marginEnd="22.0sp" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textColor="@color/white" android:id="@id/wall_post_report_send_button" android:background="@drawable/wall_screen_button_bg" android:layout_width="wrap_content" android:layout_height="40.0sp" android:layout_marginLeft="22.0sp" android:layout_marginBottom="6.0sp" android:text="SEND" android:layout_below="@id/report_wall_post_recyler_view" android:layout_marginStart="22.0sp" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/q_a_list_bottom" android:background="#ff252222" android:layout_width="fill_parent" android:layout_height="15.0sp" android:layout_below="@id/q_a_list">
+        <View android:background="#ff7cc245" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/indicator_close_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/q_a_list" android:layout_centerHorizontal="true">
+        <ImageView android:background="@drawable/q_a_home_menu_indicator_bg" android:padding="7.0sp" android:layout_width="40.0sp" android:layout_height="30.0sp" android:src="@drawable/group_menu_indicator" android:tint="#ff7cc245" android:layout_centerHorizontal="true" android:rotation="180.0" />
+    </RelativeLayout>
+</RelativeLayout>

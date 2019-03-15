@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:background="#ff252525" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/top_menu" android:paddingBottom="30.0sp" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/sqe_one" android:background="#ff1f1f1f" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+            <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+            <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="15.0sp" android:paddingRight="15.0sp" android:layout_width="fill_parent" android:layout_height="40.0sp" android:layout_marginTop="4.0sp" android:weightSum="10.0">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="8.8">
+                <ImageView android:layout_width="20.0sp" android:layout_height="20.0sp" android:src="@drawable/ic_journal_name_icon" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="18.0sp" android:textColor="#ffc4c4c4" android:paddingLeft="10.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Journal Name" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.codingpixel.healingbudz.customeUI.HealinBudEditText android:textSize="20.0sp" android:textColor="@color/white" android:textColorHint="#ff726f6a" android:id="@id/entry_title" android:background="@color/transparent" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="50.0sp" android:layout_marginLeft="16.0sp" android:layout_marginRight="16.0sp" android:hint="Entry Title..." android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0sp" android:layout_marginLeft="10.0sp" android:layout_marginTop="20.0sp" android:layout_marginRight="10.0sp" android:weightSum="10.0">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textColor="#ffb9b8b8" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="Public" android:layout_weight="6.8" />
+            <LinearLayout android:orientation="horizontal" android:background="#ff616161" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="10.0sp" android:layout_marginTop="4.0sp" android:layout_marginRight="10.0sp" android:layout_marginBottom="4.0sp" android:weightSum="10.0" android:layout_weight="3.2">
+                <Button android:textSize="12.0sp" android:textColor="#fff8f8f8" android:id="@id/private_btn" android:background="@drawable/toggle_btn_private" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginRight="-5.0sp" android:text="OFF" android:layout_weight="5.0" android:textAllCaps="true" />
+                <Button android:textSize="12.0sp" android:textColor="#fff8f8f8" android:id="@id/public_btn" android:background="@color/transparent" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="-5.0sp" android:text="ON" android:layout_weight="5.0" android:textAllCaps="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/save_btn" android:background="@drawable/save_and_publish_journal" android:layout_width="fill_parent" android:layout_height="38.0sp" android:layout_marginLeft="24.0sp" android:layout_marginTop="42.0sp" android:layout_marginRight="24.0sp" android:text="SAVE" />
+    </LinearLayout>
+</ScrollView>

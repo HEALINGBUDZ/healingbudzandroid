@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:paddingTop="14.0sp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/tags_recyler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" />
+    <View android:background="#ff4d4948" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="20.0sp" android:layout_below="@id/filtr" />
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="10.0sp" android:paddingRight="10.0sp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0sp" android:weightSum="10.0">
+        <LinearLayout android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="5.0">
+            <ImageView android:padding="3.0sp" android:layout_width="30.0sp" android:layout_height="30.0sp" android:src="@drawable/ic_tag_pin_green" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textSize="18.0sp" android:textColor="#ff7cc144" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:text="Cannabis Oil" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center|right" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="5.0">
+            <ImageView android:padding="6.0sp" android:layout_width="30.0sp" android:layout_height="30.0sp" android:src="@drawable/ic_pin_edit_myjournal" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textSize="18.0sp" android:textColor="#ff898989" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/line_top" android:background="#ff4d4948" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="6.0sp" android:layout_below="@id/filtr" />
+    <android.support.v7.widget.RecyclerView android:id="@id/journal_list_recyler_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" />
+</LinearLayout>

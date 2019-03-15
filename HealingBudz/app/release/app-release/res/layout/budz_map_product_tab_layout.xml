@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:background="#ff232323" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:background="#ff232323" android:paddingTop="14.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/btns">
+        <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+    </LinearLayout>
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/no_record" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0sp" android:text="No Product Found!" android:layout_below="@id/btns" android:layout_centerInParent="true" />
+    <android.support.v7.widget.RecyclerView android:id="@id/product_recyler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/btns" android:nestedScrollingEnabled="false" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/btns" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp">
+        <RelativeLayout android:gravity="center" android:id="@id/add_product_open" android:background="@drawable/bg_btn_product" android:visibility="gone" android:layout_width="150.0sp" android:layout_height="42.0sp" android:layout_centerHorizontal="true" android:layout_marginEnd="5.0sp">
+            <ImageView android:padding="5.0sp" android:layout_width="30.0sp" android:layout_height="30.0sp" android:src="@drawable/ic_plus_product" android:layout_toLeftOf="@id/text_btn" android:layout_centerVertical="true" android:layout_marginEnd="7.0sp" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textColor="#fffdfbfd" android:id="@id/text_btn" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Product" android:layout_centerInParent="true" android:textAllCaps="false" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:id="@id/add_service_open" android:background="@drawable/bg_btn_product_serc" android:visibility="gone" android:layout_width="150.0sp" android:layout_height="42.0sp" android:layout_centerHorizontal="true" android:layout_marginStart="5.0sp">
+            <ImageView android:padding="3.0sp" android:layout_width="30.0sp" android:layout_height="30.0sp" android:src="@drawable/hand_shake" android:layout_centerVertical="true" android:layout_marginEnd="7.0sp" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textColor="#fffdfbfd" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Service" android:layout_centerInParent="true" android:textAllCaps="false" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="50.0sp" android:weightSum="10.0">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="18.0sp" android:textColor="#ff808080" android:gravity="center_vertical" android:id="@id/bud_name" android:paddingLeft="10.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="Shan Doe" android:layout_weight="8.0" />
+        <LinearLayout android:gravity="center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.0">
+            <ImageView android:id="@id/add_invitation_button" android:padding="6.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_invite_group_bud_invited_btn" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

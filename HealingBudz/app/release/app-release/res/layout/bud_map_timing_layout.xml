@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/parent_house" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0sp">
+        <LinearLayout android:gravity="center" android:id="@id/_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="2.4">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="right" android:id="@id/mon_d" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Mon:" android:layout_weight="6.0" />
+            </LinearLayout>
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.2" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/mon_t" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="9:00 AM - 7:00 PM" android:layout_weight="4.6" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:weightSum="10.0">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="2.4">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="right" android:id="@id/tue_d" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Tues:" android:layout_weight="6.0" />
+            </LinearLayout>
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.2" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/tue_t" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="9:00 AM - 7:00 PM" android:layout_weight="4.6" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:weightSum="10.0">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="2.4">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="right" android:id="@id/wed_d" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Wed:" android:layout_weight="6.0" />
+            </LinearLayout>
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.2" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/wed_t" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="9:00 AM - 7:00 PM" android:layout_weight="4.6" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/_4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:weightSum="10.0">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="2.4">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="right" android:id="@id/thu_d" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Thurs:" android:layout_weight="6.0" />
+            </LinearLayout>
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.2" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/thu_t" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="9:00 AM - 7:00 PM" android:layout_weight="4.6" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/_5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:weightSum="10.0">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="2.4">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="right" android:id="@id/fri_d" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Fri:" android:layout_weight="6.0" />
+            </LinearLayout>
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.2" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/fri_t" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="9:00 AM - 7:00 PM" android:layout_weight="4.6" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/_6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:weightSum="10.0">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="2.4">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="right" android:id="@id/sat_d" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Sat:" android:layout_weight="6.0" />
+            </LinearLayout>
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.2" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/sat_t" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="9:00 AM - 7:00 PM" android:layout_weight="4.6" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:weightSum="10.0">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="2.4">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="right" android:id="@id/sun_d" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Sun:" android:layout_weight="6.0" />
+            </LinearLayout>
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.2" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/sun_t" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="Closed" android:layout_weight="4.6" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/add_hours" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0sp" android:text="Add hours of operations" />
+</LinearLayout>

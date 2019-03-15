@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff161616" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="60.0sp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/home_bottom_tab_bar_budz_feed_btn" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/icon_feeds" android:padding="0.0sp" android:layout_width="34.0sp" android:layout_height="28.0sp" android:src="@drawable/social_wall_new" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0sp" android:text="Q&amp;A" />
+        </LinearLayout>
+        <View android:background="#ff5d5d5d" android:layout_width="1.0sp" android:layout_height="fill_parent" android:layout_marginTop="6.0sp" android:layout_marginBottom="6.0sp" />
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/icon" android:padding="2.0sp" android:layout_width="30.0sp" android:layout_height="28.0sp" android:src="@drawable/ic_tab_qa" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0sp" android:text="Q&amp;A" />
+            </LinearLayout>
+            <Button android:textSize="16.0sp" android:textColor="#ff6d749e" android:gravity="center" android:id="@id/tab_one" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textAllCaps="false" />
+            <View android:background="#ff5d5d5d" android:layout_width="1.0sp" android:layout_height="fill_parent" android:layout_marginTop="6.0sp" android:layout_marginBottom="6.0sp" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:visibility="gone" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="44.0sp" android:layout_height="24.0sp" android:src="@drawable/ic_tab_group" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0sp" android:text="GROUPS" />
+            </LinearLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textSize="16.0sp" android:textColor="#ff6d749e" android:gravity="center" android:id="@id/tab_two" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:textAllCaps="false" android:layout_alignParentStart="true" />
+            <View android:background="#ff5d5d5d" android:layout_width="1.0sp" android:layout_height="fill_parent" android:layout_marginTop="6.0sp" android:layout_marginBottom="6.0sp" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:visibility="gone" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:padding="1.0sp" android:layout_width="20.0sp" android:layout_height="21.0sp" android:src="@drawable/ic_tab_journal" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:text="JOURNALS" />
+            </LinearLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textSize="16.0sp" android:textColor="#ff6d749e" android:gravity="center" android:id="@id/tab_three" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textAllCaps="false" />
+            <View android:background="#ff5d5d5d" android:layout_width="1.0sp" android:layout_height="fill_parent" android:layout_marginTop="6.0sp" android:layout_marginBottom="6.0sp" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_width="24.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_tab_strain" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0sp" android:text="STRAINS" />
+            </LinearLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textSize="16.0sp" android:textColor="#ff6d749e" android:gravity="center" android:id="@id/tab_four" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textAllCaps="false" />
+            <View android:background="#ff5d5d5d" android:layout_width="1.0sp" android:layout_height="fill_parent" android:layout_marginTop="6.0sp" android:layout_marginBottom="6.0sp" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:padding="0.0sp" android:layout_width="25.0sp" android:layout_height="26.0sp" android:src="@drawable/budzmapnewic" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0sp" android:text="BUDZMAP" />
+            </LinearLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textSize="16.0sp" android:textColor="#ff6d749e" android:gravity="center" android:id="@id/tab_five" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:textAllCaps="false" android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

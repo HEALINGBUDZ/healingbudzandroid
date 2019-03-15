@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#ff2a2a2a" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/top_view" android:layout_width="fill_parent" android:layout_height="290.0sp">
+            <ImageView android:id="@id/cover_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:adjustViewBounds="true" android:layout_centerInParent="true" />
+            <ImageView android:background="#79000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <RelativeLayout android:id="@id/prfl_img" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="80.0sp" android:layout_marginTop="50.0sp" android:layout_centerHorizontal="true">
+                <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/profile_photo" android:layout_width="74.0sp" android:layout_height="74.0sp" android:layout_marginTop="8.0sp" android:src="@drawable/ic_discuss_question_profile" android:layout_centerHorizontal="true" />
+                <ImageView android:id="@id/profile_img_topi" android:visibility="visible" android:layout_width="40.0sp" android:layout_height="40.0sp" android:layout_marginTop="-4.0sp" android:src="@drawable/topi_ic" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerInParent="true" android:layout_alignParentStart="true" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/buder_infoo" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0sp" android:layout_below="@id/prfl_img" android:layout_centerHorizontal="true">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="18.0sp" android:textColor="#ffef9a07" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BesterBud" android:maxLines="1" android:singleLine="true" android:maxLength="20" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/menu" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:layout_marginTop="22.0sp">
+            <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:background="#ff232323" android:paddingBottom="18.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/top_view">
+            <RelativeLayout android:background="#ff1d1d1c" android:paddingLeft="23.0sp" android:paddingRight="23.0sp" android:layout_width="fill_parent" android:layout_height="68.0sp">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/upload" android:background="@drawable/bg_btn_product_up" android:padding="10.0sp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Upload Cover" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/save_btn" android:background="@drawable/get_started_btn" android:layout_width="116.0sp" android:layout_height="38.0sp" android:text="SAVE" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <View android:background="#ff292929" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

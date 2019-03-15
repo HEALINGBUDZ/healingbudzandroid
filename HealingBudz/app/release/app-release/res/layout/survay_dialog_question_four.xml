@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/relativeLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0sp" android:layout_marginRight="24.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <RelativeLayout android:orientation="vertical" android:id="@id/main_content" android:paddingBottom="18.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0sp">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/top_layout" android:background="@drawable/shoot_out_dialog_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/first_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="QUESTION 4/6" />
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewItalic android:textSize="18.0sp" android:textStyle="italic" android:textColor="@color/brown_question" android:gravity="center" android:id="@id/second_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/question_4" android:layout_below="@id/first_textview" />
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ff999999" android:gravity="center" android:id="@id/add_upto_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="5.0dip" android:text="Choose Yes or No." android:layout_below="@id/second_textview" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/bottom_layout" android:background="@drawable/strain_filter_dialog_bg" android:paddingBottom="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="15.0sp" android:textColor="@color/black" android:id="@id/yes" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:text="YES" />
+                        <View android:background="#49666666" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="5.0dip" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="15.0sp" android:textColor="@color/black" android:id="@id/no" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="No" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/save_continue" android:background="@drawable/strain_help_me_find_matches_btn_bg" android:layout_width="fill_parent" android:layout_height="40.0sp" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:text="Save &amp; Continue" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <ImageView android:id="@id/cross_button" android:paddingLeft="10.0sp" android:paddingBottom="10.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_cross_strain_yellow" android:layout_alignTop="@id/relativeLayout" android:layout_alignRight="@id/relativeLayout" android:layout_alignEnd="@id/relativeLayout" />
+        <ImageView android:id="@id/back_button" android:paddingRight="10.0sp" android:paddingBottom="10.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_cross_back_btn" android:layout_alignLeft="@id/relativeLayout" android:layout_alignTop="@id/relativeLayout" android:layout_alignStart="@id/relativeLayout" />
+    </RelativeLayout>
+</LinearLayout>

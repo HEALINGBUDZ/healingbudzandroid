@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/main_layout" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="84.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/top_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0dip" android:src="@drawable/doted_line" android:layerType="software" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0" android:layout_above="@id/bottom_line" android:layout_below="@id/top_line">
+        <RelativeLayout android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.0">
+            <ImageView android:id="@id/icon_img" android:padding="4.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="6.0sp" android:src="@drawable/ic_profile_blue" android:layout_weight="2.0" />
+            <ImageView android:id="@id/bud_map_catagory_img" android:layout_width="20.0sp" android:layout_height="20.0sp" android:layout_marginTop="8.0sp" android:layout_marginRight="7.0sp" android:src="@drawable/ic_dispancry_icon" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="6.0sp" android:paddingTop="14.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="8.0">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ff5e5e5e" android:id="@id/type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dispensary" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff8e2884" android:id="@id/heading_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:layout_marginBottom="1.0sp" android:text="South Miami Natural Pharmaceuticals" />
+            <LinearLayout android:orientation="horizontal" android:paddingRight="12.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="12.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="10.0sp" android:textColor="#ff808080" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="3.2 mi" android:layout_weight="2.0" />
+                <ImageView android:id="@id/rating_img" android:padding="3.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_rating_img" android:layout_weight="3.0" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ff808080" android:gravity="center|right" android:paddingRight="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="5 Reviews" android:layout_weight="3.0" />
+                <LinearLayout android:gravity="end" android:paddingLeft="6.0sp" android:paddingRight="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:weightSum="10.0" android:layout_weight="4.0">
+                    <ImageView android:id="@id/organic_img" android:padding="5.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_organic" android:layout_weight="5.0" />
+                    <ImageView android:id="@id/delivery_img" android:padding="5.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_delivery" android:layout_weight="5.0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ff383838" android:layout_width="fill_parent" android:layout_height="2.0sp" android:layout_marginTop="4.0sp" android:layout_alignParentBottom="true" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/featured_business_layout" android:background="@drawable/bud_map_feature_business_bg" android:paddingLeft="3.0sp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="24.0sp" android:layout_alignParentRight="true">
+        <ImageView android:padding="3.0sp" android:layout_width="20.0sp" android:layout_height="20.0sp" android:src="@drawable/ic_featured_bussiness_star_icon" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="8.0sp" android:textColor="#ff28383e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FEATURED  " />
+    </LinearLayout>
+    <View android:id="@id/bottom_line" android:background="#ff000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+</RelativeLayout>

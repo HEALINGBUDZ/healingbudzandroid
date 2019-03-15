@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.gms.ads.AdView android:id="@id/adView" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" app:adSize="BANNER" app:adUnitId="@string/ad_mob_id_add" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/main_layout_whole" android:background="@drawable/budz_feed_main_post_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+            <FrameLayout android:id="@id/vh_budz_feed_main_post_imgs_viewpager_parent" android:layout_width="fill_parent" android:layout_height="350.0dip" android:layout_marginLeft="1.0px" android:layout_marginTop="1.0px" android:layout_marginRight="1.0px" android:layout_marginStart="1.0px" android:layout_marginEnd="1.0px">
+                <android.support.v4.view.ViewPager android:id="@id/vh_budz_feed_main_post_imgs_viewpager" android:layout_width="fill_parent" android:layout_height="350.0dip" />
+                <View android:layout_gravity="bottom" android:background="@drawable/feeds_main_img_view_pager_gradiant_overlay" android:layout_width="fill_parent" android:layout_height="350.0dip" />
+                <com.rd.PageIndicatorView android:layout_gravity="bottom|center" android:id="@id/vh_budz_feed_main_post_imgs_viewpager_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" app:piv_animationType="scale" app:piv_dynamicCount="true" app:piv_interactiveAnimation="true" app:piv_padding="4.0dip" app:piv_radius="3.0dip" app:piv_scaleFactor="0.9" app:piv_selectedColor="#ff929091" app:piv_unselectedColor="#ff54534f" />
+                <ImageView android:layout_gravity="end|bottom|center" android:id="@id/many_data" android:layout_width="30.0sp" android:layout_height="30.0sp" android:layout_margin="25.0sp" android:src="@drawable/ic_gallery_many" />
+            </FrameLayout>
+            <com.codingpixel.healingbudz.customeUI.Preview android:id="@id/vh_budz_feed_main_post_link_scrap" android:background="@drawable/feeds_main_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0px" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginRight="17.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="17.0dip">
+                <RelativeLayout android:layout_width="50.0sp" android:layout_height="fill_parent">
+                    <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/vh_budz_feed_main_post_person_img" android:layout_width="50.0dip" android:layout_height="50.0sp" android:layout_marginLeft="7.0sp" android:layout_marginTop="6.0sp" android:src="@drawable/smile" />
+                    <ImageView android:id="@id/profile_img_topi" android:visibility="visible" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginLeft="3.0sp" android:layout_marginTop="3.0sp" android:src="@drawable/topi_ic" />
+                </RelativeLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0" android:layout_marginStart="10.0dip">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="16.0sp" android:textStyle="bold" android:textColor="#fff09a07" android:id="@id/vh_budz_feed_main_post_person_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Bester Bud" android:layout_weight="1.0" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewItalic android:textColor="#ffc6c4c5" android:id="@id/vh_budz_feed_main_post_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="45 min ago" />
+                        <ImageView android:id="@id/vh_budz_feed_main_post_options" android:layout_width="20.0dip" android:layout_height="30.0dip" android:src="@drawable/ic_menu_dot_gray" android:scaleType="centerCrop" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/vh_budz_feed_main_post_reposted_parent" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="25.0dip" android:layout_height="20.0dip" android:src="@drawable/wall_repost_icon" />
+                        <TextView android:textColor="#ffc6c4c5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Reposted " />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="14.0sp" android:textColor="#ffc6c4c5" android:id="@id/vh_budz_feed_main_post_reposted_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jhonny" />
+                        <TextView android:textColor="#ffc6c4c5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="'s " />
+                        <TextView android:textColor="#ffc6c4c5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="post" android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/vh_budz_feed_main_post_posted_as_parent" android:background="@drawable/posted_as_lable_bg" android:paddingLeft="5.0dip" android:paddingTop="3.0dip" android:paddingRight="5.0dip" android:paddingBottom="3.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:paddingStart="5.0dip" android:paddingEnd="5.0dip">
+                        <ImageView android:layout_width="23.0dip" android:layout_height="23.0dip" android:src="@drawable/ic_budz_map" />
+                        <TextView android:textColor="#ffc6c4c5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Posted As: " />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="14.0sp" android:textColor="#fff09a07" android:id="@id/vh_budz_feed_main_post_posted_as" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jhonny" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/vh_budz_feed_main_post_person_leaf" android:layout_width="20.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_profile_leaf_yellow" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="11.0sp" android:textColor="#fff09a07" android:id="@id/vh_budz_feed_main_post_person_extra_info" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="355  |  Blooing Buds" android:layout_marginStart="5.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/repost_for" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.luseen.autolinklibrary.AutoLinkTextView android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/vh_budz_feed_main_post_text_repost" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="17.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="17.0dip" android:layout_marginBottom="5.0sp" android:text="Lorem ipsum" android:layout_marginStart="17.0dip" android:layout_marginEnd="17.0dip" />
+                <View android:background="#ff6b665d" android:layout_width="fill_parent" android:layout_height="0.5sp" />
+            </LinearLayout>
+            <com.luseen.autolinklibrary.AutoLinkTextView android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/vh_budz_feed_main_post_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="17.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="17.0dip" android:text="Lorem ipsum" android:layout_marginStart="17.0dip" android:layout_marginEnd="17.0dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/vh_budz_feed_main_post_with_parent" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/feeds_like_gray_color" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="With: " />
+                <android.support.v7.widget.RecyclerView android:layout_gravity="center_vertical" android:id="@id/vh_budz_feed_main_post_tag_people_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/vh_budz_feed_main_post_like_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="17.0dip">
+                    <ImageView android:id="@id/vh_budz_feed_main_post_like_img" android:layout_width="wrap_content" android:layout_height="22.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:src="@drawable/un_like_wall" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="14.0sp" android:textColor="@color/feeds_like_gray_color" android:gravity="center" android:id="@id/vh_budz_feed_main_post_like_txt_temp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:text="Liked 0" android:layout_marginStart="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/vh_budz_feed_main_post_comment_btn_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="15.0dip">
+                    <ImageView android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/comment_icon" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="14.0sp" android:textColor="#ffc6c4c5" android:id="@id/commentTxtTemp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Comments" android:layout_marginStart="9.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/vh_budz_feed_main_post_repost_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="17.0dip">
+                    <ImageView android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/wall_repost_icon" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="14.0sp" android:textColor="#ffc6c4c5" android:id="@id/vh_budz_feed_main_post_repost_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="123 Reposts" android:singleLine="true" android:layout_marginStart="9.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#ff6b665d" android:layout_width="fill_parent" android:layout_height="0.5sp" />
+            <android.support.v7.widget.RecyclerView android:id="@id/activity_wall_post_detail_post_comments_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="@drawable/feeds_comment_display" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <FrameLayout android:id="@id/activity_wall_post_detail_uploaded_media_parent" android:background="@color/feed_toolbar_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="85.0dip" android:layout_margin="5.0dip">
+                            <FrameLayout android:layout_gravity="start" android:layout_width="125.0dip" android:layout_height="fill_parent">
+                                <ImageView android:id="@id/activity_wall_post_detail_uploaded_media" android:layout_width="125.0dip" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+                                <ImageView android:layout_gravity="center" android:id="@id/activity_wall_post_detail_uploaded_media_video" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_video_play_icon" />
+                            </FrameLayout>
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="18.0sp" android:textColor="#ffff0000" android:gravity="center_vertical" android:layout_gravity="end" android:id="@id/activity_wall_post_detail_uploaded_media_cross" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="X Remove Media   " />
+                        </FrameLayout>
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/activity_wall_post_detail_comment_emoji_btn" android:padding="8.0dip" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_cross_wall" />
+                            <ImageView android:id="@id/activity_wall_post_detail_comment_attach" android:padding="5.0dip" android:layout_width="40.0dip" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" android:src="@drawable/comment_attach_icon" android:layout_marginEnd="5.0dip" />
+                            <com.linkedin.android.spyglass.ui.MentionsEditText android:textSize="16.0sp" android:textColor="@color/white" android:textColorHint="#ffb2b1b1" android:textColorLink="@color/wall_repost" android:gravity="center_vertical" android:autoLink="all" android:id="@id/activity_wall_post_detail_comment_ed_txt" android:background="@color/transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:hint="Write your comment..." android:minLines="2" android:layout_weight="1.0" android:inputType="textCapSentences|textMultiLine" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" app:mentionTextColor="@color/wall_repost" app:selectedMentionTextColor="@color/wall_repost" />
+                            <ImageView android:id="@id/activity_wall_post_detail_comment_send" android:padding="5.0dip" android:layout_width="40.0dip" android:layout_height="fill_parent" android:layout_marginRight="5.0dip" android:src="@drawable/comment_post_icon" android:layout_marginEnd="5.0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+                <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/list_liked_people" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:visibility="invisible" android:layout_width="12.0dip" android:layout_height="22.0dip" android:src="@drawable/like_heart" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="12.0sp" android:textColor="@color/feeds_like_gray_color" android:id="@id/vh_budz_feed_main_post_like_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:text="13 Likes" android:layout_marginStart="0.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/vh_budz_feed_main_post_comment_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginStart="0.0dip">
+                    <ImageView android:visibility="invisible" android:layout_width="12.0dip" android:layout_height="22.0dip" android:src="@drawable/comment_icon" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="12.0sp" android:textColor="#ffb2b1b1" android:id="@id/vh_budz_feed_main_post_comment_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="123 Comments" android:layout_marginStart="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginStart="15.0dip">
+                    <ImageView android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/wall_repost_icon" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="12.0sp" android:textColor="#ffb2b1b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="123 Reposts" android:layout_marginStart="5.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/activity_wall_post_detail_comment_tag_list" android:background="#ff252525" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="400.0dip" android:layout_marginBottom="50.0dip" android:minHeight="0.0dip" android:layout_alignBottom="@id/main_layout_whole" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" android:nestedScrollingEnabled="true" />
+    </RelativeLayout>
+</LinearLayout>

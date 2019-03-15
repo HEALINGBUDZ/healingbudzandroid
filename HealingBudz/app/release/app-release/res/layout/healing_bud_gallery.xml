@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/main_cntnt_strain" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/top_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/sqe_one" android:background="#ff1f1f1f" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+                <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+                <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+                <LinearLayout android:gravity="start" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/home_btn" android:paddingEnd="?actionBarSize">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="19.0sp" android:textColor="#ffe8e8e8" android:gravity="center" android:id="@id/q_a_menu_title" android:paddingLeft="5.0sp" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="HealingBud Gallery" android:singleLine="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                </LinearLayout>
+                <ImageView android:id="@id/upload_btn" android:padding="15.0sp" android:visibility="visible" android:layout_width="?actionBarSize" android:layout_height="fill_parent" android:src="@drawable/ic_upload_budz_map_icon" android:tint="@color/white" android:layout_alignParentEnd="true" />
+                <ImageView android:id="@id/download_btn" android:padding="15.0sp" android:visibility="gone" android:layout_width="?actionBarSize" android:layout_height="fill_parent" android:src="@drawable/ic_download" android:tint="@color/white" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/image_showing_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_below="@id/top_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0sp" android:layout_weight="10.0">
+                <android.support.v4.view.ViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent"
+                  xmlns:android="http://schemas.android.com/apk/res/android" />
+                <ImageView android:id="@id/complete_img" android:background="@drawable/ic_text_img_1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/grid_layout" android:background="#ff252525" android:paddingTop="10.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/top_content">
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="top" android:orientation="vertical" android:id="@id/refresh" android:paddingTop="14.0sp" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+            </LinearLayout>
+            <TextView android:textColor="#ffa9a7a7" android:id="@id/no_recorcd_found" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No record found in gallery!" />
+            <android.support.v7.widget.RecyclerView android:id="@id/images_gallery_recyler_view" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0sp" android:layout_marginRight="16.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

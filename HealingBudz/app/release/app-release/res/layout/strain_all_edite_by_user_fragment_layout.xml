@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:background="#ff252525" android:paddingLeft="15.0sp" android:paddingTop="12.0sp" android:paddingRight="15.0sp" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:paddingBottom="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/view_one" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:weightSum="10.0">
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#fff0c12f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Full Description:" />
+            <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="36.0sp" android:layout_height="36.0sp" android:src="@drawable/ic_reward_like_strain_red" />
+                <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffa43d56" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="150" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textColor="#ffc4c1c1" android:id="@id/view_two" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:text="Girl Scout Cookies, or GSC, is an OG Kush Durban Poison hybrid cross whose reputation grew too large to stay within the borders of its California homeland. With a sweet and earthy aroma, Girl Scout Cookies launches you to euphoria’s top floor where full-body relaxation meets a time-bending cerebral space.A little goes a long way with this hybrid, whose THC heights have won Girl Scout Cookies numerous Cannabis Cup awards. Patients needing a strong dose of relief, however, may look to GSC for severe pain, nausea, and appetite loss. Girl Scout Cookies, or GSC, is an OG Kush and Durban poison hybrid cross whose reputation grew too large to stay within the borders of its California homeland. With a sweet and earthy aroma, Girl Scout Cookies launches you to euphoria’s top floor where full-body relaxation meets a time-bending cerebral space." android:layout_below="@id/view_one" />
+        <View android:id="@id/view_three" android:background="#ff3e3e3e" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="18.0sp" android:layout_below="@id/view_two" />
+        <RelativeLayout android:orientation="vertical" android:id="@id/type_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0sp" android:layout_below="@id/view_three">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/one" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffefc12f" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Type :" />
+                <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffb8b8b8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0sp" android:text="Hybrid" />
+                <ImageView android:id="@id/hybrid_info_button" android:layout_width="23.0sp" android:layout_height="23.0sp" android:layout_marginLeft="10.0sp" android:src="@drawable/ic_info_icon" />
+            </LinearLayout>
+            <RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@id/parent" android:layout_width="fill_parent" android:layout_height="64.0sp" android:layout_marginTop="5.0sp" android:layout_below="@id/one">
+                <LinearLayout android:orientation="horizontal" android:id="@id/back_view" android:background="@drawable/seak_bar_bg" android:layout_width="fill_parent" android:layout_height="38.0sp" android:layout_marginLeft="26.0sp" android:layout_marginRight="26.0sp" android:layout_marginBottom="6.0sp" android:weightSum="10.0" android:layout_centerVertical="true">
+                    <TextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="30%" android:layout_weight="3.0" />
+                    <TextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="70%" android:layout_weight="7.0" />
+                </LinearLayout>
+                <SeekBar android:id="@id/customSeekBar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:max="100" android:progress="30" android:progressDrawable="@drawable/custom_progress" android:thumb="@drawable/ic_vertical_line_white" android:layout_alignParentBottom="true" android:splitTrack="false" style="@style/tallerBarStyle" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/seek_bar_below_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:weightSum="10.0" android:layout_below="@id/type_layout">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffb8b8b8" android:gravity="left" android:id="@id/indica_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Indica" />
+                <ImageView android:id="@id/indica_info_button" android:layout_width="23.0sp" android:layout_height="23.0sp" android:layout_marginLeft="10.0sp" android:src="@drawable/ic_info_icon" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="5.0">
+                <ImageView android:id="@id/sativa_info_button" android:layout_width="23.0sp" android:layout_height="23.0sp" android:layout_marginRight="10.0sp" android:src="@drawable/ic_info_icon" />
+                <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffb8b8b8" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sativa" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@id/view_four" android:background="#ff3e3e3e" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="12.0sp" android:layout_below="@id/seek_bar_below_layout" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#fff0c12f" android:id="@id/view_five" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:text="Parcentage / Genetics:" android:layout_below="@id/view_four" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/view_six" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:weightSum="10.0" android:layout_below="@id/view_five">
+            <LinearLayout android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="70.0sp" android:layout_weight="2.5">
+                <ImageView android:padding="4.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_percentage" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="5.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="7.5">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="70.0sp">
+                    <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="#ffbcbebc" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="22.0sp" android:text="Cross-Breed of:" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="36.0sp" android:layout_marginTop="12.0sp">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="#fff0c12f" android:gravity="center_vertical" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="6.0sp" android:text="Durban Poison" />
+                        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="#ffbcbebc" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="22.0sp" android:layout_marginLeft="6.0sp" android:layout_marginRight="6.0sp" android:text="and" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="#fff0c12f" android:gravity="center_vertical" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="OG Kush" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@id/view_seven" android:background="#ff3e3e3e" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="12.0sp" android:layout_below="@id/view_six" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#fff0c12f" android:id="@id/view_eight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:text="Growing &amp; Care:" android:layout_below="@id/view_seven" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/view_nine" android:layout_width="fill_parent" android:layout_height="94.0sp" android:layout_marginTop="12.0sp" android:weightSum="4.3" android:layout_below="@id/view_eight">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/add_strain_growing_care_active_bg" android:paddingTop="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="9.0sp" android:textColor="#ff636463" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dificulty\nLevel" android:textAllCaps="true" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/level_easy" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <ImageView android:padding="4.0sp" android:layout_width="fill_parent" android:layout_height="36.0sp" android:src="@drawable/ic_easy_dft" />
+                        <TextView android:textSize="10.0sp" android:textColor="#ffa0a2a0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0sp" android:text="Easy" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.1" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/add_strain_growing_care_active_bg" android:paddingTop="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="9.0sp" android:textColor="#ff636463" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mature\nHeight" android:textAllCaps="true" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="4.0sp" android:paddingBottom="4.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:background="@drawable/ic_leaf_icon" android:layout_width="32.0sp" android:layout_height="fill_parent" android:layout_marginTop="8.0sp" android:layout_marginBottom="8.0sp" />
+                    <ImageView android:background="@drawable/ic_double_arrow" android:layout_width="15.0sp" android:layout_height="fill_parent" android:layout_marginTop="10.0sp" android:layout_marginBottom="10.0sp" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textColor="@color/white" android:gravity="center" android:id="@id/degree_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.1" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/add_strain_growing_care_active_bg" android:paddingTop="8.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ff636463" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Following\nTime" android:textAllCaps="true" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="5.0sp" android:paddingRight="5.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="#ffc7a029" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="60" />
+                    <TextView android:textColor="#ff818281" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5.0sp" android:text="days" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.1" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/add_strain_growing_care_active_bg" android:paddingTop="8.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ff636463" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hardness\nZones" android:textAllCaps="true" />
+                <LinearLayout android:orientation="horizontal" android:paddingLeft="5.0sp" android:paddingRight="5.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:padding="2.0sp" android:layout_width="22.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_temp_ic" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="4.0sp" android:paddingBottom="4.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+                        <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#ffbfbfbf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30℉" />
+                        <TextView android:textSize="8.0sp" android:textColor="#ff818281" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="to" />
+                        <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="#ffbfbfbf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50℉" />
+                        <TextView android:textSize="8.0sp" android:textColor="#ff818281" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20℃\u0009\u000940℃" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/view_ten" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0sp" android:weightSum="10.0" android:layout_below="@id/view_nine">
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffc7c7c7" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Yield:" android:layout_weight="2.5" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="7.5">
+                <TextView android:textSize="14.0sp" android:textColor="#ff7e7e7e" android:gravity="center" android:id="@id/yeild_low" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Low(Medium or High)" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/view_elaven" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:weightSum="10.0" android:layout_below="@id/view_ten">
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffc7c7c7" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Climate:" android:layout_weight="2.5" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="7.5">
+                <TextView android:textSize="14.0sp" android:textColor="#ff7e7e7e" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="InDoor, OutDoor, GreeHouses" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/view_tewle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:weightSum="10.0" android:layout_below="@id/view_elaven">
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffc7c7c7" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Notes:" android:layout_weight="2.5" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="7.5">
+                <TextView android:textSize="14.0sp" android:textColor="#ff7e7e7e" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Prefers moderate amounts of fertilizer, Average yield falls between 25-30 grams per plant. May express fruity or diesel-smelling phenotypes" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

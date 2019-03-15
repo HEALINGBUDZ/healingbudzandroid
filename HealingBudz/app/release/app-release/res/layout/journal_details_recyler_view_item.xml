@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="8.0sp" android:layout_width="fill_parent" android:layout_height="48.0sp" android:layout_marginLeft="10.0sp" android:layout_marginRight="10.0sp" android:weightSum="10.0">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff7cc144" android:id="@id/date_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="February, 17" />
+        <ImageView android:id="@id/arrow_journal_list" android:layout_width="24.0sp" android:layout_height="24.0sp" android:src="@drawable/ic_journal_details_expand" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="#b04e4c4e" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginLeft="12.0sp" android:layout_marginRight="12.0sp" />
+</LinearLayout>

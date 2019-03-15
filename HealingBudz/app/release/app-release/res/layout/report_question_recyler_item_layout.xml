@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="?actionBarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/indicator" android:background="#ff0083ca" android:layout_width="fill_parent" android:layout_height="4.0sp" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0" android:layout_below="@id/indicator">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="#ff0083cb" android:gravity="center" android:id="@id/text_img" android:visibility="gone" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="Q:" android:layout_weight="1.5" />
+        <ImageView android:id="@id/img_rscr" android:padding="15.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_double_circle" android:layout_weight="1.5" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textSize="16.0sp" android:textColor="#ffc5c4c4" android:gravity="center|left" android:id="@id/q_a_header_list_title" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="ANSWER IS OFFENCIVE" android:layout_weight="6.0" />
+    </LinearLayout>
+    <View android:background="#63252222" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/wall_tag_chip_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="30.0sp" android:layout_marginLeft="2.0sp">
+            <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/wall_tag_people_chip_vh_img" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginTop="3.0sp" android:src="@drawable/ic_user_person" android:scaleType="centerCrop" />
+            <ImageView android:id="@id/profile_img_topi" android:visibility="visible" android:layout_width="10.0sp" android:layout_height="10.0sp" android:layout_marginLeft="4.0sp" android:src="@drawable/topi_ic" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerInParent="true" android:layout_alignParentStart="true" />
+        </RelativeLayout>
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="13.0sp" android:textColor="#ff7cc245" android:id="@id/wall_tag_people_chip_vh_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+        <ImageView android:id="@id/wall_tag_people_chip_vh_delete" android:padding="5.0dip" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/ic_close_24dp" android:tint="@color/COLOR_YOUR_COLOR" />
+    </LinearLayout>
+</FrameLayout>

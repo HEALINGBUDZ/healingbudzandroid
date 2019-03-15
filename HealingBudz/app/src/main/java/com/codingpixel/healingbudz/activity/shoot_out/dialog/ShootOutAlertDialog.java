@@ -321,7 +321,7 @@ public class ShootOutAlertDialog extends BaseDialogFragment<ShootOutAlertDialog.
         image_location_pin = main_dialog.findViewById(R.id.image_location_pin);
         if (dataModel.getPublic_location().length() > 3) {
             Image_Location.setVisibility(View.VISIBLE);
-            String url = "http://maps.google.com/maps/api/staticmap?center=" + dataModel.getLat() + "," + dataModel.getLng() + "&zoom=19&size=1080x200&sensor=false";
+            String url = "http://maps.google.com/maps/api/staticmap?center=" + dataModel.getLat() + "," + dataModel.getLng() + "&zoom=19&size=1080x200&sensor=false";//&markers=color:green
             Glide.with(getContext())
                     .load(url)
                     .diskCacheStrategy(DiskCacheStrategy.SOURCE)

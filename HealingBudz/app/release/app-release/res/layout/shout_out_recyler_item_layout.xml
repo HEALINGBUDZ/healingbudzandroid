@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="#ff252525" android:paddingLeft="16.0sp" android:paddingTop="6.0sp" android:paddingRight="16.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+        <ImageView android:id="@id/icon_img" android:padding="8.0sp" android:layout_width="0.0sp" android:layout_height="30.0sp" android:src="@drawable/ic_shoot_out_purpole" android:layout_weight="1.1" />
+        <LinearLayout android:orientation="vertical" android:paddingTop="6.0sp" android:paddingBottom="6.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_marginLeft="-5.0sp" android:layout_weight="5.9">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="11.0sp" android:textColor="#ffe070e0" android:ellipsize="marquee" android:id="@id/title_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Shout Out received from CannaCafe" android:singleLine="true" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="9.0sp" android:textColor="#ff727272" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:layout_marginBottom="1.0sp" android:text="10 minutes ago" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="top" android:orientation="vertical" android:id="@id/active" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_marginTop="10.0sp" android:layout_weight="3.0">
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/location" android:layout_width="9.0sp" android:layout_height="12.0sp" android:src="@drawable/ic_pin_purpole" />
+                <ImageView android:id="@id/image_icon" android:layout_width="16.0sp" android:layout_height="12.0sp" android:layout_marginLeft="6.0sp" android:src="@drawable/ic_photo_icon_purpole" />
+            </LinearLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="8.0sp" android:textColor="#ffc4c6c7" android:gravity="right" android:id="@id/validity" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:layout_marginBottom="6.0sp" android:text="EXPIRE SOON! : 25.10.2017" android:layout_alignParentBottom="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ff1c1c1c" android:layout_width="fill_parent" android:layout_height="2.0sp" />
+</RelativeLayout>

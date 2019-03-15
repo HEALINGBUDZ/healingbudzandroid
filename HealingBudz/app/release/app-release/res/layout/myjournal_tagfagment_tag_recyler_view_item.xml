@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/tag_select_bg" android:paddingLeft="4.0sp" android:paddingTop="4.0sp" android:paddingRight="4.0sp" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0sp" android:layout_marginTop="10.0sp">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/text_title" android:paddingLeft="2.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BLUE DREAM" android:textAllCaps="true" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/cross" android:background="@drawable/ic_white_circle" android:layout_width="24.0sp" android:layout_height="24.0sp" android:layout_marginLeft="2.0sp" android:text="3" />
+    </LinearLayout>
+</LinearLayout>

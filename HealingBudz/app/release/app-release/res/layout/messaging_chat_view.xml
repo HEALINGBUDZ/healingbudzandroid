@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_view" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp">
+        <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="42.0sp" android:src="@drawable/ic_back_icon" />
+        <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="42.0sp" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0sp">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/user_profile" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RelativeLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="60.0sp">
+                    <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/user_img" android:layout_width="50.0sp" android:layout_height="50.0sp" android:src="@drawable/ic_profile_blue" />
+                    <ImageView android:id="@id/profile_img_topi" android:visibility="gone" android:layout_width="25.0sp" android:layout_height="25.0sp" android:layout_marginTop="-5.0sp" android:src="@drawable/topi_ic" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerInParent="true" android:layout_alignParentStart="true" />
+                </RelativeLayout>
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textSize="18.0sp" android:textColor="#ffe4e4e5" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:text="Bester Bud" />
+            </LinearLayout>
+            <View android:background="#ff383433" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginLeft="12.0sp" android:layout_marginTop="12.0sp" android:layout_marginRight="12.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0sp" android:layout_above="@id/enter_msg" android:layout_below="@id/top_view">
+        <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_to_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="12.0sp" android:layout_marginRight="12.0sp">
+            <android.support.v7.widget.RecyclerView android:id="@id/group_recyler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/enter_msg" android:background="@drawable/feeds_comment_edittext_block_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/attach_ment" android:padding="10.0sp" android:layout_width="46.0sp" android:layout_height="?android:actionBarSize" android:src="@drawable/comment_attach_icon" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/buttons" android:paddingRight="6.0sp" android:layout_width="wrap_content" android:layout_height="?android:actionBarSize" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <RelativeLayout android:id="@id/attachment" android:visibility="gone" android:layout_width="60.0sp" android:layout_height="fill_parent" android:layout_marginTop="2.0sp" android:layout_weight="2.0">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0sp">
+                    <ImageView android:id="@id/attachment_img" android:background="@drawable/test_img" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <ImageView android:id="@id/attachment_video_icon" android:visibility="gone" android:layout_width="24.0sp" android:layout_height="24.0sp" android:src="@drawable/ic_play_attachment" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <ImageView android:id="@id/attachment_cross" android:paddingLeft="7.0sp" android:paddingBottom="8.0sp" android:layout_width="25.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_cross_image" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <ImageView android:id="@id/send_buuton" android:padding="7.0sp" android:layout_width="46.0sp" android:layout_height="fill_parent" android:src="@drawable/comment_post_icon" android:layout_toLeftOf="@id/send_button" />
+        </LinearLayout>
+        <com.codingpixel.healingbudz.customeUI.HealinBudEditTextRegular android:textSize="16.0sp" android:textColor="@color/white" android:textColorHint="#ffb2b1b1" android:gravity="center_vertical" android:id="@id/msg_text" android:background="@color/transparent" android:paddingLeft="6.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:actionBarSize" android:hint="Type message..." android:maxLines="4" android:minLines="2" android:layout_toLeftOf="@id/buttons" android:layout_toRightOf="@id/attach_ment" android:inputType="textCapSentences|textMultiLine" />
+    </RelativeLayout>
+</RelativeLayout>

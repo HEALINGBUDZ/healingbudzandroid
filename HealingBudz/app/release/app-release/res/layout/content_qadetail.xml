@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="13.0sp" android:paddingRight="13.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonRegular android:textSize="20.0sp" android:textColor="#ffffffff" android:id="@id/budz_answers" android:background="@drawable/q_a_menu_ask_q_button_bottom" android:layout_width="fill_parent" android:layout_height="48.0sp" android:layout_marginTop="8.0sp" android:layout_marginStart="2.0sp" android:layout_marginEnd="2.0sp" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:paddingTop="14.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-5.0sp" android:layout_marginStart="2.0sp" android:layout_marginEnd="2.0sp">
+                <android.support.v7.widget.RecyclerView android:id="@id/anser_detail_recyler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

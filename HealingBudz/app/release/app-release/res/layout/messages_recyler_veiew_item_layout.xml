@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.chauthai.swipereveallayout.SwipeRevealLayout android:id="@id/swipe_layout" android:layout_width="fill_parent" android:layout_height="70.0sp" app:dragEdge="right" app:mode="normal">
+        <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textSize="13.0sp" android:textColor="#ffe7b9c2" android:gravity="center" android:id="@id/delete_button" android:background="#ffc14562" android:paddingLeft="12.0sp" android:paddingRight="12.0sp" android:layout_width="74.0sp" android:layout_height="fill_parent" android:text="Delete" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textSize="13.0sp" android:textColor="#fffdfdfd" android:gravity="center" android:id="@id/save_button" android:background="@color/COLOR_YOUR_COLOR" android:paddingLeft="12.0sp" android:paddingRight="12.0sp" android:visibility="gone" android:layout_width="80.0sp" android:layout_height="fill_parent" android:text="Save" android:layout_toEndOf="@id/delete_button" />
+        </RelativeLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@id/main_layout" android:background="#ff252525" android:paddingLeft="10.0sp" android:paddingRight="10.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+                <RelativeLayout android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.0">
+                    <RelativeLayout android:layout_width="60.0sp" android:layout_height="60.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                        <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/user_image" android:padding="1.0sp" android:layout_width="50.0sp" android:layout_height="50.0sp" android:src="@drawable/ic_user_profile" android:scaleType="centerCrop" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                        <ImageView android:id="@id/profile_img_topi" android:visibility="visible" android:layout_width="25.0sp" android:layout_height="25.0sp" android:src="@drawable/topi_ic" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerInParent="true" android:layout_alignParentStart="true" />
+                        <TextView android:textSize="10.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/notification" android:background="@drawable/messages_badge_notification_bg" android:visibility="visible" android:layout_width="20.0sp" android:layout_height="20.0sp" android:layout_marginTop="4.0sp" android:layout_marginRight="4.0sp" android:text="2" android:layout_alignParentRight="true" />
+                        <TextView android:textSize="10.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/online_indicator" android:background="@drawable/messages_online_notification_bg" android:visibility="visible" android:layout_width="15.0sp" android:layout_height="15.0sp" android:layout_marginLeft="4.0sp" android:layout_marginBottom="4.0sp" android:text="" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+                        <ImageView android:gravity="center" android:id="@id/buz_image" android:visibility="gone" android:layout_width="20.0sp" android:layout_height="20.0sp" android:layout_marginTop="4.0sp" android:layout_marginRight="4.0sp" android:src="@drawable/ic_dispancry_icon" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout android:paddingLeft="5.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="5.0">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/user_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Bester Bud" android:singleLine="true" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ffc4c3c4" android:gravity="center_vertical" android:id="@id/user_name_type" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0sp" android:text="Bester Bud" android:layout_alignParentBottom="true" />
+                    <TextView android:textSize="10.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/notification_budz" android:background="@drawable/messages_badge_notification_bg" android:visibility="invisible" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginTop="4.0sp" android:layout_marginRight="4.0sp" android:text="" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ffc4c4c4" android:gravity="center|right" android:id="@id/time_text" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="8:25 PM" android:layout_weight="2.0" />
+                <ImageView android:padding="1.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_navigate_next" android:layout_weight="1.0" android:alpha="0.36" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+    <View android:background="#aa1c1c1c" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+</LinearLayout>

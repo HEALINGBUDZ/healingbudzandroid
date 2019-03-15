@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:background="#ff232323" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/main_scroll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <io.togoto.imagezoomcrop.photoview.PhotoView android:id="@id/iv_photo" android:layout_width="fill_parent" android:layout_height="340.0dip" android:layout_margin="-10.0sp" android:src="#ff232323" android:scaleType="center" />
+            <RelativeLayout android:id="@id/top_header" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="290.0sp">
+                <ImageView android:id="@id/slider_img" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="#ff232323" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+                <io.togoto.imagezoomcrop.cropoverlay.CropOverlayView android:id="@id/crop_overlay" android:layout_width="fill_parent" android:layout_height="290.0sp" app:cornerRadius="0.0sp" app:guideLines="false" app:marginSide="0.0sp" app:marginTop="0.0sp" app:overlayColor="@color/transparent" />
+                <RelativeLayout android:id="@id/toper_view" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:background="#8c000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <RelativeLayout android:id="@id/menu" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+                        <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+                        <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:visibility="gone" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+                        <ImageView android:id="@id/add_banner_btn" android:padding="13.0sp" android:layout_width="52.0sp" android:layout_height="fill_parent" android:layout_marginRight="10.0sp" android:src="@drawable/ic_upload_budz_map_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    <com.codingpixel.healingbudz.customeUI.CircularImageView android:layout_gravity="center_horizontal" android:id="@id/logo_img" android:layout_width="78.0sp" android:layout_height="78.0sp" android:layout_marginTop="-29.0sp" android:src="@drawable/ic_budz_adn" android:layout_below="@id/menu" android:layout_centerHorizontal="true" />
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/logo_img">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonRegular android:textSize="9.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/add_logo" android:background="@drawable/budz_map_add_logo_bg" android:paddingLeft="12.0sp" android:paddingRight="12.0sp" android:layout_width="wrap_content" android:layout_height="34.0sp" android:layout_marginTop="10.0sp" android:text="Add your Logo" android:textAllCaps="false" />
+                        <com.codingpixel.healingbudz.customeUI.HealinBudEditTextBold android:textSize="19.0sp" android:textColor="@color/white" android:textColorHint="@color/white" android:gravity="center" android:id="@id/Namea" android:background="@drawable/doted_border" android:layout_width="fill_parent" android:layout_height="46.0sp" android:layout_marginLeft="11.0sp" android:layout_marginTop="20.0sp" android:layout_marginRight="11.0sp" android:hint="Add Business/Event Name" android:maxLines="1" android:singleLine="true" android:maxLength="30" android:digits="qwertyuiopasdfghjklzxcvbnm 1234567890 QWERTYUIOPASDFGHJKLZXCVBNM" android:inputType="textPersonName|textCapSentences" android:imeOptions="actionDone" android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white" />
+                        <LinearLayout android:orientation="horizontal" android:id="@id/opt_value" android:layout_width="fill_parent" android:layout_height="50.0sp" android:layout_marginTop="18.0sp" android:weightSum="10.0">
+                            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="5.0">
+                                <ImageView android:id="@id/check_box_one" android:padding="6.0sp" android:layout_width="35.0sp" android:layout_height="35.0sp" android:src="@drawable/ic_budmap_check_box_uncheckd" />
+                                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ffe4e4e5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0sp" android:text="Organic" />
+                                <ImageView android:id="@id/organic_img" android:padding="7.0sp" android:layout_width="40.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_organic" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="5.0">
+                                <ImageView android:id="@id/check_box_two" android:padding="6.0sp" android:layout_width="35.0sp" android:layout_height="35.0sp" android:src="@drawable/ic_budmap_check_box_uncheckd" />
+                                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ffe4e4e5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0sp" android:text="We Deliver" />
+                                <ImageView android:padding="7.0sp" android:layout_width="40.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_delivery" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/resize" android:background="#8c000000" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0sp" android:text="Select" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/resize_cancel" android:background="#8c000000" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0sp" android:text="Cancel" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/tabs" android:background="#ff5c5c5c" android:layout_width="fill_parent" android:layout_height="42.0sp" android:weightSum="12.0" android:layout_below="@id/top_header">
+                <RelativeLayout android:background="#ff932a88" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="3.94">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/tab_one" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Business Info" android:textAllCaps="false" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/other_tabs" android:visibility="visible" android:layout_width="0.0sp" android:layout_height="wrap_content" android:weightSum="8.06" android:layout_weight="8.06">
+                    <View android:id="@id/event_indicator" android:background="#ff5c5c5c" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.06" android:layout_alignParentBottom="true" />
+                    <RelativeLayout android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="4.0">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffc4c4c4" android:gravity="center" android:id="@id/tab_two" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Product/Services" android:textAllCaps="false" />
+                    </RelativeLayout>
+                    <View android:background="#ff5c5c5c" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.06" android:layout_alignParentBottom="true" />
+                    <RelativeLayout android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="3.94">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffc4c4c4" android:gravity="center" android:id="@id/tab_three" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Specials" android:textAllCaps="false" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:id="@id/tab_line" android:background="#ff872e7e" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_below="@id/tabs" />
+            <FrameLayout android:id="@id/fragment_layout" android:background="#ff232323" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/tab_line" />
+        </RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/freshchat_conversation_banner_message_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/freshchat_partial_conversation_banner_message" />
+    <ListView android:id="@id/freshchat_conv_detail_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/freshchat_conv_detail_divider" android:layout_below="@id/freshchat_conversation_banner_message_text" android:layout_alignWithParentIfMissing="true" style="?freshchatMessageListStyle" />
+    <View android:id="@id/freshchat_conv_detail_divider" android:background="@color/freshchat_message_list_reply_view_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/freshchat_conv_detail_text_reply_layout" android:layout_alignWithParentIfMissing="true" />
+    <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/freshchat_conv_detail_voice_reply_layout" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignWithParentIfMissing="true" layout="@layout/freshchat_partial_text_message_frame" />
+    <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/freshchat_chat_resolution_confirmation_layout" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" layout="@layout/freshchat_partial_voice_message_frame" />
+    <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" layout="@layout/freshchat_partial_chat_resolution_confirmation_frame" />
+</RelativeLayout>

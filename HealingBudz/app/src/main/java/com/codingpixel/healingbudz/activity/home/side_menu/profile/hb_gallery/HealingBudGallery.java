@@ -7,11 +7,13 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -35,16 +37,20 @@ import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.codingpixel.healingbudz.DataModel.HealingBudGalleryModel;
+import com.codingpixel.healingbudz.DataModel.ReportQuestionListDataModel;
 import com.codingpixel.healingbudz.R;
+import com.codingpixel.healingbudz.ReportItView.Report;
 import com.codingpixel.healingbudz.Utilities.FileUtils;
 import com.codingpixel.healingbudz.Utilities.PermissionHandler;
 import com.codingpixel.healingbudz.activity.splash.Splash;
 import com.codingpixel.healingbudz.adapter.HealingBudGalleryRecylerAdapter;
+import com.codingpixel.healingbudz.adapter.StrainCommentFullViewAdapter;
 import com.codingpixel.healingbudz.camera_activity.HBCameraActivity;
 import com.codingpixel.healingbudz.customeUI.CustomeToast;
 import com.codingpixel.healingbudz.customeUI.ProgressDialog;
 import com.codingpixel.healingbudz.customeUI.customalerts.SweetAlertDialog;
 import com.codingpixel.healingbudz.data_structure.APIActions;
+import com.codingpixel.healingbudz.interfaces.ReportSendButtonLstner;
 import com.codingpixel.healingbudz.media_view_Dialog.MediPreview;
 import com.codingpixel.healingbudz.network.VollyAPICall;
 import com.codingpixel.healingbudz.network.model.APIResponseListner;
@@ -62,6 +68,7 @@ import tcking.github.com.giraffeplayer.GiraffePlayer;
 
 import static android.view.View.GONE;
 import static com.codingpixel.healingbudz.Utilities.ViewUtils.checkRotation;
+import static com.codingpixel.healingbudz.activity.home.home_fragment.Strain_tab.straindetail.StrainCommentFullView.strain_report_full_screen;
 import static com.codingpixel.healingbudz.activity.splash.Splash.user;
 import static com.codingpixel.healingbudz.application.HealingBudApplication.getContext;
 import static com.codingpixel.healingbudz.data_structure.APIActions.ApiActions.add_media_cover;
@@ -73,9 +80,10 @@ import static com.codingpixel.healingbudz.static_function.IntentFunction.GoToHom
 import static com.codingpixel.healingbudz.static_function.UIModification.ChangeStatusBarColor;
 
 @SuppressLint("Registered")
-public class HealingBudGallery extends AppCompatActivity implements View.OnClickListener, HealingBudGalleryRecylerAdapter.ItemClickListener, APIResponseListner, ViewPager.OnPageChangeListener {
+public class HealingBudGallery extends AppCompatActivity implements View.OnClickListener, HealingBudGalleryRecylerAdapter.ItemClickListener, APIResponseListner, ViewPager.OnPageChangeListener, ReportSendButtonLstner {
     ImageView Back, Home, download_btn, upload_btn;
     RecyclerView Images_Recyler_view;
+    public Report galleryReport;
     LinearLayout Grid_layout;
     int UserID = 47;
     TextView No_Record_found;
@@ -89,6 +97,7 @@ public class HealingBudGallery extends AppCompatActivity implements View.OnClick
     TextView q_a_menu_title;
     ArrayList<HealingBudGalleryModel> images_paths = new ArrayList<>();
     LinearLayout Refresh;
+    RelativeLayout Main_layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -161,12 +170,16 @@ public class HealingBudGallery extends AppCompatActivity implements View.OnClick
         });
         JSONObject jsonObject = new JSONObject();
         new VollyAPICall(HealingBudGallery.this, false, hb_gallery + "/" + UserID, jsonObject, user.getSession_key(), Request.Method.GET, HealingBudGallery.this, APIActions.ApiActions.hb_gallery);
+        Main_layout = (RelativeLayout) findViewById(R.id.main_cntnt_strain);
+        galleryReport = new Report(this, this, "#7CC245", "gallery");
+        Main_layout.addView(galleryReport.getView());
+        galleryReport.InitSlide();
     }
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         if (images_paths.get(position).getType().equalsIgnoreCase("image")) {
-            download_btn.setVisibility(View.VISIBLE);
+            download_btn.setVisibility(View.GONE);
             upload_btn.setVisibility(View.GONE);
             urlPath = URL.images_baseurl + images_paths.get(position).getPath();
             fileName = images_paths.get(position).getPath();
@@ -183,7 +196,7 @@ public class HealingBudGallery extends AppCompatActivity implements View.OnClick
     @Override
     public void onPageSelected(int position) {
         if (images_paths.get(position).getType().equalsIgnoreCase("image")) {
-            download_btn.setVisibility(View.VISIBLE);
+            download_btn.setVisibility(View.GONE);
             upload_btn.setVisibility(View.GONE);
             urlPath = URL.images_baseurl + images_paths.get(position).getPath();
             fileName = images_paths.get(position).getPath();
@@ -262,7 +275,7 @@ public class HealingBudGallery extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onItemClick(View view, int position) {
-        download_btn.setVisibility(View.VISIBLE);
+        download_btn.setVisibility(View.GONE);
         upload_btn.setVisibility(View.GONE);
         if (images_paths.get(position).getType().equalsIgnoreCase("image")) {
             isImagePreview = true;
@@ -334,6 +347,7 @@ public class HealingBudGallery extends AppCompatActivity implements View.OnClick
                 model.setPath(object.getString("path"));
                 model.setType(object.getString("type"));
                 model.setUser_id(object.getInt("user_id"));
+                model.setFlag_count(object.optInt("flaged_count"));
                 model.setPoster("");
                 model.setCreated_at(object.getString("created_at"));
                 model.setV_pk(String.valueOf(object.getInt("id")) + "_hbgallery");
@@ -367,12 +381,14 @@ public class HealingBudGallery extends AppCompatActivity implements View.OnClick
                         model.setType(object.getString("type"));
                         model.setUser_id(object.getInt("user_id"));
                         model.setPoster(object.getString("poster"));
+                        model.setFlag_count(object.optInt("flaged_count"));
                         model.setCreated_at(object.getString("created_at"));
 //                        model.setV_pk(object.getString("v_pk"));
                         images_paths.add(model);
                     }
                     adapter.notifyDataSetChanged();
                     imagePaggerAdapter.notifyDataSetChanged();
+
                     if (isImagePreview) {
                         slide_start_point = images_paths.size() - 1;
                         ShowImage(images_paths.size() - 1);
@@ -457,6 +473,28 @@ public class HealingBudGallery extends AppCompatActivity implements View.OnClick
         new UploadImageAPIcall(this, URL.add_hb_media, drawable, user.getSession_key(), this, add_media_cover);
     }
 
+    @Override
+    public void OnSnedClicked(JSONObject data, final int position) {
+        try {
+            new VollyAPICall(this, true, URL.block_hb_gallery, new JSONObject().put("image_id", images_paths.get(position).getId()).put("reason", data.getString("reason"))
+                    , Splash.user.getSession_key(), Request.Method.POST, new APIResponseListner() {
+                @Override
+                public void onRequestSuccess(String response, APIActions.ApiActions apiActions) {
+                    images_paths.get(position).setFlag_count(1);
+                    adapter.notifyDataSetChanged();
+                    imagePaggerAdapter.notifyDataSetChanged();
+                }
+
+                @Override
+                public void onRequestError(String response, APIActions.ApiActions apiActions) {
+
+                }
+            }, APIActions.ApiActions.testAPI);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
     public class ImagePaggerAdapter extends PagerAdapter {
 
         ImageView Back_Img, Next_Img, download_image, play_vid;
@@ -490,9 +528,86 @@ public class HealingBudGallery extends AppCompatActivity implements View.OnClick
 
         @Override
         public Object instantiateItem(ViewGroup container, final int position) {
-            View itemView = mLayoutInflater.inflate(R.layout.pager_layout_main_gallery, container, false);
+            final View itemView = mLayoutInflater.inflate(R.layout.pager_layout_user_main_gallery, container, false);
             imageView = itemView.findViewById(R.id.img);
+            ImageView download_image_user = itemView.findViewById(R.id.download_image_user);
+            LinearLayout linn = itemView.findViewById(R.id.linn);
+            ImageView flag_image_user = itemView.findViewById(R.id.flag_image_user);
+            RelativeLayout flag_view = itemView.findViewById(R.id.flag_view);
             play_vid = itemView.findViewById(R.id.play_vid);
+            download_image_user.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    PermissionHandler.checkPermission(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, v.getContext(), new PermissionHandler.CheckPermissionResponse() {
+                        @Override
+                        public void permissionGranted() {
+                            String pth = URL.images_baseurl + images_paths.get(position).getPath();
+                            FileUtils.StartDownload(pth, images_paths.get(position).getPath(), HealingBudGallery.this);
+                        }
+
+                        @Override
+                        public void showNeededPermissionDialog() {
+
+                        }
+
+                        @Override
+                        public void requestPermission() {
+
+                        }
+                    });
+                }
+            });
+            if (UserID == Splash.user.getUser_id()) {
+                flag_image_user.setVisibility(GONE);
+                linn.setWeightSum(1.0F);
+                if (mData.get(position).getType().equalsIgnoreCase("image")){
+                    download_image_user.setVisibility(View.VISIBLE);
+                } else {
+                    download_image_user.setVisibility(View.GONE);
+                }
+            } else {
+                linn.setWeightSum(2.0F);
+                flag_image_user.setVisibility(View.VISIBLE);
+                if (mData.get(position).getType().equalsIgnoreCase("image")){
+                    linn.setWeightSum(2.0F);
+                    download_image_user.setVisibility(View.VISIBLE);
+                } else {
+                    linn.setWeightSum(1.0F);
+                    download_image_user.setVisibility(View.GONE);
+                }
+            }
+            if (mData.get(position).getFlag_count() == 0) {
+                flag_image_user.setColorFilter(ContextCompat.getColor(itemView.getContext(), R.color.white), android.graphics.PorterDuff.Mode.SRC_IN);
+            } else {
+                flag_image_user.setColorFilter(ContextCompat.getColor(itemView.getContext(), R.color.post_description_links_color), android.graphics.PorterDuff.Mode.SRC_IN);
+            }
+            flag_image_user.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ArrayList<ReportQuestionListDataModel> dataModels = new ArrayList<>();
+                    dataModels.add(new ReportQuestionListDataModel("Nudity or sexual content", false));
+                    dataModels.add(new ReportQuestionListDataModel("Harassment or hate speech", false));
+                    dataModels.add(new ReportQuestionListDataModel("Threatening, violent, or concerning", false));
+                    dataModels.add(new ReportQuestionListDataModel("Spam", false));
+                    dataModels.add(new ReportQuestionListDataModel("Offensive", false));
+                    dataModels.add(new ReportQuestionListDataModel("Unrelated", false));
+                    if (mData.get(position).getFlag_count() == 0) {
+                        if (galleryReport.isSlide()) {
+                            galleryReport.SlideUp();
+                        } else {
+                            galleryReport.SlideDown(position, dataModels, HealingBudGallery.this, "gallery");
+                        }
+                    } else {
+                        if (mData.get(position).getType().equalsIgnoreCase("image")){
+                            CustomeToast.ShowCustomToast(itemView.getContext(), "You already flagged this image!", Gravity.TOP);
+                        } else {
+                            CustomeToast.ShowCustomToast(itemView.getContext(), "You already flagged this video!", Gravity.TOP);
+                        }
+
+                    }
+
+                }
+            });
             download_image = itemView.findViewById(R.id.download_image);
             Loading_spiner = (ProgressBar) itemView.findViewById(R.id.loading_spinner);
             Loading_spiner.setVisibility(View.GONE);
@@ -501,8 +616,8 @@ public class HealingBudGallery extends AppCompatActivity implements View.OnClick
             imagePaggerAdapter.player.hide(true);
             rl.setVisibility(GONE);
             if (mData.get(position).getType().equalsIgnoreCase("image")) {
-                download_btn.setVisibility(View.VISIBLE);
-
+                download_btn.setVisibility(View.GONE);
+                download_image_user.setVisibility(View.VISIBLE);
                 play_vid.setVisibility(GONE);
 //                urlPath = images_baseurl + mData.get(position).getPath();
 //                fileName = mData.get(position).getPath();
@@ -559,7 +674,10 @@ public class HealingBudGallery extends AppCompatActivity implements View.OnClick
                             }
                         }).into(imageView);
 //                Loading_spiner.setVisibility(GONE);
+
             } else {
+
+                download_image_user.setVisibility(GONE);
                 imagePaggerAdapter.player.hide(true);
                 play_vid.setVisibility(View.VISIBLE);
                 play_vid.setOnClickListener(new View.OnClickListener() {

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/daimajia_slider_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ProgressBar android:id="@id/loading_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/description_layout" android:paddingLeft="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0sp" android:minHeight="50.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="9.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Photo Uploaded By:" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="9.0sp" android:textStyle="bold" android:textColor="#ffe4e4e5" android:id="@id/photo_powered_by" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0sp" android:text="BesterBud" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0sp">
+                <ImageView android:layout_width="10.0sp" android:layout_height="10.0sp" android:src="@drawable/ic_calaneder_gray" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewLightAttalic android:textSize="7.0sp" android:textColor="@color/white" android:id="@id/photo_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0sp" android:text="20th March, 2017" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textColor="#ffffffff" android:id="@id/description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

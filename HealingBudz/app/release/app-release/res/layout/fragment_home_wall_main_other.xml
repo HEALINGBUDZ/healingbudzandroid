@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/fragment_home_wall_main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/fragment_home_wall_main_layout_parent" android:background="#ff322e25" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/fragment_home_wall_main_toolbar_parent" android:background="@color/black" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:orientation="horizontal" android:background="@color/feed_toolbar_color" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/feed_pic" android:padding="12.0sp" android:visibility="visible" android:layout_width="?android:actionBarSize" android:layout_height="fill_parent" android:layout_marginRight="70.0sp" android:src="@drawable/social_wall_new" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="22.0sp" android:textColor="@color/COLOR_YOUR_COLOR" android:gravity="center" android:id="@id/fragment_home_wall_main_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="My Buzz" android:textAllCaps="true" />
+                <ImageView android:id="@id/fragment_wall_main_drawer_btn" android:padding="9.0dip" android:layout_width="?android:actionBarSize" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+                <ImageView android:id="@id/fragment_wall_main_home_btn" android:padding="13.0dip" android:layout_width="?android:actionBarSize" android:layout_height="fill_parent" android:layout_marginLeft="40.0sp" android:src="@drawable/ic_home_icon" />
+                <ImageView android:layout_gravity="end" android:id="@id/fragment_wall_main_add_btn" android:padding="15.0dip" android:layout_width="?android:actionBarSize" android:layout_height="fill_parent" android:src="@drawable/feed_main_add_icon" android:tint="#ff7cc245" />
+            </FrameLayout>
+            <ImageView android:id="@id/fragment_wall_main_feed_filter_icon" android:background="@drawable/feeds_toolbar_bottom_arrow_bg" android:paddingLeft="13.0dip" android:paddingRight="13.0dip" android:visibility="gone" android:layout_width="46.0dip" android:layout_height="30.0dip" android:layout_marginTop="-15.0dip" android:src="@drawable/group_menu_indicator" android:tint="#ff7cc245" android:paddingStart="13.0dip" android:paddingEnd="13.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/fragment_wall_main_feed_new" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="70.0dip">
+                <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/fragment_wall_main_feed_user_img" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="15.0dip" android:src="@drawable/smile" android:layout_marginStart="15.0dip" />
+                <View android:background="@color/white" android:layout_width="2.0dip" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" android:layout_marginStart="15.0dip" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="17.0sp" android:textColor="@color/white" android:textColorHint="@color/white" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:layout_marginRight="10.0dip" android:hint="Hey Bud, what's on your mind?" android:layout_marginStart="15.0dip" android:layout_marginEnd="10.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.v4.widget.SwipeRefreshLayout android:id="@id/fragment_home_wall_main_post_list_refresher" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <android.support.v7.widget.RecyclerView android:id="@id/fragment_home_wall_main_post_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="end" android:orientation="horizontal" android:id="@id/not_found" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textColor="@color/white" android:id="@id/no_question" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No Post Found!" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:background="#ff252525" android:paddingLeft="14.0sp" android:paddingTop="4.0sp" android:paddingRight="14.0sp" android:paddingBottom="4.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+            <RelativeLayout android:layout_width="0.0sp" android:layout_height="30.0sp" android:layout_marginTop="10.0sp" android:layout_marginBottom="10.0sp" android:layout_weight="1.1">
+                <ImageView android:id="@id/icon_img" android:padding="4.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_group_green" />
+                <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/userImg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" />
+            </RelativeLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textColor="#ff7cc144" android:gravity="center_horizontal" android:id="@id/text_icon" android:visibility="gone" android:layout_width="0.0sp" android:layout_height="30.0sp" android:layout_marginTop="10.0sp" android:layout_marginBottom="10.0sp" android:text="A:" android:maxLines="5" android:layout_weight="1.1" />
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="6.0sp" android:paddingTop="6.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="8.9">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ff6da73e" android:id="@id/title_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BesterBud is now following you." android:maxLines="5" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="9.0sp" android:textColor="#ffc4c4c4" android:id="@id/heading_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0sp" android:layout_marginBottom="1.0sp" android:text="Q: Should i warm Canniban Oil before applying?" android:maxLines="5" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/featured_business_layout" android:background="@drawable/bud_map_feature_business_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="20.0sp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <ImageView android:padding="3.0sp" android:layout_width="20.0sp" android:layout_height="20.0sp" android:src="@drawable/ic_featured_bussiness_star_icon" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="8.0sp" android:textColor="#ff213f20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FEATURED  " />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#ff202020" android:layout_width="fill_parent" android:layout_height="2.0sp" android:layout_marginLeft="14.0sp" android:layout_marginTop="4.0sp" android:layout_marginRight="14.0sp" />
+    </LinearLayout>
+</RelativeLayout>

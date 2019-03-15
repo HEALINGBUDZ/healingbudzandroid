@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/main_cntnt_strain" android:background="#ff232323" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/menu_top_content" android:background="#ff1f1f1f" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="#ff1f1f1f" android:layout_width="fill_parent" android:layout_height="22.0sp" />
+        <RelativeLayout android:id="@id/menu" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+            <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+            <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="22.0sp" android:textColor="#ff80c340" android:gravity="center" android:paddingBottom="4.0sp" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="22.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/q_a_menu_title" android:paddingLeft="4.0sp" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Keywords" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/recycler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/menu_top_content" />
+</RelativeLayout>

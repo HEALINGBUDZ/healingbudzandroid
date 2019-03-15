@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0sp" android:weightSum="10.0">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="13.0sp" android:textColor="#ffe4e4e5" android:gravity="center_vertical" android:id="@id/title_journal" android:paddingLeft="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="Journal Name" android:layout_weight="6.0" />
+        <LinearLayout android:gravity="center|right" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="4.0">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="13.0sp" android:textColor="#ffe4e4e5" android:gravity="center" android:id="@id/entryies" android:layout_width="30.0sp" android:layout_height="wrap_content" android:text="4" />
+            <ImageView android:id="@id/p_p" android:padding="5.0sp" android:layout_width="30.0sp" android:layout_height="30.0sp" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_public_icon_journal" />
+            <ImageView android:id="@id/menu_dots" android:padding="7.0sp" android:layout_width="30.0sp" android:layout_height="30.0sp" android:layout_marginLeft="8.0sp" android:layout_marginRight="8.0sp" android:src="@drawable/ic_menu_dots_journal_details" />
+            <View android:id="@id/dummy_view" android:layout_width="1.0sp" android:layout_height="1.0sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/line_top" android:background="#ff4d4948" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="6.0sp" android:layout_below="@id/filtr" />
+</LinearLayout>

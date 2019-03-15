@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <com.google.android.gms.ads.AdView android:id="@id/adView" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" ads:adSize="BANNER" ads:adUnitId="@string/ad_mob_id_add" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/main_layout_whole" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0sp" android:weightSum="10.0">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/strain_detail_recyler_item_bg" android:padding="8.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="10.0">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+                    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="1.4">
+                        <RelativeLayout android:layout_width="wrap_content" android:layout_height="50.0sp" android:layout_weight="2.0">
+                            <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/user_img" android:padding="6.0sp" android:layout_width="42.0sp" android:layout_height="42.0sp" android:src="@drawable/ic_discuss_question_profile" />
+                            <ImageView android:id="@id/profile_img_topi" android:visibility="visible" android:layout_width="20.0sp" android:layout_height="20.0dip" android:src="@drawable/topi_ic" />
+                        </RelativeLayout>
+                        <ImageView android:id="@id/like_thumb" android:layout_width="28.0sp" android:layout_height="28.0sp" android:layout_marginTop="15.0sp" android:src="@drawable/ic_thumb_unliked" android:layout_weight="2.0" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/like_count" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:text="150" />
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/got_ur_vote" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="19.0sp">
+                            <ImageView android:padding="3.0sp" android:layout_width="26.0sp" android:layout_height="22.0sp" android:layout_marginTop="15.0sp" android:src="@drawable/ic_tick_yellow" android:layout_weight="2.0" />
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="13.0sp" android:textColor="#fff4c42f" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:text="Got Your Vote" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:paddingLeft="10.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="8.6">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="46.0sp">
+                            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="13.0sp" android:textColor="#ffc4c4c4" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jone Doe" />
+                                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="13.0sp" android:textColor="#ffe4e4e5" android:id="@id/updated_by" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0sp" android:text="updated Description 5 days ago" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="right" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                                <ImageView android:id="@id/reward_like" android:padding="6.0sp" android:visibility="gone" android:layout_width="46.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_reward_like_strain_red" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="#ffc4c4c4" android:id="@id/detail_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:text="Girl Scout Cookies, or GSC, is an OG Kush and Durban Poison hybrid cross whose reputation grew too large to stay within the borders of its California homeland. Girl Scout Cookies, or GSC, in an OG Kush and Durban Poison hybrid cross whose reputation grew too large to stay, Girl Scout Cookies, or GSC, is an OG Kush and Durban Poison hybrid cross whose reputation grew too large to stay within the borders of its California homeland. Girl Scout Cookies, or GSC, in an OG Kush and Durban Poison hybrid cross whose, Girl Scout Cookies, or GSC, is an OG Kush and Durban Poison hybrid cross whose reputation grew too large to stay within the borders of its California homeland. Girl Scout Cookies, or GSC, in an OG Kush " />
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textColor="#fff4c42f" android:id="@id/all_edits" android:paddingTop="12.0sp" android:paddingBottom="12.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="View all edits added by this user" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

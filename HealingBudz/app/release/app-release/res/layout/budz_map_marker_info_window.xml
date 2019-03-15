@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/main_layout" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="200.0sp" android:layout_height="60.0sp">
+        <LinearLayout android:id="@id/main_content_info_window" android:layout_width="fill_parent" android:layout_height="62.0sp" android:weightSum="10.0" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+            <RelativeLayout android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.0">
+                <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/info_windowicon_img" android:padding="0.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_budz_adn" android:layout_weight="2.0" />
+            </RelativeLayout>
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="7.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="9.0sp" android:textStyle="bold" android:textColor="#ff932a88" android:id="@id/heading_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:layout_marginBottom="1.0sp" android:text="South Miami Natural Pharmaceuticals" android:singleLine="true" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="7.0sp" android:textColor="#ff808080" android:id="@id/type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dispensary" />
+                <LinearLayout android:orientation="horizontal" android:paddingRight="12.0sp" android:layout_width="fill_parent" android:layout_height="18.0sp" android:weightSum="10.0">
+                    <ImageView android:id="@id/rating_img" android:padding="3.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_rating_img" android:layout_weight="3.0" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="6.0sp" android:textColor="#ff808080" android:gravity="center|right" android:id="@id/reviews" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="5 Reviews" android:layout_weight="4.5" />
+                </LinearLayout>
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="6.0sp" android:textStyle="bold" android:textColor="#ff932a88" android:id="@id/open_untill" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Open until 8:00 pm" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" />
+            </LinearLayout>
+            <ImageView android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_info_window_next_icon" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

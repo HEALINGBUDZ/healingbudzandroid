@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:stripe="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/dialog_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <RelativeLayout android:id="@id/main_content" android:background="@drawable/budz_map_payment_dialog_bg" android:paddingBottom="18.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0sp">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/first_dialog_layout" android:paddingLeft="10.0sp" android:paddingRight="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="17.0sp" android:textStyle="bold" android:textColor="#ff932a88" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0sp" android:text="Healing Budz" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#ff932a88" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Subscription For Buying Budz" />
+                    <View android:background="#203b3b3b" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="18.0sp" />
+                    <com.stripe.android.view.CardInputWidget android:id="@id/card_input_widget" android:layout_width="fill_parent" android:layout_height="wrap_content" stripe:cardTextErrorColor="@android:color/holo_orange_dark" stripe:cardTint="@android:color/holo_purple" />
+                    <View android:background="#203b3b3b" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/payy" android:background="@drawable/q_a_menu_ask_q_button" android:layout_width="fill_parent" android:layout_height="36.0sp" android:layout_marginTop="12.0sp" android:text="Pay $99.99" />
+                </LinearLayout>
+            </RelativeLayout>
+            <ImageView android:id="@id/cross_btn" android:paddingLeft="10.0sp" android:paddingBottom="10.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_save_dialog_cross" android:layout_alignParentRight="true" />
+            <ImageView android:id="@id/premium_tag" android:background="@drawable/ic_premium_tag_icon" android:visibility="gone" android:layout_width="70.0sp" android:layout_height="100.0sp" android:layout_margin="5.0sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

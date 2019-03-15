@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="20.0sp" android:paddingRight="20.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0sp">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff923a88" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Payment Methods" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="18.0sp" android:textColor="#ff999999" android:gravity="center" android:id="@id/not_found_payment" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="No payment method available." />
+        <android.support.v7.widget.RecyclerView android:id="@id/payment_method_selection" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="25.0sp" android:layout_marginTop="10.0sp">
+            <ImageView android:layout_width="36.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_payment_method_1" />
+            <ImageView android:layout_width="36.0sp" android:layout_height="fill_parent" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_payment_method_2" />
+            <ImageView android:layout_width="36.0sp" android:layout_height="fill_parent" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_payment_method_3" />
+            <ImageView android:layout_width="36.0sp" android:layout_height="fill_parent" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_payment_method_4" />
+            <ImageView android:layout_width="36.0sp" android:layout_height="fill_parent" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_payment_method_5" />
+            <ImageView android:layout_width="36.0sp" android:layout_height="fill_parent" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_payment_method_6" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

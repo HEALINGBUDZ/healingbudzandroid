@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="#ff252525" android:paddingLeft="14.0sp" android:paddingRight="14.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+        <ImageView android:id="@id/icon_img" android:padding="4.0sp" android:layout_width="0.0sp" android:layout_height="30.0sp" android:layout_marginTop="10.0sp" android:layout_marginBottom="10.0sp" android:src="@drawable/ic_group_green" android:layout_weight="1.1" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="20.0sp" android:textColor="#ff7cc144" android:gravity="center_horizontal" android:id="@id/text_icon" android:visibility="gone" android:layout_width="0.0sp" android:layout_height="30.0sp" android:layout_marginTop="10.0sp" android:layout_marginBottom="10.0sp" android:text="A:" android:layout_weight="1.1" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="6.0sp" android:paddingTop="6.0sp" android:paddingBottom="6.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="8.9">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ff7bc044" android:id="@id/title_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BesterBud is now following you." android:maxLines="4" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="13.0sp" android:textColor="#ffe4e4e5" android:id="@id/heading_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0sp" android:layout_marginBottom="1.0sp" android:text="Q: Should i warm Canniban Oil before applying?" android:maxLines="4" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="10.0sp" android:textColor="#ff545454" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0sp" android:layout_marginBottom="1.0sp" android:text="10 minutes ago" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ff1c1c1c" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginLeft="5.0sp" android:layout_marginTop="6.0sp" android:layout_marginRight="5.0sp" />
+</LinearLayout>

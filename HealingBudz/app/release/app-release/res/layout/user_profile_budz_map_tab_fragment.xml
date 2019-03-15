@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/main_cc" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff932b88" android:gravity="center" android:layout_width="wrap_content" android:layout_height="50.0sp" android:layout_marginLeft="10.0sp" android:layout_marginTop="6.0sp" android:layout_marginRight="10.0sp" android:layout_marginBottom="6.0sp" android:text="My Favorite Adz Listing" />
+        <View android:background="#ff333333" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginLeft="8.0sp" android:layout_marginRight="8.0sp" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textColor="#ffc4c3c4" android:gravity="center" android:id="@id/not_found" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0sp" android:text="No record found!" android:layout_centerInParent="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:paddingTop="14.0sp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView android:id="@id/recyler_View" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0sp" android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

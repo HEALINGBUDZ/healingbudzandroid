@@ -1068,6 +1068,7 @@ public class BudzFeedMainPostAdapter extends RecyclerView.Adapter<BudzFeedMainPo
             repostedPostUser = itemView.findViewById(R.id.vh_budz_feed_main_post_reposted_user_name);
 
             scrapView = itemView.findViewById(R.id.vh_budz_feed_main_post_link_scrap);
+
             scrapView.setListener(BudzFeedMainPostVH.this);
 //            scrapView.setDescriptionTextColor(Color.GRAY);
 //            scrapView.setTitleTextColor(Color.YELLOW);
@@ -1126,6 +1127,7 @@ public class BudzFeedMainPostAdapter extends RecyclerView.Adapter<BudzFeedMainPo
 
         void showView(final Post post, final int pos, final BudzFeedMainPostVH holder) {
             initMentionEditText();
+            scrapView.setPost(post);
             holder.itemView.findViewById(R.id.activity_wall_post_detail_uploaded_media_cross).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

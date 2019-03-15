@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:background="#ff252525" android:paddingLeft="14.0sp" android:paddingTop="4.0sp" android:paddingRight="14.0sp" android:paddingBottom="4.0sp" android:layout_width="fill_parent" android:layout_height="53.0sp" android:weightSum="10.0">
+        <ImageView android:id="@id/icon_img" android:padding="4.0sp" android:layout_width="0.0sp" android:layout_height="30.0sp" android:src="@drawable/ic_group_green" android:layout_weight="1.1" />
+        <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/icon_img_cir" android:padding="4.0sp" android:visibility="gone" android:layout_width="0.0sp" android:layout_height="30.0sp" android:src="@drawable/ic_group_green" android:layout_weight="1.1" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textColor="#ff7cc144" android:gravity="center_horizontal" android:id="@id/text_icon" android:visibility="gone" android:layout_width="0.0sp" android:layout_height="30.0sp" android:text="A:" android:layout_weight="1.1" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="6.0sp" android:paddingTop="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="7.4">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="#ff6da73e" android:gravity="center_vertical" android:id="@id/title_main" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="BesterBud is now following you." />
+        </LinearLayout>
+        <ImageView android:id="@id/delete_my_save" android:padding="12.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_del_my_save" android:layout_weight="1.5" android:alpha="0.9" />
+    </LinearLayout>
+    <View android:background="#ff202020" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="4.0sp" />
+</LinearLayout>

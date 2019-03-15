@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/main_layout" android:background="#ff252525" android:paddingLeft="10.0sp" android:paddingRight="10.0sp" android:paddingBottom="6.0sp" android:layout_width="fill_parent" android:layout_height="72.0sp" android:weightSum="10.0">
+        <RelativeLayout android:layout_width="0.0sp" android:layout_height="60.0sp" android:layout_weight="1.7">
+            <RelativeLayout android:layout_width="46.0sp" android:layout_height="46.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                <ImageView android:id="@id/group_img" android:padding="1.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/ic_groups_icon" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <TextView android:textSize="9.0sp" android:textStyle="bold" android:gravity="center" android:background="@drawable/my_group_badge_notification_bg" android:visibility="gone" android:layout_width="18.0sp" android:layout_height="18.0sp" android:layout_marginTop="2.0sp" android:text="22" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="6.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_marginTop="-3.0sp" android:layout_weight="6.3">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textColor="@color/white" android:id="@id/group_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Medical Marijuana fro Dummies" android:maxLines="1" android:lines="1" android:singleLine="true" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffc5c3c4" android:id="@id/group_budz" android:layout_width="70.0sp" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:text="8 Budz" android:layout_alignParentRight="true" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="2.0">
+            <ImageView android:id="@id/public_icon" android:padding="3.0sp" android:layout_width="18.0sp" android:layout_height="18.0sp" android:layout_marginRight="3.0sp" android:layout_marginBottom="2.0sp" android:src="@drawable/ic_private_group" android:layout_above="@id/buttons" android:layout_alignParentRight="true" />
+            <LinearLayout android:gravity="bottom|center|right" android:orientation="horizontal" android:id="@id/buttons" android:layout_width="70.0sp" android:layout_height="30.0sp" android:weightSum="10.0" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+                <ImageView android:id="@id/group_members" android:padding="6.0sp" android:layout_width="0.0sp" android:layout_height="30.0sp" android:src="@drawable/ic_group_single_men" android:layout_weight="5.0" />
+                <ImageView android:id="@id/edite_group_btn" android:padding="6.0sp" android:layout_width="0.0sp" android:layout_height="30.0sp" android:src="@drawable/ic_edit_myquestion" android:layout_weight="5.0" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="#aa1c1c1c" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+</LinearLayout>

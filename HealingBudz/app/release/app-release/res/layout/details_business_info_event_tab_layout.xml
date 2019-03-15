@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="#ff232323" android:paddingTop="12.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="40.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:background="#ff232323" android:paddingTop="14.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ffc4c4c4" android:id="@id/discription" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0sp" android:layout_marginRight="14.0sp" android:text="CannaCon florida will showcase the wares of more than 65 exhibitors, two dozen leading cannabis industry speakers, who will extertain and educate attendees on a wide range of topics, including the latest in breeding techniques, grow room technology, extraction methodology, “interpreting” and marketing." />
+            <View android:background="#ff363636" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="18.0sp" />
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="20.0sp" android:paddingRight="20.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:weightSum="10.0">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingBottom="12.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="5.0">
+                    <ImageView android:padding="10.0sp" android:layout_width="55.0sp" android:layout_height="49.0sp" android:src="@drawable/ic_event_calander" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ffdddddd" android:gravity="center" android:id="@id/event_date_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0sp" android:text="Friday, May 5,2017\nSaturday, May 6,2017\nSunday, May 7,2017" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingBottom="12.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="5.0">
+                    <ImageView android:id="@id/imageView" android:padding="10.0sp" android:layout_width="50.0sp" android:layout_height="50.0sp" android:src="@drawable/ic_event_time" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ffdddddd" android:gravity="center" android:id="@id/event_time_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0sp" android:text="8:00 am - 10:00 pm \n8:00 am - 10:00 pm \n8:00 am - 10:00 pm" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#ff363636" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="14.0sp" />
+            <include layout="@layout/layout_location_budz" />
+            <View android:background="#ff363636" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="14.0sp" />
+            <include layout="@layout/budz_payment" />
+            <View android:background="#ff363636" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="14.0sp" />
+            <include layout="@layout/budz_map_links_layout" />=<View android:background="#ff363636" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="14.0sp" />
+            <include layout="@layout/budz_map_detail_bottom_comments_reviews" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0sp">
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="20.0sp" android:paddingRight="20.0sp" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:weightSum="10.0">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ff8c2a81" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Zip Code" android:layout_weight="3.5" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffe773e7" android:id="@id/zip_code" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="@string/email" android:layout_weight="6.5" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/other_links" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="20.0sp" android:paddingRight="20.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:weightSum="10.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff8c2a81" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Website" android:layout_weight="3.5" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffe773e7" android:id="@id/website" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="@string/website" android:layout_weight="6.5" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="20.0sp" android:paddingRight="20.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:weightSum="10.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff8c2a81" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Facebook" android:layout_weight="3.5" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffe773e7" android:id="@id/facebook" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="@string/facebook" android:layout_weight="6.5" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="20.0sp" android:paddingRight="20.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:weightSum="10.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff8c2a81" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Twitter" android:layout_weight="3.5" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffe773e7" android:id="@id/twitter" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="@string/twitter" android:layout_weight="6.5" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="20.0sp" android:paddingRight="20.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:weightSum="10.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff8c2a81" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Instagram" android:layout_weight="3.5" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffe773e7" android:id="@id/instagram" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="@string/instagram" android:layout_weight="6.5" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

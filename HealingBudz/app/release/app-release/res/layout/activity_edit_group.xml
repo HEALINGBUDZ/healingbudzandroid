@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:id="@id/main_scroll" android:background="@drawable/home_bg_img" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/top_menu" android:paddingBottom="30.0sp" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/group_cover" android:background="#fff7921f" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/sqe_one" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+                <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+                <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <com.codingpixel.healingbudz.customeUI.HealinBudEditTextRegular android:textSize="18.0sp" android:textColor="#fff6921f" android:textColorHint="#fff6921f" android:id="@id/group_name" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="50.0sp" android:layout_marginLeft="10.0sp" android:layout_marginTop="12.0sp" android:layout_marginRight="10.0sp" android:hint="Add Group Name" android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white" />
+        <LinearLayout android:background="@drawable/answer_fragment_edittext_bg" android:padding="14.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0sp" android:layout_marginTop="8.0sp" android:layout_marginRight="16.0sp">
+            <com.codingpixel.healingbudz.customeUI.HealinBudEditText android:textSize="16.0sp" android:textColor="#ff383838" android:gravity="center|left|top" android:id="@id/group_discription" android:background="@color/transparent" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="Add Group Description...." android:minLines="5" android:maxLength="300" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:padding="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="18.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0sp" android:text="Group Tags:" />
+            </LinearLayout>
+            <AutoCompleteTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffffffff" android:textColorHint="#ff646464" android:id="@id/search_Strain" android:background="@color/transparent" android:paddingLeft="4.0sp" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="50.0sp" android:hint="search tag keywords..." android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white" />
+            <android.support.v7.widget.RecyclerView android:id="@id/strain_recyler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="16.0sp" android:textColor="#ffffffff" android:id="@id/create_new_group" android:background="@drawable/create_group_btn_bg" android:layout_width="fill_parent" android:layout_height="40.0sp" android:layout_marginLeft="13.0sp" android:layout_marginTop="18.0sp" android:layout_marginRight="13.0sp" android:text="Update GROUP" />
+    </LinearLayout>
+</ScrollView>

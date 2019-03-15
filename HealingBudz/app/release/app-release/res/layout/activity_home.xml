@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@id/my_drawer_layout" android:background="@drawable/home_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/find_new_job_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:id="@id/status_bar_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <View android:layout_width="fill_parent" android:layout_height="25.0sp" />
+                    <View android:id="@id/top_line" android:background="#ff6fae3e" android:layout_width="fill_parent" android:layout_height="1.0sp" android:alpha="0.5" />
+                </LinearLayout>
+                <RelativeLayout android:id="@id/top_bar_id" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/status_bar_top">
+                    <include layout="@layout/top_bar" />
+                </RelativeLayout>
+                <FrameLayout android:id="@id/fragment_id" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-16.0sp" android:layout_above="@id/bottom_bar" android:layout_below="@id/top_bar_id" />
+                <FrameLayout android:id="@id/fragment_id_full_screen" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="-2.0sp" android:layout_above="@id/bottom_bar" android:layout_below="@id/status_bar_top" />
+                <RelativeLayout android:id="@id/bottom_bar" android:background="#ff161616" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:layout_alignParentBottom="true">
+                    <include layout="@layout/home_bottom_tab_bar_layout" />
+                </RelativeLayout>
+                <include android:id="@id/search_layout" android:visibility="gone" layout="@layout/home_activity_search_view" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="start" android:orientation="vertical" android:background="#ff1f1f1f" android:layout_width="280.0sp" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="#ff1f1f1f" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:background="#ff171717" android:layout_width="fill_parent" android:layout_height="26.0sp" />
+            <include layout="@layout/drawer_layout_content" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

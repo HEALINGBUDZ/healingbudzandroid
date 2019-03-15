@@ -241,11 +241,11 @@ public class BuzzFeedActivity extends AppCompatActivity implements View.OnClickL
                     if (!object.getString("type").equalsIgnoreCase("admin")) {
 
                         dataModel.setId(object.getInt("id"));
-                        dataModel.setUser_id(object.getInt("user_id"));
-                        dataModel.setType(object.getString("type"));
-                        dataModel.setOn_user(String.valueOf(object.getInt("on_user")));
+                        dataModel.setUser_id(object.optInt("user_id"));
+                        dataModel.setType(object.optString("type"));
+                        dataModel.setOn_user(String.valueOf(object.optInt("on_user")));
                         if (!object.isNull("type_sub_id")) {
-                            dataModel.setTypeSubId(String.valueOf(object.getInt("type_sub_id")));
+                            dataModel.setTypeSubId(String.valueOf(object.optInt("type_sub_id")));
                         } else {
                             dataModel.setTypeSubId("-1");
                         }

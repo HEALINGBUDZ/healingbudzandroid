@@ -43,8 +43,8 @@ android {
 //        applicationId "com.codingpixel.healingbudz"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 24
-        versionName "1.0.22"
+        versionCode 29
+        versionName "1.0.25"
         multiDexEnabled true
 //        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -197,3 +197,11 @@ dependencies {
     implementation 'com.github.freshdesk:freshchat-android:1.0.0'
 }
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.dynatrace.tools.android'
+dynatrace {
+    defaultConfig {
+        applicationId '3d976edf-507a-4621-932a-f5ca0653d85c'
+        environmentId 'bf89382oae'
+        cluster 'https://bf.dynatrace.com'
+    }
+}

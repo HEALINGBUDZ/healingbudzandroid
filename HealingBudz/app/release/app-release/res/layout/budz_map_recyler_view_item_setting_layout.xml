@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/main_layout" android:background="@color/black" android:layout_width="fill_parent" android:layout_height="100.0sp" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/top_line" android:layout_width="fill_parent" android:layout_height="2.0dip" android:src="@drawable/doted_line" android:layerType="software" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_above="@id/bottom_line" android:layout_below="@id/top_line">
+        <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="72.0sp" android:layout_weight="2.0">
+            <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/icon_img" android:padding="2.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="6.0sp" android:src="@drawable/ic_budz_adn" android:layout_weight="2.0" />
+            <ImageView android:id="@id/bud_map_catagory_img" android:layout_width="20.0sp" android:layout_height="20.0sp" android:layout_marginTop="8.0sp" android:layout_marginRight="7.0sp" android:src="@drawable/ic_dispancry_icon" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="6.0sp" android:paddingTop="14.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="8.0">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffceccce" android:id="@id/type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dispensary" />
+            <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0sp">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textStyle="bold" android:textColor="#ff932a88" android:gravity="start" android:id="@id/heading_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="South Test test Test" android:singleLine="true" android:layout_toLeftOf="@id/btn_cancel" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/btn_cancel" android:paddingLeft="5.0sp" android:paddingTop="2.0sp" android:paddingRight="5.0sp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CANCEL" android:singleLine="true" android:layout_marginEnd="5.0sp" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingRight="12.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="12.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ff999999" android:gravity="center_vertical" android:id="@id/distance" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="3.2 mi" android:layout_weight="2.0" />
+                <ImageView android:id="@id/rating_img" android:padding="3.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_rating_img" android:layout_weight="3.0" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ff999999" android:gravity="center|right" android:id="@id/reviewss" android:paddingRight="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="5 Reviews" android:layout_weight="3.0" />
+                <LinearLayout android:gravity="end" android:paddingLeft="6.0sp" android:paddingRight="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:weightSum="10.0" android:layout_weight="4.0">
+                    <ImageView android:id="@id/organic_img" android:padding="5.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_organic" android:layout_weight="5.0" />
+                    <ImageView android:id="@id/delivery_img" android:padding="5.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_delivery" android:layout_weight="5.0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/bottom_line" android:background="@drawable/doted_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0sp" android:layout_marginTop="4.0sp" android:layout_alignParentBottom="true" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/featured_business_layout" android:background="@drawable/bud_map_feature_business_bg" android:paddingLeft="3.0sp" android:layout_width="wrap_content" android:layout_height="20.0sp" android:layout_alignParentRight="true">
+        <ImageView android:padding="3.0sp" android:layout_width="20.0sp" android:layout_height="20.0sp" android:src="@drawable/ic_featured_bussiness_star_icon" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="8.0sp" android:textColor="#ff213f20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FEATURED  " />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingRight="8.0sp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0sp" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:background="@drawable/budz_map_submit_button_bg" android:paddingLeft="14.0sp" android:paddingRight="5.0sp" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ffebd7e9" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="UPDATE" />
+            <ImageView android:padding="2.0sp" android:layout_width="16.0sp" android:layout_height="16.0sp" android:layout_marginLeft="4.0sp" android:src="@drawable/ic_edit_white" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:background="@drawable/budz_map_submit_button_bg" android:paddingLeft="14.0sp" android:paddingRight="14.0sp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ffebd7e9" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="UPDATE" />
+            <ImageView android:padding="2.0sp" android:layout_width="16.0sp" android:layout_height="16.0sp" android:layout_marginLeft="4.0sp" android:src="@drawable/ic_edit_white" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/business_setting" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:layout_centerHorizontal="true">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Plan Type: " />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/plane_type_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Plane Type: " />
+    </LinearLayout>
+</RelativeLayout>

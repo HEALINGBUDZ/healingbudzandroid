@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/transparent" android:padding="15.0sp" android:layout_width="fill_parent" android:layout_height="190.0sp">
+        <ImageView android:background="@drawable/save_discussion_dialog_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="6.0sp" />
+        <ImageView android:id="@id/cross_btn" android:paddingLeft="7.0sp" android:paddingBottom="7.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_save_dialog_cross" android:layout_alignParentRight="true" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="8.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0sp">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="#ff4d4d4d" android:id="@id/heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SAVE DISCUSSION" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0sp" android:layout_marginTop="14.0sp" android:layout_marginRight="7.0sp">
+                <ImageView android:layout_width="20.0sp" android:layout_height="20.0sp" android:src="@drawable/ic_info_icon" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:id="@id/title_d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:text="Q’s &amp; A’s are saved in the app menu under My Saves" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0sp" android:layout_marginTop="12.0sp" android:layout_marginRight="7.0sp">
+                <CheckBox android:id="@id/save_option" android:layout_width="wrap_content" android:layout_height="30.0sp" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:id="@id/msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Got it! Don not show again for Q’s &amp; A’s I save" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

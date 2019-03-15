@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/activity_wall_post_detail_main_view" android:background="@color/feed_toolbar_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+            <ImageView android:id="@id/activity_wall_post_detail_back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_chevron_left_white_36dp" android:layout_alignParentStart="true" />
+            <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/activity_wall_post_detail_back_btn" android:layout_toEndOf="@id/activity_wall_post_detail_back_btn" />
+            <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/feed_pic" android:padding="6.0dip" android:visibility="visible" android:layout_width="42.0dip" android:layout_height="fill_parent" android:src="@drawable/social_wall_new" android:layout_toStartOf="@id/txt_head" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="22.0sp" android:textColor="#ff7cc245" android:gravity="center" android:id="@id/txt_head" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="The Buzz" android:layout_centerInParent="true" android:textAllCaps="true" />
+            <ImageView android:layout_gravity="end" android:id="@id/activity_wall_post_detail_add_btn" android:padding="15.0dip" android:visibility="visible" android:layout_width="?android:actionBarSize" android:layout_height="fill_parent" android:src="@drawable/feed_main_add_icon" android:tint="#ff7cc245" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <FrameLayout android:id="@id/frame_feed" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</RelativeLayout>

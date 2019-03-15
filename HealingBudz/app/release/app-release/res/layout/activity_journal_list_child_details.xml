@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/main_scroll" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/top_content" android:layout_width="fill_parent" android:layout_height="214.0sp">
+            <ImageView android:id="@id/slider_img" android:background="@drawable/image_plaecholder_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:orientation="vertical" android:id="@id/top_menuu" android:background="#46000000" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:layout_width="fill_parent" android:layout_height="22.0sp" />
+                <RelativeLayout android:id="@id/menu" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+                    <ImageView android:id="@id/back_btn" android:padding="4.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+                    <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+                    <ImageView android:id="@id/favorite_it" android:padding="13.0sp" android:visibility="gone" android:layout_width="46.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_attatch_ment" android:layout_toLeftOf="@id/share_btn" android:layout_centerVertical="true" />
+                    <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+                        <ImageView android:id="@id/share_btn" android:padding="13.0sp" android:layout_width="48.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_share_icon" android:layout_centerVertical="true" />
+                        <ImageView android:id="@id/edit" android:padding="13.0sp" android:visibility="gone" android:layout_width="48.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_journal_edit_childdetail_icon" />
+                        <ImageView android:id="@id/delete_event_dialog_dots" android:padding="7.0sp" android:layout_width="40.0sp" android:layout_height="fill_parent" android:layout_marginRight="8.0sp" android:src="@drawable/ic_menu_dots_white" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+                <ImageView android:id="@id/img_indicator_one" android:visibility="gone" android:layout_width="14.0sp" android:layout_height="14.0sp" android:src="@drawable/pin_password_button_bg" android:alpha="0.7" />
+                <ImageView android:id="@id/img_indicator_two" android:layout_width="14.0sp" android:layout_height="14.0sp" android:layout_marginLeft="10.0sp" android:src="@drawable/enter_pin_circle" android:alpha="0.7" />
+                <ImageView android:id="@id/img_indicator_three" android:visibility="gone" android:layout_width="14.0sp" android:layout_height="14.0sp" android:layout_marginLeft="10.0sp" android:src="@drawable/pin_password_button_bg" android:alpha="0.7" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/delete_event_dialog" android:visibility="gone" android:layout_width="150.0sp" android:layout_height="50.0sp" android:layout_marginTop="-14.0sp" android:layout_marginRight="13.0sp" android:layout_below="@id/top_menuu" android:layout_alignParentRight="true">
+                <ImageView android:background="@drawable/ic_up_arrow_indicator" android:layout_width="20.0sp" android:layout_height="18.0sp" android:layout_marginRight="5.0sp" android:layout_alignParentRight="true" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/menu_dialog_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="12.0sp">
+                    <ImageView android:padding="8.0sp" android:layout_width="30.0sp" android:layout_height="wrap_content" android:src="@drawable/ic_delete_icon" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="#ff656666" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Delete Event" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="11.0sp" android:layout_marginRight="11.0sp" android:layout_below="@id/top_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="64.0sp" android:layout_marginTop="5.0sp" android:weightSum="10.0">
+                <LinearLayout android:orientation="horizontal" android:paddingLeft="5.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="7.4">
+                    <ImageView android:layout_gravity="center_vertical" android:layout_width="33.0sp" android:layout_height="35.0sp" android:src="@drawable/ic_pick_date" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="40.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/day_count" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0sp" android:layout_marginTop="-4.0sp" android:text="01" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="2.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="18.0sp" android:textColor="#ffe4e4e5" android:id="@id/day_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wednesday" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="18.0sp" android:textColor="#ffe4e4e5" android:id="@id/mnth_year_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FEBRUARY ,2017" />
+                    </LinearLayout>
+                </LinearLayout>
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ffe4e4e5" android:gravity="bottom|center|right" android:id="@id/time_text" android:paddingBottom="8.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="05:30 PM" android:layout_weight="2.5" />
+            </LinearLayout>
+            <View android:background="#ff4f4e50" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="5.0sp" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/feeling_dialog" android:layout_width="fill_parent" android:layout_height="46.0sp" android:layout_marginTop="4.0sp" android:weightSum="10.0">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="7.8">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="18.0sp" android:textColor="#ffe4e4e5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="How I'm feeling:" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="18.0sp" android:textColor="#ffe4e4e5" android:id="@id/feeling_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="happy" />
+                </LinearLayout>
+                <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="fill_parent" android:weightSum="3.0" android:layout_weight="2.2">
+                    <ImageView android:id="@id/feeling_image" android:padding="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_emoji" android:layout_weight="2.0" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="#ff4f4e50" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="5.0sp" />
+            <LinearLayout android:orientation="horizontal" android:paddingRight="15.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:weightSum="10.0">
+                <LinearLayout android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="7.5">
+                    <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="40.0sp">
+                        <ImageView android:layout_width="18.0sp" android:layout_height="18.0sp" android:src="@drawable/ic_journal_name_icon" />
+                    </LinearLayout>
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/journal_name" android:paddingLeft="8.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="38.0sp" android:text="Journal Name Test " />
+                </LinearLayout>
+                <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="40.0sp" android:layout_weight="2.5">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/like_btn" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <ImageView android:id="@id/ic_like_icon" android:layout_width="14.0sp" android:layout_height="14.0sp" android:src="@drawable/ic_like_icon" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textColor="@color/white" android:gravity="center" android:id="@id/like_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:text="2" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/dislike_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="12.0sp">
+                        <ImageView android:id="@id/ic_dislike_icon" android:layout_width="14.0sp" android:layout_height="14.0sp" android:src="@drawable/ic_dislike_icon" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textColor="@color/white" android:gravity="center" android:id="@id/dislike_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:text="4" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingBottom="30.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0sp">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="24.0sp" android:textColor="@color/white" android:id="@id/first_day_of_treatment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="First Day Of Treatment" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="18.0sp" android:textColor="#ffc4c4c4" android:id="@id/disscription" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="The progeny of G12 and Shun #1, Bullrider is another hefty Indica-dominant strain in G13’s legendary cannon. Its large, dense bugs give it major bag and grow appeal. If you mess with the bull, you will fall off and get the horns, Bullrider is known for its knockout Indica effect. This bud will sit you down on the couch and give you a serious case of the munchies. The buss hits you body immediately, and can be felt with its pain killing and muscle relaxing qualities. There is a nice head buzz to accompany this body stone that can be felt in the temples and behind the eyes and is a nice soaring euphoric buzz. Bullrider is best smoked after worked and is great afternoon weed.Can be a real day wrecker if smoked in the morning!" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="18.0sp" android:textColor="#ffc4c4c4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:text="More About This Strain" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="18.0sp" android:textColor="#ffc4c4c4" android:id="@id/more_about_this_starain" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="18.0sp" android:layout_height="15.0sp" android:src="@drawable/ic_pin" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="18.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="30.0sp" android:layout_marginLeft="4.0sp" android:text="Tags:" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="#ff9d998e" android:gravity="center" android:id="@id/tags_title" android:layout_width="wrap_content" android:layout_height="30.0sp" android:layout_marginLeft="12.0sp" android:text="No Tags Found!" />
+                    </LinearLayout>
+                    <android.support.v7.widget.RecyclerView android:id="@id/tags_recyler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="18.0sp" android:layout_height="18.0sp" android:src="@drawable/ic_tab_strain" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="18.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0sp" android:text="Tagged Strain:" />
+                    </LinearLayout>
+                    <android.support.v7.widget.RecyclerView android:id="@id/strain_recyler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textSize="16.0sp" android:textColor="#ff231f20" android:id="@id/more_abouth_strain" android:background="@drawable/more_about_strain_button_bg" android:layout_width="fill_parent" android:layout_height="36.0sp" android:layout_marginTop="12.0sp" android:text="MORE ABOUT THIS STRAIN >" android:textAllCaps="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/video_button" android:background="@drawable/journal_child_details_video_btn_bg" android:layout_width="68.0sp" android:layout_height="68.0sp" android:layout_marginTop="-40.0sp" android:layout_marginRight="14.0sp" android:layout_below="@id/top_content" android:layout_alignParentRight="true">
+            <ImageView android:layout_width="22.0sp" android:layout_height="23.0sp" android:src="@drawable/ic_movi_icon" />
+            <TextView android:textSize="22.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/video_count" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0sp" android:text="1" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

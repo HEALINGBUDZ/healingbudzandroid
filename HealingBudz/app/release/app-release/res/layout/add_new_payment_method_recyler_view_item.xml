@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:paddingBottom="5.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/payment_image" android:layout_width="36.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_payment_method_1" />
+        <ImageView android:id="@id/payment_image_above" android:background="#33000000" android:visibility="gone" android:layout_width="36.0sp" android:layout_height="25.0sp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

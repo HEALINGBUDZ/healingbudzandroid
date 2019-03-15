@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+        <LinearLayout android:orientation="vertical" android:background="#fff4c62b" android:layout_width="fill_parent" android:layout_height="0.0sp" android:weightSum="10.0" android:layout_weight="4.5">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="@dimen/intro_screen_title_font_size" android:textColor="@color/white" android:gravity="bottom|center" android:id="@id/textView" android:layout_width="fill_parent" android:layout_height="0.0sp" android:text="@string/intor_five_title" android:layout_weight="2.0" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/icon" android:padding="20.0sp" android:layout_width="fill_parent" android:layout_height="0.0sp" android:layout_marginTop="10.0sp" android:layout_marginBottom="10.0sp" android:src="@drawable/ic_intro_fivee" android:layout_weight="8.0" />
+        </LinearLayout>
+        <ScrollView android:background="#ffe4b000" android:layout_width="fill_parent" android:layout_height="0.0sp" android:layout_weight="5.5">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="#ffe4b000" android:paddingTop="@dimen/intro_screen_heading_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="5.5">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="@dimen/intro_screen_heading_font_size" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/intor_five_heading" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="@dimen/intro_screen_discription_font_size" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0sp" android:layout_marginTop="@dimen/intro_screen_heading_to_description_margin" android:layout_marginRight="18.0sp" android:text="@string/intor_five_msg" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:lineSpacingExtra="2.0dip" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

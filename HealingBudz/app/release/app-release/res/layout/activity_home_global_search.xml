@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <View android:background="#ff5c9233" android:layout_width="fill_parent" android:layout_height="16.0sp" />
+        <RelativeLayout android:id="@id/home_search_header" android:background="#ff5c9233" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+            <Button android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/home_btn" />
+            <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+            <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+        </RelativeLayout>
+        <RelativeLayout android:background="#ff7bc344" android:layout_width="fill_parent" android:layout_height="59.0sp">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+                <RelativeLayout android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="8.0">
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText android:textSize="18.0sp" android:textColor="@color/white" android:textColorHint="#a8ffffff" android:id="@id/home_search_edit_text" android:background="@color/transparent" android:paddingLeft="14.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="Enter Keyword for search" android:maxLines="1" android:lines="1" android:singleLine="true" android:imeOptions="actionDone" android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white" />
+                    <ImageView android:id="@id/cross_icon" android:padding="5.0sp" android:visibility="gone" android:layout_width="25.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_cross_icon" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <ImageView android:id="@id/gloobal_search_btn_click" android:padding="15.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_search_white_home" android:layout_weight="2.0" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:background="#ff609139" android:layout_width="fill_parent" android:layout_height="29.0sp">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Search: Q&amp;A, Strains, Budz Adz, and Users" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/home_search_list_view" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:id="@id/home_search_filter_button_click" android:background="@drawable/ic_home_filter_home_search_bg" android:layout_width="132.0sp" android:layout_height="23.0sp">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Filter By Type" />
+                <ImageView android:paddingTop="4.0sp" android:layout_width="20.0sp" android:layout_height="20.0sp" android:src="@drawable/ic_keyboard_arrow_down_white_24dp" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/home_search_filter_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="220.0sp">
+                <View android:background="#ff4b4b4b" android:layout_width="fill_parent" android:layout_height="2.0sp" android:layout_alignParentBottom="true" />
+                <ImageView android:id="@id/close_filter" android:padding="5.0sp" android:layout_width="80.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_keyboard_arrow_up_black_24dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/close_filter">
+                    <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0sp" android:text="Filter By Type" />
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="30.0sp" android:layout_marginTop="10.0sp" android:weightSum="10.0">
+                        <ImageView android:padding="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_tab_qa" android:layout_weight="0.7" />
+                        <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.3" />
+                        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="Q&amp;A" android:layout_weight="3.0" />
+                        <com.codingpixel.healingbudz.customeUI.APPSwitch android:id="@id/global_search_check_box_qa" android:layout_width="0.0sp" android:layout_height="fill_parent" android:checked="true" android:layout_weight="2.0" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0sp" android:layout_marginTop="6.0sp" android:weightSum="10.0">
+                        <ImageView android:padding="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_tab_group" android:layout_weight="0.7" />
+                        <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.3" />
+                        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="GROUPS" android:layout_weight="3.0" />
+                        <com.codingpixel.healingbudz.customeUI.APPSwitch android:id="@id/global_search_check_box_groups" android:layout_width="0.0sp" android:layout_height="fill_parent" android:checked="true" android:layout_weight="2.0" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0sp" android:layout_marginTop="6.0sp" android:weightSum="10.0">
+                        <ImageView android:padding="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_tab_journal" android:layout_weight="0.7" />
+                        <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.3" />
+                        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="JOURNAL" android:layout_weight="3.0" />
+                        <com.codingpixel.healingbudz.customeUI.APPSwitch android:id="@id/global_search_check_box_journals" android:layout_width="0.0sp" android:layout_height="fill_parent" android:checked="true" android:layout_weight="2.0" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="30.0sp" android:layout_marginTop="6.0sp" android:weightSum="10.0">
+                        <ImageView android:padding="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_tab_budz_map" android:layout_weight="0.7" />
+                        <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.3" />
+                        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="BUDZ ADZ" android:layout_weight="3.0" />
+                        <com.codingpixel.healingbudz.customeUI.APPSwitch android:id="@id/global_search_check_box_budzmap" android:layout_width="0.0sp" android:layout_height="fill_parent" android:checked="true" android:layout_weight="2.0" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="30.0sp" android:layout_marginTop="6.0sp" android:weightSum="10.0">
+                        <ImageView android:padding="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_tab_strain" android:layout_weight="0.7" />
+                        <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.3" />
+                        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="STRAINS" android:layout_weight="3.0" />
+                        <com.codingpixel.healingbudz.customeUI.APPSwitch android:id="@id/global_search_check_box_strains" android:layout_width="0.0sp" android:layout_height="fill_parent" android:checked="true" android:layout_weight="2.0" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="30.0sp" android:layout_marginTop="6.0sp" android:weightSum="10.0">
+                        <ImageView android:padding="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_user_person" android:layout_weight="0.7" />
+                        <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.3" />
+                        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="USERS" android:layout_weight="3.0" />
+                        <com.codingpixel.healingbudz.customeUI.APPSwitch android:id="@id/global_search_check_box_user" android:layout_width="0.0sp" android:layout_height="fill_parent" android:checked="true" android:layout_weight="2.0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/global_search_refresh" android:paddingTop="14.0sp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_menu">
+                <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView android:id="@id/home_search_recyler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textColor="@color/white" android:id="@id/not_found" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="224.0dip" android:text="No Record Found!" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <android.support.constraint.Guideline android:orientation="vertical" android:id="@id/guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_begin="20.0dip" />
+    <android.support.constraint.Guideline android:orientation="horizontal" android:id="@id/guideline2" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_begin="20.0dip" />
+</android.support.constraint.ConstraintLayout>

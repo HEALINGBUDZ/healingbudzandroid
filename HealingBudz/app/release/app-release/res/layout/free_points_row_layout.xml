@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/first_review_layout" android:background="#ff82bb2b" android:layout_width="fill_parent" android:layout_height="85.0sp" android:layout_marginTop="10.0sp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+            <LinearLayout android:orientation="vertical" android:background="#ff232323" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_margin="3.0sp" android:layout_weight="8.0">
+                <LinearLayout android:orientation="vertical" android:padding="5.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/star">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="32.0sp" android:textColor="#ff82bb2b" android:id="@id/text_point" android:paddingLeft="4.0sp" android:paddingTop="2.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="+50" android:layout_centerVertical="true" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/name_reward" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Complete your profile." android:paddingStart="6.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_margin="3.0sp" android:layout_weight="2.0">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/done" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+                    <ImageView android:layout_gravity="center" android:layout_width="25.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_tick_reward" android:contentDescription="tick" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="18.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Done" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/pending" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GO" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

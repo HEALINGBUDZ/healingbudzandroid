@@ -7,11 +7,20 @@ package com.codingpixel.healingbudz.DataModel;
 public class HealingBudGalleryModel {
     int id;
     int user_id;
-    String v_pk;
-    String a_type;
-    String path;
-    String type;
-    String poster;
+    private String v_pk;
+    private String a_type;
+    private String path;
+    private String type;
+    private String poster;
+    private int flag_count;
+
+    public int getFlag_count() {
+        return flag_count;
+    }
+
+    public void setFlag_count(int flag_count) {
+        this.flag_count = flag_count;
+    }
 
     public int getId() {
         return id;

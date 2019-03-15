@@ -24,6 +24,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -53,6 +54,7 @@ import com.codingpixel.healingbudz.activity.home.home_fragment.budz_map_tab.Budz
 import com.codingpixel.healingbudz.activity.home.home_fragment.wall_feeds.WallFeedsMainFragment;
 import com.codingpixel.healingbudz.activity.home.side_menu.messages.MessagesActivity;
 import com.codingpixel.healingbudz.activity.home.side_menu.messages.MessagingChatViewActivity;
+import com.codingpixel.healingbudz.activity.home.side_menu.my_answers.MyAnswersActivity;
 import com.codingpixel.healingbudz.activity.home.side_menu.profile.budz_map_tab.BudzMapFragment;
 import com.codingpixel.healingbudz.activity.home.side_menu.profile.dialog.EditUserProfileUploadPhotoAlertDialog;
 import com.codingpixel.healingbudz.activity.home.side_menu.profile.dialog.UserFollowFollwingAlertDialog;
@@ -62,15 +64,19 @@ import com.codingpixel.healingbudz.activity.home.side_menu.profile.journal_tab.J
 import com.codingpixel.healingbudz.activity.home.side_menu.profile.qa_tab.QAFragment;
 import com.codingpixel.healingbudz.activity.home.side_menu.profile.review_tab.ReviewFragment;
 import com.codingpixel.healingbudz.activity.home.side_menu.profile.strain_tab.StrainFragment;
+import com.codingpixel.healingbudz.activity.splash.Splash;
 import com.codingpixel.healingbudz.adapter.BudzMapHomeRecylAdapter;
 import com.codingpixel.healingbudz.adapter.ExpertAreaRecylerAdapter;
 import com.codingpixel.healingbudz.camera_activity.HBCameraActivity;
+import com.codingpixel.healingbudz.customeUI.CustomeToast;
 import com.codingpixel.healingbudz.customeUI.ProgressDialog;
+import com.codingpixel.healingbudz.customeUI.customalerts.SweetAlertDialog;
 import com.codingpixel.healingbudz.data_structure.APIActions;
 import com.codingpixel.healingbudz.interfaces.UserFollowCallBack;
 import com.codingpixel.healingbudz.interfaces.UserLocationListner;
 import com.codingpixel.healingbudz.network.VollyAPICall;
 import com.codingpixel.healingbudz.network.model.APIResponseListner;
+import com.codingpixel.healingbudz.network.model.URL;
 import com.codingpixel.healingbudz.network.upload_image.UploadImageAPIcall;
 import com.codingpixel.healingbudz.sharedprefrences.SharedPrefrences;
 import com.google.gson.Gson;
@@ -98,8 +104,10 @@ import static com.codingpixel.healingbudz.activity.home.home_fragment.budz_map_t
 import static com.codingpixel.healingbudz.activity.home.home_fragment.budz_map_tab.BudzMapHomeFragment.budz_map_item_clickerd_dataModel_abc;
 import static com.codingpixel.healingbudz.activity.home.side_menu.messages.MessagingChatViewActivity.chat_message_data_modal;
 import static com.codingpixel.healingbudz.activity.splash.Splash.user;
+import static com.codingpixel.healingbudz.application.HealingBudApplication.getContext;
 import static com.codingpixel.healingbudz.customeUI.ImageHelper.getRoundedCornerBitmap;
 import static com.codingpixel.healingbudz.data_structure.APIActions.ApiActions.follow_unfollow_user;
+import static com.codingpixel.healingbudz.network.model.URL.delete_answer;
 import static com.codingpixel.healingbudz.network.model.URL.follow_user;
 import static com.codingpixel.healingbudz.network.model.URL.get_user_profile;
 import static com.codingpixel.healingbudz.network.model.URL.images_baseurl;
@@ -142,7 +150,7 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
     LinearLayout User_Logout_Layout;
     boolean isInfoDialogOpen = false;
     QAFragment qaFragment;
-
+    RelativeLayout block_user;
     GroupFragment groupFragment;
     StrainFragment strainFragment;
     JournalFragment journalFragment = new JournalFragment();
@@ -191,24 +199,25 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
         reviewFragment = new ReviewFragment(USER_ID);
 
         topDropDowns = new WallTopDropDowns(UserProfileActivity.this);
-        RelativeLayout layout = (RelativeLayout) findViewById(R.id.activity_user_profile_parent_view);
+        RelativeLayout layout = findViewById(R.id.activity_user_profile_parent_view);
         layout.addView(topDropDowns.getView());
 
         wallFeedsMainFragment = new WallFeedsMainFragment(USER_ID, true, topDropDowns, UserProfileActivity.this);
         Bundle bundle = new Bundle();
         bundle.putInt("USER_ID", USER_ID);
         wallFeedsMainFragment.setArguments(bundle);
-        Healing_Bud_Gallery = (LinearLayout) findViewById(R.id.healing_bud_gallery);
-        my_listing_recyler_vewi = (RecyclerView) findViewById(R.id.my_listin_recyler_view);
-        Follow_btn_text = (TextView) findViewById(R.id.follow_btn_text);
-        text_gallery = (TextView) findViewById(R.id.text_gallery);
-        text_msg = (TextView) findViewById(R.id.text_msg);
-        Follow_btn_icon = (ImageView) findViewById(R.id.follow_btn_icon);
+        Healing_Bud_Gallery = findViewById(R.id.healing_bud_gallery);
+        block_user = findViewById(R.id.block_user);
+        my_listing_recyler_vewi = findViewById(R.id.my_listin_recyler_view);
+        Follow_btn_text = findViewById(R.id.follow_btn_text);
+        text_gallery = findViewById(R.id.text_gallery);
+        text_msg = findViewById(R.id.text_msg);
+        Follow_btn_icon = findViewById(R.id.follow_btn_icon);
         RecyclerView.LayoutManager layoutManager_home_saerch = new LinearLayoutManager(UserProfileActivity.this);
         my_listing_recyler_vewi.setLayoutManager(layoutManager_home_saerch);
-        scrollView = (NestedScrollView) findViewById(R.id.scroll_view);
-        Follow_layout = (LinearLayout) findViewById(R.id.follow_layout);
-        Unfollow_layout = (LinearLayout) findViewById(R.id.unfollow_layout);
+        scrollView = findViewById(R.id.scroll_view);
+        Follow_layout = findViewById(R.id.follow_layout);
+        Unfollow_layout = findViewById(R.id.unfollow_layout);
         Follow_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -246,7 +255,7 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
                 startActivity(intent);
             }
         });
-        Back = (ImageView) findViewById(R.id.back_btn);
+        Back = findViewById(R.id.back_btn);
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -262,7 +271,7 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
             }
         });
 
-        Home = (ImageView) findViewById(R.id.home_btn);
+        Home = findViewById(R.id.home_btn);
         Home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -273,8 +282,8 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
         });
 
         InitTabs();
-        InfoButton = (ImageView) findViewById(R.id.info_button);
-        InfoDialog = (RelativeLayout) findViewById(R.id.user_profile_info_dialog);
+        InfoButton = findViewById(R.id.info_button);
+        InfoDialog = findViewById(R.id.user_profile_info_dialog);
 
         InfoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -293,7 +302,7 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
             }
         });
 
-        User_Message_Layout = (LinearLayout) findViewById(R.id.user_messages_layout);
+        User_Message_Layout = findViewById(R.id.user_messages_layout);
         User_Message_Layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -323,7 +332,7 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
             }
         });
 
-        User_Logout_Layout = (LinearLayout) findViewById(R.id.user_logout_layout);
+        User_Logout_Layout = findViewById(R.id.user_logout_layout);
         User_Logout_Layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -346,7 +355,7 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
                 InfoDialogDisappear();
                 ClearSharedPrefrences(UserProfileActivity.this);
                 final ProgressDialog pd = ProgressDialog.newInstance();
-                pd.show(((FragmentActivity) UserProfileActivity.this).getSupportFragmentManager(), "pd");
+                pd.show(UserProfileActivity.this.getSupportFragmentManager(), "pd");
                 new Handler().postDelayed(new Runnable() {
                     public void run() {
                         pd.dismiss();
@@ -369,7 +378,7 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
 
             }
         });
-        Edit_Profile = (ImageView) findViewById(R.id.edit_profile);
+        Edit_Profile = findViewById(R.id.edit_profile);
         Edit_Profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -379,7 +388,7 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
                 GoTo(UserProfileActivity.this, EditUserProfileActivity.class);
             }
         });
-        EditUserParentRelative = (RelativeLayout) findViewById(R.id.edit_user_parent_relative);
+        EditUserParentRelative = findViewById(R.id.edit_user_parent_relative);
         EditUserParentRelative.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -488,27 +497,27 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
     }
 
     public void Init() {
-        Follow_Button = (LinearLayout) findViewById(R.id.follow_button);
+        Follow_Button = findViewById(R.id.follow_button);
 
-        Cover_Photo = (ImageView) findViewById(R.id.cover_photo);
-        Profile_Image = (ImageView) findViewById(R.id.profile_image);
-        profile_img_topi = (ImageView) findViewById(R.id.profile_img_topi);
-        UserName = (TextView) findViewById(R.id.user_name);
-        Following_count = (TextView) findViewById(R.id.following_count);
-        Follower_count = (TextView) findViewById(R.id.follower_count);
-        User_Bio = (TextView) findViewById(R.id.user_bio);
-        Medical_experties = (TextView) findViewById(R.id.medial_experties);
-        Medical_experties_rc = (RecyclerView) findViewById(R.id.medial_experties_rc);
+        Cover_Photo = findViewById(R.id.cover_photo);
+        Profile_Image = findViewById(R.id.profile_image);
+        profile_img_topi = findViewById(R.id.profile_img_topi);
+        UserName = findViewById(R.id.user_name);
+        Following_count = findViewById(R.id.following_count);
+        Follower_count = findViewById(R.id.follower_count);
+        User_Bio = findViewById(R.id.user_bio);
+        Medical_experties = findViewById(R.id.medial_experties);
+        Medical_experties_rc = findViewById(R.id.medial_experties_rc);
         Medical_experties_rc.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        Strain_experties = (TextView) findViewById(R.id.setrain_experties);
-        Strain_experties_rc = (RecyclerView) findViewById(R.id.setrain_experties_rc);
+        Strain_experties = findViewById(R.id.setrain_experties);
+        Strain_experties_rc = findViewById(R.id.setrain_experties_rc);
         Strain_experties_rc.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        Rating_dialog_title = (TextView) findViewById(R.id.rating_title);
-        User_Rating_image = (ImageView) findViewById(R.id.user_rating_image);
-        User_Rating = (TextView) findViewById(R.id.user_rating);
+        Rating_dialog_title = findViewById(R.id.rating_title);
+        User_Rating_image = findViewById(R.id.user_rating_image);
+        User_Rating = findViewById(R.id.user_rating);
         User_Rating_seprator = findViewById(R.id.user_rating_seprator);
-        User_Rating_title = (TextView) findViewById(R.id.user_rating_title);
-        my_listing_no_record = (TextView) findViewById(R.id.my_listing_no_record_found);
+        User_Rating_title = findViewById(R.id.user_rating_title);
+        my_listing_no_record = findViewById(R.id.my_listing_no_record_found);
         if (USER_ID == user.getUser_id()) {
             User_Message_Layout.setVisibility(View.GONE);
             User_Logout_Layout.setVisibility(View.VISIBLE);
@@ -536,6 +545,48 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
             Follow_Button.setVisibility(View.VISIBLE);
             Edit_Profile.setVisibility(View.INVISIBLE);
         }
+        block_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    new VollyAPICall(v.getContext(),
+                            true
+                            , URL.block_user,
+                            new JSONObject().put("user_id", USER_ID)
+                            , Splash.user.getSession_key(),
+                            Request.Method.POST
+                            , new APIResponseListner() {
+                        @Override
+                        public void onRequestSuccess(String response, APIActions.ApiActions apiActions) {
+                            new SweetAlertDialog(UserProfileActivity.this, SweetAlertDialog.ERROR_TYPE)
+                                    .setTitleText("Blocked")
+                                    .setContentText("User blocked successfully!")
+                                    .setConfirmText("Okay!")
+                                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                            finish();
+                                        }
+                                    })
+                                    .show();
+                        }
+
+                        @Override
+                        public void onRequestError(String response, APIActions.ApiActions apiActions) {
+                            Log.d("Response", response);
+                            try {
+                                JSONObject object = new JSONObject(response);
+                                CustomeToast.ShowCustomToast(UserProfileActivity.this, object.optString("errorMessage"), Gravity.TOP);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }, APIActions.ApiActions.testAPI);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     public void TabOneClick() {
@@ -630,13 +681,13 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
 
     public void InitTabs() {
         final ImageView Tab_One, Tab_Two, Tab_Three, Tab_Four, Tab_Five, Tab_Six, Tab_Wall;
-        Tab_One = (ImageView) findViewById(R.id.tab_one);
-        Tab_Wall = (ImageView) findViewById(R.id.tab_wall);
-        Tab_Two = (ImageView) findViewById(R.id.tab_two);
-        Tab_Three = (ImageView) findViewById(R.id.tab_three);
-        Tab_Four = (ImageView) findViewById(R.id.tab_four);
-        Tab_Five = (ImageView) findViewById(R.id.tab_five);
-        Tab_Six = (ImageView) findViewById(R.id.tab_six);
+        Tab_One = findViewById(R.id.tab_one);
+        Tab_Wall = findViewById(R.id.tab_wall);
+        Tab_Two = findViewById(R.id.tab_two);
+        Tab_Three = findViewById(R.id.tab_three);
+        Tab_Four = findViewById(R.id.tab_four);
+        Tab_Five = findViewById(R.id.tab_five);
+        Tab_Six = findViewById(R.id.tab_six);
 //budz_feeds
         //#6BB735
         Tab_Wall.setOnClickListener(new View.OnClickListener() {
@@ -903,7 +954,6 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
                             Strain_Experties_ids = Strain_Experties_ids + object.getStrain_id();
                         } else {
                             Strain_Experties_ids = Strain_Experties_ids + "," + object.getStrain_id();
-                            ;
                         }
                         if (Strain_Experties.length() == 0) {
                             Strain_Experties_count = 1;
@@ -1094,6 +1144,27 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
     @Override
     public void onRequestError(String response, APIActions.ApiActions apiActions) {
         Log.d("Response", response);
+        try {
+            JSONObject object = new JSONObject(response);
+            if (object.optString("errorMessage").equalsIgnoreCase("User is blocked")) {
+                new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                        .setTitleText("Blocked")
+                        .setContentText(object.optString("errorMessage"))
+                        .setConfirmText("Okay!")
+                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                            @Override
+                            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                finish();
+                            }
+                        })
+                        .show();
+            } else {
+                CustomeToast.ShowCustomToast(getContext(), object.optString("errorMessage"), Gravity.TOP);
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -1450,6 +1521,7 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
 
         }
     }
+
     public void UploadImage(Drawable drawable) {
         new UploadImageAPIcall(this, update_image, drawable, user.getSession_key(), new APIResponseListner() {
             @Override
@@ -1463,7 +1535,6 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
             }
         }, APIActions.ApiActions.add_media);
     }
-
 
 
     public static class UserProfileDataModel implements Cloneable, Serializable {
@@ -1722,20 +1793,21 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
 
     public void MakeRealView(boolean isAnimate) {
         Animation startAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blinking);
-        LinearLayout Hide_Layout_One = (LinearLayout) findViewById(R.id.hide_layout_one);
-        LinearLayout buder_infoo = (LinearLayout) findViewById(R.id.buder_infoo);
-        LinearLayout following_follwoer_layout = (LinearLayout) findViewById(R.id.following_follwoer_layout);
-        LinearLayout experties_detail = (LinearLayout) findViewById(R.id.experties_detail);
-        LinearLayout tabs_bottom = (LinearLayout) findViewById(R.id.tabs_bottom);
-        RelativeLayout prfl_img = (RelativeLayout) findViewById(R.id.prfl_img);
-        RelativeLayout menu = (RelativeLayout) findViewById(R.id.menu);
-        LinearLayout about_bud = (LinearLayout) findViewById(R.id.about_bud);
-        LinearLayout main_layout_bot = (LinearLayout) findViewById(R.id.main_layout_bot);
-        RelativeLayout my_listingg = (RelativeLayout) findViewById(R.id.my_listingg);
-        LinearLayout my_activity = (LinearLayout) findViewById(R.id.my_activity);
-        LinearLayout expert_area_header = (LinearLayout) findViewById(R.id.expert_area_header);
-        TextView About_bud_Text = (TextView) findViewById(R.id.about_bud_text);
-        ImageView blur_image_view = (ImageView) findViewById(R.id.blur_image_view);
+        LinearLayout Hide_Layout_One = findViewById(R.id.hide_layout_one);
+        LinearLayout buder_infoo = findViewById(R.id.buder_infoo);
+        LinearLayout following_follwoer_layout = findViewById(R.id.following_follwoer_layout);
+        LinearLayout experties_detail = findViewById(R.id.experties_detail);
+        LinearLayout tabs_bottom = findViewById(R.id.tabs_bottom);
+        RelativeLayout prfl_img = findViewById(R.id.prfl_img);
+        RelativeLayout menu = findViewById(R.id.menu);
+        LinearLayout about_bud = findViewById(R.id.about_bud);
+        LinearLayout main_layout_bot = findViewById(R.id.main_layout_bot);
+        RelativeLayout my_listingg = findViewById(R.id.my_listingg);
+        LinearLayout my_activity = findViewById(R.id.my_activity);
+        LinearLayout expert_area_header = findViewById(R.id.expert_area_header);
+        TextView About_bud_Text = findViewById(R.id.about_bud_text);
+        ImageView blur_image_view = findViewById(R.id.blur_image_view);
+
         if (isAnimate) {
             about_bud.startAnimation(startAnimation);
             expert_area_header.startAnimation(startAnimation);
@@ -1743,6 +1815,11 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
             my_activity.startAnimation(startAnimation);
 
         } else {
+            if (USER_ID == user.getUser_id()) {
+                block_user.setVisibility(View.GONE);
+            } else {
+                block_user.setVisibility(View.VISIBLE);
+            }
             blur_image_view.setVisibility(View.VISIBLE);
             about_bud.clearAnimation();
             my_listingg.clearAnimation();
@@ -1778,9 +1855,9 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
             About_bud_Text.setVisibility(View.VISIBLE);
 
 
-            TextView listing_text = (TextView) findViewById(R.id.listing_text);
+            TextView listing_text = findViewById(R.id.listing_text);
             listing_text.setVisibility(View.VISIBLE);
-            TextView listing_text_see = (TextView) findViewById(R.id.listing_text_see);
+            TextView listing_text_see = findViewById(R.id.listing_text_see);
 //            if (user.getUser_id() != USER_ID) {
 //                listing_text_see.setVisibility(View.INVISIBLE);
 //            } else {
@@ -1811,13 +1888,13 @@ public class UserProfileActivity extends AppCompatActivity implements APIRespons
             });
 
 
-            TextView my_activity_text = (TextView) findViewById(R.id.my_activity_text);
+            TextView my_activity_text = findViewById(R.id.my_activity_text);
             my_activity_text.setVisibility(View.VISIBLE);
 
 
 //            my_listing_no_record.setVisibility(View.VISIBLE);
 
-            TextView expert_text = (TextView) findViewById(R.id.expert_text);
+            TextView expert_text = findViewById(R.id.expert_text);
             expert_text.setVisibility(View.VISIBLE);
 
             User_Bio.setVisibility(View.VISIBLE);

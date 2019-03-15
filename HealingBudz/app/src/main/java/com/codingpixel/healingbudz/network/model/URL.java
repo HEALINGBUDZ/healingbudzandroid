@@ -141,6 +141,8 @@ public class URL {
     public static String add_group_settings = baseurl + "add_group_settings";
     public static String group_settings = baseurl + "group_settings";
     public static String hb_gallery = baseurl + "hb_gallery";
+    public static String block_hb_gallery = baseurl + "block_hb_gallery";//post,param:image_id
+    public static String block_user = baseurl + "block_user";//post,param:user_id
     public static String add_event_image = baseurl + "add_event_image";
     public static String add_event_video = baseurl + "add_event_video";
     public static String create_journal_event = baseurl + "create_journal_event";

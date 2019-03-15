@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textColor="#ffc4c3c4" android:gravity="center" android:id="@id/not_found" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0sp" android:text="No record found!" android:layout_centerInParent="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:paddingTop="14.0sp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+            <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/recyler_View" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="4.0sp" android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+</RelativeLayout>

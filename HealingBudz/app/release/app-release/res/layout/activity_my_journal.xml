@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_menu" android:background="#ff1f1f1f" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+        <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+        <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="22.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/q_a_menu_title" android:paddingLeft="4.0sp" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="My Journals" />
+        </LinearLayout>
+        <ImageView android:id="@id/search_button" android:padding="12.0sp" android:visibility="invisible" android:layout_width="50.0sp" android:layout_height="fill_parent" android:layout_marginRight="6.0sp" android:src="@drawable/ic_search_white_gray_nyjournal" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/main_top_contnet" android:padding="12.0sp" android:layout_width="fill_parent" android:layout_height="170.0sp" android:layout_marginTop="-15.0sp" android:weightSum="10.0" android:layout_below="@id/top_menu">
+        <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/my_journal_usr_img" android:padding="12.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_discuss_question_profile" android:layout_weight="3.2" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="6.8">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="30.0sp" android:weightSum="10.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="15.0sp" android:textColor="#ffc4c4c4" android:gravity="center|right" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="Total Journals:" android:layout_weight="6.0" />
+                <ImageView android:padding="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="6.0sp" android:src="@drawable/ic_journal_gray_icon" android:layout_weight="1.5" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffc3c3c3" android:gravity="center|top" android:id="@id/total_journals" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="12" android:layout_weight="2.0" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="30.0sp" android:layout_marginTop="6.0sp" android:layout_marginBottom="6.0sp" android:weightSum="10.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="15.0sp" android:textColor="#ffc4c4c4" android:gravity="center|right" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="Total Tags:" android:layout_weight="6.0" />
+                <ImageView android:padding="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="6.0sp" android:src="@drawable/ic_pin_gray_icon_myjournal" android:layout_weight="1.5" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffc3c3c3" android:gravity="center|top" android:id="@id/total_tags" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="6" android:layout_weight="2.0" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="30.0sp" android:weightSum="10.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="15.0sp" android:textColor="#ffc4c4c4" android:gravity="center|right" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="Total Entries Today:" android:layout_weight="6.0" />
+                <ImageView android:padding="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="6.0sp" android:src="@drawable/ic_pin_edit_myjournal" android:layout_weight="1.5" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffc3c3c3" android:gravity="center|top" android:id="@id/entries_today" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="3" android:layout_weight="2.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/main_top_contnet">
+        <View android:id="@id/top_line" android:background="#ff5f5c5c" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="70.0sp" android:weightSum="9.0">
+            <RelativeLayout android:gravity="center_vertical" android:id="@id/tab_one_bg" android:background="#ff6fa943" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="3.0">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/tab_one_icon" android:padding="3.0sp" android:layout_width="32.0sp" android:layout_height="32.0sp" android:src="@drawable/ic_calaneder_white" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="11.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/tab_one_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0sp" android:text="MOOD CALENDAR" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_vertical" android:id="@id/tab_two_bg" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="3.0">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/tab_two_icon" android:padding="3.0sp" android:layout_width="32.0sp" android:layout_height="32.0sp" android:src="@drawable/ic_journal_gray_icon" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffc4c4c4" android:gravity="center" android:id="@id/tab_two_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0sp" android:text="JOURNALS" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_vertical" android:id="@id/tab_three_bg" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="3.0">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:id="@id/tab_three_icon" android:padding="3.0sp" android:layout_width="32.0sp" android:layout_height="32.0sp" android:src="@drawable/ic_pin_gray_icon_myjournal" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffc4c4c4" android:gravity="center" android:id="@id/tab_three_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0sp" android:text="TAGS" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <View android:background="#ff6fa943" android:layout_width="fill_parent" android:layout_height="2.0sp" android:layout_below="@id/main_top_contnet" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/content_fragment" android:padding="6.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/search_menu" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-14.0sp" android:layout_below="@id/top_menu">
+        <ImageView android:id="@id/indi_catr" android:background="@drawable/ic_up_arrow_indicator_journal" android:layout_width="20.0sp" android:layout_height="20.0sp" android:layout_marginRight="22.0sp" android:layout_alignParentRight="true" />
+        <RelativeLayout android:background="#ff4c4c4c" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:layout_marginTop="-6.0sp" android:layout_below="@id/indi_catr">
+            <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="42.0sp" android:layout_marginLeft="20.0sp" android:layout_marginRight="20.0sp" android:layout_centerVertical="true">
+                <RelativeLayout android:background="@drawable/qa_fragment_search_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="2.0sp" android:layout_marginBottom="2.0sp">
+                    <com.codingpixel.healingbudz.customeUI.HealinBudEditText android:textColor="@color/black" android:gravity="center" android:id="@id/search_field" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="search" android:maxLines="1" android:lines="1" android:singleLine="true" />
+                    <ImageView android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_search_white_gray_nyjournal" android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

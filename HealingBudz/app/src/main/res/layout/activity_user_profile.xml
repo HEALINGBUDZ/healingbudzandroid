@@ -206,6 +206,24 @@
 
             </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/block_user"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/buder_infoo"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/block_bg"
+                android:visibility="invisible">
+
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="Block"
+                    android:textColor="@color/wall_repost" />
+            </RelativeLayout>
+
             <LinearLayout
                 android:id="@+id/buder_infoo"
                 android:layout_width="wrap_content"
@@ -289,6 +307,7 @@
 
 
                 </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout

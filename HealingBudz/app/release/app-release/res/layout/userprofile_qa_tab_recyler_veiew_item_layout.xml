@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/question_layout" android:background="#ff252525" android:paddingLeft="10.0sp" android:paddingTop="8.0sp" android:paddingRight="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="6.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="10.0">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="13.0sp" android:textColor="#ff0676b5" android:id="@id/question_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Q: Should I warm Cannabis oil before applying?" android:maxLines="5" android:layout_toLeftOf="@id/question_time" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="10.0sp" android:textColor="#ff505050" android:gravity="center" android:id="@id/question_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 hour ago" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="3.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:layout_marginBottom="7.0sp" android:layout_alignParentBottom="true">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#fff3f3f3" android:id="@id/question_answers_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 ANSWERS" android:maxLines="5" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/answer_layout" android:background="#ff252525" android:paddingLeft="10.0sp" android:paddingTop="8.0sp" android:paddingRight="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="6.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="10.0">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="13.0sp" android:textColor="#fff3f3f3" android:id="@id/answer_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Q: Should I warm Cannabis oil before applying?" android:maxLines="5" android:layout_toLeftOf="@id/answer_time" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="10.0sp" android:textColor="#ff505050" android:gravity="center" android:id="@id/answer_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 hour ago" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="3.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:layout_marginBottom="7.0sp" android:layout_alignParentBottom="true">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="#ff0676b5" android:id="@id/answer_discription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A: The Cannabis oil shuld be warmed before application..." android:maxLines="5" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#aa1c1c1c" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/journal_name_item_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/title_main" android:layout_width="fill_parent" android:layout_height="52.0sp" android:layout_marginLeft="12.0sp" />
+    </LinearLayout>
+</LinearLayout>

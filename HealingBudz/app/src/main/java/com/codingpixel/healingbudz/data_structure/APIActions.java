@@ -17,7 +17,7 @@ public class APIActions {
         get_invite, get_notification, get_remove_tag, get_key, get_followers, get_followings, get_journal_settings_update, add_budz_review, add_budz_review_flag, get_budz_profile_can, get_budz_profile_event, get_budz_profile_overall, get_strains_detail, get_suggestion, add_flag_q, get_strains_search, delete_strain_review, delete_budz_review, delete_my_budz, save_strain_search, forget_password, get_journal,
 
         //Muzammil Android Branch
-        wall_post_img_upload, get_my_rewards,offline, get_products, get_user_point_log, purchase_product, wall_post_video_upload, delete_hb, get_sub_user, add_budz_review_reply, save_share, save_budz_menu_click, save_budz_call_click, save_budz_ticket_click, logout, saved_shout_out, update_subscription, job_remaind_later, update_pop_up, change_show_ads_status, get_budz_chats, get_budz_chats_user, add_budz_flag, chech_state, check_emai_special, add_media_cover, key_words, zip_code, liked_count_done, add_product, add_media_full, add_media_cropped, other, clear_all_notifications
+        wall_post_img_upload, get_my_rewards,offline, get_products, get_user_point_log, purchase_product, wall_post_video_upload, delete_hb, get_sub_user, add_budz_review_reply, save_share, save_budz_menu_click, save_budz_call_click, save_budz_ticket_click, logout, saved_shout_out, update_subscription, job_remaind_later, update_pop_up, change_show_ads_status, get_budz_chats, get_budz_chats_user, add_budz_flag, chech_state, check_emai_special, add_media_cover, key_words, zip_code, liked_count_done, add_product, add_media_full, add_media_cropped, other, paging_call, clear_all_notifications
         //Muzammil Android Branch
     }
 }

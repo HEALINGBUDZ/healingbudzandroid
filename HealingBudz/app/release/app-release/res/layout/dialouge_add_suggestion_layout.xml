@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/strain_search_edittext_search_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0sp" android:layout_marginLeft="24.0sp" android:layout_marginTop="10.0dip" android:layout_marginRight="24.0sp">
+        <ImageView android:padding="5.0sp" android:visibility="gone" android:layout_width="36.0sp" android:layout_height="36.0sp" android:src="@drawable/ic_invite_groups_bud_add_btn" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewItalic android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0sp" android:text="No Condition Found" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/suggest_add" android:background="@drawable/add_onther_bud_invited_group_section_btn_bg" android:layout_width="fill_parent" android:layout_height="40.0sp" android:layout_marginLeft="24.0sp" android:layout_marginTop="10.0dip" android:layout_marginRight="24.0sp" android:layout_marginBottom="10.0dip">
+        <ImageView android:padding="7.0sp" android:layout_width="36.0sp" android:layout_height="36.0sp" android:src="@drawable/ic_invite_groups_bud_add_btn" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="12.0sp" android:textColor="#ff999999" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0sp" android:text="Suggest an addition" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:background="#ff2a2a2a" android:paddingLeft="10.0sp" android:paddingRight="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/item_one" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textSize="18.0sp" android:textColor="#ff7cc144" android:id="@id/item_one_heading" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0sp" android:text="General" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="54.0sp" android:weightSum="10.0">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="7.0">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/item_one_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Enable First Launch Overview Screen" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="3.0">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/switch_layout" android:background="#ff616161" android:clickable="true" android:layout_width="fill_parent" android:layout_height="26.0sp" android:layout_marginLeft="10.0sp" android:layout_marginTop="4.0sp" android:layout_marginRight="10.0sp" android:layout_marginBottom="1.0sp" android:weightSum="10.0">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudButtonRegular android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/private_btn" android:background="@drawable/seeting_toggle_btn_off" android:clickable="false" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginRight="-5.0sp" android:text="OFF" android:layout_weight="5.0" android:textAllCaps="true" />
+                        <Button android:textSize="12.0sp" android:textColor="#fff8f8f8" android:id="@id/public_btn" android:background="@color/transparent" android:clickable="false" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="-5.0sp" android:layout_weight="5.0" android:textAllCaps="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#ff323232" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/item_two" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="54.0sp" android:weightSum="10.0">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/second_setting_item" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="7.0">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/item_two_heading" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Groups:" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#ff323232" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/item_three" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="28.0sp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="54.0sp" android:weightSum="10.0">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="7.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/item_three_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Enable First Launch Overview Screen" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="3.0">
+                <LinearLayout android:orientation="horizontal" android:id="@id/second_switch_layout" android:background="#ff616161" android:layout_width="fill_parent" android:layout_height="26.0sp" android:layout_marginLeft="10.0sp" android:layout_marginTop="4.0sp" android:layout_marginRight="10.0sp" android:layout_marginBottom="1.0sp" android:weightSum="10.0">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButtonRegular android:textSize="14.0sp" android:textColor="@color/white" android:id="@id/item_three_off_btn" android:background="@drawable/seeting_toggle_btn_off" android:clickable="false" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginRight="-5.0sp" android:text="OFF" android:layout_weight="5.0" android:textAllCaps="true" />
+                    <Button android:textSize="12.0sp" android:textColor="#fff8f8f8" android:id="@id/item_three_on_btn" android:background="@color/transparent" android:clickable="false" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="-5.0sp" android:layout_weight="5.0" android:textAllCaps="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="#ff323232" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+    </LinearLayout>
+</LinearLayout>

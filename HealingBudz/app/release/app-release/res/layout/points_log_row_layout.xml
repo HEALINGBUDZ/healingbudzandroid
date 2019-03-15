@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/first_review_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0sp" android:weightSum="10.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="7.0">
+                <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <ImageView android:layout_gravity="top" android:id="@id/star" android:padding="3.0sp" android:layout_width="25.0sp" android:layout_height="34.0sp" android:layout_marginTop="-2.0sp" android:src="@drawable/ic_green_star_reward" android:layout_weight="2.0" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/star">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="19.0sp" android:textColor="@color/white" android:id="@id/text_content" android:paddingLeft="4.0sp" android:paddingTop="2.0sp" android:paddingBottom="4.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Follow a Bud" android:layout_centerVertical="true" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewItalic android:textSize="10.0sp" android:textColor="#ff5c5d5d" android:id="@id/date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="16-16-2018" android:paddingStart="6.0sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="19.0sp" android:textColor="#ff82bb2b" android:gravity="end" android:layout_gravity="center" android:id="@id/points" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="+50 pts" android:maxLines="1" android:singleLine="true" android:layout_weight="3.0" android:paddingEnd="5.0sp" />
+        </LinearLayout>
+        <View android:background="#ff5c5d5d" android:layout_width="fill_parent" android:layout_height="2.0sp" android:layout_marginTop="5.0sp" />
+    </LinearLayout>
+</LinearLayout>

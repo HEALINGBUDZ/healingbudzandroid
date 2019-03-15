@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/video_processing_dilog" android:layout_width="160.0sp" android:layout_height="100.0sp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:id="@id/loading_spinner" android:layout_width="40.0sp" android:layout_height="40.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/main_title" android:paddingTop="5.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Video Processing..." />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

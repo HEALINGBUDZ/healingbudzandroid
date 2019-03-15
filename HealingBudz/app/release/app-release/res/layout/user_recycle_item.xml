@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="80.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/main_layout" android:background="#ff252525" android:paddingLeft="10.0sp" android:paddingRight="10.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+            <RelativeLayout android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.0">
+                <RelativeLayout android:layout_width="60.0sp" android:layout_height="60.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                    <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/user_image" android:padding="1.0sp" android:layout_width="50.0sp" android:layout_height="50.0sp" android:src="@drawable/ic_user_profile" android:scaleType="centerCrop" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/profile_img_topi" android:visibility="visible" android:layout_width="25.0sp" android:layout_height="25.0sp" android:src="@drawable/topi_ic" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerInParent="true" android:layout_alignParentStart="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout android:paddingLeft="5.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="6.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/user_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Bester Bud" android:singleLine="true" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.0">
+                <RelativeLayout android:id="@id/follow_btn" android:layout_width="60.0sp" android:layout_height="60.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                    <com.codingpixel.healingbudz.customeUI.CircularImageView android:padding="1.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_profile_add" android:scaleType="centerCrop" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <View android:background="#aa1c1c1c" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+</LinearLayout>

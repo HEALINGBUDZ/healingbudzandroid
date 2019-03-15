@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/remaining_time" android:paddingTop="8.0sp" android:paddingBottom="8.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:layout_marginBottom="2.0sp">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ff696969" android:gravity="center" android:id="@id/time_ago_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Monday 3:30pm" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/sender_msgs_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="60.0sp" android:layout_marginBottom="6.0sp">
+        <ImageView android:id="@id/indi_left" android:background="@drawable/chat_right_indicator" android:layout_width="8.0sp" android:layout_height="4.0sp" android:layout_alignParentLeft="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/sender_ll" android:background="@drawable/messaging_msgs_bg_left" android:padding="10.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/indi_left">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textColor="#ff7bc044" android:id="@id/sender_msg_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hey every body, what’s up? Happy Monday!" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0sp">
+                <ImageView android:id="@id/sender_msg_img" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="180.0sp" android:scaleType="centerCrop" />
+                <ImageView android:id="@id/sender_video_icon" android:visibility="gone" android:layout_width="60.0sp" android:layout_height="60.0sp" android:src="@drawable/ic_play_attachment" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/loading_spinner" android:visibility="gone" android:layout_width="48.0sp" android:layout_height="48.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                <com.codingpixel.healingbudz.customeUI.Preview android:id="@id/sender_scraps" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" />
+            </RelativeLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="9.0sp" android:textColor="#ff808080" android:gravity="center" android:id="@id/sender_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:text="SenderName" android:layout_below="@id/sender_ll" android:layout_alignParentStart="true" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="9.0sp" android:textColor="#ff808080" android:gravity="center" android:id="@id/sender_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:text="Date" android:layout_below="@id/sender_ll" android:layout_alignParentStart="true" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="right" android:id="@id/reciever_msg_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="60.0sp" android:layout_marginBottom="6.0sp">
+        <ImageView android:id="@id/ind_right" android:background="@drawable/chat_left_indicator" android:layout_width="8.0sp" android:layout_height="4.0sp" android:layout_alignParentRight="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/receiver_ll" android:background="@drawable/messaging_msgs_bg" android:padding="10.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/ind_right">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textColor="#ffa3a3a3" android:id="@id/receiver_msg_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hey every body, what’s up? Happy Monday!" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0sp">
+                <ImageView android:id="@id/receiver_msg_img" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="180.0sp" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+                <ImageView android:id="@id/receiver_video_icon" android:visibility="gone" android:layout_width="60.0sp" android:layout_height="60.0sp" android:src="@drawable/ic_play_attachment" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/loading_spinner_rcvr" android:visibility="gone" android:layout_width="48.0sp" android:layout_height="48.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                <RelativeLayout android:id="@id/uploading_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="180.0sp">
+                    <ImageView android:background="#94000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <ProgressBar android:layout_gravity="center" android:id="@id/uploading_progress_bar" android:layout_width="48.0sp" android:layout_height="48.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                </RelativeLayout>
+                <com.codingpixel.healingbudz.customeUI.Preview android:id="@id/receiver_scraps" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" />
+            </RelativeLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="9.0sp" android:textColor="#ff808080" android:gravity="center" android:layout_gravity="end" android:id="@id/receiver_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:text="ReceiverName" android:layout_below="@id/receiver_ll" android:layout_alignParentEnd="true" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="9.0sp" android:textColor="#ff808080" android:gravity="center" android:layout_gravity="end" android:id="@id/receiver_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:text="Date" android:layout_below="@id/receiver_ll" android:layout_alignParentEnd="true" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

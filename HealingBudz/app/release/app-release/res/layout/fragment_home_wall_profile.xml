@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView android:id="@id/fragment_home_wall_main_post_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/feed_other" android:background="@drawable/full_view_feed_bg" android:padding="5.0sp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0sp" android:text="See All The Buzz!" />
+    </LinearLayout>
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/not_found" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Empty The Buzz!" />
+</RelativeLayout>

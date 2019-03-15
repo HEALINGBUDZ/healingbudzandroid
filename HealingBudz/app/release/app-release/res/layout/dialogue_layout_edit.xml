@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/edits_dialogg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="-14.0sp" android:layout_above="@id/editss">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:background="@drawable/strain_detail_alert_dialog" android:padding="16.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0sp" android:layout_marginTop="10.0sp" android:layout_marginRight="10.0sp" android:layout_marginBottom="-10.0sp" android:layout_above="@id/indicator">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ff666666" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffb8b8b8" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="indica" />
+                <ImageView android:background="@drawable/ic_info_window_down_arrow" android:layout_width="23.0sp" android:layout_height="25.0sp" android:layout_marginLeft="14.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/cross_btn" android:paddingLeft="12.0sp" android:paddingBottom="12.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_cross_strain_yellow" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

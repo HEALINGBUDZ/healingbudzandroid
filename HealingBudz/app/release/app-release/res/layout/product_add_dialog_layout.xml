@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/transparent" android:padding="15.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/save_discussion_dialog_bg" android:padding="8.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0sp">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="#ff4d4d4d" android:id="@id/heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ADD PRODUCT" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0sp" android:layout_marginTop="14.0sp" android:layout_marginRight="7.0sp">
+                <ImageView android:layout_width="20.0sp" android:layout_height="20.0sp" android:src="@drawable/ic_info_icon" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:id="@id/title_d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:text="You cannot add product on mobile application, please go to our desktop version website." />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0sp" android:layout_marginTop="12.0sp" android:layout_marginRight="7.0sp">
+                <ImageView android:visibility="invisible" android:layout_width="20.0sp" android:layout_height="20.0sp" android:src="@drawable/ic_info_icon" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:text="For further detail:" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0sp" android:layout_marginTop="-5.0sp" android:layout_marginRight="7.0sp">
+                <ImageView android:visibility="invisible" android:layout_width="20.0sp" android:layout_height="20.0sp" android:src="@drawable/ic_info_icon" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="16.0sp" android:textColor="#ff7cc244" android:id="@id/msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0sp" android:text="Support Message Center" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/cross_btn" android:paddingLeft="7.0sp" android:paddingBottom="7.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_save_dialog_cross" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

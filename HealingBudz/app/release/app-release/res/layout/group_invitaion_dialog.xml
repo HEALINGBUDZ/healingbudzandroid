@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dialog_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:layout_marginRight="10.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <RelativeLayout android:orientation="vertical" android:id="@id/main_content" android:paddingBottom="18.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0sp">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/first_dialog_layout" android:background="@drawable/shoot_out_dialog_bg" android:paddingLeft="15.0sp" android:paddingRight="16.0sp" android:paddingBottom="15.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="19.0sp" android:textColor="#fff69320" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0sp" android:text="Group Invitaion" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/shoot_out_dialog_bg_white" android:paddingLeft="15.0sp" android:paddingTop="0.0sp" android:paddingRight="12.0sp" android:paddingBottom="6.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/first_dialog_layout" android:layout_centerHorizontal="true">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="#ff747474" android:gravity="center" android:id="@id/text_notification" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0sp" android:layout_marginBottom="16.0sp" android:text="“Special deals for Weed Week.\n Free samples. Come see us.”" />
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="8.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:weightSum="10.0">
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/like_layout" android:paddingBottom="8.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="4.0">
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/reject_button" android:background="@drawable/group_invitation_reject" android:layout_width="fill_parent" android:layout_height="40.0sp" android:layout_marginTop="7.0sp" android:text="Reject" />
+                        </LinearLayout>
+                        <View android:layout_width="0.0sp" android:layout_height="4.0sp" android:layout_weight="2.0" />
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/share_layout" android:paddingBottom="8.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="4.0">
+                            <com.codingpixel.healingbudz.customeUI.HealingBudButton android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/accept_button" android:background="@drawable/group_invitation_accept" android:layout_width="fill_parent" android:layout_height="40.0sp" android:layout_marginTop="7.0sp" android:text="Accept" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

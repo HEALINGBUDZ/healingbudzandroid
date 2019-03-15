@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <com.google.android.gms.ads.AdView android:id="@id/adView" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" ads:adSize="BANNER" ads:adUnitId="@string/ad_mob_id_add" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/main_layout_whole" android:paddingBottom="6.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:background="@drawable/qa_question_list_item_bg" android:padding="16.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="10.0">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="50.0sp">
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0" android:layout_weight="1.2">
+                    <RelativeLayout android:id="@id/profile_image" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.4">
+                        <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/user_profile_img" android:layout_width="50.0sp" android:layout_height="50.0sp" android:layout_marginTop="3.0sp" android:src="@drawable/ic_user_profile" android:scaleType="centerCrop" android:layout_weight="2.0" />
+                        <ImageView android:id="@id/profile_img_topi" android:visibility="visible" android:layout_width="20.0sp" android:layout_height="20.0dip" android:src="@drawable/topi_ic" />
+                        <ImageView android:id="@id/plus_icon" android:visibility="visible" android:layout_width="20.0sp" android:layout_height="20.0sp" android:layout_marginLeft="30.0sp" android:src="@drawable/ic_profile_add" android:layout_alignParentBottom="true" />
+                    </RelativeLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/profile_name" android:paddingLeft="1.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="10.0sp" android:layout_weight="4.3">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#fff89224" android:gravity="center_vertical" android:id="@id/answer_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Glitter Bomb" />
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0sp">
+                            <ImageView android:id="@id/answer_user_points_image" android:layout_width="15.0sp" android:layout_height="19.0sp" android:src="@drawable/ic_leafe_disscusspage" />
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#fff89224" android:gravity="center_vertical" android:id="@id/answer_user_points" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0sp" android:text="355" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="4.2">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ffa4a4a3" android:gravity="right" android:id="@id/answer_date" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="06,10 2017 02:00 PM" />
+                        <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <ImageView android:id="@id/like_answer_btn" android:padding="4.0sp" android:layout_width="48.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_thumb_unliked" />
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textColor="#fff6f5f3" android:gravity="bottom" android:id="@id/like_answer_count" android:paddingBottom="5.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="27" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="16.0sp" android:textColor="#ffe2e2e2" android:gravity="center_vertical" android:id="@id/answer_detail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0sp" android:text="The cannabis oil should be warmed before application. You’ll want to be sure to test it with a cooking thermometer and only apply it if it’s reached 90 degree farenhite. The canniban oil should be warmed before application. You’ll want to be sure to test it with a cooking thermometer and only apply it if it’s reached 90 degree farenhite." />
+            <LinearLayout android:gravity="start" android:id="@id/reply_layout" android:paddingTop="2.0sp" android:layout_width="fill_parent" android:layout_height="54.0sp" android:layout_marginTop="5.0sp" android:weightSum="10.0">
+                <LinearLayout android:gravity="start|center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:weightSum="7.5" android:layout_weight="6.5">
+                    <RelativeLayout android:id="@id/attachment_three" android:visibility="invisible" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginTop="2.0sp" android:layout_weight="2.5">
+                        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0sp">
+                            <com.codingpixel.healingbudz.customeUI.SelectableRoundedImageView android:id="@id/attachment_three_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+                            <ImageView android:id="@id/attachment_three_video" android:visibility="gone" android:layout_width="24.0sp" android:layout_height="24.0sp" android:src="@drawable/ic_play_attachment" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                        <ImageView android:id="@id/attachment_three_cross" android:paddingLeft="7.0sp" android:paddingBottom="8.0sp" android:visibility="gone" android:layout_width="25.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_cross_image" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/attachment_two" android:visibility="invisible" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginTop="2.0sp" android:layout_weight="2.5">
+                        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0sp">
+                            <com.codingpixel.healingbudz.customeUI.SelectableRoundedImageView android:id="@id/attachment_two_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+                            <ImageView android:id="@id/attachment_two_video" android:visibility="gone" android:layout_width="24.0sp" android:layout_height="24.0sp" android:src="@drawable/ic_play_attachment" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                        <ImageView android:id="@id/attachment_two_cross" android:paddingLeft="7.0sp" android:paddingBottom="8.0sp" android:visibility="gone" android:layout_width="25.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_cross_image" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/attachment_one" android:visibility="invisible" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginTop="2.0sp" android:layout_marginRight="4.0sp" android:layout_weight="2.5">
+                        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0sp">
+                            <com.codingpixel.healingbudz.customeUI.SelectableRoundedImageView android:id="@id/attachment_one_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+                            <ImageView android:id="@id/attachment_one_video" android:visibility="gone" android:layout_width="24.0sp" android:layout_height="24.0sp" android:src="@drawable/ic_play_attachment" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                        <ImageView android:id="@id/attachment_one_cross" android:paddingLeft="7.0sp" android:paddingBottom="8.0sp" android:visibility="gone" android:layout_width="25.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_cross_image" android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.6" />
+                <RelativeLayout android:background="@drawable/qa_question_list_item_bg" android:padding="7.0sp" android:visibility="gone" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_margin="4.0sp" android:weightSum="10.0" android:layout_weight="2.9">
+                    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                        <LinearLayout android:gravity="center" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.0">
+                            <ImageView android:layout_width="21.0sp" android:layout_height="13.0sp" android:src="@drawable/ic_reply_icon" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="4.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="5.0">
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="16.0sp" android:textColor="#ffcccccb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reply" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <com.codingpixel.healingbudz.customeUI.HealingBudButton android:id="@id/reply_answer" android:background="@color/transparent" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout android:gravity="end|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="46.0sp">
+                <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:id="@id/report_answer_dialog" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="50.0sp" android:layout_below="@id/menu" android:layout_alignParentRight="true">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/flag_dialog_bg" android:paddingLeft="12.0sp" android:paddingRight="12.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textColor="#ffc00302" android:gravity="center" android:paddingRight="2.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="!" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textColor="#ff656666" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Report" />
+                    </LinearLayout>
+                    <ImageView android:background="@drawable/ic_right_arrow_indicator" android:layout_width="20.0sp" android:layout_height="18.0sp" android:layout_marginLeft="-6.0sp" android:layout_alignParentRight="true" />
+                </LinearLayout>
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ffa4a4a3" android:gravity="start" android:id="@id/answer_date_edit" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="06,10 2017 02:00 PM" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/edit_screen" android:background="@drawable/edit_diss" android:padding="6.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0sp" android:layout_toRightOf="@id/answer_date_edit" android:layout_centerVertical="true">
+                    <android.support.v7.widget.AppCompatImageView android:layout_width="10.0sp" android:layout_height="10.0sp" android:layout_marginTop="1.0sp" android:src="@drawable/ic_edited" android:layout_marginEnd="5.0sp" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ff0083cb" android:gravity="start" android:id="@id/answer_date_edit_view" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Edited" />
+                </LinearLayout>
+                <ImageView android:layout_gravity="end" android:id="@id/report_answer" android:padding="7.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_qa_flag" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

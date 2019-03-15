@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main_container" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatCheckBox android:layout_gravity="center_vertical" android:id="@id/dialog_item_checkbox" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:buttonTint="@color/white" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="@dimen/font_size_subheading" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/dialog_item_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/textview_margin" android:layout_marginStart="@dimen/textview_margin" />
+    </LinearLayout>
+    <View android:background="#ff949494" android:layout_width="fill_parent" android:layout_height="0.5sp" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+</LinearLayout>

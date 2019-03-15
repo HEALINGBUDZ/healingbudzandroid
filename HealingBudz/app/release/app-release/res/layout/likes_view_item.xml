@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:paddingLeft="6.0sp" android:paddingRight="6.0sp" android:layout_width="fill_parent" android:layout_height="38.0sp">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/follow_btn" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="6.0" android:layout_centerInParent="true">
+            <RelativeLayout android:layout_width="0.0sp" android:layout_height="38.0sp" android:layout_weight="1.0" android:layout_toLeftOf="@id/name">
+                <com.codingpixel.healingbudz.customeUI.CircularImageView android:layout_gravity="end" android:id="@id/img_user" android:padding="5.0sp" android:layout_width="fill_parent" android:layout_height="38.0sp" android:src="@drawable/ic_user_person" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/profile_img_topi" android:visibility="visible" android:layout_width="20.0sp" android:layout_height="20.0sp" android:layout_marginLeft="8.0sp" android:src="@drawable/topi_ic" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerInParent="true" android:layout_alignParentStart="true" />
+            </RelativeLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textStyle="bold" android:textColor="#ff464645" android:gravity="center_vertical" android:id="@id/name" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="1.0sp" android:text="HB User" android:maxLines="1" android:singleLine="true" android:layout_weight="4.0" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="end" android:orientation="horizontal" android:id="@id/f_btn" android:paddingLeft="8.0sp" android:paddingRight="5.0sp" android:layout_width="0.0sp" android:layout_height="20.0sp" android:layout_margin="5.0sp" android:layout_weight="1.0" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+                <ImageView android:textSize="10.0sp" android:textStyle="bold" android:gravity="center" android:layout_gravity="end" android:id="@id/follow_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/liked_wall" android:tint="@color/post_description_links_color" android:text="Like this post" android:textAllCaps="true" />
+                <ImageView android:id="@id/followe_icon" android:padding="2.0sp" android:visibility="gone" android:layout_width="14.0sp" android:layout_height="14.0sp" android:src="@drawable/ic_profile_add" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="#68c4c3c3" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="1.0sp" />
+</LinearLayout>

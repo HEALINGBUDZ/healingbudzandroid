@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="5.0sp" android:layout_width="fill_parent" android:layout_height="120.0sp" android:layout_marginLeft="10.0sp" android:layout_marginRight="10.0sp" android:weightSum="10.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0sp" android:weightSum="10.0" android:layout_weight="7.2">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.6">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="17.0sp" android:textStyle="bold" android:textColor="#ffc5c5c5" android:gravity="center" android:id="@id/day_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="-5.0sp" android:text="WED" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="40.0sp" android:textStyle="bold" android:textColor="#ffc5c5c5" android:id="@id/day_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-9.0sp" android:text="01" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="10.0sp" android:textColor="#ffc5c5c5" android:id="@id/time_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8.0sp" android:text="05:30 PM" />
+            </LinearLayout>
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="0.3" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="5.6">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffc5c5c5" android:id="@id/title_event" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="First Day of Treatment" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="#ffc5c5c5" android:id="@id/event_discription" android:paddingRight="14.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Today I started using Cannabis as a treatment" android:maxLines="2" android:lines="2" />
+            </LinearLayout>
+            <LinearLayout android:paddingTop="12.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.5">
+                <ImageView android:id="@id/image_event" android:background="@drawable/image_plaecholder_bg" android:layout_width="fill_parent" android:layout_height="50.0sp" android:layout_marginLeft="4.0sp" android:layout_marginRight="4.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0sp" android:weightSum="10.0" android:layout_weight="2.4">
+            <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.9" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="fill_parent" android:weightSum="10.0" android:layout_weight="5.8">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="3.0">
+                    <ImageView android:layout_width="13.0sp" android:layout_height="13.0sp" android:src="@drawable/ic_gallery_icon" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textColor="#ffc5c5c5" android:gravity="center" android:id="@id/image_count" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="4.0sp" android:text="2" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="3.0">
+                    <ImageView android:layout_width="13.0sp" android:layout_height="13.0sp" android:src="@drawable/ic_movi_icon" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textColor="#ffc5c5c5" android:gravity="center" android:id="@id/video_count" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="4.0sp" android:text="1" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="3.0">
+                    <ImageView android:layout_width="13.0sp" android:layout_height="13.0sp" android:src="@drawable/ic_pin" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textColor="#ffc5c5c5" android:gravity="center" android:id="@id/tags_count" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="4.0sp" android:text="5" />
+                </LinearLayout>
+                <ImageView android:id="@id/feeling" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_emoji" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#b04e4c4e" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginLeft="10.0sp" android:layout_marginRight="10.0sp" />
+</LinearLayout>

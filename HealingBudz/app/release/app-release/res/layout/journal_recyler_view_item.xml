@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:padding="8.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:layout_marginRight="10.0sp" android:weightSum="10.0">
+        <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/user_img" android:padding="3.0sp" android:layout_width="0.0sp" android:layout_height="60.0sp" android:src="@drawable/journal_profile_test_img" android:layout_weight="1.8" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="12.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:layout_weight="8.2">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0sp" android:weightSum="10.0">
+                <LinearLayout android:orientation="vertical" android:id="@id/name_layout" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="5.5">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textColor="@color/white" android:id="@id/journal_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Journal Name" android:maxLines="1" android:lines="1" android:singleLine="true" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewItalic android:textSize="11.0sp" android:textColor="#ffc5c3c4" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:text="John Doe" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0.0sp" android:layout_height="fill_parent" android:weightSum="3.0" android:layout_weight="4.5">
+                    <LinearLayout android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <ImageView android:id="@id/favorite" android:padding="3.0sp" android:layout_width="0.0sp" android:layout_height="26.0sp" android:src="@drawable/ic_favorite_border_green" android:layout_weight="1.0" />
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/share_journal" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <ImageView android:padding="5.0sp" android:layout_width="0.0sp" android:layout_height="26.0sp" android:src="@drawable/ic_share_white" android:layout_weight="1.0" />
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/item_indicator_btn" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <ImageView android:id="@id/item_indicator" android:layout_width="0.0sp" android:layout_height="wrap_content" android:src="@drawable/ic_navigate_next" android:layout_weight="1.0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@id/slide" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <android.support.v7.widget.RecyclerView android:id="@id/journal_list_item_recyler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="#ff4e4a4b" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginLeft="12.0sp" android:layout_marginRight="12.0sp" />
+</LinearLayout>

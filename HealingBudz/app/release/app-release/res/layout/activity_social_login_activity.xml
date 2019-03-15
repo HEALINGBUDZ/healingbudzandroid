@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@drawable/home_bg_img" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/icon" android:layout_width="150.0sp" android:layout_height="130.0sp" android:src="@drawable/ic_logo" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0sp" android:text="The Community for Natural Healing" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:textAllCaps="false" />
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0sp">
+                <ImageView android:paddingLeft="5.0sp" android:paddingTop="8.0sp" android:paddingRight="5.0sp" android:paddingBottom="5.0sp" android:layout_width="20.0sp" android:layout_height="20.0sp" android:src="@drawable/ic_tick_user_social" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textColor="#ff7dc242" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Successfully Login" />
+            </LinearLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="18.0sp" android:textColor="#ffa4a4a3" android:gravity="center" android:id="@id/user_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0sp" android:text="Choose a nickname" />
+            <RelativeLayout android:orientation="horizontal" android:id="@id/email" android:layout_width="fill_parent" android:layout_height="50.0sp" android:layout_marginLeft="30.0sp" android:layout_marginTop="10.0sp" android:layout_marginRight="30.0sp">
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditText android:textSize="18.0sp" android:textColor="#fffafafa" android:textColorHint="#ffceccce" android:gravity="center" android:id="@id/email_text_field" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="Enter your nickname" android:maxLength="20" android:digits="qwertyuiopasdfghjklzxcvbnm 1234567890 QWERTYUIOPASDFGHJKLZXCVBNM" android:inputType="textEmailAddress" android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white" />
+                <View android:background="#60999996" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textSize="18.0sp" android:textColor="#ffa4a4a3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0sp" android:text="Where are you located?" />
+            <RelativeLayout android:gravity="center" android:orientation="horizontal" android:layout_width="170.0sp" android:layout_height="50.0sp" android:layout_marginLeft="30.0sp" android:layout_marginTop="10.0sp" android:layout_marginRight="30.0sp">
+                <com.codingpixel.healingbudz.customeUI.HealinBudEditText android:textSize="18.0sp" android:textColor="#fffafafa" android:textColorHint="#ffa4a4a3" android:gravity="center" android:id="@id/zip_code" android:background="#00000000" android:layout_width="170.0sp" android:layout_height="fill_parent" android:hint="Enter Zip code" android:maxLines="1" android:lines="1" android:maxLength="6" android:inputType="number" android:textCursorDrawable="@drawable/edit_text_cursor_drawable_white" />
+                <View android:background="#60999996" android:layout_width="wrap_content" android:layout_height="1.0sp" android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+            <ImageView android:id="@id/next_step" android:padding="6.0sp" android:layout_width="75.0sp" android:layout_height="75.0sp" android:layout_marginTop="20.0sp" android:src="@drawable/ic_login_next_btn" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="22.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/skip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0sp" android:text="Skip Now" />
+        </LinearLayout>
+        <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:visibility="gone" android:layout_width="52.0sp" android:layout_height="52.0sp" android:layout_margin="5.0sp" android:src="@drawable/ic_back_icon" />
+    </RelativeLayout>
+</ScrollView>

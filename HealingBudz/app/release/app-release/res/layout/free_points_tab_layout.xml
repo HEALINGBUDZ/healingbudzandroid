@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="15.0sp" android:paddingTop="12.0sp" android:paddingRight="15.0sp" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:paddingTop="14.0sp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/refresh">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab_text" android:paddingLeft="8.0sp" android:paddingRight="8.0sp" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/main_heading_title" android:layout_width="80.0sp" android:layout_height="80.0sp" android:src="@drawable/reward" android:textAllCaps="false" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:text="Your Current Reward Points" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="40.0sp" android:textColor="@color/white" android:id="@id/points_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+            </LinearLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textColor="@color/white" android:id="@id/text_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="We're all Budz here. The more you collaborate in the Healing Budz community and help other Budz, the more points you earn to redeem for cool stuff." android:layout_below="@id/tab_text" />
+            <RelativeLayout android:id="@id/get_point_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/text_content">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/free_points_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0sp" android:layout_marginBottom="10.0sp" android:text="Get 400 Free Reward Points" />
+                <View android:id="@id/line_view" android:background="#ff5c5d5d" android:layout_width="fill_parent" android:layout_height="2.0sp" android:layout_below="@id/free_points_text" />
+                <android.support.v7.widget.RecyclerView android:id="@id/recycler_view_free_points" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:layout_below="@id/line_view" android:nestedScrollingEnabled="false" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/redeem_point_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/get_point_layout">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/free_points_text_second" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0sp" android:layout_marginBottom="10.0sp" android:text="YOUR REDEEM PRODUCTS" />
+                <View android:id="@id/line_view_second" android:background="#ff5c5d5d" android:layout_width="fill_parent" android:layout_height="2.0sp" android:layout_below="@id/free_points_text_second" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/line_view_second">
+                    <TextView android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/not_found" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No Record Found!" android:layout_centerInParent="true" />
+                    <android.support.v7.widget.RecyclerView android:id="@id/recycler_view_free_points_second" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:nestedScrollingEnabled="false" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

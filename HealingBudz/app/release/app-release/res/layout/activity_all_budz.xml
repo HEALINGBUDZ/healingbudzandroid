@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_menu" android:background="#ff1f1f1f" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+        <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+        <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="22.0sp" android:textColor="#ff8f8f8f" android:gravity="center" android:paddingBottom="4.0sp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="A:" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="22.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/q_a_menu_title" android:paddingLeft="4.0sp" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="All Budz" />
+        </LinearLayout>
+    </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout android:id="@id/swipe_rf" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_menu">
+        <android.support.v7.widget.RecyclerView android:id="@id/my_questions_recyler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0sp" android:layout_marginTop="4.0sp" android:layout_marginRight="14.0sp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:paddingTop="14.0sp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_menu">
+        <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh_btm" android:paddingTop="14.0sp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top_menu" android:layout_alignParentBottom="true">
+        <ProgressBar android:id="@id/loading_spinner_btm" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+    </LinearLayout>
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textColor="@color/white" android:id="@id/no_record_found" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" No Record Found!" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <FrameLayout android:id="@id/main_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

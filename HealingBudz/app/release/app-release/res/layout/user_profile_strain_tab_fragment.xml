@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textColor="#ffc4c3c4" android:gravity="center" android:id="@id/not_found" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0sp" android:text="No record found!" android:layout_below="@id/main_contetn" android:layout_centerInParent="true" />
+        <LinearLayout android:orientation="vertical" android:id="@id/main_contetn" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textSize="18.0sp" android:textStyle="bold" android:textColor="#fff4c42f" android:gravity="center" android:layout_width="wrap_content" android:layout_height="50.0sp" android:layout_marginLeft="10.0sp" android:layout_marginTop="6.0sp" android:layout_marginRight="10.0sp" android:layout_marginBottom="6.0sp" android:text="My Strains" />
+            <View android:id="@id/linee" android:background="#ff333333" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginLeft="8.0sp" android:layout_marginRight="8.0sp" />
+            <android.support.v7.widget.RecyclerView android:id="@id/recyler_View" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:paddingTop="14.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:id="@id/loading_spinner" android:layout_width="40.0sp" android:layout_height="40.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+    </LinearLayout>
+</LinearLayout>

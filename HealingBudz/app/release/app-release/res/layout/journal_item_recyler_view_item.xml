@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="8.0sp" android:paddingBottom="8.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="10.0sp" android:weightSum="10.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="8.5">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="9.0sp" android:textColor="#ffc5c5c5" android:id="@id/event_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FirstDay of Treatment" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0sp">
+                <ImageView android:layout_width="8.0sp" android:layout_height="8.0sp" android:src="@drawable/ic_calaneder_gray" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="9.0sp" android:textColor="#ffc5c5c5" android:id="@id/event_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0sp" android:text="WED 01 FEB, 05:30 PM" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/emoji" android:padding="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_emoji" android:layout_weight="1.5" />
+    </LinearLayout>
+    <View android:id="@id/bottom_line" android:background="#694e4a4b" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginLeft="10.0sp" android:layout_marginRight="10.0sp" />
+</LinearLayout>

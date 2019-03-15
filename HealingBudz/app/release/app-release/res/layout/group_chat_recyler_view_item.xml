@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/remaining_time" android:paddingTop="8.0sp" android:paddingBottom="8.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:layout_marginBottom="2.0sp">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ffc5c3c4" android:gravity="center" android:id="@id/time_ago_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Monday 3:30pm" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/msgs_layout" android:background="@drawable/groups_msgs_bg" android:paddingTop="5.0sp" android:paddingBottom="5.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="6.0sp">
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="6.0sp" android:paddingRight="6.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:layout_marginBottom="2.0sp" android:weightSum="10.0">
+            <com.codingpixel.healingbudz.customeUI.CircularImageView android:id="@id/profile_image" android:layout_width="0.0sp" android:layout_height="34.0sp" android:src="@drawable/ic_user_profile" android:layout_weight="1.0" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="10.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="7.5">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffcaccca" android:id="@id/member_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Glitter Storm" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ffc4c4c4" android:id="@id/msg_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hey every body, what’s up? Happy Monday!" />
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp">
+                    <ImageView android:id="@id/msg_img" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="180.0sp" />
+                    <ImageView android:id="@id/video_icon" android:visibility="gone" android:layout_width="60.0sp" android:layout_height="60.0sp" android:src="@drawable/ic_play_attachment" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+                    <ProgressBar android:layout_gravity="center" android:id="@id/loading_spinner" android:visibility="gone" android:layout_width="48.0sp" android:layout_height="48.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                    <RelativeLayout android:id="@id/uploading_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="180.0sp">
+                        <ImageView android:background="#94000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                        <ProgressBar android:layout_gravity="center" android:id="@id/uploading_progress_bar" android:layout_width="48.0sp" android:layout_height="48.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="8.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:layout_weight="1.5">
+                <ImageView android:id="@id/like_msg" android:layout_width="25.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_favorite_border_white" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#fff79121" android:gravity="bottom|center|left" android:id="@id/like_msg_count" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="1.0sp" android:text="3" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/joined_membder_layout" android:paddingTop="8.0sp" android:paddingBottom="8.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" android:layout_marginBottom="2.0sp">
+            <View android:background="#954e4644" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginRight="4.0sp" android:layout_toLeftOf="@id/joind_member_text" android:layout_centerVertical="true" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#fff89221" android:gravity="center" android:id="@id/joind_member_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Glitter Storm has joined the group." android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+            <View android:background="#954e4644" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginLeft="4.0sp" android:layout_toRightOf="@id/joind_member_text" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

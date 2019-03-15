@@ -2,6 +2,7 @@ package com.codingpixel.healingbudz.ReportItView;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -83,13 +84,17 @@ public class Report implements ReportQuestionHeaderLayoutRecylerAdapter.ItemClic
             if (nameReport.equalsIgnoreCase("strain")) {
                 Send_BTN.setBackgroundResource(R.drawable.strain_flag_send_btn_bg);
                 indi_report.setImageResource(R.drawable.strain_flag_close_indicator);
+                indi_report.setColorFilter(Color.parseColor(mColor), android.graphics.PorterDuff.Mode.SRC_IN);
                 line_color_report.setBackgroundColor(Color.parseColor(mColor));
             } else if (nameReport.equalsIgnoreCase("budz")) {
                 Send_BTN.setBackgroundResource(R.drawable.budz_flag_send_btn_bg);
                 indi_report.setImageResource(R.drawable.budz_flag_close_indicator);
                 line_color_report.setBackgroundColor(Color.parseColor(mColor));
-            } else {
-
+            } else if (nameReport.equalsIgnoreCase("gallery")) {
+                Send_BTN.setBackgroundResource(R.drawable.gallery_flag_send_btn_bg);
+                indi_report.setImageResource(R.drawable.strain_flag_close_indicator);
+                indi_report.setColorFilter(Color.parseColor(mColor), android.graphics.PorterDuff.Mode.SRC_IN);
+                line_color_report.setBackgroundColor(Color.parseColor(mColor));
             }
 
 
@@ -156,7 +161,7 @@ public class Report implements ReportQuestionHeaderLayoutRecylerAdapter.ItemClic
             e.printStackTrace();
         }
         dataModels.get(0).setSelected(true);
-        ReportQuestionHeaderLayoutRecylerAdapter recyler_adapter = new ReportQuestionHeaderLayoutRecylerAdapter(mContext, dataModels, nameReport);
+        ReportQuestionHeaderLayoutRecylerAdapter recyler_adapter = new ReportQuestionHeaderLayoutRecylerAdapter(mContext, dataModels, nameReport,mColor);
         Report_Question_RecylerView.setAdapter(recyler_adapter);
         recyler_adapter.setClickListener(this);
         if (dataModels.size() > 0) {
@@ -175,7 +180,7 @@ public class Report implements ReportQuestionHeaderLayoutRecylerAdapter.ItemClic
             e.printStackTrace();
         }
         dataModels.get(0).setSelected(true);
-        ReportQuestionHeaderLayoutRecylerAdapter recyler_adapter = new ReportQuestionHeaderLayoutRecylerAdapter(mContext, dataModels, name);
+        ReportQuestionHeaderLayoutRecylerAdapter recyler_adapter = new ReportQuestionHeaderLayoutRecylerAdapter(mContext, dataModels, name,mColor);
         Report_Question_RecylerView.setAdapter(recyler_adapter);
         recyler_adapter.setClickListener(this);
         if (dataModels.size() > 0) {

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="90.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:paddingBottom="7.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0" android:layout_above="@id/bottom_line" android:layout_below="@id/top_line">
+        <RelativeLayout android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="2.0">
+            <ImageView android:id="@id/icon_img" android:padding="4.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="6.0sp" android:src="@drawable/ic_profile_blue" android:layout_weight="2.0" />
+            <ImageView android:id="@id/bud_map_catagory_img" android:layout_width="20.0sp" android:layout_height="20.0sp" android:layout_marginTop="10.0sp" android:layout_marginRight="10.0sp" android:src="@drawable/ic_dispancry_icon" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="6.0sp" android:paddingTop="14.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="8.0">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="11.0sp" android:textColor="#ffceccce" android:id="@id/type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dispensary" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textColor="#ff932a88" android:id="@id/heading_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:layout_marginBottom="1.0sp" android:text="Culture Farms &amp; Dispensary" />
+            <LinearLayout android:orientation="horizontal" android:paddingRight="12.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="12.0">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ff999999" android:gravity="center_vertical" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="3.2 ml" android:layout_weight="2.0" />
+                <ImageView android:id="@id/rating_img" android:padding="3.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_rating_img" android:layout_weight="3.0" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="11.0sp" android:textColor="#ff999999" android:gravity="center|right" android:paddingRight="2.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:text="5 Reviews" android:layout_weight="3.0" />
+                <LinearLayout android:gravity="end" android:paddingLeft="6.0sp" android:paddingRight="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:weightSum="10.0" android:layout_weight="4.0">
+                    <ImageView android:id="@id/organic_img" android:padding="5.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_organic" android:layout_weight="5.0" />
+                    <ImageView android:id="@id/delivery_img" android:padding="5.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_delivery" android:layout_weight="5.0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/bottom_line" android:background="@drawable/doted_line" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0sp" android:layout_marginTop="4.0sp" android:layout_alignParentBottom="true" />
+    <LinearLayout android:gravity="bottom|center" android:orientation="horizontal" android:layout_width="70.0sp" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:layout_marginRight="4.0sp" android:weightSum="10.0" android:layout_alignParentRight="true">
+        <ImageView android:padding="6.0sp" android:layout_width="0.0sp" android:layout_height="30.0sp" android:src="@drawable/ic_edit_myquestion" android:layout_weight="5.0" />
+        <ImageView android:padding="6.0sp" android:layout_width="0.0sp" android:layout_height="30.0sp" android:src="@drawable/ic_delete_icon" android:layout_weight="5.0" />
+    </LinearLayout>
+    <View android:background="#ff484848" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_alignParentBottom="true" />
+</RelativeLayout>

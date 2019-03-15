@@ -1,6 +1,8 @@
 package com.codingpixel.healingbudz.adapter;
 
 import android.content.Context;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 
 import com.codingpixel.healingbudz.DataModel.StrainDataModel;
 import com.codingpixel.healingbudz.R;
+import com.codingpixel.healingbudz.interfaces.PagingCall;
 
 import java.util.ArrayList;
 
@@ -21,12 +24,14 @@ public class StrainTabFragmentRecylerAdapter extends RecyclerView.Adapter<Strain
     private LayoutInflater mInflater;
     Context context;
     ArrayList<StrainDataModel> mData = new ArrayList<>();
+    public PagingCall pagingCall;
     private StrainTabFragmentRecylerAdapter.ItemClickListener mClickListener;
 
-    public StrainTabFragmentRecylerAdapter(Context context, ArrayList<StrainDataModel> dataModels) {
+    public StrainTabFragmentRecylerAdapter(Context context, ArrayList<StrainDataModel> dataModels, PagingCall pagingCall) {
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
         this.mData = dataModels;
+        this.pagingCall = pagingCall;
     }
 
     // inflates the cell layout from xml when needed
@@ -38,9 +43,13 @@ public class StrainTabFragmentRecylerAdapter extends RecyclerView.Adapter<Strain
     }
 
     // binds the data to the textview in each cell
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.Title.setText(mData.get(position).getTitle());
+        if (position > 0 && (position == (mData.size() - 2))) {
+            pagingCall.callNextPage(mData.size());
+        }
         holder.Rating.setText(D_FORMAT_ONE.format(mData.get(position).getRating()) + "");
         holder.Review.setText(mData.get(position).getReviews());
         if (mData.get(position).getAlphabetic_keyword().equalsIgnoreCase("i")) {
@@ -64,6 +73,7 @@ public class StrainTabFragmentRecylerAdapter extends RecyclerView.Adapter<Strain
             holder.Matche_count.setVisibility(View.GONE);
         }
         holder.Rating_img.setImageResource(Strain_Rating(mData.get(position).getRating()));
+
     }
 
     // total number of cells

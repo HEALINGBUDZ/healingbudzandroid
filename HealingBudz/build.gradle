@@ -24,6 +24,7 @@ buildscript {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
 //       classpath 'com.google.gms:google-services:3.0.0'
         classpath 'com.google.gms:google-services:3.1.0'
+        classpath 'com.dynatrace.tools:android:+'
         classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
 
         // NOTE: Do not place your application dependencies here; they belong

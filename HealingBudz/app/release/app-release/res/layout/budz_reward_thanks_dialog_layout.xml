@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dialog_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:layout_marginRight="10.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <RelativeLayout android:orientation="vertical" android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0sp">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/first_dialog_layout" android:background="@drawable/reward_dialogue_black_thank" android:paddingLeft="15.0sp" android:paddingRight="16.0sp" android:paddingBottom="15.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                    <ImageView android:layout_width="90.0sp" android:layout_height="90.0sp" android:layout_marginTop="15.0sp" android:src="@drawable/ic_logo_with_out_name" />
+                    <ImageView android:textSize="19.0sp" android:layout_width="90.0sp" android:layout_height="30.0sp" android:layout_marginTop="-23.0sp" android:src="@drawable/ic_logo_rewardz" android:text="Group Invitaion" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="12.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Thank You" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="8.0sp" android:textColor="#ff727677" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:layout_marginBottom="10.0sp" android:text="for redeeming product “Women White T-Shirt”" />
+                </LinearLayout>
+            </RelativeLayout>
+            <ImageView android:id="@id/cross_btn" android:paddingLeft="10.0sp" android:paddingBottom="10.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_cross_reward" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

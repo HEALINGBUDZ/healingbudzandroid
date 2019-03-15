@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="49.0sp" android:weightSum="10.0">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="15.0sp" android:textColor="#fff4c42f" android:gravity="center_vertical" android:id="@id/strain_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Cactus Sunset" android:maxLength="25" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="4.0sp" android:weightSum="9.0" android:layout_toLeftOf="@id/match_result" android:layout_marginEnd="4.0sp" android:layout_toStartOf="@id/match_result">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="11.0sp" android:layout_weight="1.5">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="14.0sp" android:textColor="#fff4c42f" android:gravity="center" android:id="@id/alpabetic" android:background="@drawable/strain_liseted_alphabetically_border_bg" android:layout_width="22.0sp" android:layout_height="22.0sp" android:text="H" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center|right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.5">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/ratin_image" android:layout_width="14.0sp" android:layout_height="14.0sp" android:src="@drawable/ic_strain_rating_three" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ff979797" android:id="@id/rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0sp" android:text="3.5" />
+                </LinearLayout>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="10.0sp" android:textColor="#ff979797" android:id="@id/reviews" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:maxWidth="52.0dip" android:minWidth="52.0dip" android:text="100 Reviews" android:maxLines="1" android:singleLine="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/match_result" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="10.0sp" android:textColor="#ff333333" android:gravity="center" android:id="@id/matche_count" android:background="#fff4c42f" android:visibility="gone" android:layout_width="58.0sp" android:layout_height="fill_parent" android:text="3 of 4" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:background="#ff545555" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+</LinearLayout>

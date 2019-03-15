@@ -2,8 +2,10 @@ package com.codingpixel.healingbudz.customeUI;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.os.Handler;
 import android.support.annotation.ColorInt;
+import android.text.Html;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -23,6 +25,7 @@ import com.codingpixel.healingbudz.DataModel.HomeQAfragmentDataModel;
 import com.codingpixel.healingbudz.R;
 import com.codingpixel.healingbudz.Utilities.eventbus.MessageEvent;
 import com.codingpixel.healingbudz.data_structure.APIActions;
+import com.codingpixel.healingbudz.network.BudzFeedModel.GetAllPost.Post;
 import com.codingpixel.healingbudz.network.VollyAPICall;
 import com.codingpixel.healingbudz.network.model.APIResponseListner;
 import com.codingpixel.healingbudz.network.model.URL;
@@ -83,6 +86,7 @@ public class Preview extends RelativeLayout {
     LinearLayout bid_first_content, qa_view;
     private ImageView cross;
     Button first_bid_button, qa_fragment_list_discuss_button;
+    private Post post;
 
     public Preview(Context context) {
         super(context);
@@ -147,7 +151,12 @@ public class Preview extends RelativeLayout {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    mTxtViewTitle.setText(getTitle());
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        mTxtViewTitle.setText(Html.fromHtml(getTitle(), Html.FROM_HTML_MODE_COMPACT));
+                    } else {
+                        mTxtViewTitle.setText(Html.fromHtml(getTitle()));
+                    }
+
                 }
             });
         }
@@ -158,7 +167,12 @@ public class Preview extends RelativeLayout {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    mTxtViewDescription.setText(getDescription());
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                        mTxtViewDescription.setText(Html.fromHtml(getDescription(), Html.FROM_HTML_MODE_COMPACT));
+                    } else {
+                        mTxtViewDescription.setText(Html.fromHtml(getDescription()));
+                    }
+
                 }
             });
 
@@ -312,7 +326,7 @@ public class Preview extends RelativeLayout {
                                 @Override
                                 public void onClick(View v) {
 
-                                    new android.os.Handler().postDelayed(new Runnable() {
+                                    new Handler().postDelayed(new Runnable() {
                                         @Override
                                         public void run() {
                                             EventBus.getDefault().post(new MessageEvent(true));
@@ -341,7 +355,7 @@ public class Preview extends RelativeLayout {
                 @Override
                 public void onClick(View v) {
 
-                    new android.os.Handler().postDelayed(new Runnable() {
+                    new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             EventBus.getDefault().post(new MessageEvent(true));
@@ -453,6 +467,9 @@ public class Preview extends RelativeLayout {
                                 } else {
                                     site = Preview.this.url;
                                     imageElements = doc.select("meta[property=og:image]");
+                                    if (imageElements == null) {
+                                        imageElements = doc.select("meta[image=og:url]");
+                                    }
                                 }
                                 mImageLink = getImageLinkFromSource(imageElements, site);
                                 siteElements = doc.select("meta[property=og:site_name]");
@@ -483,7 +500,11 @@ public class Preview extends RelativeLayout {
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            mTxtViewTitle.setText(getTitle());
+                                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                                                mTxtViewTitle.setText(Html.fromHtml(getTitle(), Html.FROM_HTML_MODE_COMPACT));
+                                            } else {
+                                                mTxtViewTitle.setText(Html.fromHtml(getTitle()));
+                                            }
                                         }
                                     });
                                 }
@@ -494,7 +515,11 @@ public class Preview extends RelativeLayout {
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            mTxtViewDescription.setText(getDescription());
+                                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                                                mTxtViewDescription.setText(Html.fromHtml(getDescription(), Html.FROM_HTML_MODE_COMPACT));
+                                            } else {
+                                                mTxtViewDescription.setText(Html.fromHtml(getDescription()));
+                                            }
                                         }
                                     });
 
@@ -739,6 +764,14 @@ public class Preview extends RelativeLayout {
         cross.setVisibility(GONE);
     }
 
+    public void setPost(Post post) {
+        this.post = post;
+    }
+
+    public Post getPost() {
+        return post;
+    }
+
     public interface PreviewListener {
         public void onDataReady(Preview preview);
     }
@@ -748,14 +781,41 @@ public class Preview extends RelativeLayout {
     }
 
     public String getTitle() {
+        if (mTitle == null) {
+            return "";
+        }
         return mTitle;
     }
 
     public String getDescription() {
+        if (mDescription == null) {
+            return "";
+        }
         return mDescription;
     }
 
     public String getImageLink() {
+        if (mImageLink == null) {
+            if (this.post.getScrappedData() != null) {
+                if (this.post.getScrappedData().getImage().length() > 0) {
+                    return this.post.getScrappedData().getImage();
+                } else {
+                    return "";
+                }
+            } else {
+                return "";
+            }
+        } else if (mImageLink.length() == 0) {
+            if (this.post.getScrappedData() != null) {
+                if (this.post.getScrappedData().getImage().length() > 0) {
+                    return this.post.getScrappedData().getImage();
+                } else {
+                    return "";
+                }
+            } else {
+                return "";
+            }
+        }
         return mImageLink;
     }
 

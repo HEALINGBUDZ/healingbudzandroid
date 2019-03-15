@@ -25,11 +25,13 @@ public class ReportQuestionHeaderLayoutRecylerAdapter extends RecyclerView.Adapt
     private ReportQuestionHeaderLayoutRecylerAdapter.ItemClickListener mClickListener;
     Context context;
     String chechReport = "";
+    String color = "";
 
-    public ReportQuestionHeaderLayoutRecylerAdapter(Context context, ArrayList<ReportQuestionListDataModel> data, String nameReport) {
+    public ReportQuestionHeaderLayoutRecylerAdapter(Context context, ArrayList<ReportQuestionListDataModel> data, String nameReport, String color) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
         this.context = context;
+        this.color = color;
         chechReport = nameReport;
     }
 
@@ -56,10 +58,23 @@ public class ReportQuestionHeaderLayoutRecylerAdapter extends RecyclerView.Adapt
             holder.indicator.setVisibility(View.VISIBLE);
             if (chechReport.equalsIgnoreCase("strain")) {
 //                holder.Main_content.setBackgroundColor(Color.parseColor("#f4c42f"));
-                holder.indicator.setBackgroundColor(Color.parseColor("#f4c42f"));
+                if (this.color.length() > 0) {
+                    holder.indicator.setBackgroundColor(Color.parseColor(color));
+                } else {
+                    holder.indicator.setBackgroundColor(Color.parseColor("#f4c42f"));
+                }
+
             } else if (chechReport.equalsIgnoreCase("budz")) {
 //                holder.Main_content.setBackgroundColor(Color.parseColor("#932a88"));
                 holder.indicator.setBackgroundColor(Color.parseColor("#932a88"));
+            } else if (chechReport.equalsIgnoreCase("gallery")) {
+//                holder.Main_content.setBackgroundColor(Color.parseColor("#f4c42f"));
+                if (this.color.length() > 0) {
+                    holder.indicator.setBackgroundColor(Color.parseColor(color));
+                } else {
+                    holder.indicator.setBackgroundColor(Color.parseColor("#f4c42f"));
+                }
+
             } else {
 
 //                holder.indicator.setBackgroundColor(Color.parseColor("#403f3f"));

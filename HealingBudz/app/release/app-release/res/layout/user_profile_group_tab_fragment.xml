@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_contetn" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textColor="#ffee8c25" android:gravity="center" android:layout_width="wrap_content" android:layout_height="50.0sp" android:layout_margin="6.0sp" android:text="My Groups" />
+        <View android:background="#ff333333" android:layout_width="fill_parent" android:layout_height="1.0sp" />
+        <android.support.v7.widget.RecyclerView android:id="@id/recyler_View" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0sp" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:paddingTop="14.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:id="@id/loading_spinner" android:layout_width="40.0sp" android:layout_height="40.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+    </LinearLayout>
+</LinearLayout>

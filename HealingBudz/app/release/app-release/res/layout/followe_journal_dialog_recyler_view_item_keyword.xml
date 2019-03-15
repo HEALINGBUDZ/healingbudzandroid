@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:paddingLeft="6.0sp" android:paddingRight="6.0sp" android:layout_width="fill_parent" android:layout_height="38.0sp">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textStyle="bold" android:textColor="#ffc4c3c4" android:gravity="center_vertical" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="John Alex" android:layout_weight="7.0" android:alpha="0.8" />
+        <LinearLayout android:gravity="center" android:id="@id/follow_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/f_btn" android:background="@drawable/add_journal_entry_btn" android:paddingLeft="8.0sp" android:paddingRight="5.0sp" android:layout_width="wrap_content" android:layout_height="20.0sp" android:layout_margin="5.0sp">
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="10.0sp" android:textStyle="bold" android:textColor="#ff486136" android:gravity="center" android:id="@id/follow_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Follow" android:textAllCaps="true" />
+                <ImageView android:id="@id/followe_icon" android:padding="2.0sp" android:visibility="visible" android:layout_width="14.0sp" android:layout_height="14.0sp" android:src="@drawable/ic_profile_add" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="#8bc4c3c3" android:layout_width="fill_parent" android:layout_height="0.100000024sp" />
+</LinearLayout>

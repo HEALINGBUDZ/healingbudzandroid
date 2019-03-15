@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/menu" android:background="@color/transparent" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Spinner android:gravity="bottom" android:id="@id/spinner" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:spinnerMode="dropdown" android:overlapAnchor="false" />
+    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:textColorHint="#ff4d4d4d" android:ellipsize="end" android:gravity="center|left" android:id="@id/ShowSpinner" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="1.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="1.0dip" android:maxLines="1" android:singleLine="true" android:layout_marginStart="30.0dip" />
+</RelativeLayout>

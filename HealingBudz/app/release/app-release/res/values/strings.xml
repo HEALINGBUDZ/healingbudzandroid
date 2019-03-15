@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">Navigate home</string>
+    <string name="abc_action_bar_up_description">Navigate up</string>
+    <string name="abc_action_menu_overflow_description">More options</string>
+    <string name="abc_action_mode_done">Done</string>
+    <string name="abc_activity_chooser_view_see_all">See all</string>
+    <string name="abc_activitychooserview_choose_application">Choose an app</string>
+    <string name="abc_capital_off">OFF</string>
+    <string name="abc_capital_on">ON</string>
+    <string name="abc_font_family_body_1_material">sans-serif</string>
+    <string name="abc_font_family_body_2_material">sans-serif-medium</string>
+    <string name="abc_font_family_button_material">sans-serif-medium</string>
+    <string name="abc_font_family_caption_material">sans-serif</string>
+    <string name="abc_font_family_display_1_material">sans-serif</string>
+    <string name="abc_font_family_display_2_material">sans-serif</string>
+    <string name="abc_font_family_display_3_material">sans-serif</string>
+    <string name="abc_font_family_display_4_material">sans-serif-light</string>
+    <string name="abc_font_family_headline_material">sans-serif</string>
+    <string name="abc_font_family_menu_material">sans-serif</string>
+    <string name="abc_font_family_subhead_material">sans-serif</string>
+    <string name="abc_font_family_title_material">sans-serif-medium</string>
+    <string name="abc_search_hint">Search…</string>
+    <string name="abc_searchview_description_clear">Clear query</string>
+    <string name="abc_searchview_description_query">Search query</string>
+    <string name="abc_searchview_description_search">Search</string>
+    <string name="abc_searchview_description_submit">Submit query</string>
+    <string name="abc_searchview_description_voice">Voice search</string>
+    <string name="abc_shareactionprovider_share_with">Share with</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="acc_label_card_number">Card number</string>
+    <string name="acc_label_expiry_date">Expiration date</string>
+    <string name="acc_label_zip">ZIP Code</string>
+    <string name="acc_label_zip_short">ZIP</string>
+    <string name="action_about">About</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_mark_as_done">Mark as done</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+    <string name="action_show_now">Show now</string>
+    <string name="ad_mob_id_add">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_mob_id_add_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_mob_id_add_ini_simple">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="ad_mob_id_add_ini_vid">ca-app-pub-3940256099942544/8691691433</string>
+    <string name="ad_mob_id_did">7A733B5D64CE502DC060FC28660CECC4</string>
+    <string name="ad_mob_id_init">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="add_card">Add a new debit or credit card to make purchases in this app.</string>
+    <string name="add_reminder">Add reminder</string>
+    <string name="address_city_required">Please enter your city</string>
+    <string name="address_county_required">Please enter your county</string>
+    <string name="address_label_address">Address</string>
+    <string name="address_label_address_line1">Address line 1</string>
+    <string name="address_label_address_line1_optional">Address line 1 (optional)</string>
+    <string name="address_label_address_line2">Address line 2</string>
+    <string name="address_label_address_line2_optional">Address line 2 (optional)</string>
+    <string name="address_label_address_optional">Address (optional)</string>
+    <string name="address_label_apt">Apt.</string>
+    <string name="address_label_apt_optional">Apt. (optional)</string>
+    <string name="address_label_city">City</string>
+    <string name="address_label_city_optional">City (optional)</string>
+    <string name="address_label_country">Country</string>
+    <string name="address_label_county">County</string>
+    <string name="address_label_county_optional">County (optional)</string>
+    <string name="address_label_name">Name</string>
+    <string name="address_label_name_optional">Name (optional)</string>
+    <string name="address_label_phone_number">Phone number</string>
+    <string name="address_label_phone_number_optional">Phone number (optional)</string>
+    <string name="address_label_postal_code">Postal code</string>
+    <string name="address_label_postal_code_optional">Postal code (optional)</string>
+    <string name="address_label_postcode">Postcode</string>
+    <string name="address_label_postcode_optional">Postcode (optional)</string>
+    <string name="address_label_province">Province</string>
+    <string name="address_label_province_optional">Province (optional)</string>
+    <string name="address_label_region_generic">State / Province / Region</string>
+    <string name="address_label_region_generic_optional">State / Province / Region (optional)</string>
+    <string name="address_label_state">State</string>
+    <string name="address_label_state_optional">State (optional)</string>
+    <string name="address_label_zip_code">ZIP code</string>
+    <string name="address_label_zip_code_optional">ZIP code (optional)</string>
+    <string name="address_label_zip_postal_code">ZIP/Postal code</string>
+    <string name="address_label_zip_postal_code_optional">ZIP / Postal code (optional)</string>
+    <string name="address_name_required">Please enter your name</string>
+    <string name="address_phone_number_required">Please enter your phone number</string>
+    <string name="address_postal_code_invalid">Your postal code is invalid</string>
+    <string name="address_postcode_invalid">Your postcode is invalid</string>
+    <string name="address_province_required">Please enter your province</string>
+    <string name="address_region_generic_required">Please enter your State/Province/Region</string>
+    <string name="address_required">Please enter your address</string>
+    <string name="address_shipping_address">Shipping Address</string>
+    <string name="address_state_required">Please enter your state</string>
+    <string name="address_zip_invalid">Your ZIP code is invalid.</string>
+    <string name="address_zip_postal_invalid">Your ZIP/Postal code is invalid</string>
+    <string name="amex_short">Amex</string>
+    <string name="app_intro_done_button">DONE</string>
+    <string name="app_intro_skip_button">SKIP</string>
+    <string name="app_name">Healing Budz</string>
+    <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="asset_statements">"[{
+ \"relation\": [\"delegate_permission/common.handle_all_urls\"],
+ \"target\": {
+ \"namespace\": \"web\",
+ \"site\": \"https://139.162.37.73\",
+ }
+}]"</string>
+    <string name="bottom_sheet_behavior">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="can_not_play">can not play this video</string>
+    <string name="card_number_hint">1234 1234 1234 1234</string>
+    <string name="character_counter_pattern">%1$d / %2$d</string>
+    <string name="checkbox_LED">LED</string>
+    <string name="checkbox_ongoing">Persistent</string>
+    <string name="checkbox_sound">Sound</string>
+    <string name="checkbox_vibrate">Vibrate</string>
+    <string name="clear_all_label">clear_all</string>
+    <string name="com.crashlytics.android.build_id">d97bf5b9-c20a-4b14-a8c2-a5ca4fc80b60</string>
+    <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b> and enter the code shown above.</string>
+    <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
+    <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
+    <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
+    <string name="com_facebook_like_button_liked">Liked</string>
+    <string name="com_facebook_like_button_not_liked">Like</string>
+    <string name="com_facebook_loading">Loading…</string>
+    <string name="com_facebook_loginview_cancel_action">Cancel</string>
+    <string name="com_facebook_loginview_log_in_button">Log in</string>
+    <string name="com_facebook_loginview_log_in_button_continue">Continue with Facebook</string>
+    <string name="com_facebook_loginview_log_in_button_long">Log in with Facebook</string>
+    <string name="com_facebook_loginview_log_out_action">Log out</string>
+    <string name="com_facebook_loginview_log_out_button">Log out</string>
+    <string name="com_facebook_loginview_logged_in_as">Logged in as: %1$s</string>
+    <string name="com_facebook_loginview_logged_in_using_facebook">Logged in using Facebook</string>
+    <string name="com_facebook_send_button_text">Send</string>
+    <string name="com_facebook_share_button_text">Share</string>
+    <string name="com_facebook_smart_device_instructions">To connect your account, open the Facebook app on your mobile device and check for notifications.</string>
+    <string name="com_facebook_smart_device_instructions_or">- OR -</string>
+    <string name="com_facebook_smart_login_confirmation_cancel">Not you?</string>
+    <string name="com_facebook_smart_login_confirmation_continue_as">Continue as %1$s</string>
+    <string name="com_facebook_smart_login_confirmation_title">Confirm Login</string>
+    <string name="com_facebook_tooltip_default">"You're in control - choose what info you want to share with apps."</string>
+    <string name="common_google_play_services_enable_button">Enable</string>
+    <string name="common_google_play_services_enable_text">"%1$s won't work unless you enable Google Play services."</string>
+    <string name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_install_button">Install</string>
+    <string name="common_google_play_services_install_text">"%1$s won't run without Google Play services, which are missing from your device."</string>
+    <string name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="common_google_play_services_unsupported_text">"%1$s won't run without Google Play services, which are not supported by your device."</string>
+    <string name="common_google_play_services_update_button">Update</string>
+    <string name="common_google_play_services_update_text">"%1$s won't run unless you update Google Play services."</string>
+    <string name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_google_play_services_updating_text">"%1$s won't run without Google Play services, which are currently updating."</string>
+    <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="contact">Contact</string>
+    <string name="content_hint">Add notification content</string>
+    <string name="custom_icon">Custom icon</string>
+    <string name="cvc_amex_hint">CVV</string>
+    <string name="cvc_multiline_helper">\ 123</string>
+    <string name="cvc_multiline_helper_amex">\ 1234</string>
+    <string name="cvc_number_hint">CVC</string>
+    <string name="data_backup_restore">Data Backup &amp; Restore</string>
+    <string name="date_today">Today</string>
+    <string name="de_select_all">deselect all</string>
+    <string name="default_colour">Default colour</string>
+    <string name="default_colour_value">\#8e8e8e</string>
+    <string name="default_icon">Default icon</string>
+    <string name="default_icon_value">ic_logo</string>
+    <string name="default_web_client_id">700098895046-hli00o0jk37hg7jpbcmda0ps3dsl7f39.apps.googleusercontent.com</string>
+    <string name="define_appintro" />
+    <string name="define_slideup_android">owner;year</string>
+    <string name="delete_confirmation">Are you sure you want to delete this notification?</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_cancel_text">CANCEL</string>
+    <string name="dialog_default_title">"Here's a message!"</string>
+    <string name="dialog_done_text">DONE</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_title">Select Up to 3 Values</string>
+    <string name="dismiss_label">Cancel</string>
+    <string name="double_cors" />
+    <string name="email"><u>cutlerfarms@gmail.com</u></string>
+    <string name="ending_in">" ending in "</string>
+    <string name="expiry_date_hint">MM/YY</string>
+    <string name="expiry_label_short">Expiry</string>
+    <string name="fabric_key">313e6a5ad40e17050ecd131800f7e89df95fda80</string>
+    <string name="facebook"><u>facebook.com/cutlerfarms</u></string>
+    <string name="facebook_app_id">\ 189648565295722</string>
+    <string name="facebook_client_token">0f5945fa9932f34178fbd7cfc469944b</string>
+    <string name="fb_login_protocol_scheme">fb189648565295722</string>
+    <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
+    <string name="firebase_database_url">https://healing-budz-40a54.firebaseio.com</string>
+    <string name="forever">Forever</string>
+    <string name="freshchat_activity_title_article_detail">FAQ</string>
+    <string name="freshchat_activity_title_article_list">FAQs</string>
+    <string name="freshchat_activity_title_category_list">FAQs</string>
+    <string name="freshchat_activity_title_channel_list">Conversations</string>
+    <string name="freshchat_channel_disabled">Oops, this chat is no longer available</string>
+    <string name="freshchat_channel_list_empty">Oops, no message channels here!</string>
+    <string name="freshchat_chat_camera_permissions_granted">Permission to access camera granted</string>
+    <string name="freshchat_chat_camera_permissions_not_granted">Permission to access camera denied</string>
+    <string name="freshchat_chat_camera_permissions_rationale">Camera permission is required to take pictures</string>
+    <string name="freshchat_chat_capture_from_camera">Take a picture</string>
+    <string name="freshchat_chat_deeplink">View</string>
+    <string name="freshchat_chat_deeplink_faq">View FAQ</string>
+    <string name="freshchat_chat_message_composer_hint">Type a message</string>
+    <string name="freshchat_chat_rating_submit">Send</string>
+    <string name="freshchat_chat_resolution_confirmation_prompt">Did we address your concerns?</string>
+    <string name="freshchat_chat_resolution_confirmation_prompt_negative">@string/freshchat_no</string>
+    <string name="freshchat_chat_resolution_confirmation_prompt_positive">@string/freshchat_yes</string>
+    <string name="freshchat_chat_resolution_suggestions_prompt">How could we have helped you better?</string>
+    <string name="freshchat_chat_resolution_user_comments_hint">Tell us</string>
+    <string name="freshchat_chat_select_from_gallery">Upload from gallery</string>
+    <string name="freshchat_chat_unknown_content_type">Message content not supported on this version. Please update the app</string>
+    <string name="freshchat_chat_voice_messaging_audio_recording_permission_rationale">Audio Recording permission is required to capture and send voice messages</string>
+    <string name="freshchat_chat_voice_messaging_permissions_granted">The permissions necessary for voice messaging have been granted</string>
+    <string name="freshchat_chat_voice_messaging_permissions_not_granted">The permissions necessary for voice messaging have not been granted</string>
+    <string name="freshchat_chat_voice_messaging_permissions_rationale">Audio Recording permission and Write External Storage permission is required to capture and send voice messages</string>
+    <string name="freshchat_chat_voice_messaging_write_storage_permission_rationale">Write External Storage permission is required to capture and send voice messages</string>
+    <string name="freshchat_contact_us">Message Us</string>
+    <string name="freshchat_content_description_attach_picture">Attach a picture</string>
+    <string name="freshchat_content_description_send_message">Send message</string>
+    <string name="freshchat_content_description_send_voice_message">Record a voice message</string>
+    <string name="freshchat_content_description_upload_status">Message upload Status</string>
+    <string name="freshchat_default_agent_name">Support</string>
+    <string name="freshchat_error_message_account_not_active">This section is disabled</string>
+    <string name="freshchat_error_message_failed_to_launch_support_section">Oops! Failed to launch</string>
+    <string name="freshchat_error_message_faq_section_not_enabled">Uh-uh! FAQ section is unavailable</string>
+    <string name="freshchat_error_message_inbox_section_not_enabled">Uh-uh! Chat section is unavailable.</string>
+    <string name="freshchat_error_message_init_not_completed">Freshchat SDK not initialized. Please invoke Freshchat.init() first and invoke {{method_name}} again!</string>
+    <string name="freshchat_error_message_init_not_completed_method_name_placeholder">{{method_name}}</string>
+    <string name="freshchat_error_message_not_connected_to_internet">No internet connection!</string>
+    <string name="freshchat_error_no_matching_faq_categories_found">No matching FAQ categories found !</string>
+    <string name="freshchat_error_no_matching_faqs_found">No matching FAQs found !</string>
+    <string name="freshchat_faq_downvote">@string/freshchat_no</string>
+    <string name="freshchat_faq_failed_to_load">This FAQ is no longer available</string>
+    <string name="freshchat_faq_list_empty">Sorry! There are no FAQs available</string>
+    <string name="freshchat_faq_rich_media_content_cannot_be_displayed">Connect to internet to view the rich media content</string>
+    <string name="freshchat_faq_search_query_hint">Search FAQs</string>
+    <string name="freshchat_faq_upvote">@string/freshchat_yes</string>
+    <string name="freshchat_faq_video_loading">Loading video...</string>
+    <string name="freshchat_faq_vote_successful">Thanks for your feedback!</string>
+    <string name="freshchat_faq_voting_prompt">Was this FAQ helpful?</string>
+    <string name="freshchat_faqs_reload_and_redirect">FAQs updated. Redirecting...</string>
+    <string name="freshchat_file_provider_authority" />
+    <string name="freshchat_menu_item_contact_us">Message Us</string>
+    <string name="freshchat_menu_item_search_faqs">Search</string>
+    <string name="freshchat_menu_item_toggle_speaker">Toggle speakerphone</string>
+    <string name="freshchat_message_content_copied_to_clipboard">Message copied</string>
+    <string name="freshchat_message_sending_failed">"Message not sent. We'll try again"</string>
+    <string name="freshchat_no">No</string>
+    <string name="freshchat_placeholder_app_name">{{app_name}}</string>
+    <string name="freshchat_placeholder_minutes">{{minutes}}</string>
+    <string name="freshchat_promotional_message_notification_title">{{app_name}}</string>
+    <string name="freshchat_speaker_phone_off">"Audio will play through your phone's speaker"</string>
+    <string name="freshchat_speaker_phone_on">Audio will play through your ear piece</string>
+    <string name="freshchat_support_message_notification_title">{{app_name}}</string>
+    <string name="freshchat_typically_replies_within_2_hours">Typically replies within 2 hours</string>
+    <string name="freshchat_typically_replies_within_a_minute">Typically replies within a minute</string>
+    <string name="freshchat_typically_replies_within_an_hour">Typically replies within an hour</string>
+    <string name="freshchat_typically_replies_within_few_hours">Typically replies within few hours</string>
+    <string name="freshchat_typically_replies_within_x_minutes">Typically replies within {{minutes}} minutes</string>
+    <string name="freshchat_voice_message_preview">[Voice ({{duration}})]</string>
+    <string name="freshchat_voice_message_preview_duration_tag">{{duration}}</string>
+    <string name="freshchat_voice_message_too_long">Reached voice message max duration limit, please release to send the message, otherwise message will get discarded soon</string>
+    <string name="freshchat_voice_message_too_short">The message you are trying to send spans less than a second. Are you sure you want to send it ?</string>
+    <string name="freshchat_xiaomi_auto_start_prompt_message">Please enable Autostart to receive notifications when the app is in the background</string>
+    <string name="freshchat_xiaomi_auto_start_prompt_negative">@android:string/cancel</string>
+    <string name="freshchat_xiaomi_auto_start_prompt_positive">@android:string/ok</string>
+    <string name="freshchat_yes">Yes</string>
+    <string name="full_screen_button">Full screen button</string>
+    <string name="gcm_defaultSenderId">\ 700098895046</string>
+    <string name="giraffe_player_url_empty">Please specify the address of the video playback</string>
+    <string name="google_api_key">AIzaSyBDfsO3ZzleI-WsxN3x6Yt6PuXGVUaMVmQ</string>
+    <string name="google_app_id">1:700098895046:android:81d99da1ebadffaf</string>
+    <string name="google_crash_reporting_api_key">AIzaSyBDfsO3ZzleI-WsxN3x6Yt6PuXGVUaMVmQ</string>
+    <string name="google_maps_key">AIzaSyBDfsO3ZzleI-WsxN3x6Yt6PuXGVUaMVmQ</string>
+    <string name="google_storage_bucket">healing-budz-40a54.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hostName">139.162.37.73</string>
+    <string name="ijkplayer_dummy" />
+    <string name="instagram"><u>intagram.com/cutlerfarms</u></string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="intor_five_heading">"Individualized strain reviews,
+ powered by you, not a laboratory…"</string>
+    <string name="intor_five_msg">From Acapulco Gold to White Widow, find your strain in our database with our individualized strain reviews, rankings on aroma, taste, potency, genetics, and health benefits. Powered by you, not a laboratory, in a language you can understand without a botany degree. Share your prize worthy bud photos, best growing techniques, mood, sensation, and effects.</string>
+    <string name="intor_five_title">Strain User Reviews</string>
+    <string name="intor_four_heading">"Document your journey as you
+ experiment with different strains…"</string>
+    <string name="intor_four_msg">Whether you smoke, eat, or use topically, write down all of those cool inventions that you dreamt up last time you felt that creative spark. Share your journals with the Healing Budz community, create a private diary for symptom management and share with close family, friends or your physician.</string>
+    <string name="intor_four_title">Journals</string>
+    <string name="intor_one_heading">"Back in the day you got everything
+ you needed to know about cannabis
+ from your cousin Tommy."</string>
+    <string name="intor_one_msg">"Today’s cannabis patients are part horticulturalist, part herbalist, and part chemist, but they are also passionate about sharing their knowledge. Our Budz are patients with stories to tell. The Healing Budz community connects you to decades of real life experience. Demystify cannabis and get all the answers you couldn't ask Tommy - privately and anonymously."</string>
+    <string name="intor_one_title">Welcome to Healing Budz</string>
+    <string name="intor_six_heading">"Find medical dispensaries,
+ physicians, natural healers, smoke
+ shops, glass artists, canna chefs…"</string>
+    <string name="intor_six_title">Budz Adz</string>
+    <string name="intor_three_heading">"Just like the old smoke circles
+ around the bonfire…"</string>
+    <string name="intor_three_msg">Community is at the core of cannabis culture and Healing Budz is passionate about creating connections. Join and create public or private groups to share healing stories, recipes and advice from patients and connoisseurs all around the globe.</string>
+    <string name="intor_three_title">Groups</string>
+    <string name="intor_two_heading">"The Healing Budz Community 
+has heard it all…"</string>
+    <string name="intor_two_msg">So ask away and get quick answers to thousands of live questions on a range of plant science and healing topics. Answer questions on your area of experience and earn points towards our rewards program!</string>
+    <string name="intor_two_title">Live Q&amp;A Forum</string>
+    <string name="intor_xis_msg">Discover your local canna community. Be in the know about upcoming deals, promotions, fun industry events, and educational seminars in just a few taps.</string>
+    <string name="invalid_card_number">"Your card's number is invalid."</string>
+    <string name="invalid_cvc">"Your card's security code is invalid."</string>
+    <string name="invalid_expiry_month">"Your card's expiration month is invalid."</string>
+    <string name="invalid_expiry_year">"Your card's expiration year is invalid."</string>
+    <string name="invalid_shipping_information">Invalid Shipping Address</string>
+    <string name="invalid_zip">Your postal code is incomplete.</string>
+    <string name="large_text">"Material is the metaphor.
+
+ A material metaphor is the unifying theory of a rationalized space and a system of motion. The material is grounded in tactile reality, inspired by the study of paper and ink, yet  technologically advanced and open to imagination and magic.
+ Surfaces and edges of the material provide visual cues that are grounded in reality. The  use of familiar tactile attributes helps users quickly understand affordances. Yet the  flexibility of the material creates new affordances that supercede those in the physical  world, without breaking the rules of physics.
+ The fundamentals of light, surface, and movement are key to conveying how objects move,  interact, and exist in space and in relation to each other. Realistic lighting shows  seams, divides space, and indicates moving parts.
+
+ Bold, graphic, intentional.
+
+ The foundational elements of print based design typography, grids, space, scale, color,  and use of imagery guide visual treatments. These elements do far more than please the  eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge  imagery, large scale typography, and intentional white space create a bold and graphic  interface that immerse the user in the experience.
+ An emphasis on user actions makes core functionality immediately apparent and provides  waypoints for the user.
+
+ Motion provides meaning.
+
+ Motion respects and reinforces the user as the prime mover. Primary user actions are  inflection points that initiate motion, transforming the whole design.
+ All action takes place in a single environment. Objects are presented to the user without  breaking the continuity of experience even as they transform and reorganize.
+ Motion is meaningful and appropriate, serving to focus attention and maintain continuity.  Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.
+
+ 3D world.
+
+ The material environment is a 3D space, which means all objects have x, y, and z  dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the  positive z-axis extending towards the viewer. Every sheet of material occupies a single  position along the z-axis and has a standard 1dp thickness.
+ On the web, the z-axis is used for layering and not for perspective. The 3D world is  emulated by manipulating the y-axis.
+
+ Light and shadow.
+
+ Within the material environment, virtual lights illuminate the scene. Key lights create  directional shadows, while ambient light creates soft shadows from all angles.
+ Shadows in the material environment are cast by these two light sources. In Android  development, shadows occur when light sources are blocked by sheets of material at  various positions along the z-axis. On the web, shadows are depicted by manipulating the  y-axis only. The following example shows the card with a height of 6dp.
+
+ Resting elevation.
+
+ All material objects, regardless of size, have a resting elevation, or default elevation  that does not change. If an object changes elevation, it should return to its resting  elevation as soon as possible.
+
+ Component elevations.
+
+ The resting elevation for a component type is consistent across apps (e.g., FAB elevation  does not vary from 6dp in one app to 16dp in another app).
+ Components may have different resting elevations across platforms, depending on the depth  of the environment (e.g., TV has a greater depth than mobile or desktop).
+
+ Responsive elevation and dynamic elevation offsets.
+
+ Some component types have responsive elevation, meaning they change elevation in response  to user input (e.g., normal, focused, and pressed) or system events. These elevation  changes are consistently implemented using dynamic elevation offsets.
+ Dynamic elevation offsets are the goal elevation that a component moves towards, relative  to the component’s resting state. They ensure that elevation changes are consistent  across actions and component types. For example, all components that lift on press have  the same elevation change relative to their resting elevation.
+ Once the input event is completed or cancelled, the component will return to its resting  elevation.
+
+ Avoiding elevation interference.
+
+ Components with responsive elevations may encounter other components as they move between  their resting elevations and dynamic elevation offsets. Because material cannot pass  through other material, components avoid interfering with one another any number of ways,  whether on a per component basis or using the entire app layout.
+ On a component level, components can move or be removed before they cause interference.  For example, a floating action button (FAB) can disappear or move off screen before a  user picks up a card, or it can move if a snackbar appears.
+ On the layout level, design your app layout to minimize opportunities for interference.  For example, position the FAB to one side of stream of a cards so the FAB won’t interfere  when a user tries to pick up one of cards.
+
+"</string>
+    <string name="libraries">Libraries</string>
+    <string name="library_appintro_author">Paolo Rotolo</string>
+    <string name="library_appintro_authorWebsite">http://paolorotolo.github.io/</string>
+    <string name="library_appintro_classPath">com.github.paolorotolo.appintro</string>
+    <string name="library_appintro_isOpenSource">true</string>
+    <string name="library_appintro_libraryDescription">AppIntro is a library for making a cool intro in your Android apps.</string>
+    <string name="library_appintro_libraryName">AppIntro</string>
+    <string name="library_appintro_libraryVersion">3.2.0</string>
+    <string name="library_appintro_libraryWebsite">https://github.com/PaoloRotolo/AppIntro</string>
+    <string name="library_appintro_licenseId">apache_2_0</string>
+    <string name="library_appintro_repositoryLink">https://github.com/PaoloRotolo/AppIntro</string>
+    <string name="library_slideup_android_author">Mansur (Mancj)</string>
+    <string name="library_slideup_android_authorWebsite">https://mancj.github.io/</string>
+    <string name="library_slideup_android_classPath">com.mancj.slideup.SlideUp</string>
+    <string name="library_slideup_android_isOpenSource">true</string>
+    <string name="library_slideup_android_libraryDescription">&lt;b>SlideUp&lt;/b> is a small library that allows you to add sweet slide effect to any view. Slide your views up, down, left or right with &lt;b>SlideUp&lt;/b>!</string>
+    <string name="library_slideup_android_libraryName">SlideUp-Android</string>
+    <string name="library_slideup_android_libraryVersion">2.2.7.1</string>
+    <string name="library_slideup_android_libraryWebsite">https://github.com/mancj/SlideUp-Android/</string>
+    <string name="library_slideup_android_licenseId">mit</string>
+    <string name="library_slideup_android_owner">Mancj</string>
+    <string name="library_slideup_android_repositoryLink">https://github.com/mancj/SlideUp-Android/blob/master/LICENSE</string>
+    <string name="library_slideup_android_year">\ 2017</string>
+    <string name="list_empty">No items to display</string>
+    <string name="live">LIVE</string>
+    <string name="mark_as_done">Mark as done</string>
+    <string name="mark_as_done_detail">Add a \"Mark as done\" action to the notification</string>
+    <string name="nagging_detail">Continuously notify you of the current notification until it is dismissed</string>
+    <string name="nagging_interval">Nagging interval</string>
+    <string name="nagging_reminder">Nagging reminder</string>
+    <string name="network_error_title">Internet Error</string>
+    <string name="network_not_connected_error">It seems that your device is not connected to internet!</string>
+    <string name="no">No</string>
+    <string name="no_active">No active notifications</string>
+    <string name="no_inactive">No inactive notifications</string>
+    <string name="no_payment_methods">No payment methods.</string>
+    <string name="no_repeat">Does not repeat</string>
+    <string name="not_support">player not support this device</string>
+    <string name="null_time">0:00</string>
+    <string name="ok">OK</string>
+    <string name="ok_label">ok</string>
+    <string name="ongoing_detail">Prevent notification from being swiped away</string>
+    <string name="open_video_in_youtube">Open video in YouTube</string>
+    <string name="option">option</string>
+    <string name="options">options</string>
+    <string name="password_toggle_content_description">Toggle password visibility</string>
+    <string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
+    <string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
+    <string name="payment_method_add_new_card">Add new card…</string>
+    <string name="place_autocomplete_clear_button">Clear search</string>
+    <string name="place_autocomplete_search_hint">Search</string>
+    <string name="play_button">Play button</string>
+    <string name="please_select_atleast">Please select atleast</string>
+    <string name="preference_notification_category">Notification Preferences</string>
+    <string name="price_free">Free</string>
+    <string name="project_id">healing-budz-40a54</string>
+    <string name="question_1">What medical conditions have you effectively treated with this strain?</string>
+    <string name="question_2">Which moods or sensations have you experienced with this strain?</string>
+    <string name="question_3">"What negative effects have you 
+ experienced with this strain?"</string>
+    <string name="question_4">Are you currently using cannabis as preventive medication?</string>
+    <string name="question_5">"Which 3 prevention areas are you 
+ focusing on?"</string>
+    <string name="question_6">"What flavor profiles would you 
+ associate with this strain?"</string>
+    <string name="rate_app">Rate app</string>
+    <string name="repeat_every">Repeat every</string>
+    <string name="repeat_notification">Number of times to repeat:</string>
+    <string name="repeats_every">Repeats every: %1$d %2$s</string>
+    <string name="repeats_on">Repeats on:</string>
+    <string name="s1">Save image</string>
+    <string name="s2">Allow Ad to store image in Picture gallery?</string>
+    <string name="s3">Accept</string>
+    <string name="s4">Decline</string>
+    <string name="s5">Create calendar event</string>
+    <string name="s6">Allow Ad to create a calendar event?</string>
+    <string name="s7">Test Ad</string>
+    <string name="save_menu">Save</string>
+    <string name="schemeName">hbscheme</string>
+    <string name="search_menu_title">Search</string>
+    <string name="select_all">select all</string>
+    <string name="select_colour">Select a colour</string>
+    <string name="select_entry">Select Entries</string>
+    <string name="select_icon">Select an icon</string>
+    <string name="send_email">Send email</string>
+    <string name="small_problem">Player encountered a small problem</string>
+    <string name="snooze">Snooze</string>
+    <string name="snooze_detail">Add a snooze action to the notification</string>
+    <string name="snooze_length">Snooze length</string>
+    <string name="start_survey_text">Take our Strain Survey and receive</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="syns_backup_restore">Syns, backup &amp; restore</string>
+    <string name="text_location_permission">For Application Usage and Features.</string>
+    <string name="text_location_permission_open">Please on the location from setting to access this.</string>
+    <string name="thanks_to">Thanks to</string>
+    <string name="time_now">Now</string>
+    <string name="times">times</string>
+    <string name="times_shown">Shown %1$d out of %2$d times</string>
+    <string name="times_shown_edit">Shown %1$d out of</string>
+    <string name="title">Title</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_qadetail">QADetailActivity</string>
+    <string name="title_activity_test_map">Map</string>
+    <string name="title_add_a_card">Add a Card</string>
+    <string name="title_add_an_address">Add an Address</string>
+    <string name="title_location_permission">Location Access Permission</string>
+    <string name="title_payment_method">Payment Method</string>
+    <string name="title_select_shipping_method">Select Shipping Method</string>
+    <string name="toast_higher_number">Repeat number must be higher</string>
+    <string name="toast_mark_as_done">Marked next reminder as done</string>
+    <string name="toast_past_date">Cannot set initial date in the past</string>
+    <string name="toast_title_empty">Title cannot be empty</string>
+    <string name="tools_label_duration">Duration</string>
+    <string name="translator">Translator</string>
+    <string name="twitter"><u>twitter.com./cutlerfarms</u></string>
+    <string name="valid_digits">\ 0123456789</string>
+    <string name="validation_text">Please select atleast one option</string>
+    <string name="version">Version</string>
+    <string name="website"><u>www.cutlerfarms.com</u></string>
+    <string name="within_15_miles_of_your_location">within 15 miles of your Location</string>
+    <string name="yes">Yes</string>
+    <string name="you_can_only_select_upto">You can only select upto</string>
+    <string name="zip_helper">\ 12345</string>
+</resources>

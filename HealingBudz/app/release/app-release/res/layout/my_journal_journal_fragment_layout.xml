@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/filtr" android:paddingLeft="10.0sp" android:paddingRight="10.0sp" android:layout_width="fill_parent" android:layout_height="44.0sp" android:layout_marginTop="5.0sp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="10.0">
+            <LinearLayout android:paddingLeft="10.0sp" android:paddingRight="10.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginTop="5.0sp" android:layout_marginBottom="5.0sp" android:weightSum="10.0" android:layout_weight="10.0">
+                <LinearLayout android:gravity="center" android:id="@id/add_new_journal" android:background="@drawable/add_journal_entry_btn" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="4.9">
+                    <ImageView android:layout_gravity="center" android:id="@id/imageView2" android:padding="0.0sp" android:layout_width="28.0sp" android:layout_height="28.0sp" android:src="@drawable/ic_add_new_journal" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ADD JOURNAL" />
+                </LinearLayout>
+                <View android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="1.4" />
+                <LinearLayout android:gravity="center|right" android:id="@id/public_private_filter" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="4.3">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="13.0sp" android:textColor="#ffe4e4e5" android:id="@id/sort_text_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SORT" />
+                    <ImageView android:layout_width="15.0sp" android:layout_height="30.0sp" android:layout_marginLeft="5.0sp" android:src="@drawable/ic_keyboard_arrow_down_white_24dp" android:alpha="0.7" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/line_top" android:background="#ff4d4948" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginTop="6.0sp" android:layout_below="@id/filtr" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/line_top">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/refresh" android:paddingTop="14.0sp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ProgressBar android:id="@id/loading_spinner" android:layout_width="30.0sp" android:layout_height="30.0sp" android:indeterminateTint="#ffffffff" android:indeterminateTintMode="src_atop" />
+            <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0sp" android:text="Loading..." />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView android:id="@id/journal_fragment_recyler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<plugin name='grailsPrettyTime' version='4.0.0' grailsVersion='3.0.1 &gt; *'>
+  <type>grails.pretty.time.GrailsPrettyTimeGrailsPlugin</type>
+  <authorEmail>cazacugmihai@gmail.com</authorEmail>
+  <developers>[[name:Janusz Slota, email:janusz.slota@nixilla.com], [name:Diego Toharia, email:diego@toharia.com], [name:Stefan Glase, email:stefan.glase@googlemail.com], [name:Manish Kapoor, email:manishkapoor_1989@yahoo.co.in]]</developers>
+  <author>Cazacu Mihai</author>
+  <documentation>https://github.com/cazacugmihai/grails-pretty-time/blob/master/README.md</documentation>
+  <description>A plugin that allows you to display human readable, relative timestamps.</description>
+  <title>Pretty-time plugin</title>
+  <version />
+  <grailsVersion>3.0.1 &gt; *</grailsVersion>
+  <license>APACHE</license>
+  <pluginExcludes>[grails-app/views/error.gsp]</pluginExcludes>
+  <issueManagement system='Github' url='https://github.com/cazacugmihai/grails-pretty-time/issues' />
+  <name>grails-pretty-time</name>
+  <scm url='https://github.com/cazacugmihai/grails-pretty-time' />
+  <resources>
+    <resource>grails.pretty.time.Application</resource>
+    <resource>org.grails.prettytime.PrettyTimeTagLib</resource>
+  </resources>
+</plugin>

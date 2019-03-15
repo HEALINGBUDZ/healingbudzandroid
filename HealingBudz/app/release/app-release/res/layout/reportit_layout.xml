@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/report_question_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/top" android:background="#ff252222" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/reporting_heading" android:layout_width="fill_parent" android:layout_height="50.0sp" android:layout_marginLeft="22.0sp" android:layout_marginTop="26.0sp" android:text="REASON FOR REPORTING:" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/q_a_list" android:background="#ff252222" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/top">
+            <com.codingpixel.healingbudz.customeUI.HealingBudButtonBold android:textColor="@color/white" android:id="@id/send_button" android:background="@drawable/q_a_menu_ask_q_button" android:layout_width="wrap_content" android:layout_height="40.0sp" android:layout_marginLeft="26.0sp" android:text="SEND" android:layout_below="@id/report_question_recyler_view" />
+            <android.support.v7.widget.RecyclerView android:id="@id/report_question_recyler_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="22.0sp" android:layout_marginRight="22.0sp" android:layout_marginBottom="4.0sp" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/q_a_list_bottom" android:background="#ff252222" android:layout_width="fill_parent" android:layout_height="15.0sp" android:layout_below="@id/q_a_list">
+            <View android:id="@id/line_color_report" android:background="#ff0083ca" android:layout_width="fill_parent" android:layout_height="4.0sp" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/indicator_close_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/q_a_list" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/indi_report" android:background="@drawable/q_a_home_menu_indicator_bg" android:padding="7.0sp" android:layout_width="40.0sp" android:layout_height="30.0sp" android:src="@drawable/q_a_menu_indicator_close" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/indicator_close" android:background="#86000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.2" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

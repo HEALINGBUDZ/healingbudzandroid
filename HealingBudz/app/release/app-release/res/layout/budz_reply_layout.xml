@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/budz_reply_bg" android:padding="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0sp" android:weightSum="10.0">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:layout_marginTop="10.0sp" android:layout_marginRight="10.0sp" android:weightSum="10.0">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ff923a88" android:id="@id/comment_one_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reply" android:maxLines="1" android:singleLine="true" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewItalic android:textSize="10.0sp" android:textColor="@color/white" android:gravity="right" android:id="@id/reply_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="on 25 Aug 2017" />
+                </LinearLayout>
+                <View android:background="#ff363636" android:layout_width="fill_parent" android:layout_height="1.0sp" android:layout_marginLeft="10.0sp" android:layout_marginTop="5.0sp" android:layout_marginRight="10.0sp" />
+                <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ffc4c4c4" android:id="@id/reply" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:layout_marginTop="5.0sp" android:layout_marginRight="10.0sp" android:text="" />
+                <RelativeLayout android:gravity="center_vertical" android:id="@id/edit_reply" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginEnd="8.0sp">
+                    <ImageView android:id="@id/ic_edit_reply" android:padding="9.0sp" android:layout_width="32.0sp" android:layout_height="32.0sp" android:src="@drawable/ic_edit_white" android:layout_marginEnd="32.0sp" android:layout_alignParentEnd="true" />
+                    <ImageView android:id="@id/ic_delete_reply" android:padding="9.0sp" android:layout_width="32.0sp" android:layout_height="32.0sp" android:src="@drawable/ic_delete_white" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

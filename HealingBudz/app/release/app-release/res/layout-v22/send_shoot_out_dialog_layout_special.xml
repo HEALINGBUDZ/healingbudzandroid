@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dialog_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0sp" android:layout_marginRight="6.0sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <RelativeLayout android:orientation="vertical" android:id="@id/main_content" android:paddingBottom="18.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0sp">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/first_dialog_layout" android:background="@drawable/shoot_out_dialog_bg" android:layout_width="fill_parent" android:layout_height="47.0sp" android:layout_centerHorizontal="true">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="18.0sp" android:textColor="#ffe070e0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Create Special" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/add_expert_area_top_bg" android:paddingLeft="16.0sp" android:paddingRight="16.0sp" android:paddingBottom="6.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/first_dialog_layout" android:layout_centerHorizontal="true">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ff93268f" android:gravity="center" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0sp" android:text="within 25 miles radius of" />
+                    <RadioGroup android:id="@id/location_radio_btn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <com.codingpixel.healingbudz.customeUI.HealingBudRadioButton android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:id="@id/zip_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="Default zip code from my profile" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudRadioButton android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:id="@id/current_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="Find my current location" />
+                    </RadioGroup>
+                    <LinearLayout android:background="@drawable/add_expert_area_edittext_bg" android:padding="14.0sp" android:layout_width="fill_parent" android:layout_height="45.0sp" android:layout_marginTop="16.0sp">
+                        <com.codingpixel.healingbudz.customeUI.HealinBudEditText android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:gravity="center|left|top" android:id="@id/shoot_out_edit_text_title" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="Title" android:maxLength="140" android:inputType="textCapSentences|textMultiLine" />
+                    </LinearLayout>
+                    <LinearLayout android:background="@drawable/add_expert_area_edittext_bg" android:padding="14.0sp" android:layout_width="fill_parent" android:layout_height="85.0sp" android:layout_marginTop="16.0sp">
+                        <com.codingpixel.healingbudz.customeUI.HealinBudEditText android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:gravity="center|left|top" android:id="@id/shoot_out_edit_text" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="Description" android:maxLength="140" android:inputType="textCapSentences|textMultiLine" />
+                    </LinearLayout>
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="9.0sp" android:textColor="#ff4d4d4d" android:gravity="right" android:id="@id/character_counter" android:paddingTop="3.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="0/140 characters" />
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/bottom_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0sp" android:weightSum="10.0" android:layout_below="@id/main_cntn">
+                        <LinearLayout android:gravity="center" android:id="@id/attatch_image" android:background="@drawable/shhot_out_send_button_bg" android:visibility="gone" android:layout_width="0.0sp" android:layout_height="46.0sp" android:layout_weight="4.5">
+                            <ImageView android:id="@id/image_attach" android:layout_width="23.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_aatachment_blk" />
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:text="Add Image" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:id="@id/valid_till" android:background="@drawable/shhot_out_send_button_bg" android:layout_width="0.0sp" android:layout_height="46.0sp" android:layout_marginLeft="12.0sp" android:layout_weight="4.5">
+                            <ImageView android:layout_width="24.0sp" android:layout_height="25.0sp" android:src="@drawable/ic_calender_blk" />
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:id="@id/valid_till_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:text="Valid Until..." />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp">
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0sp" android:text="Link To:" />
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0sp" android:text="(optional)" />
+                        </LinearLayout>
+                        <RelativeLayout android:gravity="center_vertical" android:background="@drawable/add_expert_area_edittext_bg" android:paddingLeft="5.0sp" android:paddingRight="8.0sp" android:layout_width="fill_parent" android:layout_height="33.0sp" android:layout_marginTop="4.0sp">
+                            <com.codingpixel.healingbudz.customeUI.customspinner android:id="@id/link_to" android:layout_width="fill_parent" android:layout_height="fill_parent" android:autofillHints="@string/app_name" />
+                            <ImageView android:background="@drawable/ic_arrow_drop_down_black_24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0sp">
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0sp" android:text="With Special:" />
+                            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0sp" android:text="(optional)" />
+                        </LinearLayout>
+                        <RelativeLayout android:gravity="center_vertical" android:background="@drawable/add_expert_area_edittext_bg" android:paddingLeft="5.0sp" android:paddingRight="8.0sp" android:layout_width="fill_parent" android:layout_height="33.0sp" android:layout_marginTop="4.0sp">
+                            <com.codingpixel.healingbudz.customeUI.customspinner android:id="@id/link_to_with" android:layout_width="fill_parent" android:layout_height="fill_parent" android:autofillHints="@string/app_name" />
+                            <ImageView android:background="@drawable/ic_arrow_drop_down_black_24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="9.0sp" android:textColor="#ff4d4d4d" android:gravity="right" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0sp" android:text="Share on:" />
+                    <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="36.0sp" android:weightSum="10.0">
+                        <com.codingpixel.healingbudz.customeUI.HealingBubCheckBok android:textSize="12.0sp" android:textColor="#ff4d4d4d" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Share my current location" android:layout_weight="8.0" />
+                        <ImageView android:id="@id/fb_share" android:layout_width="0.0sp" android:layout_height="26.0sp" android:layout_marginLeft="6.0sp" android:layout_marginRight="6.0sp" android:src="@drawable/ic_facebook_icon" android:layout_weight="1.0" />
+                        <ImageView android:id="@id/twitter_share" android:layout_width="0.0sp" android:layout_height="26.0sp" android:src="@drawable/ic_twitter_icon" android:layout_weight="1.0" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/send_shoot_out_btn" android:background="@drawable/shoot_out_bg" android:layout_width="fill_parent" android:layout_height="37.0sp" android:layout_marginTop="22.0sp" android:layout_marginBottom="12.0sp">
+                        <ImageView android:visibility="gone" android:layout_width="26.0sp" android:layout_height="18.0sp" android:src="@drawable/ic_home_shoot_out" />
+                        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="16.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0sp" android:text="Submit Special" android:textAllCaps="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <ImageView android:id="@id/cross_btn" android:paddingLeft="7.0sp" android:paddingBottom="7.0sp" android:layout_width="40.0sp" android:layout_height="40.0sp" android:src="@drawable/ic_save_dialog_cross" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

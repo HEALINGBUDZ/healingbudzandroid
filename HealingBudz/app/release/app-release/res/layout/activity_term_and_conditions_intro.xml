@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ff252525" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_menu" android:background="#ff1f1f1f" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize">
+        <ImageView android:id="@id/back_btn" android:padding="2.0sp" android:visibility="invisible" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_back_icon" />
+        <ImageView android:id="@id/home_btn" android:padding="7.0sp" android:visibility="invisible" android:layout_width="42.0sp" android:layout_height="fill_parent" android:src="@drawable/ic_home_icon" android:layout_toRightOf="@id/back_btn" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="22.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/q_a_menu_title" android:paddingLeft="4.0sp" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Terms &amp; Conditions" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView android:paddingTop="6.0sp" android:paddingBottom="6.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_menu" android:layout_below="@id/top_menu">
+        <WebView android:id="@id/web_view" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <RelativeLayout android:id="@id/bottom_menu" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="?android:actionBarSize" android:layout_alignParentBottom="true">
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/disagree" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Disagree" android:paddingStart="10.0sp" android:paddingEnd="10.0sp" android:layout_marginStart="10.0sp" android:layout_alignParentStart="true" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudTextViewRegular android:textSize="14.0sp" android:textColor="#ff1683ce" android:gravity="center" android:id="@id/agree" android:paddingBottom="4.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Agree" android:paddingStart="4.0sp" android:paddingEnd="10.0sp" android:layout_marginEnd="10.0sp" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

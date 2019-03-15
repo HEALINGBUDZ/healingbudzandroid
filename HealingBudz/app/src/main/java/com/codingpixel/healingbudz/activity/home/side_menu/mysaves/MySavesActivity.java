@@ -716,7 +716,7 @@ public class MySavesActivity extends AppCompatActivity implements APIResponseLis
                     object = new JSONObject(data_list.get(position).getDescription());
                     HomeQAfragmentDataModel model1 = new HomeQAfragmentDataModel();
                     showSubFragmentListner_object.ShowStrainSearch(model1, object.getString("search_data"));
-//                    finish();
+                    finish();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0sp">
+        <LinearLayout android:paddingRight="20.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="10.0">
+            <LinearLayout android:gravity="right" android:background="@drawable/budz_map_location_bg" android:visibility="invisible" android:layout_width="0.0sp" android:layout_height="30.0sp" android:layout_weight="1.2">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="18.0sp" android:layout_height="18.0sp" android:layout_marginRight="12.0sp" android:src="@drawable/ic_location_white" />
+            </LinearLayout>
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="13.0sp" android:textColor="#ff932a88" android:layout_gravity="center" android:paddingLeft="8.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Location" android:layout_weight="4.2" />
+            <com.codingpixel.healingbudz.customeUI.HealingBudTextViewBold android:textSize="13.0sp" android:textColor="#ff932a88" android:layout_gravity="center" android:paddingLeft="5.0sp" android:layout_width="0.0sp" android:layout_height="wrap_content" android:text="Contact" android:layout_weight="4.4" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0sp" android:weightSum="10.0" android:minHeight="48.0sp">
+            <LinearLayout android:gravity="right" android:background="@drawable/budz_map_location_bg" android:layout_width="0.0sp" android:layout_height="30.0sp" android:layout_weight="1.2">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="18.0sp" android:layout_height="18.0sp" android:layout_marginRight="12.0sp" android:src="@drawable/ic_location_white" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="0.0sp" android:layout_height="wrap_content" android:weightSum="10.0" android:layout_weight="8.5">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="6.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_weight="4.5">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ffc4c4c4" android:id="@id/location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Punjab University Hostel Rd, Punjab University New Campus, Lahore, Punjab, Pakistan" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="5.0sp" android:layout_width="0.0sp" android:layout_height="fill_parent" android:layout_marginLeft="10.0sp" android:layout_weight="5.0">
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ffc4c4c4" android:id="@id/contact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(305) 825-7777" />
+                    <com.codingpixel.healingbudz.customeUI.HealingBudTextView android:textSize="12.0sp" android:textColor="#ffe773e7" android:autoLink="email" android:id="@id/email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonRegular android:textColor="#fffdfbfd" android:id="@id/call_user" android:background="@drawable/shoot_out_bg" android:layout_width="fill_parent" android:layout_height="34.0sp" android:layout_marginLeft="24.0sp" android:layout_marginTop="12.0sp" android:layout_marginRight="24.0sp" android:text="Click To Call" android:textAllCaps="false" />
+        <com.codingpixel.healingbudz.customeUI.HealingBudButtonRegular android:textColor="#fffdfbfd" android:id="@id/show_pruproduct" android:background="@drawable/shoot_out_bg" android:layout_width="fill_parent" android:layout_height="34.0sp" android:layout_marginLeft="24.0sp" android:layout_marginTop="12.0sp" android:layout_marginRight="24.0sp" android:text="View Products &amp; Services" android:textAllCaps="false" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

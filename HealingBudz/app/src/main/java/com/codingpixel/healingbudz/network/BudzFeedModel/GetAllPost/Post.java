@@ -92,12 +92,23 @@ public class Post implements Serializable {
     @SerializedName("comments")
     @Expose
     private List<Comment> comments = null;
-    @SerializedName("scraped_url")
-    @Expose
-    private Object scrapedUrl;
+//    @SerializedName("scraped_url")
+//    @Expose
+//    private Object scrapedUrl;
     @SerializedName("sub_user")
     @Expose
     private SubUser sub_user;
+    @SerializedName("scraped_url")
+    @Expose
+    private ScrappedModel scrappedData;
+
+    public ScrappedModel getScrappedData() {
+        return scrappedData;
+    }
+
+    public void setScrappedData(ScrappedModel scrappedData) {
+        this.scrappedData = scrappedData;
+    }
 
     public String getPost_added_comment() {
         if (post_added_comment == null)
@@ -359,13 +370,13 @@ public class Post implements Serializable {
         this.comments = comments;
     }
 
-    public Object getScrapedUrl() {
-        return scrapedUrl;
-    }
-
-    public void setScrapedUrl(Object scrapedUrl) {
-        this.scrapedUrl = scrapedUrl;
-    }
+//    public Object getScrapedUrl() {
+//        return scrapedUrl;
+//    }
+//
+//    public void setScrapedUrl(Object scrapedUrl) {
+//        this.scrapedUrl = scrapedUrl;
+//    }
 
     public MentionTagJsonModel[] getJsonData() {
         return new Gson().fromJson(getJson_Data(), MentionTagJsonModel[].class);
